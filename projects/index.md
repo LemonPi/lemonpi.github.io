@@ -4,6 +4,8 @@ title: Personal Projects
 permalink: /projects/
 ---
 
- - [CIV 102 Bridge cardboard bridge design and build - Nov 2013](bridgebuild.html)
- - [Engineering design portfolio - Nov 2013 and ongoing](portfolio.html)
- - [CIV 102 Bridge truss bridge design - Oct 2013](bridgedesign.html)
+ - [CIV 102 Bridge cardboard bridge design and build](bridgebuild.html) - Nov 2013
+ 
+ - [Engineering design portfolio](portfolio.html) - Nov 2013 and ongoing
+ 
+ - [CIV 102 Bridge truss bridge design](bridgedesign.html) - Oct 2013

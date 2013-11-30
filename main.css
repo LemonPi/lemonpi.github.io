@@ -61,6 +61,20 @@ blockquote {
 	margin: 0;
 }
 
+#footer {
+    margin: 32px 0px 0px 0px;
+    padding: 12px 32px 12px 32px;
+    background-color: rgb(51,63,80);
+	color: rgb(240,240,240);
+}
+#footer a{
+	position:absolute;
+	right:10px;
+	margin: 0px 20px 0px 0px;
+	color: rgb(240,240,240);
+}
+	
+
 #pretty {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	background:white;

@@ -1,0 +1,84 @@
+body {
+	font-family: "Avant Garde", "Lucida Sans Unicode","Lucida Grande", "Dejavu Sans", Verdana, sans-serif ;
+	background-color: white;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+}
+
+a {
+	color: #222222;
+}
+
+a:hover {
+	color: #888888;
+}
+
+a:visited {
+	color: #111111;
+}
+
+blockquote {
+	background-color: #8497B0;
+}
+
+#navbar-menu {
+	list-style-type: none;
+	display: block;
+	height: 40px;
+	margin: 0px 32px;
+	padding: 0;
+}
+
+#navbar-menu li {
+	display: block;
+	float: left;
+	padding-right: 64px;
+	height: 40px;
+}
+
+#content {
+	clear: both;
+	margin: 32px;
+}
+
+#header {
+	color: rgb(206,206,206);
+	background-color: rgb(51,63,80);
+	width: 100%;
+}
+
+#header a {
+	color: rgb(230,230,230);
+	text-decoration: none;
+}
+
+#titlearea {
+	margin: 0px 32px;
+	padding: 8px 0px;
+}
+
+#titlearea h1 {
+	margin: 0;
+}
+
+#pretty {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	background:white;
+	width:50%;
+	font-size:100%;
+        border-collapse:collapse;
+	text-align:left;
+	margin:15px;
+}
+#pretty th{
+	font-size:120%;
+	color: rgb(51,63,80);
+	border-bottom:2px solid rgb(51,63,80);
+	padding:10px 8px;
+}
+#pretty td{
+	border-bottom:1px solid rgb(190,190,220);
+	color: rgb(70,80,100);
+	padding:6px 8px;
+}
+#pretty tbody tr:hover td{background-color: rgb(250,250,250);color:#000000;}

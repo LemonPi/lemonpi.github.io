@@ -8,4 +8,8 @@ permalink: /projects/
  
  - [Engineering design portfolio](portfolio.html) - Nov 2013 and ongoing
  
+ - [Binder ring misalignment](binder.html) - Nov 2013
+ 
+ - [Detailed design of material to use with aerator](aerator.html) - Nov 2013
+ 
  - [CIV 102 Bridge truss bridge design](bridgedesign.html) - Oct 2013

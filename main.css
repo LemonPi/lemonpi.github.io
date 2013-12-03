@@ -17,6 +17,16 @@ a:visited {
 	color: #111111;
 }
 
+ul {
+	list-style-type: square;
+}
+ul ul {
+	list-style-type: square;
+}
+ul ul ul{
+	list-style-type: square;
+}
+
 blockquote {
 	background-color: #8497B0;
 }
@@ -25,17 +35,42 @@ blockquote {
 	list-style-type: none;
 	display: block;
 	height: 40px;
-	margin: 0px 32px;
 	padding: 0;
 }
 
+#navbar-menu ul {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
 #navbar-menu li {
-	display: block;
 	float: left;
-	padding-right: 64px;
+	padding-right: 32px;
+	padding-left: 32px;
+	padding-top: 5px;
+	text-align:center;
 	height: 40px;
 }
 
+#navbar-menu a {
+	text-align:center;
+	padding:0px;
+}
+
+#navbar-menu li a:active {
+	position: relative;
+	text-align:center;
+	top: 1px;
+}
+
+#navbar-menu li a:hover{
+	color: rgb(190,190,190);
+}
+
+#navbar-menu li:hover{
+	background-color: rgb(30,40,50);
+}
+	
 #content {
 	clear: both;
 	margin: 32px;
@@ -73,7 +108,7 @@ blockquote {
 	margin: 0px 20px 0px 0px;
 	color: rgb(240,240,240);
 }
-	
+
 
 #pretty {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -96,3 +131,22 @@ blockquote {
 	padding:6px 8px;
 }
 #pretty tbody tr:hover td{background-color: rgb(250,250,250);color:#000000;}
+
+.frames {
+  position: relative;
+  width: 500px;
+}
+ 
+.frames img {
+  border: 10px solid rgb(230,230,230);
+  border-bottom: 45px solid rgb(230,230,230);
+}
+ 
+.frames p {
+  position: absolute;
+  text-align: left;
+  padding-left: 20px;
+  width: 100%;
+  bottom: 0px;
+  color: #888;
+}

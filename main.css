@@ -5,6 +5,10 @@ body {
 	padding: 0px 0px 0px 0px;
 }
 
+img {
+	max-width: 100%;
+}
+
 a {
 	color: #222222;
 }

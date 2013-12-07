@@ -6,7 +6,7 @@ permalink: /principles.html
 
 My vision of good engineering design should seek these objectives in order of importance:
 
-<table id="pretty">
+<table class="pretty">
 <tr>
   <th>Objective</th>
   <th>Explanation</th>

@@ -10,6 +10,7 @@ In a team of three, we considered how to solve the problem of binder misalignmen
 <p>A typical misalignment</p>
 </div>
 
+<a name="analysis"> </a>
 ## Understanding the Problem
 -------------------------
 In line with my engineering process, we first dissected the binder first to analyze the root causes of misalignment.
@@ -40,6 +41,7 @@ We then conducted a survey to check this hypothesis.
 
 ![Binder usage survey](survey.jpg)
 
+<a name="divergent"> </a> 
 As binder ring size increased, people tended to open them more often by pulling open.  
 This provides support for my lever arm hypothesis.  
 
@@ -50,12 +52,13 @@ We performed similar research to determine other main causes of misalignment
 We produced candidate solutions aiming to solve a single cause of misalignment,  
 following my engineering process's monomaniacal design step.
 
+
 <div class="frames">
 <a href="divergentflowchart.jpg"><img src="divergentflowchartthumb.jpg"></a>
 <p>Flowchart illustrating divergent process</p>
 </div>
 
-
+<a name="convergent"> </a>
 ## Converged Solution - Shield Spring
 -------------------------------------
 After generating the solution pool, we considered the advantages and disadvantages of each solution.  
@@ -76,7 +79,7 @@ rather than the presence of gravity, direction of push, or any other environment
 <p>Flowchart illustrating convergent process</p>
 </div>
 
-
+<a name="prototype"> </a>
 ## Prototyping 
 --------------------
 Prototyping is an essential part of my engineering design process,  
@@ -90,32 +93,40 @@ Each prototype was built around a **purpose**, as shown below.
 </div>
 Built and designed with OpenScad (Which I learned for this purpose)
 
-Low fidelity physical functional prototype that I built to demonstrate feasibility.
+Low fidelity physical functional prototype that I built to demonstrate feasibility.  
 The prototype illustrated how the shield could provide the function of the leaves,  
 thus the leaves and the boosters could be removed, making the solution more efficient.
+
 <div class="frames">
 <img src="closedposition.jpg">
 <p>Closed position</p>
 </div>
+
 With both sides constrained, a force buckles the spine from configuration to configuration
+
 <div class="frames">
 <img src="opening.jpg">
 <p>Opening with a push</p>
 </div>
+
 There are two stable states of buckling, and a push transitions between the two
+
 <div class="frames">
 <img src="openposition.jpg">
 <p>Open position</p>
 </div>
+
 Close with the same push, with both sides constrained (in this case by the table)
+
 <div class="frames">
 <img src="closing.jpg">
 <p>Closing with a push</p>
 </div>
- 
+
+<a name="gains"> </a> 
 ##Gains from Experience
 --------------------
-- Solid modelling and animation with OpenScad
-- Physical prototyping experience
-- Process: creating a solution pool and combining component solutions
+- Learned how to solid model and animate with OpenScad
+- Gained physical prototyping experience
+- Refined process: create a solution pool then combine component solutions
  

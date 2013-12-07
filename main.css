@@ -2,6 +2,7 @@ body {
 	font-family: "Lucida Sans Unicode","Lucida Grande", "Dejavu Sans", Verdana, sans-serif ;
 	background-color: white;
 	margin: 0;
+	color: rgb(50,56,60);
 	padding: 0px 0px 0px 0px;
 }
 
@@ -32,8 +33,17 @@ ul ul ul{
 }
 
 blockquote {
-	background-color: #8497B0;
-}
+  font: 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  margin-left: 40px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+  max-width: 50%;
+  background: rgb(240,242,244);
+} 
 
 #navbar-menu {
 	list-style-type: none;
@@ -49,16 +59,18 @@ blockquote {
 }
 #navbar-menu li {
 	float: left;
-	padding-right: 32px;
-	padding-left: 32px;
-	padding-top: 5px;
 	text-align:center;
+	padding-bottom: 5px;
 	height: 40px;
 }
 
 #navbar-menu a {
 	text-align:center;
-	padding:0px;
+	display:block;
+	padding-right: 32px;
+	padding-left: 32px;
+	padding-top: 5px;
+	padding-bottom: 20px;
 }
 
 #navbar-menu li a:active {
@@ -153,4 +165,11 @@ blockquote {
   width: 100%;
   bottom: 0px;
   color: #888;
+}
+
+.side {
+	float: right;
+	padding-left: 30px;
+	padding-right:30px;
+	width: 500px;
 }

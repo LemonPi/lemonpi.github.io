@@ -70,7 +70,7 @@ applied to the Ring Guard and Spring Ring candidate design.
 
 We then combined the two component solutions, along with Conical Connection into the Shield Spring.
 
-The spring shield targets usability, as our goal was to change people's preferred mechanism of opening binders.  
+The **spring shield targets usability**, as our goal was to change people's preferred mechanism of opening binders.  
 By being able to open and close the binder with a simple push with one hand, people will be less inclined to pull on the rings.  
 This solution is also extremely robust, as its functionality solely depends on the material property of the shield,  
 rather than the presence of gravity, direction of push, or any other environmental factor.  

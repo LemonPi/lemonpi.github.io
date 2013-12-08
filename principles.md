@@ -35,11 +35,14 @@ My vision of good engineering design should seek these objectives in order of im
 > creating a solution/module for each part, then combining and refining them to provide what best suits the current context.  
 
 > ###*Usable* solutions are designed for the end users, who possess a different set of skills and perspectives.  
-> Designing for usability often involves changing perspectives (reframing), and considering what would be intuitive  
-> for the users. The other aspect of usability is ergonomics - making the product physically compatible with human users.  
+> Designing for usability often involves changing perspectives (reframing), and considering what would be intuitive for the users.  
+> It is attention to detail to provide a quality user experience.  
+> The other aspect of usability is ergonomics - making the product physically compatible with human users.  
 > This involves research into human factors and designing the physical properties with those factors in mind.  
+> ([binder](/portfolio/projects/binder/#convergent)) ([portfolio](/portfolio/projects/portfolio/#usability))
 
 > ###*Efficient* solutions are designed for progress, which involves solving large problems with little resources.  
 > Designing for efficiency often involves refining and iterating through solutions. My engineering process emphasizes  
 > maintaining a solution pool and keeping the selection open partly for this purpose. Retaining possible component solutions  
 > encourages iteration through various combinations to find a **balance between efficiency and robustness**. 
+> ([portfolio](/portfolio/projects/portfolio/#compare))

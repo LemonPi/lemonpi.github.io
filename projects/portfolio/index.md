@@ -24,8 +24,11 @@ I found the problem of building a website can be decomposed into:
 - Styling
 - Hosting
 
-##Solutions  
--------------
+<a name="pool"> </a>
+##Solution Pool  
+---------------
+In line with my engineering process, solutions for each problem component were generated.  
+
 1. Content needs to be easily editable, not bogged down in syntax
   - HTML: too much syntax; its strength in versatility may be useful though
   - Markdown:  although functionality is limited and requires parsing into HTML, great for the purpose of creating and maintaining content
@@ -39,7 +42,7 @@ I found the problem of building a website can be decomposed into:
   - ECF UToronto: very fast, but restricted to "satisfy(ing) the requirements of some web based courses"
   - UTORweb: restricted to "individual use in support of one's role in the University"
   - Google Sites: slower, but no restrictions on usage
-  - GithubPages: slower, but no restrictions on usage and provides server side Jekyll to parse markdown into HTML
+  - GithubPages: slower, but no restrictions on usage and provides server side Jekyll to parse markdown into HTML  
     Note that users are only viewing static HTML pages, markdown is parsed 
 
 <a name="compare"> </a>
@@ -51,20 +54,101 @@ Jekyll is quite robust in being able to parse multiple languages in one file - a
 One area of improvement for Jekyll is to support markdown inside HTML div elements.  
 
 An important part of my engineering design process is comparing solutions against each other.  
-Possible solutions were compared using the metric of no-cache first visit load time for efficiency, and .  
-My current portfolio was compared against empty templates from Wix, Weebly, and Wordpress.
+Out of 256 portfolios posted by my classmates, 189 were made using Wix, 21 Wordpress, 20 Weebly.
+My current portfolio was compared against empty templates from Wix, Wordpress, and Weebly  
+using the metric of no-cache first visit load time for efficiency.  
+Usability can be partially measured by load time, but otherwise is more to do with layout and user-interface. 
 
+<table class="pretty">
+<tr>
+  <th>Site</th>
+  <th>Users</th>
+  <th>HTTP Requests</th>
+  <th>Home page load time without caching (ms)</th>
+  <th>Average time per request (ms)</th>
+</tr>
+<tr>
+  <td>Wix</td>
+  <td>189</td>
+  <td>75</td>
+  <td><a href="wixload.png">700-1500</a></td>
+  <td>15</td>
+</tr>
+<tr>
+  <td>Wordpress</td>
+  <td>21</td>
+  <td>49</td>
+  <td><a href="wordpressload.png">1200-2000</a></td>
+  <td>33</td>
+</tr>
+<tr>
+  <td>Weebly</td>
+  <td>20</td>
+  <td>22</td>
+  <td><a href="weeblyload.png">1200-1400</a></td>
+  <td>59</td>
+</tr>
+<tr>
+  <td>This site</td>
+  <td>N/A</td>
+  <td>2</td>
+  <td><a href="mysourceload.png">200-240</a></td>
+  <td>120</td>
+</tr>
+</table>
 
+The load times (including mine) are reduced to about 40% after first visit due to caching,  
+but first impressions often make the greatest impact on user satisfaction.  
+
+An important aspect to reducing load time is reducing the number of HTTP requests.  
+Each request carries a waiting overhead that is often greater than time spent on receiving data, as is the case for my home page.
+
+<div class="frames">
+<img src="loadpartition.png">
+<p>Only 1ms spent on receiving data!</p>
+</div>
+
+In light of this, Wix provides great hosting by having a low load time to requests made ratio; however,  
+the relationship between request number and load time is not linear, and should be **considered along with total load time**.  
+For me, these sites do not afford me the control to be robus as they force their gimmicks on the user.  
+
+<a name="usability"> </a>
 ##Design decisions for usability  
 ---------------------------------
-- page anchors for quick annotation
-- row highlight for ease of tracking items in one row
+In my opinion, making a product more usable is almost equivalent to increasing its quality - the overall feel of the product.  
+Attention to detail with the consideration of what could irk the users is key to my process of designing for usability.  
+These are the key design decisions to make this site more usable:  
+
+1. Table rows highlight on hover to easily track items belonging to the same row; I personally had this difficulty with data sheets  
+
+2. Page anchors allow parts of the page to be redirected to; makes redirect links more relevant  
+
+3. Site and page history at the footer of each page to allow anyone interested to see my progress  
+
+4. Dynamic scaling of page elements (including images) to accomodate for different monitor sizes and avoid stretching  
+
+5. Thumbnail of pictures sometimes with links to full-size version to reduce loading time  
+
+<div class="frames">
+<img src="picturestoolarge.png">
+<p>Example of embedding large images; 42s load time!</p>
+</div>
+
+
 
 <a name="prototype"> </a>
 ##Prototyping
 --------------
+Developing for the web inherently makes it easy to prototype.  
+Jekyll can serve the site locally and constantly regenerate each time an edit is made.
+<div class="frames">
+<img src="jekyllprototyping.png">
+<p>Prototyping with Jekyll made easy</p>
+</div>
 
 <a name="gains"> </a>
 ##Gains from Experience
 -----------------------
-- Writing in markdown
+- Understanding of the components to creating an efficient website
+- Proficiency in CSS, HTML, and markdown
+- Principles: designing for usability is attention to detail to provide a quality user experience

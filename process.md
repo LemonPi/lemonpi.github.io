@@ -18,9 +18,12 @@ When I solve a problem, this is what I do:
    - Consider what can provide forces if something needs to be moved
    - Consider buckling or bending to fold something
    - Consider friction to hold two things together but still allow for lateral shearing
+   - Keep all solutions inside the solution pool; no elimination as revision might use a previously rejected solution ([portfolio](/portfolio/projects/portfolio/#pool))
  4. Compare solutions based on my [principles](/portfolio/principles.html), adjusted for what the context demands ([binder](/portfolio/projects/binder/#convergent)) ([portfolio](/portfolio/projects/portfolio/#compare))  
  5. Combine component solutions
- 6. Physically prototype - allows better understanding of solution and possible issues with design ([binder](/portfolio/projects/binder/#prototype))
+ 6. Prototype - allows better understanding of solution and possible issues with design ([portfolio](/portfolio/projects/portfolio/#prototype))
+   - Physically, ideally ([binder](/portfolio/projects/binder/#prototype))
+   -
  7. Refine solutions
    - Can one part perform multiple functions?
    - Can two parts be combined into one?

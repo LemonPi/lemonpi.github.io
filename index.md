@@ -10,7 +10,7 @@ and showcase [projects](projects/) and [evaluations](evaluations/).
 
 ##Professional Statement
 > ###As an engineer,
-> I believe engineering design is applying scientific knowledge to solve real problems in a robust, usable, with the stakeholders in mind.  
+> I believe engineering design is applying scientific knowledge to solve real problems in a robust, usable, and efficient manner with the stakeholders in mind.  
 > My strengths lie in applying scientific knowledge to analyze real life situations, and quickly learning new tools.  
 > An area of improvement for me is finding a balance between iterating through prototypes and researching details -  
 > As of now, I spend too much time fine tuning the details than physically testing.  

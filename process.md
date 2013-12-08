@@ -18,7 +18,7 @@ When I solve a problem, this is what I do:
    - Consider what can provide forces if something needs to be moved
    - Consider buckling or bending to fold something
    - Consider friction to hold two things together but still allow for lateral shearing
- 4. Compare solutions based on my [principles](/portfolio/principles.html), adjusted for what the context demands ([binder](/portfolio/projects/binder/#convergent))  
+ 4. Compare solutions based on my [principles](/portfolio/principles.html), adjusted for what the context demands ([binder](/portfolio/projects/binder/#convergent)) ([portfolio](/portfolio/projects/portfolio/#compare))  
  5. Combine component solutions
  6. Physically prototype - allows better understanding of solution and possible issues with design ([binder](/portfolio/projects/binder/#prototype))
  7. Refine solutions

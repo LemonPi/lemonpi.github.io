@@ -101,7 +101,7 @@ The load times (including mine) are reduced to about 40% after first visit due t
 but first impressions often make the greatest impact on user satisfaction.  
 
 An important aspect to reducing load time is reducing the number of HTTP requests.  
-Each request carries a waiting overhead that is often greater than time spent on receiving data, as is the case for my home page.
+Each request carries overhead that is often greater than time spent on receiving data, as is the case for my home page.
 
 <div class="frames">
 <img src="loadpartition.png">
@@ -110,7 +110,7 @@ Each request carries a waiting overhead that is often greater than time spent on
 
 In light of this, Wix provides great hosting by having a low load time to requests made ratio; however,  
 the relationship between request number and load time is not linear, and should be **considered along with total load time**.  
-For me, these sites do not afford me the control to be robus as they force their gimmicks on the user.  
+For me, these sites do not give enough control to the developer over what gimmicks the user has to face and thus is not robust enough.  
 
 <a name="usability"> </a>
 ##Design decisions for usability  
@@ -123,11 +123,11 @@ These are the key design decisions to make this site more usable:
 
 2. Page anchors allow parts of the page to be redirected to; makes redirect links more relevant  
 
-3. Site and page history at the footer of each page to allow anyone interested to see my progress  
+3. Site and page history at the footer of each page to allow anyone interested to see how I have progressed  
 
 4. Dynamic scaling of page elements (including images) to accomodate for different monitor sizes and avoid stretching  
 
-5. Thumbnail of pictures sometimes with links to full-size version to reduce loading time  
+5. Thumbnail of pictures with links to full-size versions where appropriate to reduce loading time  
 
 <div class="frames">
 <img src="picturestoolarge.png">

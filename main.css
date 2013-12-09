@@ -9,7 +9,7 @@ body {
 a {color:#222222;}
 a:hover {color:#888888;}
 a:visited {color:#111111;}
-
+img{max-width:100%}
 ul {list-style-type:square;}
 
 blockquote {

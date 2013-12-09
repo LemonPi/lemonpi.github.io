@@ -34,10 +34,10 @@ My vision of good engineering design should seek these objectives in order of im
 > My [engineering process](/portfolio/process.html) is geared towards robustness by first breaking the problem into components,  
 > creating a solution/module for each part, then combining and refining them to provide what best suits the current context.  
 
-> ###*Usable* solutions are designed for the end users, who possess a different set of skills and perspectives.  
+> ###*Usable* solutions are designed for the end users, who possess a various set of skills and perspectives.  
 > Designing for usability often involves changing perspectives (reframing), and considering what would be intuitive for the users.  
-> It is attention to detail to provide a quality user experience.  
-> The other aspect of usability is ergonomics - making the product physically compatible with human users.  
+> It requires attention to detail to provide a quality user experience.  
+> The more physical aspect of usability is ergonomics - making the product physically compatible with human users.  
 > This involves research into human factors and designing the physical properties with those factors in mind.  
 > ([binder](/portfolio/projects/binder/#convergent)) ([portfolio](/portfolio/projects/portfolio/#usability))
 

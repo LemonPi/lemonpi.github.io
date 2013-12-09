@@ -17,6 +17,7 @@ designs with two side trusses.
 <p>Front view of 1-truss design</p>
 </div>
 
+To make 
 <div class="frames">
 <a href="diagram.jpg"><img src="diagramthumb.jpg"></a>
 <p>Engineering drawing of the Golden Truss bridge</p>

@@ -17,16 +17,38 @@ designs with two side trusses.
 <p>Front view of 1-truss design</p>
 </div>
 
-To make 
+<a name="design"> </a>
+To achieve minimal material use for the top chord, all the members should be under the same compressional force,  
+naturally dictating an arch design where the slope of successive members decrease.  
+We also had to decide how many sections to have and how long to make each section.  
+Rather than calculating each configuration by hand - which is extremely tedious due to all members being sloped,  
+I wrote [**a program**](https://github.com/LemonPi/trusscalc) to quickly iterate through the forces, lengths, and angle of each member.  
+Since we also had to do a scaled engineering drawing of the bridge and needed confirmation that my calculations were self consistent,  
+I expanded my program to also draw the truss to scale using Python's turtle module.  
+
+<div class="frames">
+<img src="trusscalc.png">
+<p>Calculations and scaled diagram with code</p>
+</div>
+
+The pitfall of this design is its lack of robustness in responding to various loading conditions.  
+Our design was more beyond our scope to analyze fully, thus we could not compute midspan deflection or natural frequency.  
+This influenced my principles towards designing for robustness and less for efficiency - a balance needs to be struck.  
+
+
+My involvement in this project includes the design and calculation; the report and most of the engineering drawing were done  
+by my two team mates.  
+
+[Design report](designreport.pdf)
 <div class="frames">
 <a href="diagram.jpg"><img src="diagramthumb.jpg"></a>
 <p>Engineering drawing of the Golden Truss bridge</p>
 </div>
 
-[Design report](designreport.pdf)
-[Truss calculation and drawing code](https://github.com/LemonPi/trusscalc)
-
 <a name="gains"> </a>
 ## Gains from Experience
 -----------------------
+- Principles: introduced designing for robustness
 - Principles: lowered the importance of desiging for efficiency
+- Experience in applying python to solve problems
+- Principles: definition of elegance for structures as not obstructing the surrounding view

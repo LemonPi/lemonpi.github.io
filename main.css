@@ -87,7 +87,7 @@ blockquote {
 }
 .pretty tr:hover{background:rgb(250,250,250);color:#000;}
 
-.frames {position:relative;width:600px;}
+.frames {display:inline;position:relative;width:600px;}
 .frames img {border:10px solid rgb(230,230,230);border-bottom:45px solid rgb(230,230,230);}
 .frames p {
   position:absolute;

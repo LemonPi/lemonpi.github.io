@@ -127,7 +127,9 @@ These are the key design decisions to make this site more usable:
 
 4. Dynamic scaling of page elements (including images) to accomodate for different monitor sizes and avoid stretching  
 
-5. Thumbnail of pictures with links to full-size versions where appropriate to reduce loading time  
+5. Subtle bump down of navigation bar links when activated to provide a more satisfying clicking experience
+
+6. Thumbnail of pictures with links to full-size versions where appropriate to reduce loading time  
 
 <div class="frames">
 <img src="picturestoolarge.png">

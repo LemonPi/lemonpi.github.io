@@ -11,7 +11,7 @@ When I solve a problem, this is what I do:
      - Physically reconstruct problem then apply physics models to analyze problem factors ([binder](/portfolio/projects/binder/#analysis))
 	 - Research literature relevant to problem
 	 - Set initial constraints and objectives to guide solution generation
-   - Determine key stakeholders - who are most affected by this problem and what do they need/want
+   - Determine key stakeholders (1) who will use the solution (2) who will the use of the solution effect (3) who will produce the solution
  2. Break problem down to its components - what needs to be done?
  3. Generate specialized solutions for each component problem (monomaniacal design) ([binder](/portfolio/projects/binder/#divergent))  
    - Relate problem to one solved in nature (biomimicry)

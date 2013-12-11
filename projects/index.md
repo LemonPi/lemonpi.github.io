@@ -4,7 +4,7 @@ title: Personal Projects
 permalink: /projects/
 ---
 
- - [CIV 102: Boxgirder bridge design and build](bridgebuild/) - Nov 2013
+<!-- - [CIV 102: Boxgirder bridge design and build](bridgebuild/) - Nov 2013 -->
  
  - [**Engineering design portfolio**](portfolio/) - Nov 2013 and ongoing
  

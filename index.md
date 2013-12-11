@@ -15,4 +15,4 @@ and showcase [projects](projects/) and [evaluations](evaluations/).
 > An area of improvement for me is finding a balance between iterating through prototypes and researching details -  
 > As of now, I spend too much time fine tuning the details than physically testing.  
 > My engineering design process is continuously applied to and refined through each project;  
-> Some recent projects: [CDR: Binder Misalignment](projects/binder/) | [Engineering Portfolio](projects/portfolio/) | [CIV 102 Matboard Bridge](projects/bridgebuild/)
+> Some recent projects: [CDR: Binder Misalignment](projects/binder/) | [Engineering Portfolio](projects/portfolio/) | [CIV 102 Truss Bridge Design](projects/bridgedesign/)

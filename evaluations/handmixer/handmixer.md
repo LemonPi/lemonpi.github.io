@@ -142,7 +142,7 @@ mode for safety reasons, as implemented by the asymmetrical shape of the button.
 ## Improvements
 ----------------
 One great detriment to usability and **perceived safety** is the loud noise it produces during use.  
-Loud noise gives the impression that the product is unstable and may scare away children.
+Loud noise gives the impression that the product is unstable and may scare away children.  
 The noise is in part due to the small size of the fan and the use of a universal motor.  
 The motor likely cannot be altered without sacrificing size, cost, or weight.  
 

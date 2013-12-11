@@ -120,6 +120,7 @@ Attention to detail with the consideration of what could irk the users is key to
 These are the key design decisions to make this site more usable:  
 
 1. Table rows highlight on hover to easily track items belonging to the same row; I personally had this difficulty with data sheets  
+([demonstrated here](/portfolio/evaluations/handmixer/#efficiency))  
 
 2. Page anchors allow parts of the page to be redirected to; makes redirect links more relevant  
 

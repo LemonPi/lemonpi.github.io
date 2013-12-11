@@ -7,6 +7,7 @@ The Proctor Silex 43-21012 model hand mixer was the second artifact me and my ro
 and the one that I wrote a device design report for (expect more research than the last one).  
 This product was mostly designed for efficiency, safety, and usability.
 
+<a name="efficiency"> </a>
 ## Design for Efficiency
 -----------------------
 The 43-21012 runs at 125W, 120V, and 60Hz on both AC and DC power, a consequence of its universal motor.  

@@ -49,12 +49,12 @@ In line with my engineering process, solutions for each problem component were g
 ##Solution Comparison
 --------------------
 The combination that I selected was (Markdown + HTML) + CSS + Jekyll + GithubPages.  
-Markdown does not natively support tables or CSS classes, so HTML to generate tables and picture frames.  
+Markdown does not natively support tables or CSS classes, so HTML is used to generate tables and picture frames.  
 Jekyll is quite robust in being able to parse multiple languages in one file - a YAML header, HTML elements, and markdown elements.  
 One area of improvement for Jekyll is to support markdown inside HTML div elements.  
 
 An important part of my engineering design process is comparing solutions against each other.  
-Out of 256 portfolios posted by my classmates, 189 were made using Wix, 21 Wordpress, 20 Weebly.
+Out of 256 portfolios posted by my classmates, 189 were made using Wix, 21 Wordpress, 20 Weebly.  
 My current portfolio was compared against empty templates from Wix, Wordpress, and Weebly  
 using the metric of no-cache first visit load time for efficiency.  
 Usability can be partially measured by load time, but otherwise is more to do with layout and user-interface. 
@@ -146,7 +146,7 @@ Developing for the web inherently makes it easy to prototype.
 Jekyll can serve the site locally and constantly regenerate each time an edit is made.
 <div class="frames">
 <img src="jekyllprototyping.png">
-<p>Prototyping with Jekyll made easy</p>
+<p>Rapid prototyping with Jekyll made easy</p>
 </div>
 
 <a name="gains"> </a>

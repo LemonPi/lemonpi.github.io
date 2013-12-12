@@ -91,7 +91,7 @@ Each prototype was built around a **purpose**, as shown below.
 <img src="conceptualprototype.gif">
 <p>Medium fidelity conceptual prototype</p>
 </div>
-Built and designed with OpenScad (Which I learned for this purpose)
+[Built and designed](https://gist.github.com/LemonPi/7846642) with OpenScad (Which I learned over a few hours for this purpose)
 
 Low fidelity physical functional prototype that I built to demonstrate feasibility.  
 The prototype illustrated how the shield could provide the function of the leaves,  

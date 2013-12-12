@@ -11,7 +11,7 @@ Having no prior experience, I built this engineering portfolio manually with the
 - Explore designing for usability in terms of user-interface  
 - Present my accomplishments in a robust, usable, and efficient way
 
-Code and site history: [https://github.com/LemonPi/portfolio](https://github.com/LemonPi/portfolio)  
+Code and site history: [https://github.com/LemonPi/portfolio] (https://github.com/LemonPi/portfolio)
 
 ##Understanding the Problem
 ------------------------

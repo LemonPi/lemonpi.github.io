@@ -1,5 +1,5 @@
 body {
-        font-family:Candara,"Lucida Sans Unicode","Lucida Grande", "Dejavu Sans", Verdana;
+        font-family:Candara,"Dejavu Sans","Helvetica Neue","Lucida Sans",sans-serif;
         background-color:white;
         margin:0;
         color:rgb(50,56,60);
@@ -86,7 +86,7 @@ blockquote {
 }
 .pretty tr:hover{background:rgb(250,250,250);color:#000;}
 
-.frames {display:inline;position:relative;width:600px;}
+.frames {display:inline;position:relative}
 .frames img {border:10px solid rgb(230,230,230);border-bottom:45px solid rgb(230,230,230);}
 .frames p {
   position:absolute;

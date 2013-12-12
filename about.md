@@ -8,8 +8,9 @@ permalink: /about.html
 <p>Johnson Zhong</p>
 </div>
 
-I am the maker of this [site](/portfolio/projects/portfolio/).  
-As a first year engineering science student, we are developing a broad and deep foundation in the sciences.  
+
+My name is Johnson (Sheng for legal) Zhong and you've stumbled upon my [site](/portfolio/projects/portfolio/)!  
+As a first year engineering science student, my class is developing a broad and deep foundation in the sciences.  
 Simultaneously, we are learning how to apply that knowledge base to real life situations, as seen in the [evaluations](/portfolio/evaluations/).  
 However, I am personally more defined by what I do above and beyond the curriculum.  
 

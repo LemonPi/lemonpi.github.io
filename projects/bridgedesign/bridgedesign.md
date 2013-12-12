@@ -5,6 +5,8 @@ permalink: /projects/bridgedesign/index.html
 ---
 In a team of three, our task was to design and present our design of a pedestrian truss bridge to cross 150m.  
 This was one of my first projects, when I valued efficiency and elegance most, but without a tangible definition for elegance.  
+Check out my team mates' documentation of their work on this project: [Cameron](http://cameronbuttazzoni.wix.com/design#!conceptual-bridge-design/cr7l) [Wilson] (http://wilson1039.wix.com/praxis101#!past-projects/c1j8l)  
+
 
 For efficiency, the idea was to create a safe bridge with the least cost.  
 This minimalistic approach lent into our design for elegance, which meant not obstructing the scenic view for pedestrians.  

@@ -4,9 +4,11 @@ title: Welcome
 permalink: /index.html
 ---
 
-This is my engineering design portfolio,  
+Take a look around my engineering design portfolio,  
 where I present my [engineering design philosophy](principles.html)
-and showcase [projects](projects/) and [evaluations](evaluations/).
+and showcase [projects](projects/) and [evaluations](evaluations/).  
+
+Or, if you're interested in the site itself, visit [here](projects/portfolio/)
 
 ##Professional Statement
 > ###As an engineer,

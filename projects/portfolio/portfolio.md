@@ -3,10 +3,9 @@ layout: default
 title: Engineering Design Portfolio
 permalink: /projects/portfolio/index.html
 ---
-The portfolio is a mandatory assignment for all first year Engineering Science students in which we are free  
-to choose how to construct it.
-I strive to be robust, and my approach is to learn as many tools as possible while I am in school.  
-Having no prior experience, I built this engineering portfolio manually with these goals in mind:  
+The portfolio is a mandatory assignment for all first year Engineering Science students.  
+We choose how we build it, and since I strive to be robust myself, learning as many tools as possible,  
+I built this engineering portfolio manually with these goals in mind:  
 - Learn all the tools involved in creating a website rather than just making a website
 - Explore designing for usability in terms of user-interface  
 - Present my accomplishments in a robust, usable, and efficient way
@@ -15,8 +14,8 @@ Code and site history: [https://github.com/LemonPi/portfolio] (https://github.co
 
 ##Understanding the Problem
 ------------------------
-I first researched how creating a website could be broken into components and consulted a classmate,  
-[Zhuowei Zhang](zhuoweizhang.net), who had more web development experience. With permission, I used his November [build](https://github.com/zhuowei/design/tree/5b67c2a088f0330f5681924b0d83a94319ba4b96) as a starting point.  
+The first step was researching how building a website could be broken down and to that effect I consulted a classmate,  
+[Zhuowei Zhang](http://zhuoweizhang.net), who had more web development experience. With permission, I used his November [build](https://github.com/zhuowei/design/tree/5b67c2a088f0330f5681924b0d83a94319ba4b96) as my starting point.  
 
 I found the problem of building a website can be decomposed into:  
 - Content

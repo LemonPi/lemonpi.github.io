@@ -4,7 +4,8 @@ title: Conceptual Design - Binder Misalignment
 permalink: /projects/binder/index.html
 ---
 
-In a team of three, we considered how to solve the problem of binder misalignment.
+In a team of three, we considered how to solve the problem of binder misalignment.  
+Check out my team mates' documentation of their work on this project: [Cameron](http://cameronbuttazzoni.wix.com/design#!bringing-a-product-to-life/c228d) [David] (http://dasburey.wix.com/design-portfolio#!product-design/cfhz)  
 <div class="frames">
 <img src="misaligned.jpg">
 <p>A typical misalignment</p>
@@ -13,7 +14,7 @@ In a team of three, we considered how to solve the problem of binder misalignmen
 <a name="analysis"> </a>
 ## Understanding the Problem
 -------------------------
-In line with my engineering process, we first dissected the binder first to analyze the root causes of misalignment.
+In line with my engineering process, me and Cameron first dissected the binder first to analyze the root causes of misalignment.
 
 <div class="frames">
 <img src="dissected1.jpg">

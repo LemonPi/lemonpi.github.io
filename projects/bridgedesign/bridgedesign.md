@@ -23,6 +23,7 @@ designs with two side trusses.
 To achieve minimal material use for the top chord, all the members should be under the same compressional force,  
 naturally dictating an arch design where the slope of successive members decrease.  
 We also had to decide how many sections to have and how long to make each section.  
+
 Rather than calculating each configuration by hand - which is extremely tedious due to all members being sloped,  
 I wrote [**a program**](https://github.com/LemonPi/trusscalc) to quickly iterate through the forces, lengths, and angle of each member.  
 Since we also had to do a scaled engineering drawing of the bridge and needed confirmation that my calculations were self consistent,  

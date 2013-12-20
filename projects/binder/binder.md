@@ -14,6 +14,7 @@ Check out my team mates' documentation of their work on this project: [Cameron](
 <a name="analysis"> </a>
 ## Understanding the Problem
 -------------------------
+
 In line with my engineering process, me and Cameron first dissected the binder first to analyze the root causes of misalignment.
 
 <div class="frames">

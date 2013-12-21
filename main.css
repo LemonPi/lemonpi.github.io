@@ -22,6 +22,26 @@ blockquote {
   background:rgb(240,242,244);
 } 
 
+pre {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 95%;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}       
+code {
+  display: block;
+   padding:5px 10px;
+  border-left:3px solid #ccc;
+  min-width:50%;
+  width:900px;
+  max-width:95%;
+  background:rgb(240,242,244);
+  color: rgb(77,77,77);
+}
+
 #navbar-menu {
         list-style-type:none;
         display:block;

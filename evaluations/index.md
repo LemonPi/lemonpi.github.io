@@ -10,6 +10,8 @@ Here are some artifacts seen through my engineering design perspective:
 
 <!--- - [Pentel Kerry 0.7mm Mechanical Pencil - Nov 10 2013](pentelpencil/) -->
 
+ - [Skule Courses upload page security silliness - Dec 16 2013](skulecourses/)
+
  - [Proctor Silex Hand Mixer - Sept 25 2013](handmixer/)
  
  - [GBC Shredmaster 50s - Sept 19 2013](shredder/)

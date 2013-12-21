@@ -24,7 +24,8 @@ Beyond being robust, I also strive to be innovative.
 I believe innovation comes from making connections across disciplines and noticing minute details.  
 This explains my choice in the engineering science program, which covers all areas of science,  
 and my principle of designing for usability through attention to detail, which encourages innovation.  
-
+Being innovative also comes from questioning assumptions and exploring boundaries.  
+Here's a [sample](evaluations/skulecourses/) of some of my sillyness :).  
 <br>
 <br>
 <br>

@@ -6,6 +6,7 @@ permalink: /projects/portfolio/index.html
 The portfolio is a mandatory assignment for all first year Engineering Science students.  
 We choose how we build it, and since I strive to be robust myself, learning as many tools as possible,  
 I built this engineering portfolio manually with these goals in mind:  
+
 - Learn all the tools involved in creating a website rather than just making a website
 - Explore designing for usability in terms of user-interface  
 - Present my accomplishments in a robust, usable, and efficient way

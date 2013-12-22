@@ -48,6 +48,7 @@ As binder ring size increased, people tended to open them more often by pulling 
 This provides support for my lever arm hypothesis.  
 
 We performed similar research to determine other main causes of misalignment
+
 - misplacement inside overloaded backpacks could cause yield misalignment over time  
 - blunt trauma could cause shift misalignment  
 

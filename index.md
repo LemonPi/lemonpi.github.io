@@ -5,10 +5,9 @@ permalink: /index.html
 ---
 
 Take a look around my engineering design portfolio,  
-where I present my [engineering design philosophy](principles.html)
-and showcase [projects](projects/) and [evaluations](evaluations/).  
+where I present my [conception](principles.html) of good design and showcase [projects](projects/) and [evaluations](evaluations/).  
 
-Check out how I made this site [here](projects/portfolio/)!
+Check out how this site was made [here](projects/portfolio/)!
 
 ##Professional Statement
 > ###As an engineer,

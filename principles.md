@@ -15,7 +15,7 @@ robustness, usability, and efficiency.
 > one component without requiring the change of other components as long as the interface is kept the same.  
 > My [engineering process](/portfolio/process.html) is geared towards robustness by first breaking the problem into components,  
 > creating a solution/module for each part, then combining and refining them to provide what best suits the current context.  
-> ([binder](projects/binder/#divergent)) ([portfolio](projects/portfolio/#pool))
+> ([binder](projects/binder/#divergent)) ([portfolio](projects/portfolio/#pool))  
 <br>
 > ###*Usable* solutions are designed for the end users, who possess a various set of skills and perspectives.  
 > Designing for usability often involves changing perspectives (reframing), and considering what would be intuitive for the users.  

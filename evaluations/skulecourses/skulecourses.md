@@ -14,6 +14,9 @@ In case those pages were taken down, you can see the scripts in action: [Sample 
 Message to all readers and possibly maintainers of Skule:  
 Please sanitize input boxes before injecting content into the page; it's too easy for someone to insert an \<a\> tag redirecting to a malicious site!  
 
+
+**UPDATE (Dec 22, 2013)**: Fortunately Skule fixed this exploit! You can still check out the effect from the sample pages.  
+
 ## Injecting Code (the clever part)
 --------------------------------
 Before altering the actual course pages, an illegitimate course was created to allow prototyping.  

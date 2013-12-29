@@ -31,7 +31,7 @@ Apparently **no sanitation of inputs is done...**
 </div>
 
 The code for the CSC180 page was written by Zhuowei while I wrote the code for the ESC103 page.  
-The PHY180 page's GravityScript was written by Google and we simply embedded it into the page using the method below.  
+The PHY180 page's [GravityScript](https://code.google.com/p/gravityscript/) was written by Mr.Doob for Google and we simply embedded it into the page using the method below.  
 
 The embedding for the CSC180 page was trivial since no scripting was required,  
 but adding a script for the ESC103 and PHY180 pages were much more difficult.  

@@ -26,6 +26,8 @@ This explains my choice in the engineering science program, which covers all are
 and my principle of designing for usability through attention to detail, which encourages innovation.  
 Being innovative also comes from questioning assumptions and exploring boundaries.  
 Here's a [sample](evaluations/skulecourses/) of some of my sillyness :).  
+
+Also give my [resume](resume.pdf) a look if you are interested. 
 <br>
 <br>
 <br>

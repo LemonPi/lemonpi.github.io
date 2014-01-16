@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
+<html prefix="og: htttp://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
+<meta property="og:title" content="{{ page.title }} - Johnson Zhong's Design Portfolio" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ page.url }}" />
+<meta property="og:image" content="/portfolio/ogimg.png" />
 <title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
 <link rel="stylesheet" href="{{ site.baseurl }}main.css" />
 <link rel="shortcut icon" href="/portfolio/favicon.ico">
@@ -25,7 +30,7 @@
 </div>
 
 <div id="footer">
-<p>johnsonzhong@hotmail.ca <a href=https://github.com/LemonPi/portfolio/commits/gh-pages/{{page.path}}>page history</a></p>
+<p>johnsonzhong@hotmail.ca <a href="https://github.com/LemonPi/portfolio/commits/gh-pages/{{page.path}}">page history</a></p>
 </div>
 </body>
 </html>

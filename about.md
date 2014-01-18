@@ -4,7 +4,7 @@ title: Hello
 permalink: /about.html
 ---
 <div class="side frames">
-<img src="self.jpg">
+<img src="res/self.jpg">
 <p>Johnson Zhong</p>
 </div>
 

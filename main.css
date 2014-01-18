@@ -121,3 +121,22 @@ code {
         float:right;
         padding:0px 76px;
 }
+
+#github {
+		background-image:url("res/github_before.png");
+		float:right;
+		height:64px;
+		width:64px;
+}
+#github:hover {
+		background-image:url("res/github_after.png");
+}
+#linkedin {
+		background-image:url("res/linkedin_before.png");
+		float:right;
+		height:64px;
+		width:64px;
+}
+#linkedin:hover {
+		background-image:url("res/linkedin_after.png");
+}

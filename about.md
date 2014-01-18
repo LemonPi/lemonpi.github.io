@@ -8,17 +8,19 @@ permalink: /about.html
 <p>Johnson Zhong</p>
 </div>
 
+[Resume](/res/resume.pdf)
 
-My name is Johnson (Sheng for legal) Zhong and you've stumbled upon my [site](/portfolio/projects/portfolio/)!  
+My name is Johnson (Sheng) Zhong and you've stumbled upon my [site](/portfolio/projects/portfolio/)!  
 As a first year engineering science student, my class is developing a broad and deep foundation in the sciences.  
 Simultaneously, we are learning how to apply that knowledge base to real life situations, as seen in the [evaluations](/portfolio/evaluations/).  
-However, I am personally more defined by what I do above and beyond the curriculum.  
+Our curriculum challenges us to move from first principles to implementation - taking an idea and converting it to technology.  
+However, I am personally defined more by what I do above and beyond this curriculum.  
 
-My approach to education is to take every opportunity to learn and master new tools, which teaches me to learn quickly.  
-I believe being able to learn quickly and having control over many tools is what makes a robust problem solver.  
-I started programming with C++ the summer of 2013, and with python since September, but it quickly became a tool I used to  
-solve problems in other courses, such as efficiently iterating through the [truss bridge design](/portfolio/projects/bridgedesign/#design).  
-Web development was a tool that I learned as I made made this site, and you can track my progress via the page history on every footer.  
+I believe having control over many tools and being able to switch perspectives are what makes a robust problem solver.  
+To that effect, I turn every school assignment and projects I do outside of class into an opportunity to develop new skills and hone old ones.  
+I started programming with C++ the summer of 2013, moving onto python in September.  
+These languages became tools I used outside of class for **analysis and optimization** ([truss bridge design](/portfolio/projects/bridgedesign/#design)),  
+**creative problem solving** ([IEEEXtreme programming competition](ieee.html)), and **communication** ([3D modelling](projects/binder/#prototype)).  
 
 Beyond being robust, I also strive to be innovative.  
 I believe innovation comes from making connections across disciplines and noticing minute details.  
@@ -27,7 +29,7 @@ and my principle of designing for usability through attention to detail, which e
 Being innovative also comes from questioning assumptions and exploring boundaries.  
 Here's a [sample](evaluations/skulecourses/) of some of my sillyness :).  
 
-Also give my [resume](resume.pdf) a look if you are interested. 
+
 <br>
 <br>
 <br>

@@ -28,8 +28,6 @@ pre {
     line-height: 140%;
     white-space: pre;
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
 }       
 code {
   display: block;
@@ -127,6 +125,7 @@ code {
 		float:right;
 		height:64px;
 		width:64px;
+		margin: 7px 10px 0px 0px;
 }
 #github:hover {
 		background-image:url("res/github_after.png");
@@ -136,6 +135,7 @@ code {
 		float:right;
 		height:64px;
 		width:64px;
+		margin: 7px 20px 0px 0px;
 }
 #linkedin:hover {
 		background-image:url("res/linkedin_after.png");

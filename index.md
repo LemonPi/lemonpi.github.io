@@ -18,4 +18,4 @@ Check out how this site was made [here](projects/portfolio/)!
 >
 > My engineering process is cyclically applied to and refined through each project, thus my latest projects  
 > should accurately embody my process to date.  
-> Some recent projects: [Skule Security Sillyness](evaluations/skulecourses/) | [CDR: Binder Misalignment](projects/binder/) | [Engineering Portfolio](projects/portfolio/) | [CIV 102 Truss Bridge Design](projects/bridgedesign/)
+> Some recent projects: [Name Game - C String Processing](projects/namegame/) | [Skule Security Sillyness](evaluations/skulecourses/) | [CDR: Binder Misalignment](projects/binder/) | [Engineering Portfolio](projects/portfolio/) 

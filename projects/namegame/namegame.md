@@ -21,10 +21,11 @@ The game requires a Unix based user list and quizzes you on the user's real name
 <p>Quite simple in concept, but strangely addicting...</p>
 </div>
 
-## Making Process <a name="making"> </a>
+<a name="making"> </a>
+## Making Process 
 ------------------------
 It might seem masochistic to do processing with C rather than a language like Python or Perl, but I wanted to give myself a challenge.  
-The best way to learn seems to be taking on a next-to-impossible project, planning out what components are needed (data structure and processes), then figure out the implementation.  
+The best way to learn seems to be (1) taking on a next-to-impossible project (2) planning out what components are needed (data structure and processes) (3) then figure out the implementation.  
 <div class="frames">
 <img src="structure.png">
 <p>Clearly define all the data structure at the start</p>
@@ -41,5 +42,26 @@ My strsplit function returns empty string instead, which enables a regular forma
 <p>Based off of GNU libc's implementation</p>
 </div>
 
-Parsing of the file was implemented as a function for modularity. It scans each line, skipping if it doesn't contain the filter string used to define a group.  
+Parsing the user file and playing the game were implemented as separate functions for modularity.  
+The initialize function scans each user list line, skipping if it doesn't contain the filter string used to define a group.  
 Name\_data objects are created after filtering so that no memory is wasted on people that won't be quizzed.  
+
+The valid lines are then broken into fields, the first always being their id and the fifth always being their full name.  
+The full name is further split into parts to award part matches.  
+The play function is similar in splitting the strings up, then it compares each part of the guess to each part of the name.
+
+Messing around with pointers of pointers of pointers inevitably introduced some errors.  
+It was a great opportunity to practice backtracing with gdb and debugging C code in general (the run time errors are not informative at all).
+<div class="frames">
+<img src="gdb.png">
+<p>Wonderful feeling when everything finally works</p>
+</div>
+
+<a name="names"> </a>
+## Gains from Experience
+-----------------------------
+- C pointer manipulation experience
+- GDB backtracing experience
+- Appreciation that C is probably not the best language for string processing
+- More defined programming process (define components such as data structure and functions first, then implement)
+- Fun

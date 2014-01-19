@@ -2,6 +2,7 @@
 layout: default
 title: Engineering Process
 permalink: /process.html
+group: process
 ---
 
 When I solve a problem, this is what I do:  

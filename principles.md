@@ -2,6 +2,7 @@
 layout: default
 title: Principles
 permalink: /principles.html
+group: principles
 ---
 
 My vision of good engineering design should seek these objectives in order of importance: 

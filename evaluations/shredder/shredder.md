@@ -2,6 +2,7 @@
 layout: default
 title: Evaluation - GBC 50s Shredder
 permalink: /evaluations/shredder/index.html
+group: evaluations
 ---
 
 This shredder was the first aritifact me and my room mate evaluated in Praxis, and we found it mostly designed for safety and usability.

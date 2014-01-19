@@ -2,6 +2,7 @@
 layout: default
 title: Engineering Design Portfolio
 permalink: /projects/portfolio/index.html
+group: projects
 ---
 The portfolio is a mandatory assignment for all first year Engineering Science students.  
 We choose how we build it, and since I strive to be robust myself, learning as many tools as possible,  

@@ -2,6 +2,7 @@
 layout: default
 title: Name Game - C String Processing
 permalink: /projects/namegame/index.html
+group: projects
 ---
 Source on [github](https://github.com/LemonPi/LameNameGame)  
 I made this game to explore string processing in C, which my CSC190 professor specifically mentioned not to do.  

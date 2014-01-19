@@ -2,3 +2,4 @@ relative_permalinks: false
 repository: https://github.com/lemonpi/portfolio
 baseurl: /portfolio/
 markdown: redcarpet
+pygments: true

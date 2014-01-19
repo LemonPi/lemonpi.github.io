@@ -2,6 +2,7 @@
 layout: default
 title: Detailed Design - Material Selection for Aerator
 permalink: /projects/aerator.html
+group: projects
 ---
 For this project, I was subcontracted to explore the material selection for an aerator  
 that is meant to prevent splashing when liquid is transferred between containers.  

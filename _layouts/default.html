@@ -24,11 +24,35 @@
 
 <div id="navbar">
     <ul id="navbar-menu">
-        <li><a href="{{ site.baseurl }}principles.html">Principles</a></li>
-        <li><a href="{{ site.baseurl }}process.html">Process</a></li>
-        <li><a href="{{ site.baseurl }}projects/">Projects</a></li>
-        <li><a href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
-                <li><a href="{{ site.baseurl }}about.html">About</a></li>
+		{% if page.group == "principles" %}
+			<li id="active"><a href="{{ site.baseurl }}principles.html">Principles</a></li>
+		{% else %}
+			<li><a href="{{ site.baseurl }}principles.html">Principles</a></li>
+		{% endif %}
+		
+		{% if page.group == "process" %}
+			<li id="active"><a href="{{ site.baseurl }}process.html">Process</a></li>
+		{% else %}
+			<li><a href="{{ site.baseurl }}process.html">Process</a></li>
+		{% endif %}
+		
+		{% if page.group == "projects" %}
+			<li id="active"><a href="{{ site.baseurl }}projects/">Projects</a></li>
+		{% else %}
+			<li><a href="{{ site.baseurl }}projects/">Projects</a></li>
+		{% endif %}
+		
+		{% if page.group == "evaluations" %}
+			<li id="active"><a href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
+		{% else %}
+			<li><a href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
+		{% endif %}
+		
+		{% if page.group == "about" %}
+			<li id="active"><a href="{{ site.baseurl }}about.html">About</a></li>
+		{% else %}
+			<li><a href="{{ site.baseurl }}about.html">About</a></li>
+		 {% endif %}
     </ul>
 </div>
 </div>

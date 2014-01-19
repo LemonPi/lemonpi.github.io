@@ -60,7 +60,7 @@ code {
 }
 #navbar-menu a:active {border-top:1px solid rgb(30,40,50)}
 #navbar-menu a:hover{color:rgb(190,190,190);background:rgb(30,40,50);}
-
+#navbar-menu #active {border-top:1px solid rgb(30,40,50);color:rgb(190,190,190);background:rgb(30,40,50);}
 #content {clear:both;margin:32px 32px 32px 76px;}
 
 #header {background:rgb(51,63,80);}
@@ -119,6 +119,40 @@ code {
         float:right;
         padding:0px 76px;
 }
+
+#gallery {
+	height: 700px;
+	margin: 80px auto 0 auto;
+	text-align: center;
+	width:1300px;
+}
+#gallery .box {
+	border: 5px solid #888;
+	height:300px;
+	width:300px;
+	margin:5px;
+	position: relative;
+	float:left;
+	overflow: hidden;
+}
+#gallery .box .caption {
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	width:270px;
+	height:270px;
+	color: #fff;
+	z-index: 100;
+	text-align: left;
+	padding:15px;
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+}
+#gllery .box img {
+	position: absolute;
+	left: 0;
+}
+#gallery .box:hover .caption {opacity: 1}
 
 #github {
 		background-image:url("res/github_before.png");

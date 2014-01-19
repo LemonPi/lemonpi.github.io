@@ -2,6 +2,7 @@
 layout: default
 title: Evaluation - Proctor Silex Hand Mixer
 permalink: /evaluations/handmixer/index.html
+group: evaluations
 ---
 The Proctor Silex 43-21012 model hand mixer was the second artifact me and my room mate evaluated in Praxis,  
 and the one that I wrote a device design report for (expect more research than the last one).  

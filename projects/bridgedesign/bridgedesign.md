@@ -2,6 +2,7 @@
 layout: default
 title: Truss Bridge Design
 permalink: /projects/bridgedesign/index.html
+group: projects
 ---
 In a team of three, our task was to design and present our design of a pedestrian truss bridge to cross 150m.  
 This was one of my first projects, when I valued efficiency and elegance most, but without a tangible definition for elegance.  

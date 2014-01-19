@@ -2,6 +2,7 @@
 layout: default
 title: Conceptual Design - Binder Misalignment
 permalink: /projects/binder/index.html
+group: projects
 ---
 
 In a team of three, we considered how to solve the problem of binder misalignment.  

@@ -2,6 +2,7 @@
 layout: default
 title: Hello
 permalink: /about.html
+group: about
 ---
 <div class="side frames">
 <img src="res/self.jpg">

@@ -2,6 +2,7 @@
 layout: default
 title: Skule Security Sillyness
 permalink: /evaluations/skulecourses/index.html
+group: evaluations
 ---
 My room mate [Zhuowei](http://zhuoweizhang.net) and I explored how secure [Skule's (U of T Engineering) courses page](http://courses.skule.ca) is,  
 since it is host to supposed past exams that most U of T students download without a second thought.  

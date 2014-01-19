@@ -8,7 +8,7 @@ permalink: /about.html
 <p>Johnson Zhong</p>
 </div>
 
-[Resume](/res/resume.pdf)
+[Resume](res/resume.pdf)
 
 My name is Johnson (Sheng) Zhong and you've stumbled upon my [site](/portfolio/projects/portfolio/)!  
 As a first year engineering science student, my class is developing a broad and deep foundation in the sciences.  

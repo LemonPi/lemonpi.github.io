@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Name Game in C
+title: Name Game - C String Processing
 permalink: /projects/namegame/index.html
 ---
 Source on [github](https://github.com/LemonPi/LameNameGame)  
@@ -30,8 +30,16 @@ The best way to learn seems to be taking on a next-to-impossible project, planni
 <p>Clearly define all the data structure at the start</p>
 </div>
 
-Each person's name(s) and id are stored inside a name_data object for easy referencing.  
+Each person's name(s) and id are stored inside a name\_data object for easy referencing.  
 Names are stored in an array of C-strings to accommodate for multiple names; dynamic allocation is a possibility for optimization.  
-The master_storage doesn't store the objects directly because that unnecessarily uses up memory; instead the name_data objects are dynamically created.  
+The master\_storage doesn't store the objects directly because that unnecessarily uses up memory; instead the name\_data objects are dynamically created.  
 
-The next concern is 
+I altered the existing strtok function (which splits strings) because it skipped neighbouring delimiting characters.  
+My strsplit function returns empty string instead, which enables a regular format - name field is always the 5th element.  
+<div class="frames">
+<img src="strsplit.png">
+<p>Based off of GNU libc's implementation</p>
+</div>
+
+Parsing of the file was implemented as a function for modularity. It scans each line, skipping if it doesn't contain the filter string used to define a group.  
+Name\_data objects are created after filtering so that no memory is wasted on people that won't be quizzed.  

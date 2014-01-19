@@ -135,8 +135,18 @@ code {
 		float:right;
 		height:64px;
 		width:64px;
-		margin: 7px 20px 0px 0px;
+		margin: 7px 10px 0px 0px;
 }
 #linkedin:hover {
 		background-image:url("res/linkedin_after.png");
+}
+#resume {
+		background-image:url("res/resume_before.png");
+		float:right;
+		height:64px;
+		width:64px;
+		margin: 7px 20px 0px 0px;
+}
+#resume:hover {
+		background-image:url("res/resume_after.png");
 }

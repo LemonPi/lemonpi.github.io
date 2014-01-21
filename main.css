@@ -121,10 +121,11 @@ code {
 }
 
 #gallery {
-	height: 700px;
+	height: 800px;
 	margin: 80px auto 0 auto;
 	text-align: center;
 	width:1300px;
+	max-width:90%;
 }
 #gallery .box {
 	border: 5px solid #888;
@@ -152,7 +153,7 @@ code {
 	position: absolute;
 	left: 0;
 }
-#gallery .box:hover .caption {transition: 300ms;opacity: 1}
+#gallery .box:hover .caption {opacity: 1}
 
 #github {
 		background-image:url("res/github_before.png");

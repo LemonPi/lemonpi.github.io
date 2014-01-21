@@ -78,7 +78,7 @@ code {
 }
 #footer a{
         position:absolute;
-        right:10px;
+        left:30px;
         margin:0px 20px 0px 0px;
         color:rgb(240,240,240);
 }
@@ -161,9 +161,7 @@ code {
 		width:64px;
 		margin: 7px 10px 0px 0px;
 }
-#github:hover {
-		background-image:url("res/github_after.png");
-}
+#github:hover {background-image:url("res/github_after.png");}
 #linkedin {
 		background-image:url("res/linkedin_before.png");
 		float:right;
@@ -171,9 +169,7 @@ code {
 		width:64px;
 		margin: 7px 10px 0px 0px;
 }
-#linkedin:hover {
-		background-image:url("res/linkedin_after.png");
-}
+#linkedin:hover {background-image:url("res/linkedin_after.png");}
 #resume {
 		background-image:url("res/resume_before.png");
 		float:right;
@@ -181,6 +177,5 @@ code {
 		width:64px;
 		margin: 7px 20px 0px 0px;
 }
-#resume:hover {
-		background-image:url("res/resume_after.png");
-}
+#resume:hover {background-image:url("res/resume_after.png");}
+#reverse {unicode-bidi: bidi-override;direction: rtl;}

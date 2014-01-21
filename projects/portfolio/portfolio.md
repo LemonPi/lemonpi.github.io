@@ -152,6 +152,23 @@ Jekyll can serve the site locally and constantly regenerate each time an edit is
 <p>Rapid prototyping with Jekyll made easy</p>
 </div>
 
+<a name="polishing"> </a>
+##Polishing
+------------
+Rapidly prototyping a product is fine for initial launch and ironing out bugs, but I believe great usability comes from long term polish.  
+Nuances take time and usage to notice, therefore I will gradually add features to improve the quality of my portfolio.  
+<div class="frames">
+<img src="reverse.png">
+<p>Reverse email entry to protect against spam bots</p>
+</div>
+
+Some features improve the security, and others are for user appeal.
+<div class="frames">
+<img src="gallery.png">
+<p>Attention grabbing gallery</p>
+</div>
+
+Check the page history to see when these features were added!
 <a name="gains"> </a>
 ##Gains from Experience
 -----------------------

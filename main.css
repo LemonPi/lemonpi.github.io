@@ -78,7 +78,7 @@ code {
 }
 #footer a{
         position:absolute;
-        left:30px;
+        right:30px;
         margin:0px 20px 0px 0px;
         color:#f0f0f0;
 }
@@ -179,4 +179,5 @@ code {
 		margin: 7px 20px 0px 0px;
 }
 #resume:hover {background-image:url("res/resume_after.png");}
-#reverse {unicode-bidi: bidi-override;direction: rtl;}
+#reverse {unicode-bidi: bidi-override;direction: rtl;display:inline;}
+#normal {display:inline;}

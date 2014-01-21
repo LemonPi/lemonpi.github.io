@@ -168,6 +168,7 @@ Some features improve the security, and others are for user appeal.
 <p>Attention grabbing gallery</p>
 </div>
 
+Galleries now have smooth 300ms transition.
 Check the page history to see when these features were added!
 <a name="gains"> </a>
 ##Gains from Experience

@@ -5,7 +5,7 @@ permalink: /projects/namegame/index.html
 group: projects
 ---
 Source on [github](https://github.com/LemonPi/LameNameGame)  
-I made this game to explore string processing in C, which my CSC190 professor specifically mentioned not to do.  
+I made this game as a side project to explore string processing in C, which my CSC190 professor specifically mentioned not to do.  
 The game requires a Unix based user list and quizzes you on the user's real names given their username. 
 
 ## Instructions <a name="instructions"> </a>
@@ -33,8 +33,9 @@ The best way to learn seems to be (1) taking on a next-to-impossible project (2)
 </div>
 
 Each person's name(s) and id are stored inside a name\_data object for easy referencing.  
-Names are stored in an array of C-strings to accommodate for multiple names; dynamic allocation is a possibility for optimization.  
-The master\_storage doesn't store the objects directly because that unnecessarily uses up memory; instead the name\_data objects are dynamically created.  
+Names are stored in an array of C-strings to accommodate for multiple names; **dynamic allocation is a possibility for optimization**.  
+The master\_storage doesn't store the objects directly because they unnecessarily uses up memory; instead the name\_data objects are dynamically created.  
+In the future master\_storage could also be dynamically allocated for optimization.  
 
 I altered the existing strtok function (which splits strings) because it skipped neighbouring delimiting characters.  
 My strsplit function returns empty string instead, which enables a regular format - name field is always the 5th element.  
@@ -49,10 +50,12 @@ Name\_data objects are created after filtering so that no memory is wasted on pe
 
 The valid lines are then broken into fields, the first always being their id and the fifth always being their full name.  
 The full name is further split into parts to award part matches.  
+
+The play function randomly picks a name; a future update could be to make it so that the same name is not repeated.  
 The play function is similar in splitting the strings up, then it compares each part of the guess to each part of the name.
 
 Messing around with pointers of pointers of pointers inevitably introduced some errors.  
-It was a great opportunity to practice backtracing with gdb and debugging C code in general (the run time errors are not informative at all).
+It was a great opportunity to practice **backtracing with gdb** and debugging C code in general (the run time errors are not informative at all).
 <div class="frames">
 <img src="gdb.png">
 <p>Wonderful feeling when everything finally works</p>

@@ -53,7 +53,7 @@ Oct 2013 - present
 </span>
 </div></a>
 </div>
- 
+ --------------------------
  - [**User-real name matching game in C**](namegame/) - Jan 2014
  
  - [**Engineering design portfolio**](portfolio/) - Nov 2013 and ongoing

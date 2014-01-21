@@ -36,6 +36,7 @@ Sept 2013
 </div></a>
 
 </div>
+----------------------
 The design of many products give them more value than the sum of their parts, with the opposite being true as well.
 
 Here are some artifacts seen through my engineering design perspective:

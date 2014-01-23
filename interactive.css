@@ -1,0 +1,59 @@
+.holder {
+	background: url("process.png") no-repeat top center;
+	margin: 0 auto;
+	position: relative;
+	max-width: 100%;
+	height: 1000px;
+}
+.hot-spots {
+	font-family:"Calibri", Arial, sans-serif;
+	margin: 0 auto;
+	position: relative;
+	width: 0px;
+}
+.hot-spot {
+	background: #333f50;
+	border-radius: 100px;
+	color: #fff;
+	position: absolute;
+	padding:10px;
+	text-align:center;
+}
+.hot-spot:hover .info {
+	display: block;
+}
+.info {
+	color: #111;
+	background: #fff;
+	border: 5px solid #333f50;
+	text-align:left;
+	display: none;
+	position: absolute;
+	padding:5px 20px;
+	left: 100px;
+	top: 0px;
+	width: 500px;
+	z-index: 10;
+}
+.text-spot {
+	position:absolute;
+	text-align:center;
+	color: #222;
+	border: 4px solid #333f50;
+	line-height: 6px;
+}
+.text-spot:hover .info {
+	display:block;
+}
+.info_txt {
+	top:50px;
+}
+#problem {top:35px;left:-168px;width:120px;height:110px;}
+#component {top:205px;left:-163px;width:105px;height:90px;}
+#prototype {top:560px;left:-165px;width:110px;height:100px;background:#586986}
+#func {top:85px;left:-475px;width:250px;height:40px;}
+#monomaniac {top:240px;left:-550px;width:205px;height:40px;}
+#compare {top:370px;left:-550px;width:205px;height:40px;}
+#generate {top:430px;left:-550px;width:205px;height:40px;}
+#compare_2 {top:530px;left:-520px;width:205px;height:40px;}
+#pool {top:420px;left:-45px;width:125px;height:40px;}

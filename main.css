@@ -5,12 +5,10 @@ body {
         color:#32383c;
         padding:0px 0px 0px 0px;
 }
-
 a {color:#8092A3;}
 a:visited {color:#111;}
 img{max-width:100%}
 ul {list-style-type:square;}
-
 blockquote {
   font:14px/22px normal helvetica, sans-serif;
   margin:10px 0px;
@@ -23,15 +21,16 @@ blockquote {
 } 
 
 pre {
-    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-family: Consolas, Courier, monospace;
     font-size: 95%;
     line-height: 140%;
     white-space: pre;
     white-space: pre-wrap;
 }       
 code {
+  font-family: Consolas;
   display: block;
-   padding:5px 10px;
+  padding:5px 10px;
   border-left:3px solid #ccc;
   min-width:50%;
   width:900px;
@@ -47,17 +46,13 @@ code {
         padding:0;
 		border-top:3px solid #1e2832;
 }
-
 #navbar-menu li {
         float:left;
         text-align:center;
         padding:0px 0px 5px 0px;
         height:40px;
 }
-#navbar-menu a {
-        display:block;
-        padding:5px 32px 20px 32px;
-}
+#navbar-menu a {display:block;padding:5px 32px 20px 32px;}
 #navbar-menu a:active {border-top:1px solid #1e2832}
 #navbar-menu a:hover{color:#bebebe;background:#1e2832;}
 #navbar-menu #active {border-top:1px solid #1e2832;color:#bebebe;background:#1e2832;}
@@ -115,10 +110,7 @@ code {
   color:#888;
 }
 
-.side {
-        float:right;
-        padding:0px 76px;
-}
+.side {float:right;padding:0px 76px;}
 
 #gallery {
 	height: 1000px;

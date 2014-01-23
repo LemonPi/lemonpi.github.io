@@ -1,9 +1,63 @@
 ---
 layout: default
-title: Engineering Process
+title:
 permalink: /process.html
 group: process
 ---
+<h1 align="center">Engineering Process</h1>
+<div class="holder">
+	<div class="hot-spots">
+		<div class="hot-spot" id="problem"><br><h2>Problem</h2>
+			<div class="info">
+				<h2>Problem Understanding</h2>
+				<p>This eye is very cute, even if this is a kitten and not a monkey anymore, it's still quite cute.</p>
+			</div>
+		</div>
+		<div class="hot-spot" id="component"><h4>Component<br> 2</h4>
+			<div class="info">
+				<h2>Problem module</h2>
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="hot-spot" id="prototype"><br><h3>Prototype</h3>
+			<div class="info">
+				<h2>Rapid prototyping</h2>
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="text-spot" id="func"><h3>Functional decomposition</h3>
+			<div class="info info_txt">
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="text-spot" id="monomaniac"><h3>Monomaniacal design</h3>
+			<div class="info info_txt">
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="text-spot" id="compare"><h3>Compare and select</h3>
+			<div class="info info_txt">
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="text-spot" id="generate"><h3>Generate combinations</h3>
+			<div class="info info_txt">
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="text-spot" id="compare_2"><h3>Compare and select</h3>
+			<div class="info info_txt">
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+		<div class="text-spot" id="pool"><h3>Solution Pool</h3>
+			<div class="info info_txt">
+				<p>Enjoying his life with his open paw.</p>
+			</div>
+		</div>
+	</div>
+</div>
+ --------------------------
 
 When I solve a problem, this is what I do:  
 
@@ -41,4 +95,3 @@ When I solve a problem, this is what I do:
  With experience, certain **patterns** have emerged to assist each step and make the entire process more structured -  
  these are the bullets under each step.
 
-![Process visual](process.png)

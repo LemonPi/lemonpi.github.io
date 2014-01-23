@@ -44,9 +44,14 @@
 }
 .text-spot:hover .info {
 	display:block;
+	line-height:normal;
 }
 .info_txt {
 	top:50px;
+}
+.info_down {
+	left: -140px;
+	width: 400px;
 }
 #problem {top:35px;left:-168px;width:120px;height:110px;}
 #component {top:205px;left:-163px;width:105px;height:90px;}
@@ -57,3 +62,4 @@
 #generate {top:430px;left:-550px;width:205px;height:40px;}
 #compare_2 {top:530px;left:-520px;width:205px;height:40px;}
 #pool {top:420px;left:-45px;width:125px;height:40px;}
+#basis {top:60px;left:230px;width:280px;height:40px;}

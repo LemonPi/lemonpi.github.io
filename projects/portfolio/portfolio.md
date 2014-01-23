@@ -133,7 +133,9 @@ These are the key design decisions to make this site more usable:
 
 5. Subtle bump down of navigation bar links when activated to provide a more satisfying clicking experience
 
-6. Thumbnail of pictures with links to full-size versions where appropriate to reduce loading time  
+6. No Javascript unless absolutely necessary to avoid the overhead of loading additional resources
+
+7. Thumbnail of pictures with links to full-size versions where appropriate to reduce loading time  
 
 <div class="frames">
 <img src="picturestoolarge.png">
@@ -168,7 +170,14 @@ Some features improve the security, and others are for user appeal.
 <p>Attention grabbing gallery</p>
 </div>
 
-Galleries now have smooth 300ms transition.
+Presenting visuals first, especially interactive ones, highly engage readers.
+<div class="frames">
+<img src="process_visual.png">
+<p>Visual and interactive flowchart for my process page</p>
+</div>
+
+The interactive flowchart took a little more work than it appears because I wanted to keep it clean from JavaScript.
+
 Check the page history to see when these features were added!
 <a name="gains"> </a>
 ##Gains from Experience

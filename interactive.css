@@ -10,6 +10,7 @@
 	margin: 0 auto;
 	position: relative;
 	width: 0px;
+	max-width: 100%;
 }
 .hot-spot {
 	background: #333f50;
@@ -62,4 +63,4 @@
 #generate {top:430px;left:-550px;width:205px;height:40px;}
 #compare_2 {top:530px;left:-520px;width:205px;height:40px;}
 #pool {top:420px;left:-45px;width:125px;height:40px;}
-#basis {top:60px;left:230px;width:300px;height:40px;}
+#basis {top:60px;left:210px;width:310px;height:40px;}

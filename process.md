@@ -44,7 +44,7 @@ group: process
 				creative solutions as opposed to just selecting the most obvious and "effective" ones.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="generate"><h3>Generate combinations</h3>
+		<div class="text-spot" id="generate"><h3>Create combinations</h3>
 			<div class="info info_txt">
 				<p>Combine the prospective component solutions by taking compatible and strong aspects of each solution.
 				Keep these combined solutions in the solution pool for future iterations.</p>
@@ -62,7 +62,7 @@ group: process
 				be modified to be compatible with the solution in future iterations.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="basis"><h3>Basis for selection and refinement</h3>
+		<div class="text-spot" id="basis"><h3>Basis of selection & refinement</h3>
 			<div class="info info_txt info_down">
 				<p>The requirements of the stakeholders and my own design principles are the criteria for selection and refinement.
 				The stakeholders are those who are affected by the problem, explored while understanding the problem.</p>

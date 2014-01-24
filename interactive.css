@@ -54,6 +54,12 @@
 	left: -140px;
 	width: 400px;
 }
+#patch {
+	margin:0 auto;
+	max-width:1080px;
+	min-width:700px;
+	position:relative;
+}
 #problem {top:35px;left:-168px;width:120px;height:110px;}
 #component {top:205px;left:-163px;width:105px;height:90px;}
 #prototype {top:560px;left:-165px;width:110px;height:100px;background:#586986}
@@ -63,4 +69,4 @@
 #generate {top:430px;left:-550px;width:205px;height:40px;}
 #compare_2 {top:530px;left:-520px;width:205px;height:40px;}
 #pool {top:420px;left:-45px;width:125px;height:40px;}
-#basis {top:60px;left:210px;width:310px;height:40px;}
+#basis {position:relative;top:60px;float:right;width:310px;height:40px;font-family:"Calibri", Arial, sans-serif;}

@@ -62,7 +62,9 @@ group: process
 				be modified to be compatible with the solution in future iterations.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="basis"><h3>Basis of selection & refinement</h3>
+	</div>
+		<div id="patch">
+			<div class="text-spot" id="basis"><h3>Basis of selection & refinement</h3>
 			<div class="info info_txt info_down">
 				<p>The requirements of the stakeholders and my own design principles are the criteria for selection and refinement.
 				The stakeholders are those who are affected by the problem, explored while understanding the problem.</p>

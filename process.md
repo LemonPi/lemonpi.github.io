@@ -15,55 +15,55 @@ $(document).ready(function() {
 <h1 align="center">Engineering Process</h1>
 <div class="holder">
 	<div class="hot-spots">
-		<div class="hot-spot" id="problem"><br><h2>Problem</h2>
+		<div class="hot-spot hover" id="problem"><br><h2>Problem</h2>
 			<div class="info">
 				<h2>Problem Understanding</h2>
 				<p>Map out the causes and impacts of the problem as well as who it affects.
 				Dig into research to really understand the cycle of influences.</p>
 			</div>
 		</div>
-		<div class="hot-spot" id="component"><h4>Component<br> 2</h4>
+		<div class="hot-spot hover" id="component"><h4>Component<br> 2</h4>
 			<div class="info">
 				<h2>Problem module</h2>
 				<p>Independent (approximate) components of the problem that can be addressed individually.</p>
 			</div>
 		</div>
-		<div class="hot-spot" id="prototype"><br><h3>Prototype</h3>
+		<div class="hot-spot hover" id="prototype"><br><h3>Prototype</h3>
 			<div class="info">
 				<h2>Rapid prototyping</h2>
 				<p>Test out the practicality of the proposed solution by actually making it. This filters out
 				the concepts that are sound in theory but are impractical.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="func"><h3>Functional decomposition</h3>
+		<div class="text-spot hover" id="func"><h3>Functional decomposition</h3>
 			<div class="info info_txt">
 				<p>Simplify and approximate the problem cycle into a linear cause-and-effect model.
 				Then treat each cause of the problem as a component, decomposing that down as much as possible.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="monomaniac"><h3>Monomaniacal design</h3>
+		<div class="text-spot hover" id="monomaniac"><h3>Monomaniacal design</h3>
 			<div class="info info_txt">
 				<p>Generate specialized solutions for each component without worrying too much about holistic effectiveness.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="compare"><h3>Compare and select</h3>
+		<div class="text-spot hover" id="compare"><h3>Compare and select</h3>
 			<div class="info info_txt">
 				<p>For each component, select a few specialized solutions that are <b>interesting</b>, which encourages
 				creative solutions as opposed to just selecting the most obvious and "effective" ones.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="generate"><h3>Create combinations</h3>
+		<div class="text-spot hover" id="generate"><h3>Create combinations</h3>
 			<div class="info info_txt">
 				<p>Combine the prospective component solutions by taking compatible and strong aspects of each solution.
 				Keep these combined solutions in the solution pool for future iterations.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="compare_2"><h3>Compare and select</h3>
+		<div class="text-spot hover" id="compare_2"><h3>Compare and select</h3>
 			<div class="info info_txt">
 				<p>Select the best suited solution from the pool, judging based on the requirements and my own principles.</p>
 			</div>
 		</div>
-		<div class="text-spot" id="pool"><h3>Solution Pool</h3>
+		<div class="text-spot hover" id="pool"><h3>Solution Pool</h3>
 			<div class="info info_txt">
 				<p>An essential part of my design process is keeping my <b>options open and solutions creative</b> by holding onto
 				solutions that didn't quite make the selection process but still has interesting components. These could
@@ -72,7 +72,7 @@ $(document).ready(function() {
 		</div>
 	</div>
 		<div id="patch">
-			<div class="text-spot" id="basis"><h3>Basis of selection & refinement</h3>
+			<div class="text-spot hover" id="basis"><h3>Basis of selection & refinement</h3>
 			<div class="info info_txt info_down">
 				<p>The requirements of the stakeholders and my own design principles are the criteria for selection and refinement.
 				The stakeholders are those who are affected by the problem, explored while understanding the problem.</p>

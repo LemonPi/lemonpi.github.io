@@ -4,6 +4,14 @@ title:
 permalink: /process.html
 group: process
 ---
+<script>
+$(document).ready(function() {
+    $('.hover').bind('touchstart touchend', function(mobile) {
+        mobile.preventDefault();
+        $(this).toggleClass('mobile_hover');
+    });
+});
+</script>
 <h1 align="center">Engineering Process</h1>
 <div class="holder">
 	<div class="hot-spots">

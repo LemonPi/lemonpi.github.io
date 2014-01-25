@@ -20,7 +20,7 @@
 	padding:10px;
 	text-align:center;
 }
-.hot-spot:hover .info {
+.hot-spot:hover .info, .hot-spot.mobile_hover .info{
 	display: block;
 }
 .info {
@@ -43,7 +43,7 @@
 	border: 4px solid #333f50;
 	line-height: 6px;
 }
-.text-spot:hover .info {
+.text-spot:hover .info, .text-spot.mobile_hover .info{
 	display:block;
 	line-height:normal;
 }

@@ -176,7 +176,8 @@ Presenting visuals first, especially interactive ones, highly engage readers.
 <p>Visual and interactive flowchart for my process page</p>
 </div>
 
-The interactive flowchart took a little more work than it appears because I wanted to keep it clean from JavaScript.
+The interactive flowchart took a little more work than it appears because I wanted to keep it clean from JavaScript.  
+Unfortunately I had to resort to JS to make it **work on mobile devices**; will seek lighter alternatives in the future.  
 
 Check the page history to see when these features were added!
 <a name="gains"> </a>

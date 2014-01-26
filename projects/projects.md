@@ -40,7 +40,7 @@ Nov 2013
 <span class="caption">
 <h1>Material Selection</h1>
 Detailed design analysis of material selection for a kitchen aerator <br><br><br>
-Nov 2013 - present
+Nov 2013
 </span>
 </div></a>
 
@@ -49,7 +49,7 @@ Nov 2013 - present
 <span class="caption">
 <h1>Truss Bridge Design</h1>
 Bridge analysis, optimization, and drawing using python <br><br><br>
-Oct 2013 - present
+Oct 2013
 </span>
 </div></a>
 </div>

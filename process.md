@@ -6,11 +6,18 @@ group: process
 ---
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
+function is_touch_device() {
+  return 'ontouchstart' in window
+      || 'onmsgesturechange' in window;
+};
 $(document).ready(function() {
-    $('.hover').bind('touchstart touchend', function(mobile) {
-        mobile.preventDefault();
-        $(this).toggleClass('mobile_hover');
-    });
+    if (is_touch_device()) {
+		$('.hover').bind('click', function(mobile) {
+			$('.mobile_hover').removeClass("mobile_hover");
+			mobile.preventDefault();
+			$(this).toggleClass('mobile_hover');
+		});
+	}
 });
 </script>
 <h1 align="center">Engineering Process</h1>

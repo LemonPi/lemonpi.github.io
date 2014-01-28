@@ -65,18 +65,8 @@ code {
 #titlearea h1 {margin:0;}
 #titletext {display:inline; color:#AAA}
 
-#footer {
-    margin:32px 0px 0px 0px;
-    padding:12px 32px 12px 32px;
-    background:#333f50;
-    color:#f0f0f0;
-}
-#footer a{
-        position:absolute;
-        right:30px;
-        margin:0px 20px 0px 0px;
-        color:#f0f0f0;
-}
+#footer {padding:30px 32px 30px 32px;background:#333f50;color:#f0f0f0;}
+#history{position:absolute;right:50px;color:#f0f0f0;}
 
 .pretty {
         font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -110,7 +100,7 @@ code {
   color:#888;
 }
 
-.side {float:right;padding:0px 76px;}
+.side {float:right;padding:0px 70px 0px 0px;}
 
 #gallery {
 	height: 1000px;
@@ -141,10 +131,7 @@ code {
 	left: 0px;
 	top: 0px;
 }
-#gallery .box img {
-	position: absolute;
-	left: 0;
-}
+#gallery .box img {position: absolute;left: 0;}
 #gallery .box:hover .caption {opacity: 1}
 
 #github {
@@ -171,5 +158,4 @@ code {
 		margin: 7px 20px 0px 0px;
 }
 #resume:hover {background-image:url("res/resume_after.png");}
-#reverse {unicode-bidi: bidi-override;direction: rtl;display:inline;}
-#normal {display:inline;}
+.reverse {unicode-bidi: bidi-override;direction: rtl;display:inline;}

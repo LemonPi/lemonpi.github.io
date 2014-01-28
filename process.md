@@ -72,7 +72,7 @@ $(document).ready(function() {
 			</div>
 		</div>
 		<div class="text-spot hover" id="pool"><h3>Solution Pool</h3>
-			<div class="info info_txt">
+			<div class="info info_txt info_down">
 				<p>An essential part of my design process is keeping my <b>options open and solutions creative</b> by holding onto
 				solutions that didn't quite make the selection process but still has interesting components. These could
 				be modified to be compatible with the solution in future iterations.</p>

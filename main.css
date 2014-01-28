@@ -66,7 +66,7 @@ code {
 #titletext {display:inline; color:#AAA}
 
 #footer {padding:30px 32px 30px 32px;background:#333f50;color:#f0f0f0;}
-#history{position:absolute;right:50px;color:#f0f0f0;}
+#history{position:absolute;right:50px;color:#f0f0f0;display:inline;}
 
 .pretty {
         font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;

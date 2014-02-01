@@ -11,7 +11,7 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div id="gallery">
 
-<a href="namegame/"><div class="box">
+<a href="projects/namegame/"><div class="box">
 <img src="projects/namegame.png"/>
 <span class="caption">
 <h1>Name Game</h1>
@@ -20,7 +20,7 @@ Jan 2014
 </span>
 </div></a>
 
-<a href="skulecourses/"><div class="box">
+<a href="evaluations/skulecourses/"><div class="box">
 <img src="evaluations/skulecourses.png"/>
 <span class="caption">
 <h1>Skule Security Sillyness</h1>
@@ -29,7 +29,7 @@ Dec 2013
 </span>
 </div></a>
 
-<a href="portfolio/"><div class="box">
+<a href="projects/portfolio/"><div class="box">
 <img src="projects/portfolio.png"/>
 <span class="caption">
 <h1>Engineering Design Portfolio</h1>
@@ -38,7 +38,7 @@ Nov 2013 - present
 </span>
 </div></a>
 
-<a href="binder/"><div class="box">
+<a href="projects/binder/"><div class="box">
 <img src="projects/binder.png"/>
 <span class="caption">
 <h1>Binder Misalignment</h1>

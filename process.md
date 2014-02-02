@@ -20,7 +20,7 @@ $(document).ready(function() {
 	}
 });
 </script>
-<h1 align="center">Engineering Process</h1>
+<h1 style="text-align:center;font-size:50px;">Engineering Process</h1>
 <div class="holder">
 	<div class="hot-spots">
 		<div class="hot-spot hover" id="problem"><br><h2>Problem</h2>

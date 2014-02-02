@@ -5,7 +5,7 @@ permalink: /evaluations/
 group: evaluations
 ---
 
-<h1 align="center">Design Evaluations</h1>
+<h1 style="text-align:center;font-size:50px;">Design Evaluations</h1>
 <div id="gallery">
 
 <a href="skulecourses/"><div class="box">

@@ -4,7 +4,7 @@ title:
 permalink: /projects/
 group: projects
 ---
-<h1 align="center">Personal Projects</h1>
+<h1 style="text-align:center;font-size:50px;">Personal Projects</h1>
 
 <div id="gallery">
 

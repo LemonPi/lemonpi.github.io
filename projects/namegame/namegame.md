@@ -22,6 +22,15 @@ The game requires a Unix based user list and quizzes you on the user's real name
 <p>Quite simple in concept, but strangely addicting...</p>
 </div>
 
+<a name="robust"> </a>
+## Design for Robustness
+------------------------
+The code was designed with the objective of making it usable by as many people as possible.  
+
+- Anyone with a user list and C compiler (most Unix-based OSes) can compile and play the game
+- Program filters by groups to only question you on relevant people
+- Users can guess any part of the name and any capitalization on the first character
+
 <a name="making"> </a>
 ## Making Process 
 ------------------------

@@ -9,7 +9,7 @@ group: projects
 <div id="gallery">
 
 <a href="namegame/"><div class="box">
-<img src="namegame.png"/>
+<img src="namegame.jpg"/>
 <span class="caption">
 <h1>Name Game</h1>
 Gives you usernames and quizzes you on real names using string processing in C <br><br><br>
@@ -18,7 +18,7 @@ Jan 2014
 </div></a>
 
 <a href="portfolio/"><div class="box">
-<img src="portfolio.png"/>
+<img src="portfolio.jpg"/>
 <span class="caption">
 <h1>Engineering Design Portfolio</h1>
 The making of this portfolio <br><br><br>
@@ -27,7 +27,7 @@ Nov 2013 - present
 </div></a>
 
 <a href="binder/"><div class="box">
-<img src="binder.png"/>
+<img src="binder.jpg"/>
 <span class="caption">
 <h1>Binder Misalignment</h1>
 Redesign of binder shields into a spring that offers a more convenient method of opening the rings <br><br><br>
@@ -45,7 +45,7 @@ Nov 2013
 </div></a>
 
 <a href="bridgedesign/"><div class="box">
-<img src="bridgedesign.png"/>
+<img src="bridgedesign.jpg"/>
 <span class="caption">
 <h1>Truss Bridge Design</h1>
 Bridge analysis, optimization, and drawing using python <br><br><br>

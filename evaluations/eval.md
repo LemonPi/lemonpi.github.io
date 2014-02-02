@@ -9,7 +9,7 @@ group: evaluations
 <div id="gallery">
 
 <a href="skulecourses/"><div class="box">
-<img src="skulecourses.png"/>
+<img src="skulecourses.jpg"/>
 <span class="caption">
 <h1>Skule Security Sillyness</h1>
 Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br><br>

@@ -170,7 +170,8 @@ Some features improve the security, and others are for user appeal.
 <p>Attention grabbing gallery</p>
 </div>
 
-Presenting visuals first, especially interactive ones, highly engage readers.
+Presenting visuals first, especially interactive ones, highly engages readers.  
+Compressing pngs with pngcrush greatly reduces their size and load time (10-80% reduction).  
 <div class="frames">
 <img src="process_visual.png">
 <p>Visual and interactive flowchart for my process page</p>

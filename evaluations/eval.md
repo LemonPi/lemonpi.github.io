@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Evaluations
 permalink: /evaluations/
 group: evaluations
 ---

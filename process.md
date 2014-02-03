@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Engineering Process
 permalink: /process.html
 group: process
 ---

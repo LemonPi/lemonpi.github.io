@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Projects
 permalink: /projects/
 group: projects
 ---

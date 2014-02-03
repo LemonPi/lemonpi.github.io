@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Welcome
 permalink: /index.html
 ---
 <h1 style="text-align:center;font-size:80px;">Welcome</h1>

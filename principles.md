@@ -30,3 +30,8 @@ robustness, usability, and efficiency.
 > maintaining a solution pool and keeping the selection open partly for this purpose. Retaining possible component solutions  
 > encourages iteration through various combinations to find a **balance between efficiency and robustness**.  
 > ([portfolio](projects/portfolio/#compare)) ([bridge design](projects/bridgedesign)) ([hand mixer evaluation](evaluations/handmixer/#efficiency))
+<br>
+<br>
+<br>
+<br>
+<br>

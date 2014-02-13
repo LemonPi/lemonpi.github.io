@@ -40,7 +40,7 @@ $(document).ready(function() {
 			<div class="info">
 				<h2>Rapid prototyping</h2>
 				<p>Test out the practicality of the proposed solution by actually making it. This filters out
-				the concepts that are sound in theory but are impractical.</p>
+				the concepts that are sound in theory but are impractical in actuality.</p>
 			</div>
 		</div>
 		<div class="text-spot hover" id="func"><h3>Functional decomposition</h3>
@@ -90,9 +90,9 @@ $(document).ready(function() {
 </div>
  --------------------------
 
-When I solve a problem, this is what I do:  
 
  1. Understand problem
+----------------------------
    - Consider the **causes and impacts** of problem to give basis for reframing
      - Physically reconstruct problem then apply physics models to analyze problem factors ([binder](projects/binder/#analysis))
 	 - Research literature relevant to problem ([aerator](projects/aerator.html))
@@ -100,8 +100,10 @@ When I solve a problem, this is what I do:
    - Determine key stakeholders (1) who will use the solution (2) who will the use of the solution effect (3) who will produce the solution
    
  2. Break problem down to its components - what needs to be done? ([binder](projects/binder/divergentflowchart.jpg))
+---------------------------
  
  3. Generate specialized solutions for each component problem (monomaniacal design) ([binder](projects/binder/#divergent))  
+------------------------------
    - Relate problem to one solved in nature (biomimicry)
    - Consider what can provide forces if something needs to be moved
    - Consider buckling or bending to fold something
@@ -109,20 +111,25 @@ When I solve a problem, this is what I do:
    - Keep all solutions inside the solution pool; no elimination as revision might use a previously rejected solution ([portfolio](projects/portfolio/#pool))
    
  4. Compare solutions based on my [principles](/portfolio/principles.html), adjusted for what the context demands ([binder](projects/binder/#convergent)) ([portfolio](projects/portfolio/#compare)) 
- 
+------------------------------
+
  5. Combine component solutions
+---------------------------
  
  6. Prototype - allows better understanding of solution and possible issues with design ([portfolio](projects/portfolio/#prototype))
-   - Physically, ideally ([binder](projects/binder/#prototype))
+----------------------------
+ - Physically, ideally ([binder](projects/binder/#prototype))
    
+
  7. Refine solutions ([binder](projects/binder/convergentflowchart.jpg))
-   - Can one part perform multiple functions?
+----------------------------
+ - Can one part perform multiple functions?
    - Can two parts be combined into one?
    - How will the user interact with it?
    - How will it be stored and cleaned?
    
  8. Refine understanding of the problem at each step and adjust solutions accordingly
- 
+----------------------------
  With experience, certain **patterns** have emerged to assist each step and make the entire process more structured -  
  these are the bullets under each step.
 

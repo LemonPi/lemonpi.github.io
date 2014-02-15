@@ -2,7 +2,7 @@
 	background: url("process.png") no-repeat top center;
 	margin: 0 auto;
 	position: relative;
-	max-width: 100%;
+	min-width: 1050px;
 	height: 1000px;
 }
 .hot-spots {

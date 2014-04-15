@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Engineering Process
+title: Engineering Process 
 permalink: /process.html
 group: process
 ---
@@ -88,7 +88,8 @@ $(document).ready(function() {
 		</div>
 	</div>
 </div>
- --------------------------
+<div id="handbook-holder"><a id="handbook" href="/portfolio/handbook/">Tools Handbook</a></div>
+--------------------------
 
 
  1. Understand problem
@@ -130,6 +131,5 @@ $(document).ready(function() {
    
  8. Refine understanding of the problem at each step and adjust solutions accordingly
 ----------------------------
- With experience, certain **patterns** have emerged to assist each step and make the entire process more structured -  
- these are the bullets under each step.
+ With experience, I've noticed when tools are applicable, and the use of those tools are covered in the <a id="handbook" href="/portfolio/handbook/">Tools Handbook</a>
 

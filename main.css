@@ -4,6 +4,7 @@ body {
         margin:0;
         color:#32383c;
         padding:0px 0px 0px 0px;
+		line-height:1.6;
 }
 a {color:#8092A3;}
 a:visited {color:#111;}
@@ -58,7 +59,7 @@ code {
 #navbar-menu #active {border-top:1px solid #1e2832;color:#bebebe;background:#1e2832;}
 #content {clear:both;margin:32px 32px 32px 76px;}
 
-#header {background:#333f50;}
+#header {background:#333f50; line-height:normal}
 #header a {color:#e6e6e6;text-decoration:none;}
 
 #titlearea {margin:0px 32px;padding:8px 0px;}
@@ -101,6 +102,20 @@ code {
 }
 
 .side {float:right;padding:0px 70px 0px 0px;}
+.text-block {width:750px;}
+.anchor {}
+.anchor:hover .anchor-link {visibility:visible;}
+.anchor-link {text-decoration:none; visibility:hidden; padding:0 4px 0 4px; color:#32383c}
+.toc {  
+  font:14px/22px normal helvetica, sans-serif;
+  margin:10px 0px;
+  padding:1px 10px;
+  width:350px;
+  border-left:3px solid #ccc;
+  background:#f0f2f4;
+ }
+.toc-title {margin:14px 0 0 18px;}
+.toc-link {text-decoration:none;}
 
 #gallery {
 	height: 1000px;

@@ -3,7 +3,8 @@
 	margin: 0 auto;
 	position: relative;
 	min-width: 1050px;
-	height: 1000px;
+	height: 750px;
+	line-height: normal;
 }
 .hot-spots {
 	font-family:"Calibri", Arial, sans-serif;
@@ -70,3 +71,14 @@
 #compare_2 {top:530px;left:-520px;width:205px;height:40px;}
 #pool {top:420px;left:-45px;width:125px;height:40px;}
 #basis {position:relative;top:60px;float:right;width:310px;height:40px;font-family:"Calibri", Arial, sans-serif;background:#fff}
+#handbook-holder {text-align:center; height:100px; position:relative; left:370px; bottom:120px;}
+#handbook {
+	background-color:#34495e; 
+	color:#fff; 
+	border: 1px solid transparent; 
+	border-radius:4px; 
+	font-size:28px; 
+	padding:15px;
+	font-weight:bold;
+	text-decoration:none;
+}

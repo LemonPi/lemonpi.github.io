@@ -40,11 +40,11 @@
 }
 .example-box {
 	max-width:60%;
-	display:table-cell;
+	float:left;
 }
 .picture-box {
-	width:400px;
-	display:table-cell;
+	width:380px;
+	float:right;
 }
 
 .pro-box ul, .con-box ul {

@@ -82,7 +82,7 @@ environment and can be made better through iteration and alteration of parts.
 			</ul>
 		</div>
 		<div class="picture-box">
-			picture box
+			<img src="decompose.png">
 		</div>
 	</div>	
 </div>
@@ -121,7 +121,7 @@ environment and can be made better through iteration and alteration of parts.
 			</ul>
 		</div>
 		<div class="picture-box">
-			picture box
+			<img src="abstraction.png">
 		</div>
 	</div>	
 </div>
@@ -162,7 +162,7 @@ environment and can be made better through iteration and alteration of parts.
 			</ul>
 		</div>
 		<div class="picture-box">
-			picture box
+			<img src="reframe.png">
 		</div>
 	</div>	
 </div>
@@ -201,7 +201,7 @@ environment and can be made better through iteration and alteration of parts.
 			</ul>
 		</div>
 		<div class="picture-box">
-			picture box
+			<img src="research.png">
 		</div>
 	</div>	
 </div>
@@ -238,7 +238,7 @@ environment and can be made better through iteration and alteration of parts.
 			</ul>
 		</div>
 		<div class="picture-box">
-			picture box
+			<img src="pugh.png">
 		</div>
 	</div>	
 </div>
@@ -275,7 +275,7 @@ environment and can be made better through iteration and alteration of parts.
 			</ul>
 		</div>
 		<div class="picture-box">
-			picture box
+			<img src="comparison.png">
 		</div>
 	</div>	
 </div>

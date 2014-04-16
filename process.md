@@ -98,34 +98,34 @@ $(document).ready(function() {
  1. Understand problem
 ----------------------------
    - Consider the **causes and impacts** of problem to give basis for reframing
-     - Physically reconstruct problem then apply physics models to analyze problem factors ([binder](projects/binder/#analysis))
-	 - Research literature relevant to problem ([aerator](projects/aerator.html))
-	 - Set initial constraints and objectives to guide solution generation  ([aerator](projects/detaileddesign.pdf))
+     - Physically reconstruct problem then apply physics models to analyze problem factors
+	 - Research literature relevant to problem 
+	 - Set initial constraints and objectives to guide solution generation
    - Determine key stakeholders (1) who will use the solution (2) who will the use of the solution effect (3) who will produce the solution
    
- 2. Break problem down to its components - what needs to be done? ([binder](projects/binder/divergentflowchart.jpg))
+ 2. Break problem down to its components - what needs to be done?
 ---------------------------
  
- 3. Generate specialized solutions for each component problem (monomaniacal design) ([binder](projects/binder/#divergent))  
+ 3. Generate specialized solutions for each component problem (monomaniacal design)
 ------------------------------
    - Relate problem to one solved in nature (biomimicry)
    - Consider what can provide forces if something needs to be moved
    - Consider buckling or bending to fold something
    - Consider friction to hold two things together but still allow for lateral shearing
-   - Keep all solutions inside the solution pool; no elimination as revision might use a previously rejected solution ([portfolio](projects/portfolio/#pool))
+   - Keep all solutions inside the solution pool; no elimination as revision might use a previously rejected solution
    
- 4. Compare solutions based on my [principles](/portfolio/principles.html), adjusted for what the context demands ([binder](projects/binder/#convergent)) ([portfolio](projects/portfolio/#compare)) 
+ 4. Compare solutions based on my [principles](/portfolio/principles.html), adjusted for what the context demands
 ------------------------------
 
  5. Combine component solutions
 ---------------------------
  
- 6. Prototype - allows better understanding of solution and possible issues with design ([portfolio](projects/portfolio/#prototype))
+ 6. Prototype - allows better understanding of solution and possible issues with design
 ----------------------------
- - Physically, ideally ([binder](projects/binder/#prototype))
+ - Physically, ideally
    
 
- 7. Refine solutions ([binder](projects/binder/convergentflowchart.jpg))
+ 7. Refine solutions
 ----------------------------
  - Can one part perform multiple functions?
    - Can two parts be combined into one?
@@ -137,3 +137,40 @@ $(document).ready(function() {
  With experience, I've noticed when tools are applicable, and the use of those tools are covered in the 
  <a class="handbook" id="handbook-inline" href="/portfolio/handbook/">Tools Handbook</a>
 
+<h2 class="anchor">Analysis of Process <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
+----------------------------
+<div class="text-block">
+My process is characterized by being <b>cyclical</b> and by heavily <b>relying on functional decomposition</b>.
+<br>
+From experience, multiple iterations generally increase quality through integrating component solutions better, 
+finding new component solutions, and addressing flaws found in the previous iteration.
+Cyclic design processes are also the norm in industry, promoted by 
+<a href="http://www.nasa.gov/audience/foreducators/plantgrowth/reference/Eng_Design_5-12.html#">NASA</a> <a href="#ref1">[1]</a>, 
+and many educational sites <a href="#ref2">[2]</a> <a href="#ref3">[3]</a>.
+<br>
+My prevalent use of functional decomposition distinguishes my design process from many others.
+It has proved very useful in promoting modular solutions, which in turn tend to be more robust and easily changeable.
+The solution can be changed by simply swapping in a different component solution without requiring change in other components, 
+making multiple iterations more productive as less backtracking is done. This approach does not seem to be as
+prevalent as cyclic design in industry, since all the sources above present a <b>single-branch</b> approach,
+directly creating solutions for the entire problem. While that might be faster (allowing time for more iterations) than
+my <b>multi-branch</b> approach - generating component solutions for each part of the problem - I believe my
+approach requires less iterations to produce a quality product.
+</div>
+
+<h2 class="anchor">References <a class="anchor-link" title="permalink to section" href="#reference" name="reference">¶</a></h2>
+-------------------------
+<div class="reference">
+<a name="ref1">[1]</a> NASA, 
+	(2008, Feb 7). <i>Engineering Design Process</i> [Online]. Available:
+	<a href="http://www.nasa.gov/audience/foreducators/plantgrowth/reference/Eng_Design_5-12.html">http://www.nasa.gov/audience/foreducators/plantgrowth/reference/Eng_Design_5-12.html</a>
+<br>
+<a name="ref2">[2]</a> Teach Engineering, 
+	(n.a.). <i>Engineering Design Process</i> [Online]. Available:
+	<a href="http://www.teachengineering.org/engrdesignprocess.php">http://www.teachengineering.org/engrdesignprocess.php</a>
+<br>
+<a name="ref3">[3]</a> PBS, 
+	(2008, Feb 7). <i>What Is the Design Process?</i> [Online]. Available:
+	<a href="http://www.pbslearningmedia.org/resource/phy03.sci.engin.design.desprocess/what-is-the-design-process/">http://www.pbslearningmedia.org/resource/phy03.sci.engin.design.desprocess/what-is-the-design-process/</a>
+<br>
+</div>

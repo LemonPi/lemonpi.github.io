@@ -8,7 +8,7 @@ Source on [github](https://github.com/LemonPi/LameNameGame)
 I made this game as a side project to explore string processing in C, which my CSC190 professor specifically mentioned not to do.  
 The game requires a Unix based user list and quizzes you on the user's real names given their username. 
 
-## Instructions <a name="instructions"> </a>
+<h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">¶</a></h2>
 ------------------------
 1. Clone code onto your computer from [github](https://github.com/LemonPi/LameNameGame) or using cmd <pre><code>git clone git://github.com/LemonPi/LameNameGame.git</code></pre>
 2. Get user list from shared computer (Unix based)  <pre><code>cp /etc/passwd ./user_list </code></pre> 
@@ -22,8 +22,7 @@ The game requires a Unix based user list and quizzes you on the user's real name
 <p>Quite simple in concept, but strangely addicting...</p>
 </div>
 
-<a name="robust"> </a>
-## Design for Robustness
+<h2 class="anchor">Design for Robustness <a class="anchor-link" title="permalink to section" href="#robust" name="robust">¶</a></h2>
 ------------------------
 The code was designed with the objective of making it usable by as many people as possible.  
 
@@ -31,8 +30,7 @@ The code was designed with the objective of making it usable by as many people a
 - Program filters by groups to only question you on relevant people
 - Users can guess any part of the name and any capitalization on the first character
 
-<a name="making"> </a>
-## Making Process 
+<h2 class="anchor">Making Process <a class="anchor-link" title="permalink to section" href="#making" name="making">¶</a></h2>
 ------------------------
 It might seem masochistic to do processing with C rather than a language like Python or Perl, but I wanted to give myself a challenge.  
 The best way to learn seems to be (1) taking on a next-to-impossible project (2) planning out what components are needed (data structure and processes) (3) then figure out the implementation.  
@@ -70,8 +68,7 @@ It was a great opportunity to practice **backtracing with gdb** and debugging C 
 <p>Wonderful feeling when everything finally works</p>
 </div>
 
-<a name="names"> </a>
-## Gains from Experience
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 -----------------------------
 - C pointer manipulation experience
 - GDB backtracing experience

@@ -7,7 +7,7 @@ group: evaluations
 
 This shredder was the first aritifact me and my room mate evaluated in Praxis, and we found it mostly designed for safety and usability.
 
-## Design for Usability
+<h2 class="anchor">Design for Usability <a class="anchor-link" title="permalink to section" href="#usability" name="usability">¶</a></h2>
 ----------------------
 Usability features are mostly external and that is what we analyzed first.  
 The first feature we noticed was the sloping entrance to allow paper to be inserted at various angles.  
@@ -31,7 +31,7 @@ However, the benefit of this is that the shredder will not move, conformed by it
 Also seen in that picture is its relative short power cord, measuring 130cm.  
 This feature falls under both usability and safety - usability for ease of carrying and safety for avoidance of tripping.
 
-## Design for Safety
+<h2 class="anchor">Design for Safety <a class="anchor-link" title="permalink to section" href="#safety" name="safety">¶</a></h2>
 -------------------
 For a product that shreds paper, a task that is potentially dangerous, the product has to look and be safe in order to sell.  
 This shredder limits the visibility of the actual shredding to give it a safe appearance.  
@@ -54,7 +54,7 @@ And in case of unexpected material, the gears are plastic and will yield to jam 
 <p>Plastic gears prevent motor damage</p>
 </div>
 
-## Improvements
+<h2 class="anchor">Potential Improvements <a class="anchor-link" title="permalink to section" href="#improvements" name="improvements">¶</a></h2>
 ----------------
 The shredding area is not isolated from the motor, which could cause clogging if shreds were caught in the motor.  
 Serious still is the inadequate isolation of the gears from the shredding area as they are more susceptible to clogging.  

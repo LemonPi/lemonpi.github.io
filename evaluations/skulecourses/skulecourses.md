@@ -18,7 +18,7 @@ Please sanitize input boxes before injecting content into the page; it's too eas
 
 **UPDATE (Dec 22, 2013)**: Fortunately Skule fixed this exploit! You can still check out the effect from the sample pages.  
 
-## Injecting Code (the clever part)
+<h2 class="anchor">Injecting Code (the clever part) <a class="anchor-link" title="permalink to section" href="#injection" name="injection">¶</a></h2>
 --------------------------------
 Before altering the actual course pages, an illegitimate course was created to allow prototyping.  
 Skule's search cannot find the course, but direct access through URL allows access to upload and view.  
@@ -47,7 +47,7 @@ Our workaround was to use an impossible to load \<img\> element that points to o
 
 It will always load my script because http://localhost:1 as an image can never load!
 
-## Javascript (the dumb part)
+<h2 class="anchor">Javascript (the dumb part) <a class="anchor-link" title="permalink to section" href="#code" name="code">¶</a></h2>
 -------------------------
 I took this as an opportunity to get familiar with Javascript, seeing as I recently learned HTML and CSS for this portfolio.  
 Gaining proficiency in JS will complete my skill set as a web developer, which will be widely useful since the web is becoming a larger distributor of applications.  
@@ -102,7 +102,7 @@ such as onhover aren't mobile compatible.
 Lastly, I'll leave how we changed the years to an arbitrary number as an anagram, decode it if you can:  
 a cad ed retelevise fill unlit  (It is in English, has 1 verb, 1 noun, and 3 adjectives)
 
-## Gains from Experience
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 ---------------------------
 - Javascript experience and interest in web development
 - Appreciation of sanitizing inputs

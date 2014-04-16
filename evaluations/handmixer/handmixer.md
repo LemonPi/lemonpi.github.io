@@ -8,8 +8,7 @@ The Proctor Silex 43-21012 model hand mixer was the second artifact me and my ro
 and the one that I wrote a device design report for (expect more research than the last one).  
 This product was mostly designed for efficiency, safety, and usability.
 
-<a name="efficiency"> </a>
-## Design for Efficiency
+<h2 class="anchor">Design for Efficiency <a class="anchor-link" title="permalink to section" href="#efficiency" name="efficiency">¶</a></h2>
 -----------------------
 The 43-21012 runs at 125W, 120V, and 60Hz on both AC and DC power, a consequence of its universal motor.  
 It is much cheaper, lighter, and smaller than its competitors.
@@ -108,7 +107,7 @@ from operating above a safe temperature. All of these features are accomplished 
 <p>Ingenious setup to provide usability and safety</p>
 </div>
 
-## Design for Safety
+<h2 class="anchor">Design for Safety <a class="anchor-link" title="permalink to section" href="#safety" name="safety">¶</a></h2>
 ---------------------
 Apart from the setup mentioned above, additional safety features were also part of the design.  
 As the picture above shows, the gears are made of plastic - this allows the gears to  
@@ -124,7 +123,7 @@ an audible click when properly inserted to provide user feedback on insertion st
 <p>Beater plug seal; makes audible click when inserted</p>
 </div>
 
-## Design for Usability
+<h2 class="anchor">Design for Usability <a class="anchor-link" title="permalink to section" href="#usability" name="usability">¶</a></h2>
 -----------------------
 The hand beater was designed with the kitchen in mind, as it has no sharp edges that could  
 harm children and the counter. Its flat bottom also allows it to sit upright when not in use,  
@@ -141,7 +140,7 @@ Sliding the handle puts the beater in different modes, which is simply done by g
 different wiring. Pushing down the button ejects the beaters, which can only be done in off  
 mode for safety reasons, as implemented by the asymmetrical shape of the button.
 
-## Improvements
+<h2 class="anchor">Potential Improvements <a class="anchor-link" title="permalink to section" href="#improvements" name="improvements">¶</a></h2>
 ----------------
 One great detriment to usability and **perceived safety** is the loud noise it produces during use.  
 Loud noise gives the impression that the product is unstable and may scare away children.  

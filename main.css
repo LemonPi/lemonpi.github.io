@@ -6,8 +6,9 @@ body {
         padding:0px 0px 0px 0px;
 		line-height:1.6;
 }
-a {color:#8092A3;}
-a:visited {color:#111;}
+a {text-decoration:none; color:#57BFED;}
+a:visited {color:#660099;}
+a:hover {text-decoration:underline;}
 img{max-width:100%}
 ul {list-style-type:square;}
 blockquote {
@@ -102,7 +103,8 @@ code {
 }
 
 .side {float:right;padding:0px 70px 0px 0px;}
-.text-block {width:750px;}
+.text-block {max-width:750px;}
+.text-block br {line-height:220%;}
 .anchor {}
 .anchor:hover .anchor-link {visibility:visible;}
 .anchor-link {text-decoration:none; visibility:hidden; padding:0 4px 0 4px; color:#32383c}
@@ -115,7 +117,7 @@ code {
   background:#f0f2f4;
  }
 .toc-title {margin:14px 0 0 18px;}
-.toc-link {text-decoration:none;}
+.reference {font-family:"Calibri", "Lucida Grande", Sans-Serif;}
 
 #gallery {
 	height: 1000px;

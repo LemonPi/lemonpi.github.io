@@ -49,8 +49,7 @@ by my two team mates.
 <p>Engineering drawing of the Golden Truss bridge</p>
 </div>
 
-<a name="gains"> </a>
-## Gains from Experience
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 -----------------------
 - Principles: introduced designing for robustness
 - Principles: lowered the importance of desiging for efficiency

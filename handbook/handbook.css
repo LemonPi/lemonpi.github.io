@@ -39,11 +39,11 @@
 	bottom:5px;
 }
 .example-box {
-	max-width:70%;
+	max-width:60%;
 	display:table-cell;
 }
 .picture-box {
-	width:300px;
+	width:400px;
 	display:table-cell;
 }
 

@@ -88,7 +88,10 @@ $(document).ready(function() {
 		</div>
 	</div>
 </div>
-<div id="handbook-holder"><a id="handbook" href="/portfolio/handbook/">Tools Handbook</a></div>
+<a id="handbook-diagram" href="/portfolio/handbook/" class="handbook">Tools Handbook</a>
+
+
+
 --------------------------
 
 
@@ -131,5 +134,6 @@ $(document).ready(function() {
    
  8. Refine understanding of the problem at each step and adjust solutions accordingly
 ----------------------------
- With experience, I've noticed when tools are applicable, and the use of those tools are covered in the <a id="handbook" href="/portfolio/handbook/">Tools Handbook</a>
+ With experience, I've noticed when tools are applicable, and the use of those tools are covered in the 
+ <a class="handbook" id="handbook-inline" href="/portfolio/handbook/">Tools Handbook</a>
 

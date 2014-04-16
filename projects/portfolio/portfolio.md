@@ -14,7 +14,7 @@ I built this engineering portfolio manually with these goals in mind:
 
 Code and site history: [https://github.com/LemonPi/portfolio] (https://github.com/LemonPi/portfolio)
 
-##Understanding the Problem
+<h2 class="anchor">Understanding the Problem <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
 ------------------------
 The first step was researching how building a website could be broken down and to that effect I consulted a classmate,  
 [Zhuowei Zhang](http://zhuoweizhang.net), who had more web development experience. With permission, I used his November [build](https://github.com/zhuowei/design/tree/5b67c2a088f0330f5681924b0d83a94319ba4b96) as my starting point.  
@@ -26,8 +26,7 @@ I found the problem of building a website can be decomposed into:
 - Styling
 - Hosting
 
-<a name="pool"> </a>
-##Solution Pool  
+<h2 class="anchor">Solution Pool <a class="anchor-link" title="permalink to section" href="#pool" name="pool">¶</a></h2>
 ---------------
 In line with my engineering process, solutions for each problem component were generated.  
 
@@ -48,8 +47,7 @@ In line with my engineering process, solutions for each problem component were g
   - GithubPages: slower, but no restrictions on usage and provides server side Jekyll to parse markdown into HTML  
     Note that users are only viewing static HTML pages, markdown is parsed 
 
-<a name="compare"> </a>
-##Solution Comparison
+<h2 class="anchor">Solution Comparison <a class="anchor-link" title="permalink to section" href="#compare" name="compare">¶</a></h2>
 --------------------
 The combination that I selected was (Markdown + HTML) + CSS + Jekyll + GithubPages.  
 Markdown does not natively support tables or CSS classes, so HTML is used to generate tables and picture frames.  
@@ -115,8 +113,7 @@ In light of this, Wix provides great hosting by having a low load time to reques
 the relationship between request number and load time is not linear, and should be **considered along with total load time**.  
 For me, these sites do not give enough control to the developer over what gimmicks the user has to face and thus is not robust enough.  
 
-<a name="usability"> </a>
-##Design decisions for usability  
+<h2 class="anchor">Design Decisions for Usability <a class="anchor-link" title="permalink to section" href="#usability" name="usability">¶</a></h2>
 ---------------------------------
 In my opinion, making a product more usable is almost equivalent to increasing its quality - the overall feel of the product.  
 Attention to detail with the consideration of what could irk the users is key to my process of designing for usability.  
@@ -125,7 +122,7 @@ These are the key design decisions to make this site more usable:
 1. Table rows highlight on hover to easily track items belonging to the same row; I personally had this difficulty with data sheets  
 ([demonstrated here](/portfolio/evaluations/handmixer/#efficiency))  
 
-2. Page anchors allow parts of the page to be redirected to; makes redirect links more relevant  
+2. Page anchors (¶) allow parts of the page to be redirected to; makes redirect links more relevant  
 
 3. Site and page history at the footer of each page to allow anyone interested to see how I have progressed  
 
@@ -143,9 +140,7 @@ These are the key design decisions to make this site more usable:
 </div>
 
 
-
-<a name="prototype"> </a>
-##Prototyping
+<h2 class="anchor">Prototyping <a class="anchor-link" title="permalink to section" href="#prototype" name="prototype">¶</a></h2>
 --------------
 Developing for the web inherently makes it easy to prototype.  
 Jekyll can serve the site locally and constantly regenerate each time an edit is made.
@@ -154,8 +149,7 @@ Jekyll can serve the site locally and constantly regenerate each time an edit is
 <p>Rapid prototyping with Jekyll made easy</p>
 </div>
 
-<a name="polishing"> </a>
-##Polishing
+<h2 class="anchor">Poishing <a class="anchor-link" title="permalink to section" href="#polishing" name="polishing">¶</a></h2>
 ------------
 Rapidly prototyping a product is fine for initial launch and ironing out bugs, but I believe great usability comes from long term polish.  
 Nuances take time and usage to notice, therefore I will gradually add features to improve the quality of my portfolio.  
@@ -181,8 +175,8 @@ The interactive flowchart took a little more work than it appears because I want
 Unfortunately I had to resort to JS to make it **work on mobile devices**; will seek lighter alternatives in the future.  
 
 Check the page history to see when these features were added!
-<a name="gains"> </a>
-##Gains from Experience
+
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 -----------------------
 - Understanding of the components to creating an efficient website
 - Proficiency in CSS, HTML, and markdown

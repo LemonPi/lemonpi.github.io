@@ -12,8 +12,7 @@ Check out my team mates' documentation of their work on this project: [Cameron](
 <p>A typical misalignment</p>
 </div>
 
-<a name="analysis"> </a>
-## Understanding the Problem
+<h2 class="anchor">Understanding the Problem <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
 -------------------------
 
 In line with my engineering process, me and Cameron first dissected the binder first to analyze the root causes of misalignment.
@@ -44,6 +43,7 @@ We then conducted a survey to check this hypothesis.
 
 ![Binder usage survey](survey.jpg)
 
+
 <a name="divergent"> </a> 
 As binder ring size increased, people tended to open them more often by pulling open.  
 This provides support for my lever arm hypothesis.  
@@ -62,8 +62,7 @@ following my engineering process's monomaniacal design step.
 <p>Flowchart illustrating divergent process</p>
 </div>
 
-<a name="convergent"> </a>
-## Converged Solution - Shield Spring
+<h2 class="anchor">Converged Solution - Shield Spring <a class="anchor-link" title="permalink to section" href="#convergent" name="convergent">¶</a></h2>
 -------------------------------------
 After generating the solution pool, we considered the advantages and disadvantages of each solution.  
 As may happen, we deemed the solutions inadequate, although noting that Conical Connection deals well with shift misalignments.  
@@ -83,8 +82,7 @@ rather than the presence of gravity, direction of push, or any other environment
 <p>Flowchart illustrating convergent process</p>
 </div>
 
-<a name="prototype"> </a>
-## Prototyping 
+<h2 class="anchor">Prototyping <a class="anchor-link" title="permalink to section" href="#prototype" name="prototype">¶</a></h2>
 --------------------
 Prototyping is an essential part of my engineering design process,  
 and as such I took up the responsibility of producing our prototypes.  
@@ -127,8 +125,7 @@ Close with the same push, with both sides constrained (in this case by the table
 <p>Closing with a push</p>
 </div>
 
-<a name="gains"> </a> 
-##Gains from Experience
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 --------------------
 - Learned how to solid model and animate with OpenScad
 - Gained physical prototyping experience

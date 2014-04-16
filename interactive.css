@@ -71,10 +71,8 @@
 #compare_2 {top:530px;left:-520px;width:205px;height:40px;}
 #pool {top:420px;left:-45px;width:125px;height:40px;}
 #basis {position:relative;top:60px;float:right;width:310px;height:40px;font-family:"Calibri", Arial, sans-serif;background:#fff}
-#handbook-holder {text-align:center; height:100px; position:relative; left:370px; bottom:120px;}
-#handbook {
+.handbook {
 	background-color:#34495e; 
-	color:#fff; 
 	border: 1px solid transparent; 
 	border-radius:4px; 
 	font-size:28px; 
@@ -82,3 +80,5 @@
 	font-weight:bold;
 	text-decoration:none;
 }
+#handbook-diagram {color:#fff; height:100px; position:relative; left:1110px; bottom:120px;}
+#handbook-inline {color:#fff; margin:15px;}

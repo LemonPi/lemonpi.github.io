@@ -12,8 +12,8 @@ branch: base
 <a href="skulecourses/"><div class="box">
 <img src="skulecourses.jpg"/>
 <span class="caption">
-<h1>Skule Security Sillyness</h1>
-Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br><br>
+<h1 class="caption-title">Skule Security Sillyness</h1>
+Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br>
 Dec 2013
 </span>
 </div></a>
@@ -21,7 +21,7 @@ Dec 2013
 <a href="handmixer/"><div class="box">
 <img src="handmixer.jpg"/>
 <span class="caption">
-<h1>Hand Mixer</h1>
+<h1 class="caption-title">Hand Mixer</h1>
 Exploration of designing for efficiency and usability in a Proctor Silex hand mixer<br><br><br>
 Sept 2013
 </span>
@@ -30,7 +30,7 @@ Sept 2013
 <a href="shredder/"><div class="box">
 <img src="shredder.jpg"/>
 <span class="caption">
-<h1>Shredder</h1>
+<h1 class="caption-title">Shredder</h1>
 Exploration of designing for robustness and safety in a GBC 50s shredder <br><br><br>
 Sept 2013
 </span>

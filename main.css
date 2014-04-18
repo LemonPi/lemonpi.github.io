@@ -92,6 +92,8 @@ code {
         padding:6px 8px;
 }
 .pretty tr:hover{background:#fafafa;color:#000;}
+.pretty .bar {padding:0px 8px; background:#eee;}
+.pretty .bar p {margin:2px;}
 
 .frames {display:inline;position:relative}
 .frames img {border:10px solid #e6e6e6;border-bottom:45px solid #e6e6e6;}
@@ -106,7 +108,7 @@ code {
 
 .side {float:right;padding:0px 70px 0px 0px;}
 .text-block {max-width:700px;}
-.text-block br {line-height:220%;}
+.text-block p {margin-top:0em; margin-bottom:1em;}
 .anchor {}
 .anchor:hover .anchor-link {visibility:visible;}
 .anchor-link {text-decoration:none; visibility:hidden; padding:0 4px 0 4px; color:#32383c}
@@ -151,6 +153,7 @@ code {
 	left: 0px;
 	top: 0px;
 }
+#gallery .caption-title {margin-top:0.1em;}
 #gallery .box img {position: absolute;left: 0;}
 #gallery .box:hover .caption {opacity: 1}
 

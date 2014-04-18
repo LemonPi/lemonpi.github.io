@@ -6,12 +6,15 @@ group: process
 css: handbook
 ---
 <div class="text-block">
-Collected here are my assessment and guideline on technical tools and teamwork strategies.
-Each tool will be analyzed as to what they're <p class="text pro-text">suited for and when to use them</p>, 
-and when <p class="text con-text">they're not useful</p> is discussed, 
-and the tool is assigned a <p class="text score-text">general usefulness score</p> based on the range of situations the tool would be helpful in.
-<br>
-Teamwork strategies examine aspects of teamwork and potential causes of problems inside each and how they can be dealt with.
+<p>
+	Collected here are my assessment and guideline on technical tools and teamwork strategies.
+	Each tool will be analyzed as to what they're <span class="text pro-text">suited for and when to use them</span>, 
+	and when <span class="text con-text">they're not useful</span> is discussed, 
+	and the tool is assigned a <span class="text score-text">general usefulness score</span> based on the range of situations the tool would be helpful in.
+</p>
+<p>
+	Teamwork strategies examine aspects of teamwork and potential causes of problems inside each and how they can be dealt with.
+</p>
 </div>
 
 <div class="toc">

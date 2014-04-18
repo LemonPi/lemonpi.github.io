@@ -148,22 +148,26 @@ $(document).ready(function() {
 <h2 class="anchor">Analysis of Process <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
 ----------------------------
 <div class="text-block">
-My process is characterized by being <b>cyclical</b> and by heavily <b>relying on functional decomposition</b>.
-<br>
-From experience, multiple iterations generally increase quality through integrating component solutions better, 
-finding new component solutions, and addressing flaws found in the previous iteration.
-Cyclic design processes are also the norm in industry, promoted by 
-<a href="http://www.nasa.gov/audience/foreducators/plantgrowth/reference/Eng_Design_5-12.html#">NASA</a> <a href="#ref1">[1]</a>, 
-and many educational sites <a href="#ref2">[2]</a> <a href="#ref3">[3]</a>.
-<br>
-My prevalent use of functional decomposition distinguishes my design process from many others.
-It has proved very useful in promoting modular solutions, which in turn tend to be more robust and easily changeable.
-The solution can be changed by simply swapping in a different component solution without requiring change in other components, 
-making multiple iterations more productive as less backtracking is done. This approach does not seem to be as
-prevalent as cyclic design in industry, since all the sources above present a <b>single-branch</b> approach,
-directly creating solutions for the entire problem. While that might be faster (allowing time for more iterations) than
-my <b>multi-branch</b> approach - generating component solutions for each part of the problem - I believe my
-approach requires less iterations to produce a quality product.
+<p>
+	My process is characterized by being <b>cyclical</b> and by heavily <b>relying on functional decomposition</b>.
+</p>
+<p>
+	From experience, multiple iterations generally increase quality through integrating component solutions better, 
+	finding new component solutions, and addressing flaws found in the previous iteration.
+	Cyclic design processes are also the norm in industry, promoted by 
+	<a href="http://www.nasa.gov/audience/foreducators/plantgrowth/reference/Eng_Design_5-12.html#">NASA</a> <a href="#ref1">[1]</a>, 
+	and many educational sites <a href="#ref2">[2]</a> <a href="#ref3">[3]</a>.
+</p>
+<p>
+	My prevalent use of functional decomposition distinguishes my design process from many others.
+	It has proved very useful in promoting modular solutions, which in turn tend to be more robust and easily changeable.
+	The solution can be changed by simply swapping in a different component solution without requiring change in other components, 
+	making multiple iterations more productive as less backtracking is done. This approach does not seem to be as
+	prevalent as cyclic design in industry, since all the sources above present a <b>single-branch</b> approach,
+	directly creating solutions for the entire problem. While that might be faster (allowing time for more iterations) than
+	my <b>multi-branch</b> approach - generating component solutions for each part of the problem - I believe my
+	approach requires less iterations to produce a quality product.
+</p>
 </div>
 
 <h2 class="anchor">References <a class="anchor-link" title="permalink to section" href="#reference" name="reference">¶</a></h2>

@@ -15,7 +15,7 @@ where I present my <a href="principles.html">conception</a> of good design and s
 <a href="projects/namegame/"><div class="box">
 <img src="projects/namegame.jpg"/>
 <span class="caption">
-<h1>Name Game</h1>
+<h1 class="caption-title">Name Game</h1>
 Gives you usernames and quizzes you on real names using string processing in C <br><br><br>
 Jan 2014
 </span>
@@ -24,8 +24,8 @@ Jan 2014
 <a href="evaluations/skulecourses/"><div class="box">
 <img src="evaluations/skulecourses.jpg"/>
 <span class="caption">
-<h1>Skule Security Sillyness</h1>
-Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br><br>
+<h1 class="caption-title">Skule Security Sillyness</h1>
+Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br>
 Dec 2013
 </span>
 </div></a>
@@ -33,7 +33,7 @@ Dec 2013
 <a href="projects/portfolio/"><div class="box">
 <img src="projects/portfolio.jpg"/>
 <span class="caption">
-<h1>Engineering Design Portfolio</h1>
+<h1 class="caption-title">Engineering Design Portfolio</h1>
 The making of this portfolio <br><br><br>
 Nov 2013 - present
 </span>
@@ -42,8 +42,8 @@ Nov 2013 - present
 <a href="projects/binder/"><div class="box">
 <img src="projects/binder.jpg"/>
 <span class="caption">
-<h1>Binder Misalignment</h1>
-Redesign of binder shields into a spring that offers a more convenient method of opening the rings <br><br><br>
+<h1 class="caption-title">Binder Misalignment</h1>
+Redesign of binder shields into a spring that offers a more convenient method of opening the rings <br>
 Nov 2013
 </span>
 </div></a>

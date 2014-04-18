@@ -66,7 +66,7 @@
   content: "-";
 }
 
-.text {display:inline; font-weight:bold}
+.text {display:inline; font-weight:bold;}
 .pro-text {color:#1abc9c;}
 .con-text {color:#e8534f;}
 .score-text {color:#0b92ab;}

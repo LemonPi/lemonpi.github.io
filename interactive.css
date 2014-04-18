@@ -5,6 +5,7 @@
 	min-width: 1050px;
 	height: 750px;
 	line-height: normal;
+	font-size: medium;
 }
 .hot-spots {
 	font-family:"Calibri", Arial, sans-serif;
@@ -80,5 +81,5 @@
 	font-weight:bold;
 	text-decoration:none;
 }
-#handbook-diagram {color:#fff; height:100px; position:relative; left:1110px; bottom:120px;}
-#handbook-inline {color:#fff; margin:15px;}
+#handbook-diagram {color:#fff; width:190px; height:38px; position:absolute; left:262px; top:620px;}
+#handbook-inline {color:#fff; margin:15px; line-height:80px;}

@@ -33,7 +33,10 @@ The code was designed with the objective of making it usable by as many people a
 <h2 class="anchor">Making Process <a class="anchor-link" title="permalink to section" href="#making" name="making">¶</a></h2>
 ------------------------
 It might seem masochistic to do processing with C rather than a language like Python or Perl, but I wanted to give myself a challenge.  
-The best way to learn seems to be (1) taking on a next-to-impossible project (2) planning out what components are needed (data structure and processes) (3) then figure out the implementation.  
+The best way to learn seems to be  
+ 1. taking on a project at the edge of your skill  
+ 2. assume implementation is done for necessary functions and build with them  
+ 3. then figure out the implementation  
 <div class="frames">
 <img src="structure.png">
 <p>Clearly define all the data structure at the start</p>

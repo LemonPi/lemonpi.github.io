@@ -9,11 +9,11 @@
 <meta property="og:image" content="https://lemonpi.github.io/portfolio/ogimg.png" />
 <title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
 <link rel="stylesheet" href="{{ site.baseurl }}main.css" />
-{% if page.url == "/process.html" %}
-	<link rel="stylesheet" href="{{ site.baseurl }}interactive.css" />
+{% if page.css == "interactive" %}
+	<link rel="stylesheet" href="/portfolio/interactive.css" />
 {% endif %}
-{% if page.url == "/handbook/index.html" %}
-	<link rel="stylesheet" href="handbook.css" />
+{% if page.css == "handbook" %}
+	<link rel="stylesheet" href="/portfolio/handbook/handbook.css" />
 {% endif %}
 <link rel="shortcut icon" href="/portfolio/favicon.ico">
 </head>
@@ -37,9 +37,9 @@
 		{% endif %}
 		
 		{% if page.group == "process" %}
-			<li id="active"><a href="{{ site.baseurl }}process.html">Process</a></li>
+			<li id="active"><a href="{{ site.baseurl }}process/">Process</a></li>
 		{% else %}
-			<li><a href="{{ site.baseurl }}process.html">Process</a></li>
+			<li><a href="{{ site.baseurl }}process/">Process</a></li>
 		{% endif %}
 		
 		{% if page.group == "projects" %}
@@ -63,7 +63,7 @@
 </div>
 </div>
 <div id="content">
-{% if page.url != "/process.html" and page.url != "/projects/" and page.url != "/index.html" and page.url != "/evaluations/" %}
+{% if page.branch != "base" %}
 	<h1>{{ page.title }}</h1>
 {% endif %}
 {{ content }}

@@ -9,6 +9,15 @@ branch: base
 
 <div id="gallery">
 
+<a href="icecube/"><div class="box">
+<img src="icecube.png"/>
+<span class="caption">
+<h1 class="caption-title">ICE-Cube</h1>
+Meat Refridgeration without grid electricity <br><br><br><br>
+March 2014
+</span>
+</div></a>
+
 <a href="headset/"><div class="box">
 <img src="headset.jpg"/>
 <span class="caption">
@@ -64,6 +73,8 @@ Oct 2013
 </div></a>
 </div>
  --------------------------
+ - [ICE-Cube Meat refrigeration without electricity](icecube/) - March 2014
+ 
  - [Request for Proposal: Headsets and Glasses for communication operators](headset/) - Feb 2014
  
  - [User-real name matching game in C](namegame/) - Jan 2014

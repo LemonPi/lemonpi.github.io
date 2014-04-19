@@ -13,6 +13,7 @@ group: projects
 	Full RFP <a href="headsetandglasses.pdf">here</a>
 </p>
 <p>
+	I was responsible for the introduction sections, most of the requirements, most of the editing, and creating all the visuals.
 	Check out my team mates' documentation of their work on this project: <br class="br-normal">
 	<a href="http://jingboyang.weebly.com/projects.html">Eric (hasn't updated yet)</a> | 
 	<a href="http://kimcota95.wix.com/portfolio#!reflection/c1e75">Kim</a> | 

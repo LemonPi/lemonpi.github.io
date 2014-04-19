@@ -28,7 +28,7 @@ Apparently **no sanitation of inputs is done...**
 
 <div class="frames">
 <img src="dirtyinputs.png">
-<p>They protect against spam... But what of dirty injections!?!</p>
+<p>Protect against spam... But what of dirty injections!?!</p>
 </div>
 
 The code for the CSC180 page was written by Zhuowei while I wrote the code for the ESC103 page.  

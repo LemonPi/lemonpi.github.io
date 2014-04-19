@@ -95,16 +95,6 @@ code {
 .pretty .bar {padding:0px 8px; background:#eee;}
 .pretty .bar p {margin:2px;}
 
-.frames {display:inline;position:relative}
-.frames img {border:10px solid #e6e6e6;border-bottom:45px solid #e6e6e6;}
-.frames p {
-  position:absolute;
-  text-align:left;
-  padding-left:20px;
-  width:100%;
-  bottom:0px;
-  color:#888;
-}
 
 .side {float:right;padding:0px 70px 0px 0px;}
 .text-block {max-width:700px;}
@@ -122,6 +112,16 @@ code {
  }
 .toc-title {margin:14px 0 0 18px;}
 .reference {font-family:"Calibri", "Lucida Grande", Sans-Serif;}
+.frames {display:inline;position:relative}
+.frames img {border:10px solid #e6e6e6;border-bottom:45px solid #e6e6e6;}
+.frames p {
+  position:absolute;
+  text-align:left;
+  padding-left:20px;
+  width:100%;
+  bottom:-6px;
+  color:#888;
+}
 
 #gallery {
 	height: 1000px;
@@ -154,7 +154,7 @@ code {
 	top: 0px;
 }
 #gallery .caption-title {margin-top:0.1em;}
-#gallery .box img {position: absolute;left: 0;}
+#gallery .box img {position: absolute;left: 0; height:320px; width:345px;}
 #gallery .box:hover .caption {opacity: 1}
 
 #github {

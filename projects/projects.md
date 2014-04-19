@@ -73,7 +73,7 @@ Oct 2013
 </div></a>
 </div>
  --------------------------
- - [ICE-Cube Meat refrigeration without electricity](icecube/) - March 2014
+ - [**ICE-Cube Meat refrigeration without electricity**](icecube/) - March 2014
  
  - [Request for Proposal: Headsets and Glasses for communication operators](headset/) - Feb 2014
  

@@ -199,6 +199,20 @@ Summary:
 -----------------------
 <div class="text-block">
 <p>
+	We first met with our stakeholders (meat farmers) at the Wytchwood Farmer's market
+	to observe existing solutions and what they would value.
+	We found that most of them were using coolers with either ice packs or ice cubes 
+	inside, and all had opaque lids. One farmer brought a chest freezer, which had a 
+	transparent top, which I thought (and they agreed) was highly valuable.
+	What surprised me was how different the farmers were in terms of resources
+	<ul>
+		<li>Some had only cars for transportation, others had trucks.
+		<li>Some used 100 gallon coolers while others used 20L ones.
+		<li>Some had walk in freezers and others didn't, despite them selling 100 gallons at a time
+	</ul>
+	This reinforced the need for a robust solution that would work across scales.
+</p>
+<p>
 	I first functionally decomposed two things
 	<ol>
 		<li>stakeholder resources

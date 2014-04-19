@@ -198,7 +198,7 @@ environment and can be made better through iteration and alteration of parts.
 			<ul>
 				<li>survey used to understand the problem of binder misalignment
 				<li>contacting stakeholders in the <a href="/portfolio/projects/headset/">headset and glasses RFP</a> <a href="#ref4">[4]</a>
-				and <a href="/portfolio/projects/icecube/#stakeholder">meat refrigeration without grid electricity</a> for first-hand 
+				and <a href="/portfolio/projects/icecube/#process">meat refrigeration without grid electricity</a> for first-hand 
 				experience with the problem
 				<li>often found ways to improve value of solution --> ICE-Cube combines function of display and storage, 
 				an advantage over existing coolers which only store meat
@@ -277,7 +277,7 @@ environment and can be made better through iteration and alteration of parts.
 			<ul>
 				<li>informally done for each project, immediately after brainstorming diverse ideas
 				<li>disagreements add value to solution since they lead to more detailed research to back up claim,
-				such as my justifications for maintaining a cubic dimension for the <a href="/portfolio/projects/icecube/#dimension">ICE-Cube</a>
+				such as my justifications for maintaining a cubic dimension for the <a href="/portfolio/projects/icecube/#usability">ICE-Cube</a>
 			</ul>
 		</div>
 		<div class="picture-box">

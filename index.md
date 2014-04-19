@@ -55,9 +55,9 @@ Nov 2013
 > ###As an engineer,
 > I believe engineering design is the iterative application of scientific knowledge and technical skills to solve real problems in a robust, usable, and efficient manner with the stakeholders in mind.
   
-> It often involves breaking down the problem and inventing a language of tools at each layer for a long-lasting, robust solution.
 
-> Good engineering is a balance of fitting theoretical models and trial and error through prototyping.  
+> Good engineering is a balance of fitting theoretical models and trial and error through prototyping,  
+> and it often involves breaking down the problem and inventing a language of tools at each layer for a long-lasting, robust solution.
 
 > As you consider my exploits from past to present, you can see evidence of how I progressed from oversimplifying problems to appreciating complex issues.  
 

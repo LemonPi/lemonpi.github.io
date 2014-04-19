@@ -12,7 +12,7 @@ group: projects
 <p>
 	This project is ongoing (and where I spend most of my free time) and the team 
 	currently includes
-	<a href="zhuoweizhang.net">Zhuowei Zhang</a>
+	<a href="http://zhuoweizhang.net/design">Zhuowei Zhang</a>
 </p>
 <p>
 	I am responsible for high level and low level planning, general implmentation, and design.

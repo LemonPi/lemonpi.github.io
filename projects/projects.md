@@ -9,6 +9,15 @@ branch: base
 
 <div id="gallery">
 
+<a href="timewatch/"><div class="box">
+<img src="timewatch.png"/>
+<span class="caption">
+<h1 class="caption-title">Timewatch</h1>
+Social platform and utility for trending activities and time management <br><br><br><br>
+Feb 2014 - present
+</span>
+</div></a>
+
 <a href="icecube/"><div class="box">
 <img src="icecube.png"/>
 <span class="caption">
@@ -73,6 +82,8 @@ Oct 2013
 </div></a>
 </div>
  --------------------------
+ - [**Timewatch**](timewatch/) - Feb 2014 and ongoing
+ 
  - [**ICE-Cube Meat refrigeration without electricity**](icecube/) - March 2014
  
  - [Request for Proposal: Headsets and Glasses for communication operators](headset/) - Feb 2014

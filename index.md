@@ -12,6 +12,15 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div id="gallery">
 
+<a href="projects/timewatch/"><div class="box">
+<img src="projects/timewatch.png"/>
+<span class="caption">
+<h1 class="caption-title">Timewatch</h1>
+Social platform and utility for trending activities and time management <br><br><br><br>
+Feb 2014 - present
+</span>
+</div></a>
+
 <a href="projects/icecube/"><div class="box">
 <img src="projects/icecube.png"/>
 <span class="caption">
@@ -21,14 +30,6 @@ March 2014
 </span>
 </div></a>
 
-<a href="projects/namegame/"><div class="box">
-<img src="projects/namegame.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Name Game</h1>
-Gives you usernames and quizzes you on real names using string processing in C <br><br><br>
-Jan 2014
-</span>
-</div></a>
 
 <a href="evaluations/skulecourses/"><div class="box">
 <img src="evaluations/skulecourses.jpg"/>

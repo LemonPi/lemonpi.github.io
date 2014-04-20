@@ -279,7 +279,7 @@ Summary:
 </p>
 
 <div class="frames">
-<img src="container.jpg">
+<img src="twoboxes.jpg">
 <p>Plastic wrapping attempts to water seal prototype</p>
 </div>
 <div class="frames">

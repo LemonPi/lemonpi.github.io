@@ -20,7 +20,7 @@ group: projects
 <p>
 	I was responsible for generating the overall concept, justifying key features, creating the poster, and a third of the work on our prototypes.
 	Check out my team mates' documentation of their work on this project: <br class="br-normal">
-	<a href="http://jingboyang.weebly.com/projects.html">Eric (hasn't updated yet)</a> | 
+	<a href="http://jingboyangdesign.weebly.com/ice-cube.html">Eric</a> | 
 	<a href="http://kimcota95.wix.com/portfolio#!projects/cy2g">Kim</a> | 
 	<a href="http://jzabaladesignportfolio.weebly.com/artifact-six-ice-cube.html">Jessa</a>
 </p>

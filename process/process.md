@@ -203,6 +203,16 @@ $(document).ready(function() {
 	my <b>multi-branch</b> approach - generating component solutions for each part of the problem - I believe my
 	approach requires less iterations to produce a quality product.
 </p>
+<p>
+	The keeping of a <b>solution pool</b> also distinguishes my personal design process.
+	Its purpose is to allow effective responses to small changes in the problem. 
+	An analogy is the caching of websites - remaining on the same site (overall problem) 
+	will result in your browser caching site resources such as css, javascript, and images, 
+	so that switching to another page (small change to problem) will be fast and efficient, 
+	directly loading the resources from cache rather than the expensive route of downloading them again.
+	This idea of <b>solving a class of problems rather than a particular problem</b> makes 
+	my solutions robust, and is endorsed by computer science giants such as Hal Abelson and Gerald Jay Sussman <a href="#ref4">[4]</a>.
+</p>
 </div>
 
 <h2 class="anchor">References <a class="anchor-link" title="permalink to section" href="#reference" name="reference">¶</a></h2>
@@ -219,5 +229,9 @@ $(document).ready(function() {
 <a name="ref3">[3]</a> PBS, 
 	(2008, Feb 7). <i>What Is the Design Process?</i> [Online]. Available:
 	<a href="http://www.pbslearningmedia.org/resource/phy03.sci.engin.design.desprocess/what-is-the-design-process/">http://www.pbslearningmedia.org/resource/phy03.sci.engin.design.desprocess/what-is-the-design-process/</a>
+<br>
+<a name="ref4">[4]</a> Abelson H. and Sussman J. G.,
+	<i>Structure and Interpretation of Computer Programs [Online].</i> Available: 
+	<a href="http://mitpress.mit.edu/sicp/full-text/book/book.html">http://mitpress.mit.edu/sicp/full-text/book/book.html</a>
 <br>
 </div>

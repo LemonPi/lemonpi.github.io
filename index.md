@@ -12,6 +12,15 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div id="gallery">
 
+<a href="projects/bincalc/"><div class="box">
+<img src="projects/bincalc.png"/>
+<span class="caption">
+<h1 class="caption-title">Bincalc</h1>
+Binary calculator for bit manipulation practice and stream processing<br><br><br><br>
+July 2014
+</span>
+</div></a>
+
 <a href="projects/timewatch/"><div class="box">
 <img src="projects/timewatch.png"/>
 <span class="caption">
@@ -37,15 +46,6 @@ March 2014
 <h1 class="caption-title">Skule Security Sillyness</h1>
 Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br>
 Dec 2013
-</span>
-</div></a>
-
-<a href="projects/binder/"><div class="box">
-<img src="projects/binder.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Binder Misalignment</h1>
-Redesign of binder shields into a spring that offers a more convenient method of opening the rings <br>
-Nov 2013
 </span>
 </div></a>
 

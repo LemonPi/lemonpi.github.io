@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutS"
+       style="overflow:visible">
+      <path
+         id="path3958"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutL"
+       style="overflow:visible">
+      <path
+         id="path3952"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="DiamondL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DiamondL"
+       style="overflow:visible">
+      <path
+         id="path3889"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3837"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3813"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Sstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         id="path3822"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.2) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3819"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3831"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-8"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-6"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-4"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-0"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-46"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-7"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-1"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-18"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-2"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-80"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-12"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-51"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-20"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-41"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-43"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-7"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-0"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-73"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-9"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8949"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8951"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8953"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8955"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8957"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8959"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8961"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8963"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8965"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8967"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8969"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8971"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8973"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8975"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8977"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8979"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-15"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-03"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-59"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-63"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-28"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-87"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-81"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-25"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-44"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-44"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-42"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3958-93"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.2,0.2)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="272.52398"
+     inkscape:cy="483.13526"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-width="1822"
+     inkscape:window-height="1058"
+     inkscape:window-x="90"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Frames" />
+  <g
+     inkscape:label="Pictures"
+     inkscape:groupmode="layer"
+     id="layer1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Text" />
+  <g
+     id="g6725"
+     transform="translate(-92.934033,-20.203051)">
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="52.816246"
+       x="118.18784"
+       height="245.46707"
+       width="308.09653"
+       id="rect6699"
+       style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3868"
+       d="m 149.75512,139.18428 208.5965,0"
+       style="color:#000000;fill:none;stroke:#556885;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3868-1"
+       d="m 190.73473,69.736303 39.76416,0"
+       style="color:#000000;fill:none;stroke:#556885;stroke-width:18.42280388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8"
+       y="143.96317"
+       x="241.61198"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="143.96317"
+         x="241.61198"
+         id="tspan3842-9-3"
+         sodipodi:role="line">RPN</tspan></text>
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-1"
+       y="168.84018"
+       x="164.13182"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="168.84018"
+         x="164.13182"
+         id="tspan3842-9-3-7"
+         sodipodi:role="line">reads and processes static input into tokens (lexer)</tspan><tspan
+         id="tspan3825"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="183.84018"
+         x="164.13182"
+         sodipodi:role="line">process tokens in order for value (basic parser)</tspan></text>
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-7"
+       y="73.600494"
+       x="195.82254"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="73.600494"
+         x="195.82254"
+         id="tspan3842-9-3-4"
+         sodipodi:role="line">main</tspan></text>
+    <path
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:connector-curvature="0"
+       id="path3804"
+       d="m 191.36,76.96296 0,46.62956"
+       style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-1-0"
+       y="90.81015"
+       x="197.48102"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan3825-4"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="90.81015"
+         x="197.48102"
+         sodipodi:role="line">converts stream to static input</tspan></text>
+    <path
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:connector-curvature="0"
+       id="path6574"
+       d="m 149.64286,152.36219 0,41.78571"
+       style="color:#000000;fill:none;stroke:#9caac0;stroke-width:1.70000005000000010;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.40000010000000020, 6.80000019000000040;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="196.29076"
+       x="141.78572"
+       height="95.714287"
+       width="15.714286"
+       id="rect6576"
+       style="color:#000000;fill:#556885;fill-opacity:1;fill-rule:nonzero;stroke:#556885;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="196.29076"
+       x="141.78572"
+       height="79.64286"
+       width="15.714286"
+       id="rect6576-4"
+       style="color:#000000;fill:#6e809c;fill-opacity:1;fill-rule:nonzero;stroke:#6e809c;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="196.29076"
+       x="141.78572"
+       height="63.571434"
+       width="15.714286"
+       id="rect6576-4-5"
+       style="color:#000000;fill:#8399b0;fill-opacity:1;fill-rule:nonzero;stroke:#8399b0;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="196.29076"
+       x="141.78572"
+       height="46.785721"
+       width="15.714286"
+       id="rect6576-4-5-5"
+       style="color:#000000;fill:#a6b7c3;fill-opacity:1;fill-rule:nonzero;stroke:#a6b7c3;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="196.29076"
+       x="141.78572"
+       height="30.714293"
+       width="15.714286"
+       id="rect6576-4-5-5-1"
+       style="color:#000000;fill:#becace;fill-opacity:1;fill-rule:nonzero;stroke:#becace;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       y="196.29076"
+       x="141.78572"
+       height="15.35715"
+       width="15.714286"
+       id="rect6576-4-5-5-1-7"
+       style="color:#000000;fill:#d9e0e1;fill-opacity:1;fill-rule:nonzero;stroke:#d9e0e1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-1-1"
+       y="239.55179"
+       x="162.7393"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan3825-5"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="239.55179"
+         x="162.7393"
+         sodipodi:role="line">Stack</tspan><tspan
+         id="tspan6694"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="254.55179"
+         x="162.7393"
+         sodipodi:role="line">holds all working tokens (max 3)</tspan></text>
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-1-0-2"
+       y="47.556316"
+       x="117.60105"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan3825-4-7"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="47.556316"
+         x="117.60105"
+         sodipodi:role="line">bc-rpn.cpp</tspan></text>
+  </g>
+  <g
+     id="g7303"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\grammar.png"
+     inkscape:export-xdpi="196.90054"
+     inkscape:export-ydpi="196.90054"
+     transform="translate(-622.14285,99.285711)">
+    <path
+       style="color:#000000;fill:#355500;fill-opacity:1;stroke:#725a0d;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 274.78693,751.72541 289.15376,0"
+       id="path3868-6-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="388.76614"
+       y="755.01691"
+       id="text3840-0-8-14-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2"
+         x="388.76614"
+         y="755.01691"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">Expression</tspan></text>
+    <path
+       style="color:#000000;fill:#355500;fill-opacity:1;stroke:#ba8b1c;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 274.40335,793.5329 179.96324,0"
+       id="path3868-6-3-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="349.89621"
+       y="797.89081"
+       id="text3840-0-8-14-2-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2-8"
+         x="349.89621"
+         y="797.89081"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">Term</tspan></text>
+    <g
+       id="g7150">
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5"
+         y="792.02118"
+         x="470.96552"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ba8b1c;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ba8b1c;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="792.02118"
+           x="470.96552"
+           id="tspan3842-9-3-2-2-8-7"
+           sodipodi:role="line">+</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-6"
+         y="803.36273"
+         x="472.25119"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ba8b1c;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ba8b1c;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="803.36273"
+           x="472.25119"
+           id="tspan3842-9-3-2-2-8-7-1"
+           sodipodi:role="line">-</tspan><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ba8b1c;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="820.86273"
+           x="472.25119"
+           sodipodi:role="line"
+           id="tspan6905" /></text>
+    </g>
+    <path
+       style="color:#000000;fill:#ba8b1c;fill-opacity:1;stroke:#e9c36a;stroke-width:29.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 494.34744,794.01567 69.1589,0"
+       id="path3868-6-3-1-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="489.83557"
+       y="797.70367"
+       id="text3840-0-8-14-2-6-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2-8-2"
+         x="489.83557"
+         y="797.70367"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">[Other terms]</tspan></text>
+    <path
+       style="color:#000000;fill:#355500;fill-opacity:1;stroke:#d2aa22;stroke-width:29.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 274.70351,836.43869 118.25138,0"
+       id="path3868-6-3-1-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="310.50497"
+       y="840.90936"
+       id="text3840-0-8-14-2-6-95"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2-8-4"
+         x="310.50497"
+         y="840.90936"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">Bit term</tspan></text>
+    <g
+       style="fill:#d2aa22;fill-opacity:1"
+       id="g7138">
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-3"
+         y="821.19348"
+         x="408.40338"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d2aa22;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#d2aa22;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="821.19348"
+           x="408.40338"
+           id="tspan3842-9-3-2-2-8-7-12"
+           sodipodi:role="line">&gt;&gt;</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-33"
+         y="831.04248"
+         x="408.15082"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d2aa22;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#d2aa22;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="831.04248"
+           x="408.15082"
+           id="tspan3842-9-3-2-2-8-7-4"
+           sodipodi:role="line">&lt;&lt;</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-1"
+         y="841.90161"
+         x="411.18127"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d2aa22;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#d2aa22;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="841.90161"
+           x="411.18127"
+           id="tspan3842-9-3-2-2-8-7-13"
+           sodipodi:role="line">&amp;</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-8"
+         y="853.51837"
+         x="412.44397"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d2aa22;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#d2aa22;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="853.51837"
+           x="412.44397"
+           id="tspan3842-9-3-2-2-8-7-7"
+           sodipodi:role="line">|</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-8-4"
+         y="867.6225"
+         x="412.45465"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d2aa22;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#d2aa22;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="867.6225"
+           x="412.45465"
+           id="tspan3842-9-3-2-2-8-7-7-2"
+           sodipodi:role="line">^</tspan></text>
+    </g>
+    <path
+       style="color:#000000;fill:#e4b74c;fill-opacity:1;stroke:#e8cf6b;stroke-width:29.99999428;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 439.43388,836.44208 14.86464,0"
+       id="path3868-6-3-1-7-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="437.27881"
+       y="840.13007"
+       id="text3840-0-8-14-2-6-95-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2-8-4-9"
+         x="437.27881"
+         y="840.13007"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">[...]</tspan></text>
+    <path
+       style="color:#000000;fill:#355500;fill-opacity:1;stroke:#e6ce34;stroke-width:29.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 274.65494,880.93361 118.25138,0"
+       id="path3868-6-3-1-7-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="301.09802"
+       y="884.13281"
+       id="text3840-0-8-14-2-6-95-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2-8-4-98"
+         x="301.09802"
+         y="884.13281"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">Unary term</tspan></text>
+    <g
+       style="fill:#e6ce34;fill-opacity:1"
+       id="g7205">
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-65"
+         y="876.49933"
+         x="412.44397"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e6ce34;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#e6ce34;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="876.49933"
+           x="412.44397"
+           id="tspan3842-9-3-2-2-8-7-0"
+           sodipodi:role="line">~</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-65-2"
+         y="888.37939"
+         x="427.83514"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e6ce34;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#e6ce34;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="888.37939"
+           x="427.83514"
+           id="tspan3842-9-3-2-2-8-7-0-8"
+           sodipodi:role="line">lit</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-65-6"
+         y="884.84387"
+         x="412.68283"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e6ce34;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"
+         inkscape:transform-center-y="-1.2646484"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#e6ce34;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="884.84387"
+           x="412.68283"
+           id="tspan3842-9-3-2-2-8-7-0-0"
+           sodipodi:role="line">0</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-65-24"
+         y="896.20813"
+         x="412.4303"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e6ce34;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#e6ce34;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="896.20813"
+           x="412.4303"
+           id="tspan3842-9-3-2-2-8-7-0-86"
+           sodipodi:role="line">0x</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-14-2-6-5-65-5"
+         y="875.75256"
+         x="424.55212"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e6ce34;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#e6ce34;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="875.75256"
+           x="424.55212"
+           id="tspan3842-9-3-2-2-8-7-0-09"
+           sodipodi:role="line">neg</tspan></text>
+    </g>
+    <path
+       style="color:#000000;fill:#355500;fill-opacity:1;stroke:#ece337;stroke-width:29.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 275.16002,923.57647 118.25138,0"
+       id="path3868-6-3-1-7-3-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="311.57672"
+       y="926.86798"
+       id="text3840-0-8-14-2-6-95-1-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         id="tspan3842-9-3-2-2-8-4-98-6"
+         x="311.57672"
+         y="926.86798"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">Primary</tspan></text>
+    <g
+       transform="translate(0,-1.7677669)"
+       style="fill:#ece337;fill-opacity:1"
+       id="g7295">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ece337;fill-opacity:1;stroke:none;font-family:Sans"
+         x="412.27863"
+         y="915.11121"
+         id="text3840-0-8-14-2-6-5-65-24-1"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-2-2-8-7-0-86-3"
+           x="412.27863"
+           y="915.11121"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ece337;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">1.75</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ece337;fill-opacity:1;stroke:none;font-family:Sans"
+         x="412.78372"
+         y="928.74823"
+         id="text3840-0-8-14-2-6-5-65-24-8"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-2-2-8-7-0-86-9"
+           x="412.78372"
+           y="928.74823"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ece337;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">a</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ece337;fill-opacity:1;stroke:none;font-family:Sans"
+         x="412.27866"
+         y="943.64795"
+         id="text3840-0-8-14-2-6-5-65-24-3"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\first.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-2-2-8-7-0-86-4"
+           x="412.27866"
+           y="943.64795"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ece337;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">(...)</tspan></text>
+    </g>
+  </g>
+  <rect
+     style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect6699-6"
+     width="308.09653"
+     height="245.46707"
+     x="368.91489"
+     y="31.716106"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 419.99242,137.52064 56.53039,0"
+     id="path3868-61-7"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160934;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 419.83981,103.56757 56.83552,0"
+     id="path3868-61"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:18.42280388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 503.60464,43.636164 39.76416,0"
+     id="path3868-1-8"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="435.77686"
+     y="106.71027"
+     id="text3840-0-8-4"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9"
+       x="435.77686"
+       y="106.71027"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">expr</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="510.12103"
+     y="47.143215"
+     id="text3840-0-8-7-8"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-4-8"
+       x="510.12103"
+       y="47.143215"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">main</tspan></text>
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:18.42280388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 502.61791,77.71933 39.76416,0"
+     id="path3868-1-8-9"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 520.30134,47.648535 0,19.421744"
+     id="path3804-2"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="529.99377"
+     y="64.710014"
+     id="text3840-0-8-1-0-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="529.99377"
+       y="64.710014"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1">calls calculate</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="368.32809"
+     y="26.456177"
+     id="text3840-0-8-1-0-2-1"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="368.32809"
+       y="26.456177"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-7-5">bc.cpp</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="434.77371"
+     y="141.547"
+     id="text3840-0-8-4-2"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-0"
+       x="434.77371"
+       y="141.547"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">term</tspan></text>
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 420.90644,172.45192 54.70234,0"
+     id="path3868-61-77"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="425.13504"
+     y="177.14819"
+     id="text3840-0-8-4-7"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-3"
+       x="425.13504"
+       y="177.14819"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">bit term</tspan></text>
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 419.98466,207.80164 56.54588,0"
+     id="path3868-61-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="416.47049"
+     y="210.64879"
+     id="text3840-0-8-4-26"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-01"
+       x="416.47049"
+       y="210.64879"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">unary term</tspan></text>
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 411.21132,247.48782 74.09256,0"
+     id="path3868-61-6"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="425.55887"
+     y="251.40453"
+     id="text3840-0-8-4-5"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-7"
+       x="425.55887"
+       y="251.40453"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">primary</tspan></text>
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 448.2576,109.82308 0,17.18028"
+     id="path3804-2-1"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 448.2576,147.81857 0,12.90399"
+     id="path3804-2-1-0"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 448.2576,181.23462 0,14.82832"
+     id="path3804-2-1-0-0"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 448.2576,217.95162 0,12.90399"
+     id="path3804-2-1-0-0-7"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="497.70572"
+     y="81.583527"
+     id="text3840-0-8-7-8-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-4-8-8"
+       x="497.70572"
+       y="81.583527"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">calculate</tspan></text>
+  <path
+     sodipodi:nodetypes="ccc"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 520.34919,85.646771 0,18.495569 -34.63543,0"
+     id="path3804-2-6"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 544.02515,143.43361 74.09256,0"
+     id="path3868-61-6-6"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="544.60999"
+     y="147.03893"
+     id="text3840-0-8-4-5-0"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-7-3"
+       x="544.60999"
+       y="147.03893"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">token stream</tspan></text>
+  <path
+     sodipodi:nodetypes="cccc"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 493.62829,247.82661 21.25945,0 0,-102.82259 14.51381,0.016"
+     id="path3804-2-6-5"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="398.89352"
+     y="84.601868"
+     id="text3840-0-8-1-0-9-0"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="398.89352"
+       y="84.601868"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9">parsers</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="539.04028"
+     y="124.49471"
+     id="text3840-0-8-1-0-9-0-4"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="539.04028"
+       y="124.49471"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-7">lexer</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="484.04031"
+     y="183.78041"
+     id="text3840-0-8-1-0-9-0-8"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="484.04031"
+       y="183.78041"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3">  get</tspan><tspan
+       id="tspan8397"
+       sodipodi:role="line"
+       x="484.04031"
+       y="198.78041"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">token</tspan></text>
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#9caac0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.99999999, 8.99999995;stroke-dashoffset:0.3;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 612.14285,27.300442 0,92.620148"
+     id="path3804-2-16"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="589.31195"
+     y="20.802006"
+     id="text3840-0-8-1-0-9-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="589.31195"
+       y="20.802006"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-8">in stream</tspan></text>
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#9caac0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 9;stroke-dashoffset:0.3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 543.7146,156.51726 0,46.88843"
+     id="path3804-2-16-9"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:#a6b7c3;fill-opacity:1;stroke:#9caac0;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 537.41853,213.93557 40.11879,0"
+     id="path3868-61-6-6-8"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="534.96716"
+     y="218.63185"
+     id="text3840-0-8-4-5-0-8"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-7-3-0"
+       x="534.96716"
+       y="218.63185"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">c. token</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="530.7677"
+     y="239.30247"
+     id="text3840-0-8-1-0-9-0-8-8"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="530.7677"
+       y="239.30247"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-7">1 at a time</tspan></text>
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#9caac0;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.99999989, 8.99999969;stroke-dashoffset:0.29999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 617.07694,157.87112 0,84.816"
+     id="path3804-2-16-9-7"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:#a6b7c3;fill-opacity:1;stroke:#9caac0;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 614.56894,257.10793 40.11879,0"
+     id="path3868-61-6-6-8-8"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="620.37543"
+     y="261.80423"
+     id="text3840-0-8-4-5-0-8-3"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-7-3-0-8"
+       x="620.37543"
+       y="261.80423"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">table</tspan></text>
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     id="path8450"
+     d="m 514.79899,247.3472 0.0492,11.23933 84.25944,-0.15291"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="521.3963"
+     y="270.1228"
+     id="text3840-0-8-1-0-9-0-8-8-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="521.3963"
+       y="270.1228"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-7-6">name lookup</tspan></text>
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160934;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 388.93159,52.719334 38.56537,0"
+     id="path3868-61-0"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="392.51926"
+     y="55.862041"
+     id="text3840-0-8-4-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-9"
+       x="392.51926"
+       y="55.862041"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">error</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="619.59711"
+     y="82.241936"
+     id="text3840-0-8-1-0-9-0-8-6"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="619.59711"
+       y="82.241936"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-8">  get</tspan><tspan
+       id="tspan8397-3"
+       sodipodi:role="line"
+       x="619.59711"
+       y="97.241936"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">chars</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="565.7641"
+     y="176.1705"
+     id="text3840-0-8-1-0-9-0-8-8-9-5-4"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="565.7641"
+       y="176.1705"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-7-6-1-8">stores</tspan><tspan
+       id="tspan8735-4"
+       sodipodi:role="line"
+       x="565.7641"
+       y="191.1705"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">into</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-225.10274"
+     y="354.00189"
+     id="text3840-0-8-1-0-2-1-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="-225.10274"
+       y="354.00189"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-7-5-7">bc.cpp</tspan></text>
+  <path
+     sodipodi:nodetypes="ccc"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m -73.081658,413.19247 0,18.49557 -34.635432,0"
+     id="path3804-2-6-58"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     sodipodi:nodetypes="cccc"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m -108.89393,571.3317 21.259449,0 0,-102.82259 14.51381,0.016"
+     id="path3804-2-6-5-5"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-194.53731"
+     y="412.14758"
+     id="text3840-0-8-1-0-9-0-3"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="-194.53731"
+       y="412.14758"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-9">parsers</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-54.390533"
+     y="452.04041"
+     id="text3840-0-8-1-0-9-0-4-2"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="-54.390533"
+       y="452.04041"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-7-4">lexer</tspan></text>
+  <path
+     style="color:#000000;fill:#556885;fill-opacity:1;stroke:#9caac0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 9;stroke-dashoffset:0.3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m -49.716248,484.06296 0,46.88843"
+     id="path3804-2-16-9-6"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <path
+     inkscape:export-ydpi="180.12708"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     style="color:#000000;fill:#a6b7c3;fill-opacity:1;stroke:#9caac0;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m -56.012318,541.48127 40.11879,0"
+     id="path3868-61-6-6-8-2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-58.463654"
+     y="546.17755"
+     id="text3840-0-8-4-5-0-8-9"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       id="tspan3842-9-3-9-7-3-0-5"
+       x="-58.463654"
+       y="546.17755"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">c. token</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-62.663147"
+     y="566.84814"
+     id="text3840-0-8-1-0-9-0-8-8-2"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="-62.663147"
+       y="566.84814"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-7-0">1 at a time</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-72.034515"
+     y="597.66846"
+     id="text3840-0-8-1-0-9-0-8-8-9-1"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="-72.034515"
+       y="597.66846"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-7-6-9">name lookup</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-27.666746"
+     y="503.71622"
+     id="text3840-0-8-1-0-9-0-8-8-9-5-4-8"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708"><tspan
+       sodipodi:role="line"
+       x="-27.666746"
+       y="503.71622"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+       id="tspan3825-4-1-9-3-7-6-1-8-6">stores</tspan><tspan
+       id="tspan8735-4-7"
+       sodipodi:role="line"
+       x="-27.666746"
+       y="518.71619"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">into</tspan></text>
+  <path
+     sodipodi:nodetypes="ccc"
+     style="color:#000000;fill:none;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 397.64374,245.24474 0,-140.25013 10.146,0.0218"
+     id="path3804-2-6-5-5-6-5-7"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708" />
+  <g
+     id="g10294"
+     inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\third.png"
+     inkscape:export-xdpi="180.12708"
+     inkscape:export-ydpi="180.12708">
+    <path
+       style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 335.26606,731.97981 76.60708,-0.15291"
+       id="path8450-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708" />
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-1-0-9-0-8-61"
+       y="676.02045"
+       x="298.67624"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan3825-4-1-9-3-82"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="676.02045"
+         x="298.67624"
+         sodipodi:role="line">  get</tspan><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="691.02045"
+         x="298.67624"
+         sodipodi:role="line"
+         id="tspan8397-1">token</tspan></text>
+    <g
+       transform="translate(120,-27.142857)"
+       id="g9805">
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2-8"
+         width="116.08524"
+         height="30.431492"
+         x="54.942169"
+         y="541.84875"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="53.195686"
+         y="538.55865"
+         id="text3840-0-8-1-0-2-1-9-1-2"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="53.195686"
+           y="538.55865"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-5">parser.h</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="104.23244"
+         y="560.55414"
+         id="text3840-0-8-1-0-2-1-9-1-6-5"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="104.23244"
+           y="560.55414"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-9-4">expr</tspan></text>
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2-8-9"
+         width="186.79953"
+         height="30.431492"
+         x="48.513599"
+         y="626.00397"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="48.931503"
+         y="621.10669"
+         id="text3840-0-8-1-0-2-1-9-1-2-1"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="48.931503"
+           y="621.10669"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-5-2">parser_impl.h</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="55.37746"
+         y="644.22968"
+         id="text3840-0-8-1-0-2-1-9-1-6-5-5"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="55.37746"
+           y="644.22968"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-9-4-0">term, bit term, unary term, primary</tspan></text>
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#ff00ff;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.99999993, 8.99999981;stroke-dashoffset:0.3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 134.35028,574.98151 0,48.74739"
+         id="path3804-2-16-9-7-0-3"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#ff00ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.9999999, 8.99999971;stroke-dashoffset:0.29999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 117.14285,653.90954 0,15.95206"
+         id="path3804-2-16-9-7-0-3-3"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-5"
+         width="118.92317"
+         height="189.2339"
+         x="47.893784"
+         y="670.42859"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 79.883981,724.24226 56.530389,0"
+         id="path3868-61-7-5"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160934;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 79.731371,690.28919 56.835519,0"
+         id="path3868-61-33"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="95.668427"
+         y="693.43182"
+         id="text3840-0-8-4-74"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-9-38"
+           x="95.668427"
+           y="693.43182"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">expr</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="94.665291"
+         y="728.26855"
+         id="text3840-0-8-4-2-2"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-9-0-2"
+           x="94.665291"
+           y="728.26855"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">term</tspan></text>
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 80.798001,759.17354 54.702339,0"
+         id="path3868-61-77-8"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="85.026619"
+         y="763.86975"
+         id="text3840-0-8-4-7-2"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-9-3-8"
+           x="85.026619"
+           y="763.86975"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">bit term</tspan></text>
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 79.876221,794.52326 56.545879,0"
+         id="path3868-61-3-9"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="76.362068"
+         y="797.3703"
+         id="text3840-0-8-4-26-0"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-9-01-7"
+           x="76.362068"
+           y="797.3703"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">unary term</tspan></text>
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 71.102878,834.20944 74.092562,0"
+         id="path3868-61-6-8"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="85.450447"
+         y="838.12604"
+         id="text3840-0-8-4-5-1"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-9-7-5"
+           x="85.450447"
+           y="838.12604"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">primary</tspan></text>
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 108.14916,696.5447 0,17.18028"
+         id="path3804-2-1-8"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 108.14916,734.54019 0,12.90399"
+         id="path3804-2-1-0-6"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 108.14916,767.95624 0,14.82832"
+         id="path3804-2-1-0-0-1"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 108.14916,804.67324 0,12.90399"
+         id="path3804-2-1-0-0-7-2"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="48.931503"
+         y="666.71844"
+         id="text3840-0-8-1-0-2-1-9-7-5"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="48.931503"
+           y="666.71844"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-2-3">parser.cpp</tspan></text>
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:connector-curvature="0"
+         id="path3804-2-6-5-5-6-5"
+         d="m 57.61911,831.21748 0,-140.25013 10.146,0.0218"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       transform="translate(269.3216,29.412622)"
+       id="g9900">
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2-8-2"
+         width="116.08524"
+         height="30.431492"
+         x="25.171663"
+         y="423.21786"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <g
+         id="g9713"
+         transform="translate(10.793509,1.9157004)">
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3868-61-0-5"
+           d="m 52.643595,437.40789 38.56537,0"
+           style="color:#000000;fill:none;stroke:#556885;stroke-width:20.23160934;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-ydpi="180.12708" />
+        <text
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           sodipodi:linespacing="125%"
+           id="text3840-0-8-4-9-3"
+           y="440.5506"
+           x="56.231266"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="440.5506"
+             x="56.231266"
+             id="tspan3842-9-3-9-9-2"
+             sodipodi:role="line">error</tspan></text>
+      </g>
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2-8-8"
+         width="116.08524"
+         height="30.431492"
+         x="25.171663"
+         y="383.16183"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="25.884209"
+         y="379.87173"
+         id="text3840-0-8-1-0-2-1-9-1-2-3"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="25.884209"
+           y="379.87173"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-5-9">error.h</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="71.77195"
+         y="401.86725"
+         id="text3840-0-8-1-0-2-1-9-1-6-5-3"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="71.77195"
+           y="401.86725"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-9-4-9">error</tspan></text>
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#ff00ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.9999999, 8.99999971;stroke-dashoffset:0.29999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 96.25,409.7433 0,15.95206"
+         id="path3804-2-16-9-7-0-3-3-8"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="25.63167"
+         y="421.50235"
+         id="text3840-0-8-1-0-2-1-9-7-5-2"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="25.63167"
+           y="421.50235"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-2-3-5">error.cpp</tspan></text>
+    </g>
+    <g
+       transform="translate(61.36909,318.90362)"
+       id="g9936">
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2-8-6"
+         width="116.08524"
+         height="30.431492"
+         x="362.67166"
+         y="394.59039"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="363.51016"
+         y="391.30029"
+         id="text3840-0-8-1-0-2-1-9-1-2-7"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="363.51016"
+           y="391.30029"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-5-99">table.h</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="409.27194"
+         y="413.29581"
+         id="text3840-0-8-1-0-2-1-9-1-6-5-7"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="409.27194"
+           y="413.29581"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-9-4-6">table</tspan></text>
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2-8-6-1"
+         width="116.08524"
+         height="30.431492"
+         x="362.68591"
+         y="434.33789"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <g
+         id="g9633"
+         transform="translate(1.3060194,-12.821248)">
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3868-61-6-6-8-8-3"
+           d="m 400.38685,462.49697 40.11879,0"
+           style="color:#000000;fill:#a6b7c3;fill-opacity:1;stroke:#9caac0;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-ydpi="180.12708" />
+        <text
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           sodipodi:linespacing="125%"
+           id="text3840-0-8-4-5-0-8-3-9"
+           y="467.19327"
+           x="406.19333"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="467.19327"
+             x="406.19333"
+             id="tspan3842-9-3-9-7-3-0-8-1"
+             sodipodi:role="line">table</tspan></text>
+      </g>
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#ff00ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.9999999, 8.99999971;stroke-dashoffset:0.29999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 432.85714,419.56473 0,15.95206"
+         id="path3804-2-16-9-7-0-3-3-8-8"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-1-0-2-1-9-7-5-2-6"
+         y="432.35184"
+         x="363.51016"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan3825-4-7-5-7-2-3-5-2"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="432.35184"
+           x="363.51016"
+           sodipodi:role="line">table.cpp</tspan></text>
+    </g>
+    <g
+       transform="translate(173.93548,67.000768)"
+       id="g9987">
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#9caac0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.99999998, 8.99999992;stroke-dashoffset:0.3;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 269.16632,397.84942 0,42.86293"
+         id="path3804-2-16-1"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="245.61678"
+         y="391.4989"
+         id="text3840-0-8-1-0-9-9-9"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="245.61678"
+           y="391.4989"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-1-8-7">in stream</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="277.12564"
+         y="411.37463"
+         id="text3840-0-8-1-0-9-0-8-6-5"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="277.12564"
+           y="411.37463"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-1-9-3-8-2">  get</tspan><tspan
+           id="tspan8397-3-5"
+           sodipodi:role="line"
+           x="277.12564"
+           y="426.37463"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">chars</tspan></text>
+      <g
+         id="g9790"
+         transform="translate(-215.66757,-68.185296)">
+        <rect
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           y="558.74255"
+           x="423.20093"
+           height="116.50292"
+           width="118.92317"
+           id="rect6699-6-5"
+           style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           inkscape:connector-curvature="0"
+           id="path3804-2-16-9-2"
+           d="m 453.83896,594.76017 0,46.88843"
+           style="color:#000000;fill:#556885;fill-opacity:1;stroke:#9caac0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 9;stroke-dashoffset:0.3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3868-61-6-6-8-5"
+           d="m 447.54289,652.17848 40.11879,0"
+           style="color:#000000;fill:#a6b7c3;fill-opacity:1;stroke:#9caac0;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-ydpi="180.12708" />
+        <text
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           sodipodi:linespacing="125%"
+           id="text3840-0-8-4-5-0-8-4"
+           y="656.87469"
+           x="445.09155"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="656.87469"
+             x="445.09155"
+             id="tspan3842-9-3-9-7-3-0-4"
+             sodipodi:role="line">c. token</tspan></text>
+        <text
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           sodipodi:linespacing="125%"
+           id="text3840-0-8-1-0-9-0-8-8-9-5-4-1"
+           y="613.90833"
+           x="485.98999"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             id="tspan3825-4-1-9-3-7-6-1-8-61"
+             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="613.90833"
+             x="485.98999"
+             sodipodi:role="line">stores</tspan><tspan
+             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="628.90833"
+             x="485.98999"
+             sodipodi:role="line"
+             id="tspan8735-4-6">into</tspan></text>
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3868-61-6-6-6"
+           d="m 441.81365,580.61782 74.09256,0"
+           style="color:#000000;fill:none;stroke:#556885;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-ydpi="180.12708" />
+        <text
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           sodipodi:linespacing="125%"
+           id="text3840-0-8-4-5-0-2"
+           y="584.22314"
+           x="442.39853"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="584.22314"
+             x="442.39853"
+             id="tspan3842-9-3-9-7-3-6"
+             sodipodi:role="line">token stream</tspan></text>
+        <text
+           inkscape:export-ydpi="180.12708"
+           inkscape:export-xdpi="180.12708"
+           inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+           sodipodi:linespacing="125%"
+           id="text3840-0-8-1-0-2-1-9-7"
+           y="554.48401"
+           x="423.0611"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             id="tspan3825-4-7-5-7-2"
+             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+             y="554.48401"
+             x="423.0611"
+             sodipodi:role="line">lexer.cpp</tspan></text>
+      </g>
+      <rect
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect6699-6-5-2"
+         width="116.08524"
+         height="30.431492"
+         x="208.18019"
+         y="446.11182"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="209.01869"
+         y="442.82172"
+         id="text3840-0-8-1-0-2-1-9-1"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="209.01869"
+           y="442.82172"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9">lexer.h</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         x="236.09265"
+         y="464.81723"
+         id="text3840-0-8-1-0-2-1-9-1-6"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="236.09265"
+           y="464.81723"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-9-9">token stream</tspan></text>
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:connector-curvature="0"
+         id="path3804-2-16-9-7-0-3-3-8-8-4"
+         d="m 274.57414,476.45723 0,15.95206"
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#ff00ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.9999999, 8.99999971;stroke-dashoffset:0.29999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <path
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:connector-curvature="0"
+       id="path3804-2-16-9-7-0"
+       d="m 524.11315,709.20059 0,-129.01017 -28.38079,0"
+       style="color:#000000;fill:none;stroke:#9caac0;stroke-width:2.99999976;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.9999999, 8.9999997;stroke-dashoffset:0.29999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <g
+       transform="translate(-370.87273,-31.57215)"
+       id="g10043">
+      <rect
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         y="444.46786"
+         x="543.39557"
+         height="69.717209"
+         width="111.78031"
+         id="rect6699-6-5-1"
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:18.42280388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 558.69172,461.08544 39.76416,0"
+         id="path3868-1-8-3"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="565.20813"
+         y="464.5925"
+         id="text3840-0-8-7-8-0"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-4-8-88"
+           x="565.20813"
+           y="464.5925"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">main</tspan></text>
+      <path
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         style="color:#000000;fill:none;stroke:#556885;stroke-width:18.42280388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 557.70499,495.16861 39.76416,0"
+         id="path3868-1-8-9-0"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 575.38842,465.09781 0,19.42175"
+         id="path3804-2-68"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="585.08087"
+         y="482.15927"
+         id="text3840-0-8-1-0-9-1"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="585.08087"
+           y="482.15927"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-1-98">calls calculate</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="552.79279"
+         y="499.03281"
+         id="text3840-0-8-7-8-9-4"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           id="tspan3842-9-3-4-8-8-2"
+           x="552.79279"
+           y="499.03281"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri">calculate</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+         x="544.91211"
+         y="441.80542"
+         id="text3840-0-8-1-0-2-1-9-7-5-2-6-2"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-ydpi="180.12708"><tspan
+           sodipodi:role="line"
+           x="544.91211"
+           y="441.80542"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           id="tspan3825-4-7-5-7-2-3-5-2-9">main.cpp</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:connector-curvature="0"
+       id="path3804-2-6-5-5-6"
+       d="m 278.80201,808.27531 56.32372,0 0,-277.51806 38.45216,0.0432"
+       style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cccc" />
+    <text
+       inkscape:export-ydpi="180.12708"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       sodipodi:linespacing="125%"
+       id="text3840-0-8-1-0-9-0-8-61-4"
+       y="749.16022"
+       x="339.95541"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         y="749.16022"
+         x="339.95541"
+         sodipodi:role="line"
+         id="tspan8397-1-2"> name lookup</tspan></text>
+    <g
+       transform="translate(-8.9285714,-1.4285714)"
+       id="g10137">
+      <rect
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         y="414.3165"
+         x="433.98035"
+         height="30.431492"
+         width="116.08524"
+         id="rect6699-6-5-2-8-8-9"
+         style="color:#000000;fill:#edf0f1;fill-opacity:1;fill-rule:nonzero;stroke:#edf0f1;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-1-0-2-1-9-1-2-3-3"
+         y="411.0264"
+         x="434.6929"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan3825-4-7-5-7-9-5-9-4"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="411.0264"
+           x="434.6929"
+           sodipodi:role="line">consts.h</tspan></text>
+      <text
+         inkscape:export-ydpi="180.12708"
+         inkscape:export-xdpi="180.12708"
+         inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+         sodipodi:linespacing="125%"
+         id="text3840-0-8-1-0-2-1-9-1-6-5-3-4"
+         y="433.02191"
+         x="447.00919"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan3825-4-7-5-7-9-9-4-9-0"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+           y="433.02191"
+           x="447.00919"
+           sodipodi:role="line">bit_num, rep_type</tspan></text>
+    </g>
+    <path
+       style="color:#000000;fill:#556885;fill-opacity:1;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 204.99999,472.55423 0,26.11621"
+       id="path3804-2-68-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708" />
+    <path
+       style="color:#000000;fill:none;stroke:#556885;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#TriangleOutS);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 205.12308,490.76305 75.7232,-0.15291 0,28.68627 92.35287,0"
+       id="path8450-8-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       x="156.0497"
+       y="497.01559"
+       id="text3840-0-8-1-0-9-1-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         x="156.0497"
+         y="497.01559"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         id="tspan3825-4-1-98-7">get value</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#556885;fill-opacity:1;stroke:none;font-family:Sans"
+       x="284.84412"
+       y="506.3595"
+       id="text3840-0-8-1-0-9-1-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Johnson\Documents\portfolio\projects\bincalc\second.png"
+       inkscape:export-xdpi="180.12708"
+       inkscape:export-ydpi="180.12708"><tspan
+         sodipodi:role="line"
+         x="284.84412"
+         y="506.3595"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#556885;fill-opacity:1;font-family:Calibri;-inkscape-font-specification:Calibri"
+         id="tspan3825-4-1-98-73">check printing state</tspan></text>
+  </g>
+</svg>

@@ -12,9 +12,6 @@ group: projects
 	more convenient. The concept managed to draw the attention of Globe and Mail.
 </p>
 <p>
-	Globe and Mail coverage of it <a href="">here (story not written yet)</a>
-</p>
-<p>
 	One page description of it <a href="onepager.pdf">here</a>
 </p>
 <p>

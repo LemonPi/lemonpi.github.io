@@ -9,6 +9,15 @@ branch: base
 
 <div id="gallery">
 
+<a href="bincalc/"><div class="box">
+<img src="bincalc.png"/>
+<span class="caption">
+<h1 class="caption-title">Bincalc</h1>
+Binary calculator for bit manipulation practice and stream processing<br><br><br><br>
+July 2014
+</span>
+</div></a>
+
 <a href="timewatch/"><div class="box">
 <img src="timewatch.png"/>
 <span class="caption">
@@ -72,16 +81,11 @@ Nov 2013
 </span>
 </div></a>
 
-<a href="bridgedesign/"><div class="box">
-<img src="bridgedesign.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Truss Bridge Design</h1>
-Bridge analysis, optimization, and drawing using python <br><br>
-Oct 2013
-</span>
-</div></a>
 </div>
+
  --------------------------
+ - [Binary calculator](bincalc/) - July 2014
+ 
  - [**Timewatch**](timewatch/) - Feb 2014 and ongoing
  
  - [**ICE-Cube Meat refrigeration without electricity**](icecube/) - March 2014

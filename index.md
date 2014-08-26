@@ -12,6 +12,15 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div id="gallery">
 
+<a href="projects/clisp/"><div class="box">
+<img src="projects/clisp.png"/>
+<span class="caption">
+<h1 class="caption-title">Clisp</h1>
+Lisp interpreter (scheme dialect) in C++<br><br><br><br>
+Aug 2014
+</span>
+</div></a>
+
 <a href="projects/bincalc/"><div class="box">
 <img src="projects/bincalc.png"/>
 <span class="caption">
@@ -36,16 +45,6 @@ Feb 2014 - present
 <h1 class="caption-title">ICE-Cube</h1>
 Meat Refridgeration without grid electricity <br><br><br><br>
 March 2014
-</span>
-</div></a>
-
-
-<a href="evaluations/skulecourses/"><div class="box">
-<img src="evaluations/skulecourses.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Skule Security Sillyness</h1>
-Exploration of skule.ca/courses/ security, code injection, and JS pranks <br><br>
-Dec 2013
 </span>
 </div></a>
 

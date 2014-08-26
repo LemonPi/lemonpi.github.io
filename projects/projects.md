@@ -9,6 +9,15 @@ branch: base
 
 <div id="gallery">
 
+<a href="clisp/"><div class="box">
+<img src="clisp.png"/>
+<span class="caption">
+<h1 class="caption-title">Clisp</h1>
+Lisp interpreter (scheme dialect) in C++<br><br><br><br>
+Aug 2014
+</span>
+</div></a>
+
 <a href="bincalc/"><div class="box">
 <img src="bincalc.png"/>
 <span class="caption">
@@ -72,18 +81,11 @@ Nov 2013
 </span>
 </div></a>
 
-<a href="aerator.html"><div class="box">
-<img src="aerator.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Material Selection</h1>
-Detailed design analysis of material selection for a kitchen aerator <br><br><br><br>
-Nov 2013
-</span>
-</div></a>
-
 </div>
 
  --------------------------
+ - [**Clisp - Lisp interpreter**](clisp/) - Aug 2014
+ 
  - [Binary calculator](bincalc/) - July 2014
  
  - [**Timewatch**](timewatch/) - Feb 2014 and ongoing

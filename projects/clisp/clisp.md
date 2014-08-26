@@ -14,9 +14,9 @@ group: projects
 	<a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/">SICP</a>.
 </p>
 <p>
-	I made this interpreter explore runtime environments and structures for holding weakly typed data.
+	I made this interpreter explore runtime environments and <a href="#data">structures</a> for holding weakly typed data.
 	This interpreter understands a subset of Lisp's Scheme dialect.
-	The treatment of procedures and environments is the most interesting thing in this project.
+	The <a href="#environment">treatment of procedures and environments</a> is the most interesting part of this project.
 	Procedures are made of data and a pointer to the frame they were defined in.
 	Seeing run-time defined procedures in action was like magic :).
 </p>

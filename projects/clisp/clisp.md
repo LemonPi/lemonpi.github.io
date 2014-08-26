@@ -25,11 +25,12 @@ group: projects
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">&para;</a></h2>
 -------------------------------
 
-1. Clone code from [github](https://github.com/LemonPi/bincalc) or using cmd `git clone git://github.com/LemonPi/bincalc.git`
-2. Build with `make` in the directory if you have g++(gcc) with c++11 support
-3. Else either change (CC) in the makefile to your compiler of choice, or build with another tool
-4. Run with `./clisp` or `./clisp [filename] [-p]` with -p to force printing during file evaluation, which by default is silent
-5. Tips:
+1. [**Get boost**](http://www.boost.org/users/download/) if you don't have it 
+2. Clone code from [github](https://github.com/LemonPi/bincalc) or using cmd `git clone git://github.com/LemonPi/bincalc.git`
+3. Build with `make` in the directory if you have g++(gcc) with c++11 support
+4. Else either change (CC) in the makefile to your compiler of choice, or build with another tool
+5. Run with `./clisp` or `./clisp [filename] [-p]` with -p to force printing during file evaluation, which by default is silent
+6. Tips:
 	- exit with `Ctrl + c`
 	- don't define procedures as keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not`
 	- prefix name with quote for string: `'string`

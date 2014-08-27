@@ -32,9 +32,11 @@ group: projects
 5. Run with `./clisp` or `./clisp [filename] [-p]` with -p to force printing during file evaluation, which by default is silent
 6. Tips:
 	- exit with `Ctrl + c`
-	- don't define procedures as keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not`
+	- comment with ; and ;; for start of line comments 
+	- include files, which can themselves include other files, with `(include funcs.scm)`
+	- don't clash with keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not, empty?, include`
 	- prefix name with quote for string: `'string`
-	- concatenate strings with `(cat 'something 'something_else)
+	- concatenate strings with `(cat 'something 'something_else)`
 	- expressions must be terminated with appropriate ), whitespace is ignored
 	- put expression arguments at end of arglist (names, numbers, and strings in front) `(proc x anotherproc 5 'string (expr))` 
 
@@ -45,7 +47,9 @@ group: projects
 </div>
 
 With some definitions in funcs.scm:
-<pre><code>(define compose (lambda (f g)
+<pre><code>;; double semicolon for start of line comments
+(include funcs.scm)	; essentially copy paste entire file here
+(define compose (lambda (f g)
 		(lambda (x)
 				(f (g x)))))
 (define (add x)
@@ -66,6 +70,7 @@ With some definitions in funcs.scm:
 -------------------------------
  - relatively simple ~550 lines of non comment code with clearly separated components
  - highly modular design allows easy addition of features
+	- added support for comments and file inclusion in about 5 extra lines
  - concepts are clearly reflected in the implementation and representation 
 	- driver loop prints the evaluated value of the read expression in the global environment 
 	`cout << eval(expr(print_res), e0)`

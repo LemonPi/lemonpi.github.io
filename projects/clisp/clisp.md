@@ -32,8 +32,9 @@ group: projects
 5. Run with `./clisp` or `./clisp [filename] [-p]` with -p to force printing during file evaluation, which by default is silent
 6. Tips:
 	- exit with `Ctrl + c`
-	- comment with ; and ;; for start of line comments 
+	- comment with ;
 	- include files, which can themselves include other files, with `(include funcs.scm)`
+		- don't recursively include a file unless you really like recursion
 	- don't clash with keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not, empty?, include`
 	- prefix name with quote for string: `'string`
 	- concatenate strings with `(cat 'something 'something_else)`
@@ -47,7 +48,7 @@ group: projects
 </div>
 
 With some definitions in funcs.scm:
-<pre><code>;; double semicolon for start of line comments
+<pre><code>; semicolon comments
 (include funcs.scm)	; essentially copy paste entire file here
 (define compose (lambda (f g)
 		(lambda (x)

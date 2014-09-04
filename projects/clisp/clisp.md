@@ -35,7 +35,7 @@ group: projects
 	- comment with ;
 	- include files, which can themselves include other files, with `(include funcs.scm)`
 		- don't recursively include a file unless you really like recursion
-	- don't clash with keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not, empty?, include`
+	- don't clash with keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not, empty?, include, begin`
 	- prefix name with quote for string: `'string`
 	- concatenate strings with `(cat 'something 'something_else)`
 	- expressions must be terminated with appropriate ), whitespace is ignored

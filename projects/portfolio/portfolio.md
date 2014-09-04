@@ -149,7 +149,7 @@ Jekyll can serve the site locally and constantly regenerate each time an edit is
 <p>Rapid prototyping with Jekyll made easy</p>
 </div>
 
-<h2 class="anchor">Poishing <a class="anchor-link" title="permalink to section" href="#polishing" name="polishing">¶</a></h2>
+<h2 class="anchor">Polishing <a class="anchor-link" title="permalink to section" href="#polishing" name="polishing">¶</a></h2>
 ------------
 Rapidly prototyping a product is fine for initial launch and ironing out bugs, but I believe great usability comes from long term polish.  
 Nuances take time and usage to notice, therefore I will gradually add features to improve the quality of my portfolio.  

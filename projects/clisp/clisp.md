@@ -70,6 +70,7 @@ With some definitions in funcs.scm:
 <h2 class="anchor">Strengths <a class="anchor-link" title="permalink to section" href="#strengths" name="strengths">&para;</a></h2>
 -------------------------------
  - relatively simple ~550 lines of non comment code with clearly separated components
+ - <a href="#speed">fast</a> and has optimized tail recursion
  - highly modular design allows easy addition of features
 	- added support for comments and file inclusion in about 5 extra lines
  - concepts are clearly reflected in the implementation and representation 
@@ -83,13 +84,33 @@ With some definitions in funcs.scm:
 <h2 class="anchor">Room for Improvement <a class="anchor-link" title="permalink to section" href="#room_for_improvement" name="room_for_improvement">&para;</a></h2>
 -------------------------------
  - [Done] could pass an expression when there's an error in it rather than terminating the program (high priority)
+ - [Done] could optimize tail recursion to allow deep recursion for certain procedure forms (currently stack is limited to around 20 levels)
  - could trim down Cell size to 24 bytes from 40 by storing List* instead of List in Cell 
  (but would have to store Lists on heap or custom stack, additional memory management)
- - could optimize tail recursion to allow deep recursion for certain procedure forms (currently stack is limited to around 20 levels)
  - requires expression arguments to be placed at end of arglist when mixed with other types of arguments
  - stack relies on C++'s implementation of stack, so adding call/cc (exceptions) and multi-threading would be troublesome and incomplete
  - extra 7 bytes of padding could be used to store relevant information
- - no garbage collection 
+
+<h2 class="anchor">Speed <a class="anchor-link" title="permalink to section" href="#speed" name="speed">&para;</a></h2>
+-------------------------------
+<div class="frames">
+<img src="benchmark.png">
+<p>Testing on Ubuntu 14.04 x64 through VM</p>
+</div>
+
+<div class="text-block">
+<p>
+	The tests are run on my Ubuntu Virtual Machine, which was given 2 cores of i5-3317U @ 1.70GHz and 2GB of RAM.
+	Even without the most impressive hardware, the functions run very fast, especially in comparison to other
+	small interpreters, such as Peter Norvig's <a href="http://norvig.com/lispy.html">Lispy</a>. <br>
+	Clisp is faster by a factor of 4/0.002 = <b>2000 times</b>, despite being more fully featured.
+</p>
+<p>
+	The other thing to note is that the naive implementation of Fibonacci using recursion with growing state 
+	completes in around the same time as the manually tail recursive version. Its code is automatically optimized to 
+	be tail recursive (else fib-naive 100 wouldn't even complete given limited memory).
+</p>
+</div>
 
 <h2 class="anchor">Lexer <a class="anchor-link" title="permalink to section" href="#lexer" name="lexer">&para;</a></h2>
 -------------------------------
@@ -191,7 +212,7 @@ The other obvious design is to use polymorphism - having various Cell types shar
 <p>
 	The run-time environment was the most interesting thing to work on.
 	The environment dictates symbols' meanings; the scope is where a symbol is meaningful.
-	A language can either have static or dynamic scoping. The difference is that free variables 
+	A language can either have static or dynamic scoping. The difference is that <b>free variables</b> 
 	(variables not an argument or local to a procedure) are defined where the procedure's declared for static scoping,
 	and where the procedure's called for dynamic scoping.
 </p>

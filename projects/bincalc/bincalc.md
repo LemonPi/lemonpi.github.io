@@ -18,10 +18,11 @@ group: projects
 -------------------------------
 
 1. Clone code from [github](https://github.com/LemonPi/bincalc) or using cmd `git clone git://github.com/LemonPi/bincalc.git`
-2. Build with `make` in the directory if you have g++(gcc) with c++11 support
-3. Else either change (CC) in the makefile to your compiler of choice, or build with another tool
-4. Run with `./bc` or `bc` on windows in terminal 
-5. Tips:
+2. Try **bc-windows** on windows, and on **bc-linux** on linux, else build it by following the rest of the steps
+3. Build with `make` in the directory if you have g++(gcc) with c++11 support
+4. Else either change (CC) in the makefile to your compiler of choice, or build with another tool
+5. Run with `./bc` or `bc` on windows in terminal 
+6. Tips:
 	- exit with `Ctrl + c`
 	- adjust how many binary digits is shown by changing `bit_num` in consts.h
 	- 0xnum is hex and 0num is oct

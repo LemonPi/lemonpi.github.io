@@ -13,7 +13,7 @@ group: about
 
 <div class="text-block">
 <p>
-	You've stumbled upon my <a href="/portfolio/projects/portfolio/"><b>site</b></a>!  
+	You've stumbled upon my <a href="/projects/portfolio"><b>site</b></a>!  
 	As a second year engineering science student, my class is developing a broad and deep foundation in the sciences.  
 	Simultaneously, we are learning how to apply that knowledge base to real life situations, as seen in the <a href="evaluations/">evaluations</a>.  
 	Our curriculum challenges us to move from first principles to implementation - taking an idea and converting it to technology.  

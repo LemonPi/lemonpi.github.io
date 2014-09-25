@@ -123,7 +123,7 @@ Summary:
 	<br>
 	We would use AISI 316L grade stainless steel with #2B finish
 	for the final product. This choice is predicated on my previous 
-	<a href="/portfolio/projects/detaileddesign.pdf">research on material selection</a>
+	<a href="/projects/detaileddesign.pdf">research on material selection</a>
 	in which I found this to be the most food safe material.
 	It is corrosive resistent, needed as it will be in contact with meat, and
 	has a very hard surface, making it scratch resistent and easy to clean. 

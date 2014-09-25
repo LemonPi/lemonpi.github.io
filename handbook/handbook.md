@@ -75,14 +75,14 @@ environment and can be made better through iteration and alteration of parts.
 	<div class="bot-box">
 		<div class="example-box">
 			<ul>
-				<li>division of <a href="/portfolio/projects/portfolio">portfolio</a> into 
+				<li>division of <a href="/projects/portfolio">portfolio</a> into 
 				styling (CSS), content (markdown/HTML),<br>layout (HTML/Jekyll templating), and hosting (GithubPages)
-				<li>division of causes of <a href="/portfolio/projects/binder/divergentflowchart.jpg">binder misalignment</a>
+				<li>division of causes of <a href="/projects/binder/divergentflowchart.jpg">binder misalignment</a>
 				<a href="#ref1">[1]</a> into blunt trauma, misuse, and misplacement
-				<li>division of the problem of <a href="/portfolio/projects/icecube">meat refrigeration without grid electricity</a>
+				<li>division of the problem of <a href="/projects/icecube">meat refrigeration without grid electricity</a>
 				<a href="#ref2">[2]</a> into insulation, radiation protection from the sun, initial cooling, and meat storage
 				<li>division of web development by the Django framework into models, views, and templates (MVC pattern)
-				as used in the creation of <a href="/portfolio/projects/timewatch">timewatch</a>
+				as used in the creation of <a href="/projects/timewatch">timewatch</a>
 			</ul>
 		</div>
 		<div class="picture-box">
@@ -156,13 +156,13 @@ environment and can be made better through iteration and alteration of parts.
 	<div class="bot-box">
 		<div class="example-box">
 			<ul>
-				<li>understanding the problem of <a href="/portfolio/projects/binder/#analysis">binder misaligment</a> <a href="#ref1">[1]</a>
+				<li>understanding the problem of <a href="/projects/binder/#analysis">binder misaligment</a> <a href="#ref1">[1]</a>
 				as the separate and related issue of shift misalignment and yield misalignment, sharing some common causes
-				<li>selecting for a <a href="/portfolio/projects/detaileddesign.pdf">food safe material</a> <a href="#ref3">[3]</a>
+				<li>selecting for a <a href="/projects/detaileddesign.pdf">food safe material</a> <a href="#ref3">[3]</a>
 				reframed to selecting for a corrosive resistent and easy to clean material, 
 				further reframed to selecting for smoothness and hardness
 				<li>injection of modularity and robustness into all of my projects, such as the 
-				<a href="/portfolio/projects/icecube">ICE-Cube</a> <a href="#ref2">[2]</a> and the design of this handbook
+				<a href="/projects/icecube">ICE-Cube</a> <a href="#ref2">[2]</a> and the design of this handbook
 			</ul>
 		</div>
 		<div class="picture-box">
@@ -197,8 +197,8 @@ environment and can be made better through iteration and alteration of parts.
 		<div class="example-box">
 			<ul>
 				<li>survey used to understand the problem of binder misalignment
-				<li>contacting stakeholders in the <a href="/portfolio/projects/headset/">headset and glasses RFP</a> <a href="#ref4">[4]</a>
-				and <a href="/portfolio/projects/icecube/#process">meat refrigeration without grid electricity</a> for first-hand 
+				<li>contacting stakeholders in the <a href="/projects/headset/">headset and glasses RFP</a> <a href="#ref4">[4]</a>
+				and <a href="/projects/icecube/#process">meat refrigeration without grid electricity</a> for first-hand 
 				experience with the problem
 				<li>often found ways to improve value of solution --> ICE-Cube combines function of display and storage, 
 				an advantage over existing coolers which only store meat
@@ -236,9 +236,9 @@ environment and can be made better through iteration and alteration of parts.
 	<div class="bot-box">
 		<div class="example-box">
 			<ul>
-				<li>informally done for choosing portfolio setup in <a href="/portfolio/projects/portfolio/#compare">comparing</a> 
+				<li>informally done for choosing portfolio setup in <a href="/projects/#compare">comparing</a> 
 				against Wix, Wordpress, and Weebly
-				<li>comparison of <a href="/portfolio/projects/detaileddesign.pdf">food-safe materials</a> (Table 2)
+				<li>comparison of <a href="/projects/detaileddesign.pdf">food-safe materials</a> (Table 2)
 			</ul>
 		</div>
 		<div class="picture-box">
@@ -277,7 +277,7 @@ environment and can be made better through iteration and alteration of parts.
 			<ul>
 				<li>informally done for each project, immediately after brainstorming diverse ideas
 				<li>disagreements add value to solution since they lead to more detailed research to back up claim,
-				such as my justifications for maintaining a cubic dimension for the <a href="/portfolio/projects/icecube/#usability">ICE-Cube</a>
+				such as my justifications for maintaining a cubic dimension for the <a href="/projects/icecube/#usability">ICE-Cube</a>
 			</ul>
 		</div>
 		<div class="picture-box">
@@ -393,19 +393,19 @@ The top box will cover causes while the bottom box covers remedies.
 <h2 class="anchor">References <a class="anchor-link" title="permalink to section" href="#reference" name="reference">¶</a></h2>
 -------------------------
 <div class="reference">
-<a href="/portfolio/projects/binder" name="ref1">[1]</a> S. Zhong et al., 
+<a href="/projects/binder" name="ref1">[1]</a> S. Zhong et al., 
 	"Shield Spring: Binder Misalignment," 
 	University of Toronto, Jan. 1, 2014.	
 <br>
-<a href="/portfolio/projects/icecube" name="ref2">[2]</a> S. Zhong, K. Cota, E. Yang, and J. Zabala, 
+<a href="/projects/icecube" name="ref2">[2]</a> S. Zhong, K. Cota, E. Yang, and J. Zabala, 
 	"ICE-Cube: Meat Refrigeration Without Electricity," 
 	University of Toronto, April 12, 2014.
 <br>
-<a href="/portfolio/projects/detaileddesign.pdf" name="ref3">[3]</a> S. Zhong,
+<a href="/projects/detaileddesign.pdf" name="ref3">[3]</a> S. Zhong,
 	"Food-Safe Material Selection for Aerator," 
 	University of Toronto, Feb. 17, 2014.	
 <br>
-<a href="/portfolio/projects/headset" name="ref4">[4]</a> S. Zhong, K. Cota, E. Yang, and J. Zabala,
+<a href="/projects/headset" name="ref4">[4]</a> S. Zhong, K. Cota, E. Yang, and J. Zabala,
 	"Request for Proposal: Reducing the Discomfort of Wearing Headsets with Glasses for Toronto Police Communication Operators," 
 	University of Toronto, Feb. 17, 2014.	
 <br>

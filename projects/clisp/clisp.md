@@ -116,7 +116,7 @@ With some definitions in funcs.scm:
 -------------------------------
 <div class="text-block">
 <p>
-	This lexer is very similar to the last one I worked on for <a href="/portfolio/projects/bincalc/">bincalc</a>.
+	This lexer is very similar to the last one I worked on for <a href="/projects/bincalc/">bincalc</a>.
 	It's stream based, giving fast speed and minimal memory usage. Manipulating long strings and operating on strings in general
 	is inefficient in comparison. Files are also processed as streams, 
 	so switching between user console input and file input is cheap.

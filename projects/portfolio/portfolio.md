@@ -12,7 +12,7 @@ I built this engineering portfolio manually with these goals in mind:
 - Explore designing for usability in terms of user-interface  
 - Present my accomplishments in a robust, usable, and efficient way
 
-Code and site history: [https://github.com/LemonPi/portfolio] (https://github.com/LemonPi/portfolio)
+Code and site history: [https://github.com/LemonPi/lemonpi.github.io] (https://github.com/LemonPi/lemonpi.github.io)
 
 <h2 class="anchor">Understanding the Problem <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
 ------------------------
@@ -120,7 +120,7 @@ Attention to detail with the consideration of what could irk the users is key to
 These are the key design decisions to make this site more usable:  
 
 1. Table rows highlight on hover to easily track items belonging to the same row; I personally had this difficulty with data sheets  
-([demonstrated here](/portfolio/evaluations/handmixer/#efficiency))  
+([demonstrated here](/evaluations/handmixer/#efficiency))  
 
 2. Page anchors (¶) allow parts of the page to be redirected to; makes redirect links more relevant  
 

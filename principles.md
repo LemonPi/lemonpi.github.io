@@ -14,9 +14,9 @@ robustness, usability, and efficiency.
 > It also involves making the product easily changeable, which I implement by building the solution out of **modules**.  
 > This requires clearly defining how each module/component interact, which then allows the change of  
 > one component without requiring the change of other components as long as the interface is kept the same.  
-> My [engineering process](/portfolio/process.html) is geared towards robustness by first breaking the problem into components,  
+> My [engineering process](/process.html) is geared towards robustness by first breaking the problem into components,  
 > creating a solution/module for each part, then combining and refining them to provide what best suits the current context.  
-> ([icecube](projects/icecube/#robustness)) ([binder](projects/binder/#divergent)) ([portfolio](projects/portfolio/#pool))  
+> ([icecube](projects/icecube/#robustness)) ([binder](projects/binder/#divergent)) ([portfolio](projects/portfoio/#pool))  
 <br>
 > ###*Usable* solutions are designed for the end users, who possess a various set of skills and perspectives.  
 > Designing for usability often involves changing perspectives (reframing), and considering what would be intuitive for the users.  

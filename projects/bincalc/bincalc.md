@@ -25,7 +25,7 @@ group: projects
 6. Tips:
 	- exit with `Ctrl + c`
 	- adjust how many binary digits is shown by changing `bit_num` in consts.h
-	- 0xnum is hex and 0num is oct
+	- 0xnum is **hex**, 0num is **oct**, and bnum is **binary**
 	- change underlying type (default is double) by changing `rep_type` in consts.h
 
 <div class="frames">

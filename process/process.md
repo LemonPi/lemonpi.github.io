@@ -80,7 +80,7 @@ $(document).ready(function() {
 				be modified to be compatible with the solution in future iterations.</p>
 			</div>
 		</div>
-		<a id="handbook-diagram" href="/portfolio/handbook/" class="handbook">Tools Handbook</a>
+		<a id="handbook-diagram" href="/handbook/" class="handbook">Tools Handbook</a>
 	</div>
 		<div id="patch">
 			<div class="text-spot hover" id="basis"><h3>Basis of selection & refinement</h3>
@@ -131,7 +131,7 @@ $(document).ready(function() {
 		</ul>
 	</li>
 	
-	<h2 class="anchor"><li>Compare solutions based on my <a href="/portfolio/principles.html">principles</a>, adjusted for what the context demands <a class="anchor-link" title="permalink to section" href="#step4" name="step4">¶</a></h2>
+	<h2 class="anchor"><li>Compare solutions based on my <a href="/principles.html">principles</a>, adjusted for what the context demands <a class="anchor-link" title="permalink to section" href="#step4" name="step4">¶</a></h2>
 		<ul>
 			<li>Use Pugh chart for performance comparison 
 			<li>Use simple comparison matrix for general appeal
@@ -178,7 +178,7 @@ $(document).ready(function() {
 
 
  With experience, I found some tools helpful in progressing through each step, and their description and use are covered in the
- <a class="handbook" id="handbook-inline" href="/portfolio/handbook/">Tools Handbook</a>
+ <a class="handbook" id="handbook-inline" href="/handbook/">Tools Handbook</a>
 
 <h2 class="anchor">Analysis of Process <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
 ----------------------------

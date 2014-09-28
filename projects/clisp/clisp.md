@@ -23,7 +23,7 @@ group: projects
 </div>
 
 <div id="console"></div>
-<div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
+<div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
 
 Clisp was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
 and run with [jq-console](https://github.com/replit/jq-console)
@@ -154,7 +154,7 @@ One obvious design is to store every possible value into the Cell, leading to
 <div class="text-block">
 <p>
 	Actual sizes vary based on platform and architecture, and string sizes depend on if 
-	small string optimization is used (strings < 15 char stored on stack).
+	small string optimization is used (strings &lt; 15 char stored on stack).
 </p>
 <p>
 	This design minimizes redirections, which affects access time, and is very trivial to implement. 
@@ -297,7 +297,7 @@ function expr_terminate(input) {
 }
 
 $(function () {
-	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (+ 1 1) \n', '>> ');
+	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (+ 41 1) \n', '>> ');
 	jqconsole.RegisterMatching('(', ')', 'brackets');
 	var startPrompt = function() {
 		// start prompt with history enabled

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: interpreter
 title: Binary Calculator
 permalink: /projects/bincalc/index.html
 group: projects
@@ -13,6 +13,12 @@ group: projects
 	myself with more C++ along the way.
 </p>
 </div>
+
+<div id="console"></div>
+<div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
+
+Bincalc was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
+and run with [jq-console](https://github.com/replit/jq-console)
 
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">¶</a></h2>
 -------------------------------
@@ -157,3 +163,23 @@ group: projects
  - Language processing experience
  - Appreciation for C++'s offering of abstraction without overhead (fast and elegant code)
  - Bit manipulation practice
+ 
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
+<script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>
+<script src="bincalc.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+	var jqconsole = $("#console").jqconsole('Binary calculator  ex. a = (b10001101 ^ 0xF2) > 1 \n', '>> ');
+	var startPrompt = function() {
+		// start prompt with history enabled
+		jqconsole.Prompt(true, 
+		function(input) {
+			jqconsole.Write(Module.calc_str(input) + '\n', 'jqconsole-output');
+			// restart prompt
+			startPrompt();
+		});
+	};
+	startPrompt();
+});
+</script>

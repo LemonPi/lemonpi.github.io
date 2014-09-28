@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: interpreter
 title: Clisp - Lisp interpreter
 permalink: /projects/clisp/index.html
 group: projects
@@ -21,6 +21,12 @@ group: projects
 	Seeing run-time defined procedures in action was like magic :).
 </p>
 </div>
+
+<div id="console"></div>
+<div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
+
+Clisp was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
+and run with [jq-console](https://github.com/replit/jq-console)
 
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">&para;</a></h2>
 -------------------------------
@@ -269,8 +275,43 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">&para;</a></h2>
 -----------------------
  - C++ and functional programming experience
+ - Javascript and Emscripten experience (porting LLVM to JS)
  - A lot of debugging experience...
  - Language design and processing experience
  - Understanding of run time environments
  - Introduction to 3rd party C++ libraries (boost)
  - Tons of fun
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
+<script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>
+<script src="clisp.js" type="text/javascript"></script>
+<script type="text/javascript">
+function expr_terminate(input) {
+	var paren_stack = new Array();
+	for (var i = 0; i < input.length; ++i) {
+		if (input.charAt(i) === '(') paren_stack.push('(');
+		if (input.charAt(i) === ')' && paren_stack.length) paren_stack.pop();
+	}
+	if (paren_stack.length) return paren_stack.length;
+	return false;
+}
+
+$(function () {
+	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (+ 1 1) \n', '>> ');
+	jqconsole.RegisterMatching('(', ')', 'brackets');
+	var startPrompt = function() {
+		// start prompt with history enabled
+		jqconsole.Prompt(true, 
+		function(input) {
+			jqconsole.Write(Module.expr_str(input) + '\n', 'jqconsole-output');
+			// restart prompt
+			startPrompt();
+		}, 
+		function(input) {
+			// check if expression's terminated
+			return expr_terminate(input);
+		});
+	};
+	startPrompt();
+});
+</script>

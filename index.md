@@ -10,7 +10,7 @@ where I present my <a href="principles.html">conception</a> of good design and s
 <br></p>
 
 
-<div id="gallery">
+<div class="gallery" id="main-gallery">
 
 <a href="projects/clisp/"><div class="box">
 <img src="projects/clisp.png"/>

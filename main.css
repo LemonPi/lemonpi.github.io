@@ -123,14 +123,14 @@ code {
   color:#888;
 }
 
-#gallery {
+.gallery {
 	height: 1000px;
 	margin: 80px auto 0 auto;
 	text-align: center;
 	max-width:1460px;
 	display:table;
 }
-#gallery .box {
+.gallery .box {
 	border: 5px solid #888;
 	height:320px;
 	width:345px;
@@ -140,7 +140,7 @@ code {
 	overflow: hidden;
 	display:table-cell;
 }
-#gallery .box .caption {
+.gallery .box .caption {
 	background: rgba(0,0,0,0.8);
 	position: absolute;
 	width:320px;
@@ -153,9 +153,9 @@ code {
 	left: 0px;
 	top: 0px;
 }
-#gallery .caption-title {margin-top:0.1em;}
-#gallery .box img {position: absolute;left: 0; height:320px; width:345px;}
-#gallery .box:hover .caption {opacity: 1}
+.gallery .caption-title {margin-top:0.1em;}
+.gallery .box img {position: absolute;left: 0; height:320px; width:345px;}
+.gallery .box:hover .caption {opacity: 1}
 
 #github {
 		background-image:url("res/github_before.png");
@@ -184,12 +184,16 @@ code {
 .reverse {unicode-bidi: bidi-override;direction: rtl;display:inline;}
 
 @media (max-width:1662px) {
-	#gallery {
+	.gallery {
 		max-width: 1095px;
 	}
-}
-@media (max-width:1200px) {
-	#gallery {
+	#main-gallery {
 		max-width: 730px;
 	}
 }
+@media (max-width:1200px) {
+	.gallery {
+		max-width: 730px;
+	}
+}
+@media

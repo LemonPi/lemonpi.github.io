@@ -7,7 +7,7 @@ branch: base
 ---
 
 <h1 style="text-align:center;font-size:50px;">Design Evaluations</h1>
-<div id="gallery">
+<div class="gallery">
 
 <a href="skulecourses/"><div class="box">
 <img src="skulecourses.jpg"/>

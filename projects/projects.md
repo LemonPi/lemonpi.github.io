@@ -7,7 +7,7 @@ branch: base
 ---
 <h1 style="text-align:center;font-size:50px;">Personal Projects</h1>
 
-<div id="gallery">
+<div class="gallery">
 
 <a href="clisp/"><div class="box">
 <img src="clisp.png"/>
@@ -82,6 +82,8 @@ Nov 2013
 </div></a>
 
 </div>
+
+<br><br><br><br><br><br>
 
  --------------------------
  - [**Clisp - Lisp interpreter**](clisp/) - Aug 2014

@@ -4,11 +4,7 @@
   height: 700px;
   background-color:#3B474E;
 }
-@media (max-width:1200px) {
-	#console {
-		width: 875px;
-	}
-}
+input[type='text'],input[type='number'],textarea {font-size:16px;}
 .brackets {color: #B3B;}
 /* The inner console element. */
 .jqconsole {

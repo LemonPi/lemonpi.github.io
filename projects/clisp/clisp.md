@@ -28,6 +28,8 @@ group: projects
 Clisp was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
 and run with [jq-console](https://github.com/replit/jq-console)
 
+Simple library [here](funcs.scm)
+
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">&para;</a></h2>
 -------------------------------
 
@@ -297,8 +299,19 @@ function expr_terminate(input) {
 }
 
 $(function () {
-	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (+ 41 1) \n', '>> ');
+	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (map square (1 2 3 4 5)) \n', '>> ');
 	jqconsole.RegisterMatching('(', ')', 'brackets');
+	
+	$.ajax({ type: "GET", url: "funcs.scm",
+		success: function(text) { 
+			Module.expr_str(text);
+			jqconsole.Write('Standard library loaded\n');
+		},
+		error: function() {
+			jqconsole.Write('Can\'t find standard library\n');
+		}
+	});
+	
 	var startPrompt = function() {
 		// start prompt with history enabled
 		jqconsole.Prompt(true, 

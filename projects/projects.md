@@ -5,6 +5,7 @@ permalink: /projects/
 group: projects
 branch: base
 ---
+
 <h1 style="text-align:center;font-size:50px;">Personal Projects</h1>
 
 <div class="gallery">

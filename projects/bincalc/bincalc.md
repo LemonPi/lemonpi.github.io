@@ -20,6 +20,56 @@ group: projects
 Bincalc was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
 and run with [jq-console](https://github.com/replit/jq-console)
 
+<h2 class="anchor">The Usual Tricks <a class="anchor-link" title="permalink to section" href="#tricks" name="tricks">¶</a></h2>
+<table class="pretty">
+<tr><th colspan=3>basics</th></tr>
+<tr>
+	<td><p>x ^ 0 = x</p></td>
+	<td><p>x & 0 = 0</p></td>
+	<td><p>x | 0 = x</p></td>
+</tr>
+<tr>
+	<td><p>x ^ ~0 = ~x</p></td>
+	<td><p>x & ~0 = x</p></td>
+	<td><p>x | ~0 = ~0</p></td>
+</tr>
+<tr>
+	<td><p>x ^ x = 0</p></td>
+	<td><p>x & x = x</p></td>
+	<td><p>x | x = x</p></td>
+</tr>
+<tr><th colspan=3>get, set, go</th></tr>
+<tr>
+	<td><p>get ith bit</p></td>
+	<td colspan=2><p>x & (1 << i)</p></td>
+</tr>
+<tr>
+	<td><p>set ith bit</p></td>
+	<td colspan=2><p>x | (1 << i)</p></td>
+</tr>
+<tr>
+	<td><p>clear ith bit</p></td>
+	<td colspan=2><p>x & ~(1 << i)</p></td>
+</tr>
+<tr>
+	<td><p>filter out bits above i</p></td>
+	<td colspan=2><p>x & ((1 << i) - 1)</p></td>
+</tr>
+<tr>
+	<td><p>filter out bits below i</p></td>
+	<td colspan=2><p>x & ~((1 << i) - 1)</p></td>
+</tr>
+<tr><th colspan=3>least significant bit</th></tr>
+<tr>
+	<td><p>clear least significant bit</p></td>
+	<td colspan=2><p>x & (x - 1)</p></td>
+</tr>
+<tr>
+	<td><p>check if x is a power of 2</p></td>
+	<td colspan=2><p>x & (x - 1) == 0</p></td>
+</tr>
+</table>
+
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">¶</a></h2>
 -------------------------------
 

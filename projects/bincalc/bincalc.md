@@ -177,7 +177,7 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <h2 class="anchor">Third Version - Files separated <a class="anchor-link" title="permalink to section" href="#third" name="third">¶</a></h2>
 -----------------------------
  - stream based, conventional grammar
- - full support for +, -, *, /, >>, <<, &, |, ^, and ~ operators
+ - full support for +, -, *, /, %, >>, <<, &, |, ^, ~, !, and ** operators
  - full support for order of operations
  - support for variables
  - supports real numbers with decimal, octal, and hexadecimal bases

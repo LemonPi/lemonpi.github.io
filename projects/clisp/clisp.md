@@ -316,7 +316,7 @@ $(function () {
 		// start prompt with history enabled
 		jqconsole.Prompt(true, 
 		function(input) {
-			jqconsole.Write(Module.expr_str(input) + '\n', 'jqconsole-output');
+			jqconsole.Write(Module.expr_str(input+' ') + '\n', 'jqconsole-output');
 			// restart prompt
 			startPrompt();
 		}, 

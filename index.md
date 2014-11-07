@@ -51,7 +51,7 @@ March 2014
 </div>
 
 <div class="slideUp" id="google_landing" style="display:none;
-	position:absolute; top:100%; left:25%; width:45%;
+	position:absolute; top:20%; left:25%; width:45%;
 	margin: 0 auto;
 	background-color:white;
 	padding: 15px 80px 15px 80px;

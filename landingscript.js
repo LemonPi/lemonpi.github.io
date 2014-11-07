@@ -23,7 +23,6 @@ window.onload = function(e) {
 	if (possiblyGoogler) {
 		var landing = document.getElementById("google_landing");
 		landing.style.display = "";
-		landing.style.top = "20%";
 	}
 }
 

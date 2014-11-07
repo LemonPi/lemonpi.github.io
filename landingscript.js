@@ -1,5 +1,4 @@
 var possiblyGoogler = false;
-possiblyGoogler = true;
 
 function css_select(url) {
 	for (var i = 0; i < document.styleSheets.length; ++i) {

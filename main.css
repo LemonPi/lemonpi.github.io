@@ -7,6 +7,7 @@ body {
         padding:0px 0px 0px 0px;
 		line-height:1.6;
 		word-spacing:1px;
+		font-weight:normal;
 }
 a {text-decoration:none; color:#57BFED;}
 a:visited {color:#660099;}
@@ -139,6 +140,7 @@ code {
 	float:left;
 	overflow: hidden;
 	display:table-cell;
+	padding:0;
 }
 .gallery .box .caption {
 	background: rgba(0,0,0,0.8);
@@ -221,3 +223,5 @@ code {
 	95%{-webkit-transform: translateY(2%);}			
 	100% {-webkit-transform: translateY(0%);}	
 }
+
+.puretesting {display:table;}

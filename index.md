@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Welcome
 permalink: /index.html
 branch: base
@@ -91,9 +91,7 @@ March 2014
 </p>
 </div>
 
-
-
-
+<meta id='puretesting'/>
 
 ----------------------------
 ##Professional Statement
@@ -108,8 +106,6 @@ March 2014
 
 > My personal strengths lie in adopting new tools and applying scientific knowledge to analyze real life situations.  
 
-
 <script src="https://www.corp.google.com/style/prettify.js"> </script>
-<link rel="stylesheet" href="https://uberchromegw.corp.google.com/i/chromiumos.tryserver/default.css" type="text/css">
-<link rel="stylesheet" href="https://www.corp.google.com/eng/docstyle.css" type="text/css">
+
 <script src="landingscript.js"> </script>

@@ -21,7 +21,7 @@ Bincalc was cross compiled from C++ to JS using [Emscripten](https://github.com/
 and run with [jq-console](https://github.com/replit/jq-console)
 
 <h2 class="anchor">The Usual Tricks <a class="anchor-link" title="permalink to section" href="#tricks" name="tricks">¶</a></h2>
-<table class="pretty">
+<table class="pretty" style="font-family: Consolas; font-size: 14px;">
 <tr><th colspan=3>basics</th></tr>
 <tr>
 	<td><p>x ^ 0 = x</p></td>
@@ -58,6 +58,10 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <tr>
 	<td><p>filter out bits below i</p></td>
 	<td colspan=2><p>x & ~((1 << i) - 1)</p></td>
+</tr>
+<tr>
+	<td><p>extract n bits starting above i</p></td>
+	<td colspan=2><p>x & (~(~0 << n) << i)</p></td>
 </tr>
 <tr><th colspan=3>least significant bit</th></tr>
 <tr>
@@ -220,7 +224,7 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <script src="bincalc.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function () {
-	var jqconsole = $("#console").jqconsole('Binary calculator  ex. a = (b10001101 ^ 0xF2) > 1 \n', '>> ');
+	var jqconsole = $("#console").jqconsole('Binary calculator  ex. a = (b10001101 ^ 0xF2) >> 1 \n', '>> ');
 	var startPrompt = function() {
 		// start prompt with history enabled
 		jqconsole.Prompt(true, 

@@ -78,7 +78,7 @@ With some definitions in funcs.scm:
 <h2 class="anchor">Strengths <a class="anchor-link" title="permalink to section" href="#strengths" name="strengths">&para;</a></h2>
 -------------------------------
  - relatively simple ~550 lines of non comment code with clearly separated components
- - <a href="#speed">fast</a> and has optimized tail recursion
+ - fast and has optimized tail recursion
  - highly modular design allows easy addition of features
 	- added support for comments and file inclusion in about 5 extra lines
  - concepts are clearly reflected in the implementation and representation 
@@ -99,26 +99,6 @@ With some definitions in funcs.scm:
  - stack relies on C++'s implementation of stack, so adding call/cc (exceptions) and multi-threading would be troublesome and incomplete
  - extra 7 bytes of padding could be used to store relevant information
 
-<h2 class="anchor">Speed <a class="anchor-link" title="permalink to section" href="#speed" name="speed">&para;</a></h2>
--------------------------------
-<div class="frames">
-<img src="benchmark.png">
-<p>Testing on Ubuntu 14.04 x64 through VM</p>
-</div>
-
-<div class="text-block">
-<p>
-	The tests are run on my Ubuntu Virtual Machine, which was given 2 cores of i5-3317U @ 1.70GHz and 2GB of RAM.
-	Even without the most impressive hardware, the functions run very fast, especially in comparison to other
-	small interpreters, such as Peter Norvig's <a href="http://norvig.com/lispy.html">Lispy</a>. <br>
-	Clisp is faster by a factor of 4/0.002 = <b>2000 times</b>, despite being more fully featured.
-</p>
-<p>
-	The other thing to note is that the naive implementation of Fibonacci using recursion with growing state 
-	completes in around the same time as the manually tail recursive version. Its code is automatically optimized to 
-	be tail recursive (else fib-naive 100 wouldn't even complete given limited memory).
-</p>
-</div>
 
 <h2 class="anchor">Lexer <a class="anchor-link" title="permalink to section" href="#lexer" name="lexer">&para;</a></h2>
 -------------------------------
@@ -285,8 +265,8 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
  - Tons of fun
  
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
-<script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>
 <script src="clisp.js" type="text/javascript"></script>
+<script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 function expr_terminate(input) {
 	var paren_stack = new Array();
@@ -298,10 +278,8 @@ function expr_terminate(input) {
 	return false;
 }
 
-$(function () {
-	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (map square (1 2 3 4 5)) \n', '>> ');
-	jqconsole.RegisterMatching('(', ')', 'brackets');
-	
+
+function load_library(jqconsole) {
 	$.ajax({ type: "GET", url: "funcs.scm",
 		success: function(text) { 
 			Module.expr_str(text);
@@ -309,9 +287,17 @@ $(function () {
 		},
 		error: function() {
 			jqconsole.Write('Can\'t find standard library\n');
+			console.log("failed to load");
 		}
-	});
-	
+	});	
+}
+
+$(function () {
+	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (map square (1 2 3 4 5)) \n', '>> ');
+	jqconsole.RegisterMatching('(', ')', 'brackets');
+
+	load_library(jqconsole);
+
 	var startPrompt = function() {
 		// start prompt with history enabled
 		jqconsole.Prompt(true, 
@@ -327,4 +313,5 @@ $(function () {
 	};
 	startPrompt();
 });
+
 </script>

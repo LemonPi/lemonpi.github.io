@@ -65,6 +65,3 @@ March 2014
 
 > My personal strengths lie in adopting new tools and applying scientific knowledge to analyze real life situations.  
 
-<script src="https://www.corp.google.com/style/prettify.js"> </script>
-
-<script src="landingscript.js"> </script>

@@ -292,7 +292,8 @@ function load_library(jqconsole) {
 	});	
 }
 
-$(function () {
+// $(document).ready()
+$(window).load(function () {
 	var jqconsole = $("#console").jqconsole('Clisp live interpreter  ex. (map square (1 2 3 4 5)) \n', '>> ');
 	jqconsole.RegisterMatching('(', ')', 'brackets');
 

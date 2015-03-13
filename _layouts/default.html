@@ -7,12 +7,15 @@
 <meta property="og:url" content="https://lemonpi.github.io/{{ page.url }}" />
 <meta property="og:image" content="https://lemonpi.github.io/ogimg.png" />
 <title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
-<link rel="stylesheet" href="{{ site.baseurl }}main.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}css/main.css" />
 {% if page.css == "interactive" %}
-	<link rel="stylesheet" href="/interactive.css" />
+	<link rel="stylesheet" href="/css/interactive.css" />
 {% endif %}
 {% if page.css == "handbook" %}
-	<link rel="stylesheet" href="/handbook/handbook.css" />
+	<link rel="stylesheet" href="/css/handbook.css" />
+{% endif %}
+{% if page.css == "syntax" %}
+	<link rel="stylesheet" href="/css/rouge.css" />
 {% endif %}
 <link rel="shortcut icon" href="/favicon.ico">
 </head>

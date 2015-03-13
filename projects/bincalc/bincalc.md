@@ -96,7 +96,7 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <h2 class="anchor">First Version - Stack based <a class="anchor-link" title="permalink to section" href="#first" name="first">¶</a></h2>
 -----------------------------------
  - stack based, requires users to use reverse polish notation (2 3 + to express 2 + 3)
- - full support for +, -, *, /, >>, <<, &, |, ^, and ~ operators
+ - full support for `+, -, *, /, >>, <<, &, |, ^, and ~` operators
  - no support for order of operations
  - no support for variables
  - supports only positive integers
@@ -118,7 +118,7 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <h2 class="anchor">Second Version - Grammar added <a class="anchor-link" title="permalink to section" href="#second" name="second">¶</a></h2>
 --------------------------------------
  - stream based, conventional grammar
- - full support for +, -, *, /, >>, <<, &, |, ^, and ~ operators
+ - full support for `+, -, *, /, >>, <<, &, |, ^, and ~` operators
  - full support for order of operations
  - support for variables
  - supports only positive integers
@@ -137,9 +137,9 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <img src="grammar.png">
 
  - everything is an expression
- - every expression is a term optionally +/- other terms
- - every term is a bit_term optionally *// other bit_terms
- - every bit_term is a unary_term optionally >>/<</&/|/^ other unary_terms
+ - every expression is a term optionally `+/-` other terms
+ - every term is a bit_term optionally `*//` other bit_terms
+ - every bit_term is a unary_term optionally `>>/<</&/|/^` other unary_terms
  - every unary_term is a primary optionally ~/literal itself (later I will add negative, hex, and oct)
  - every primary is either a number, name, parentheses enclosed expression, or a unary operator symbol
  
@@ -149,25 +149,29 @@ and run with [jq-console](https://github.com/replit/jq-console)
 	(inspired by Bjorne Stroustrup's desk calculator in The C++ Language 4th edition, chapter 10.2).
 	Each level of the parser calls the next,
 	with each level applying its rules and returning its value. 
-	For example, in expr(), it expects at least a base term
+	For example, in <code>expr()</code>, it expects at least a base term
 	<code>rep_type left = term(need_get);</code>
 	and adds or subtracts all additional terms it can
-	<pre><code>while (true) {
+{% highlight C++ %}
+while (true) {
     switch (ts.current().kind) {
         case Kind::plus: left += term(true); break;
         case Kind::minus: left -= term(true); break;
         default: return left;
     }
-}</code></pre>
+}
+{% endhighlight %}
+
+
 	Separation of concerns and keeping it modular makes adding features and 
-	understanding the code much easier. Here, expr() doesn't have to worry about
-	the implementation at the lowest level, it just needs term() to follow the 
+	understanding the code much easier. Here, <code>expr()</code> doesn't have to worry about
+	the implementation at the lowest level, it just needs <code>term()</code> to follow the 
 	rules and return the value of a term. This sort of intuitive logic propagates
-	all the way down to the lowest level, prim(), where actual parsing of values happen.
+	all the way down to the lowest level, <code>prim()</code>, where actual parsing of values happen.
 </p>
 
 <p>
-	prim() ultimately needs to tokens to parse, which comes from the lexer.
+	<code>prim()</code> ultimately needs to tokens to parse, which comes from the lexer.
 	The lexer's job is to process state and value information from a input stream into tokens.
 </p>
 <p>
@@ -181,7 +185,7 @@ and run with [jq-console](https://github.com/replit/jq-console)
 <h2 class="anchor">Third Version - Files separated <a class="anchor-link" title="permalink to section" href="#third" name="third">¶</a></h2>
 -----------------------------
  - stream based, conventional grammar
- - full support for +, -, *, /, %, >>, <<, &, |, ^, ~, !, and ** operators
+ - full support for `+, -, *, /, %, >>, <<, &, |, ^, ~, !, and **` operators
  - full support for order of operations
  - support for variables
  - supports real numbers with decimal, octal, and hexadecimal bases

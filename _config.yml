@@ -2,4 +2,4 @@ relative_permalinks: false
 repository: https://github.com/lemonpi/lemonpi.github.io
 baseurl: /
 markdown: redcarpet
-pygments: true
+highlighter: rouge

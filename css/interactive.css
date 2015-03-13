@@ -1,5 +1,5 @@
 .holder {
-	background: url("process.png") no-repeat top center;
+	background: url("/res/process.png") no-repeat top center;
 	margin: 0 auto;
 	position: relative;
 	min-width: 1050px;

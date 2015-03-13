@@ -12,6 +12,15 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div class="gallery" id="main-gallery">
 
+<a href="projects/sal/"><div class="box">
+<img src="res/projects/lemonpi.png"/>
+<span class="caption">
+<h1 class="caption-title">SAL</h1>
+Simple Algorithms and Data structures<br><br><br><br>
+Oct 2014 - Jan 2015
+</span>
+</div></a>
+
 <a href="projects/clisp/"><div class="box">
 <img src="projects/clisp.png"/>
 <span class="caption">
@@ -21,14 +30,6 @@ Aug 2014
 </span>
 </div></a>
 
-<a href="projects/bincalc/"><div class="box">
-<img src="projects/bincalc.png"/>
-<span class="caption">
-<h1 class="caption-title">Bincalc</h1>
-Binary calculator for bit manipulation practice and stream processing<br><br><br><br>
-July 2014
-</span>
-</div></a>
 
 <a href="projects/timewatch/"><div class="box">
 <img src="projects/timewatch.png"/>

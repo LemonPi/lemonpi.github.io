@@ -10,6 +10,15 @@ branch: base
 
 <div class="gallery">
 
+<a href="sal/"><div class="box">
+<img src="/res/projects/lemonpi.png"/>
+<span class="caption">
+<h1 class="caption-title">SAL</h1>
+Simple Algorithms and Data structures<br><br><br><br>
+Oct 2014 - Jan 2015
+</span>
+</div></a>
+
 <a href="clisp/"><div class="box">
 <img src="clisp.png"/>
 <span class="caption">
@@ -55,14 +64,6 @@ Feb 2014
 </span>
 </div></a>
 
-<a href="namegame/"><div class="box">
-<img src="namegame.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Name Game</h1>
-Gives you usernames and quizzes you on real names using string processing in C <br><br><br>
-Jan 2014
-</span>
-</div></a>
 
 <a href="portfolio/"><div class="box">
 <img src="portfolio.jpg"/>
@@ -87,6 +88,8 @@ Nov 2013
 <br><br><br><br><br><br>
 
  --------------------------
+ - [**Simple Algorithms and Data Structures library**](sal/) - Oct 2014 to Jan 2014
+
  - [**Clisp - Lisp interpreter**](clisp/) - Aug 2014
  
  - [Binary calculator](bincalc/) - July 2014

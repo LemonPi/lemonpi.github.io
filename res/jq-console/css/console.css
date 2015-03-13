@@ -10,6 +10,7 @@ input[type='text'],input[type='number'],textarea {font-size:16px;}
 .jqconsole {
 	padding: 10px;
 	color: white;
+  background:inherit;
 }
 /* The cursor. */
 .jqconsole-cursor {

@@ -56,7 +56,10 @@ Simple library [here](funcs.scm)
 </div>
 
 With some definitions in funcs.scm:
-<pre><code>; semicolon comments
+
+
+```
+; semicolon comments
 (include funcs.scm)	; essentially copy paste entire file here
 (define compose (lambda (f g)
 		(lambda (x)
@@ -73,7 +76,8 @@ With some definitions in funcs.scm:
 				(expt x n))))	
 (define square (nth-power 2))	
 (define cube (nth-power 3))	
-(define square\_and\_cube (compose square cube))</code></pre>
+(define square\_and\_cube (compose square cube))
+```
 
 <h2 class="anchor">Strengths <a class="anchor-link" title="permalink to section" href="#strengths" name="strengths">&para;</a></h2>
 -------------------------------
@@ -215,12 +219,13 @@ The other obvious design is to use polymorphism - having various Cell types shar
 	Example from <a href="http://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope">Wikipedia:</a>.
 </p>
 </div>
-<pre><code>x=1
+```
+x=1
 function g () { echo $x ; x=2 ; }
 function f () { local x=3 ; g ; }
 f # dynamic g has access to f's x and prints 3; lexical g prints 1 and modifies the global
 echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modified x to be 2
-</code></pre>
+```
 
 <div class="text-block">
 <p>
@@ -231,7 +236,8 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
 	and allows the use of higher order procedures and the idiom of returning procedures.
 </p>
 </div>
-<pre><code>(define (nth-power n)
+```
+(define (nth-power n)
 		(lambda (x)
 				(expt x n)))) 	; n is bound to nth-power's n
 				
@@ -239,7 +245,8 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
 	
 (define cube (nth-power 3))	
 
-(cube 5)</code></pre>
+(cube 5)
+```
 
 ![closure](environment.png)
 

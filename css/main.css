@@ -28,7 +28,8 @@ blockquote {
 pre {
 	font-family: Consolas, Courier, monospace;
 	line-height: 140%;
-	padding:5px 10px;
+	padding:0px 20px;
+	margin:10px 0px;
 }	 
 code {
 	font-family: Consolas;
@@ -69,7 +70,7 @@ pre>code {
 #history{position:absolute;right:50px;color:#f0f0f0;display:inline;}
 
 .pretty {
-	font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-family: Verdana, Sans-Serif;
 	background:white;
 	width:50%;
 	border-collapse:collapse;
@@ -83,7 +84,6 @@ pre>code {
 	padding:10px 8px;
 }
 .pretty td{
-	border-bottom:1px solid #bebedc;
 	color:#465064;
 	padding:6px 8px;
 }

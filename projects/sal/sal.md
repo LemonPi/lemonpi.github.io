@@ -7,37 +7,48 @@ group: projects
 ---
 <div class="text-block">
 <p>
-	Source on <a href="https://github.com/LemonPi/sal">github</a><br>
+	Source and quick reference on <a href="https://github.com/LemonPi/sal">github</a><br>
+
 	SAL is a C++11 header only library containing simple implementations of
 	efficient algorithms and data structures. Simplicity refers to how close 
 	the implementation represents the essence of each concept, leaving out convoluted optimizations.
+</p>
+
+<p>
+	Detailed documentation with examples of usage for each header follows.
 </p>
 </div>
 
 
 <a name="#algo" class="anchor">Algorithms</a>
 ---
-- [numerics](numeric.html)
-- [permutation and combination](perm.html)
-- [prime generation and manipulation](prime.html)
-- [basic searching, substring matching, and finding longest common features](search.html)
-- [comparison, distributive, and hybrid sorts](sort.html)
-- [string edit distances](string.html)
-- [integer factorization](factorize.html)
-- [utility and testing functions](utility.html)
-- [**graph searches**](graph_search.html)
-- [**important graph algorithms**](graph_utility.html)
-- [**shortest paths for graphs and trees**](shortest.html)
-- [linear programming](linear.html)
+- [numerics](numeric/)
+- [permutation and combination](perm/)
+- [prime generation and manipulation](prime/)
+- [basic searching, substring matching, and finding longest common features](search/)
+- [comparison, distributive, and hybrid sorts](sort/)
+- [string edit distances](string/)
+- [utility and testing functions](utility/)
+- [**graph searches**](graph_algo/)
+- [**important graph algorithms**](graph_algo/)
+- [**shortest paths for graphs and trees**](graph_algo/)
+- [linear programming](linear/)
 
 <a name="#data" class="anchor">Data structures</a>
 ---
-- [basic linked list](list.html)
-- [binary heap](heap.html)
-- [2D matrix](matrix.html)
-- [red black tree and augmentations of it](tree.html)
-- [interval tree](interval.html)
-- [**directed and undirected graphs**](graph.html)
+- [basic linked list](list/)
+- [binary heap](heap/)
+- [2D matrix](matrix/)
+- [red black tree and augmentations of it](tree/)
+- [interval tree](interval/)
+- [**directed and undirected graphs**](graph/)
+
+<div class="text-block">
+<p>
+	(<code>namespace sal</code> is implicitely used for every example shown;
+	functions that take iterator pairs are overloaded to take containers as well )
+</p>
+</div>
 
 
 <h2 class="anchor">Features <a class="anchor-link" title="permalink to section" href="#features" name="features">&para;</a></h2>
@@ -102,7 +113,7 @@ Dijkstra(G, s)  {
 
 With direct parallels in the actual code:
 
-{% highlight C++ linenos %}
+{% highlight c++ linenos %}
 template <typename Graph>
 SPM<Graph> dijkstra(const Graph& g, typename Graph::vertex_type s, DJ_visitor&& visitor = {}) {
 	using V = typename Graph::vertex_type;
@@ -125,18 +136,22 @@ SPM<Graph> dijkstra(const Graph& g, typename Graph::vertex_type s, DJ_visitor&& 
 	return property;
 }
 {% endhighlight %}
+</code>
+
 
 <br>
 
-```
+
+{% highlight pseudo %}
 Initialize-single-source(G, s) {
    for each vertex v in V(G)
       d[v] ← ∞
       p[v] ← NIL
    d[s] ← 0
 }
-``` 
-{% highlight C++ linenos %}
+{% endhighlight %}
+
+{% highlight c++ linenos %}
 template <typename Property_map, typename Graph>
 void initialize_single_source(Property_map& property, const Graph& g, typename Graph::vertex_type s) {
 	for (auto v = g.begin(); v != g.end(); ++v) 
@@ -144,10 +159,10 @@ void initialize_single_source(Property_map& property, const Graph& g, typename G
 	property[s].distance = 0;
 }	
 {% endhighlight %}
-
+</code>
 <br>
 
-```
+{% highlight pseudo %}
 Relax(u, v) {
    //update only if we found a strictly shortest path
    if d[v] > d[u] + w(u,v) 
@@ -155,9 +170,9 @@ Relax(u, v) {
       p[v] ← u
       update(Q, v)
 }
-```
+{% endhighlight %}
 
-{% highlight C++ linenos %}
+{% highlight c++ linenos %}
 struct DJ_visitor {
 	/* relaxes an edge if it meets certain requirements */
 	template <typename Property_map, typename Queue>
@@ -170,8 +185,7 @@ struct DJ_visitor {
 		*/
 
 		size_t d_i {exploring.key(edge.dest())};
-		// d_i == 0 means not in exploring
-
+		/* d_i == 0 means not in exploring */
 		if (d_i && edge.weight() < property[edge.dest()].distance + edge.weight()) {
 			property[edge.dest()].distance = property[edge.source()].distance + edge.weight();
 			property[edge.dest()].parent = edge.source();
@@ -180,8 +194,9 @@ struct DJ_visitor {
 		}		
 	}
 };
-{% endhighlight %}
-
+{%endhighlight%}
+</code>
+<br>
 <div class="text-block">
 <p>
 	Most of the library maintains this degree of correspondence to fundamental ideas.
@@ -189,9 +204,6 @@ struct DJ_visitor {
 	the complexity or removing memory constraints. For example, prime generation is implemented
 	as a segmented sieve rather than a straight forward sieve since it effectively removes
 	memory as a limit on the largest prime I can find.
-</p>
-<p>
-	
 </p>
 </div>
 

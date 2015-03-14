@@ -142,14 +142,14 @@ SPM<Graph> dijkstra(const Graph& g, typename Graph::vertex_type s, DJ_visitor&& 
 <br>
 
 
-{% highlight pseudo %}
+<pre class="pseudo"><code>
 Initialize-single-source(G, s) {
    for each vertex v in V(G)
       d[v] ← ∞
       p[v] ← NIL
    d[s] ← 0
 }
-{% endhighlight %}
+</code></pre>
 
 {% highlight c++ linenos %}
 template <typename Property_map, typename Graph>
@@ -162,7 +162,8 @@ void initialize_single_source(Property_map& property, const Graph& g, typename G
 </code>
 <br>
 
-{% highlight pseudo %}
+
+<pre class="pseudo"><code>
 Relax(u, v) {
    //update only if we found a strictly shortest path
    if d[v] > d[u] + w(u,v) 
@@ -170,7 +171,7 @@ Relax(u, v) {
       p[v] ← u
       update(Q, v)
 }
-{% endhighlight %}
+</code></pre>
 
 {% highlight c++ linenos %}
 struct DJ_visitor {

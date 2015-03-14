@@ -267,9 +267,9 @@ Matrix<T> mul(const Indexable& mats);
 std::vector<Matrix<int>> mats;
 size_t row {30}, col {35};
 for (int i = 0; i != 100; ++i) {
-	/* generate sequence of random matrices */
+	// generate sequence of random matrices 
 	mats.push_back(random_matrix<int>(row, col, 0, 50));
-	/* next matrix's row must be prev matrix's col */
+	// next matrix's row must be prev matrix's col
 	row = col;
 	col = rand() % 100 + 5;	// between 5 - 105
 }

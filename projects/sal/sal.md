@@ -46,7 +46,12 @@ group: projects
 <div class="text-block">
 <p>
 	(<code>namespace sal</code> is implicitely used for every example shown;
-	functions that take iterator pairs are overloaded to take containers as well )
+	functions that take iterator pairs are overloaded to take containers as well).
+</p>
+<p>
+	Testing console was compiled with <a href="https://github.com/kripken/emscripten">emscripten</a> into
+	javascript. Random test data for some algorithms should be generated with '0' or '1' first; append -p to print
+	full results. 
 </p>
 </div>
 

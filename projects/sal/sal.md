@@ -242,7 +242,7 @@ $(window).load(function () {
 		// start prompt with history enabled
 		jqconsole.Prompt(true, 
 		function(input) {
-			jqconsole.Write(Module.algo_str("algotest "+input+' ') + '\n', 'jqconsole-output');
+			jqconsole.Write(Module.algo_str("algotest "+input+' '), 'jqconsole-output');
 			// restart prompt
 			startPrompt();
 		}, 

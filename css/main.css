@@ -1,5 +1,5 @@
 body {
-	font-family:Candara,"Dejavu Sans","Helvetica Neue","Lucida Sans",sans-serif;
+	font-family:Candara,"Helvetica Neue",sans-serif;
 	font-size:1.2em;
 	background-color:white;
 	margin:0;
@@ -26,13 +26,12 @@ blockquote {
 } 
 
 pre {
-	font-family: Consolas, Courier, monospace;
 	line-height: 140%;
 	padding:0px 20px;
 	margin:10px 0px;
 }	 
 code {
-	font-family: Consolas;
+	font-family: Consolas, monospace;
 	background:#f0f2f4;
 }
 pre>code {

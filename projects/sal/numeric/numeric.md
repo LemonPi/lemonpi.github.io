@@ -30,7 +30,7 @@ section: numeric
 
 
 
-<h3 class="anchor">Exponentiation <a class="anchor-link" title="permalink to section" href="#exponent" name="exponent">&para;</a></h3>
+<h3 class="anchor doc-header">Exponentiation <a class="anchor-link" title="permalink to section" href="#exponent" name="exponent">&para;</a></h3>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -66,7 +66,7 @@ int_pow(5, 3);
 
 
 
-<h3 class="anchor">Fibonacci <a class="anchor-link" title="permalink to section" href="#fibonacci" name="fibonacci">&para;</a></h3>
+<h3 class="anchor doc-header">Fibonacci <a class="anchor-link" title="permalink to section" href="#fibonacci" name="fibonacci">&para;</a></h3>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -102,7 +102,7 @@ fibonacci<Infint>(1000);
 
 <br>
 
-<h3 class="anchor">Cyclic numbers <a class="anchor-link" title="permalink to section" href="#cyclic" name="cyclic">&para;</a></h3>
+<h3 class="anchor doc-header">Cyclic numbers <a class="anchor-link" title="permalink to section" href="#cyclic" name="cyclic">&para;</a></h3>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -146,7 +146,7 @@ cycle_length(10, 7);
 
 
 
-<h3 class="anchor">Integer power <a class="anchor-link" title="permalink to section" href="#is_pow" name="is_pow">&para;</a></h3>
+<h3 class="anchor doc-header">Integer power <a class="anchor-link" title="permalink to section" href="#is_pow" name="is_pow">&para;</a></h3>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -173,7 +173,7 @@ is_pow(4194304,4);
 
 
 
-<h3 class="anchor">Perfect square <a class="anchor-link" title="permalink to section" href="#is_square" name="is_square">&para;</a></h3>
+<h3 class="anchor doc-header">Perfect square <a class="anchor-link" title="permalink to section" href="#is_square" name="is_square">&para;</a></h3>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -201,7 +201,7 @@ is_square(21489798124);
 
 
 
-<h3 class="anchor">Greatest Common Denominator <a class="anchor-link" title="permalink to section" href="#gcd" name="gcd">&para;</a></h3>
+<h3 class="anchor doc-header">Greatest Common Denominator <a class="anchor-link" title="permalink to section" href="#gcd" name="gcd">&para;</a></h3>
  
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -237,7 +237,7 @@ gcd(56, 91);
 
 
 
-<h3 class="anchor">Euler's Totient <a class="anchor-link" title="permalink to section" href="#totient" name="totient">&para;</a></h3>
+<h3 class="anchor doc-header">Euler's Totient <a class="anchor-link" title="permalink to section" href="#totient" name="totient">&para;</a></h3>
  
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -282,7 +282,7 @@ totient(500);
 
 
 
-<h3 class="anchor">Matrix Chain Multiplication <a class="anchor-link" title="permalink to section" href="#matmul" name="matmul">&para;</a></h3>
+<h3 class="anchor doc-header">Matrix Chain Multiplication <a class="anchor-link" title="permalink to section" href="#matmul" name="matmul">&para;</a></h3>
  
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -328,7 +328,7 @@ mul(mats);
 
 
 
-<h3 class="anchor">Integer Factorization <a class="anchor-link" title="permalink to section" href="#factor" name="factor">&para;</a></h3>
+<h3 class="anchor doc-header">Integer Factorization <a class="anchor-link" title="permalink to section" href="#factor" name="factor">&para;</a></h3>
  
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}

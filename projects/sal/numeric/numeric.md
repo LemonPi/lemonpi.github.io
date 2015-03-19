@@ -27,8 +27,11 @@ section: numeric
 </table>
 
 
+
+
+
 <h3 class="anchor">Exponentiation <a class="anchor-link" title="permalink to section" href="#exponent" name="exponent">&para;</a></h3>
-----------
+
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 int modular_pow(int base, int exponent, int modulus);
@@ -59,8 +62,12 @@ int_pow(5, 3);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Fibonacci <a class="anchor-link" title="permalink to section" href="#fibonacci" name="fibonacci">&para;</a></h3>
-----------
+
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename T>
@@ -78,6 +85,10 @@ fibonacci<Infint>(1000);
 // Infint 43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875
 {% endhighlight %}
 
+
+
+
+
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
@@ -92,7 +103,7 @@ fibonacci<Infint>(1000);
 <br>
 
 <h3 class="anchor">Cyclic numbers <a class="anchor-link" title="permalink to section" href="#cyclic" name="cyclic">&para;</a></h3>
-----------
+
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t make_cyclic(int base, int prime);
@@ -131,8 +142,12 @@ cycle_length(10, 7);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Integer power <a class="anchor-link" title="permalink to section" href="#is_pow" name="is_pow">&para;</a></h3>
-----------
+
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 bool is_pow(int guess, int base);
@@ -154,8 +169,12 @@ is_pow(4194304,4);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Perfect square <a class="anchor-link" title="permalink to section" href="#is_square" name="is_square">&para;</a></h3>
-----------
+
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 bool is_square(long guess);
@@ -178,8 +197,12 @@ is_square(21489798124);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Greatest Common Denominator <a class="anchor-link" title="permalink to section" href="#gcd" name="gcd">&para;</a></h3>
--------------- 
+ 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 unsigned int gcd(int a, int b);
@@ -210,8 +233,12 @@ gcd(56, 91);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Euler's Totient <a class="anchor-link" title="permalink to section" href="#totient" name="totient">&para;</a></h3>
--------------- 
+ 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 unsigned long long totient(unsigned long long n);
@@ -251,8 +278,12 @@ totient(500);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Matrix Chain Multiplication <a class="anchor-link" title="permalink to section" href="#matmul" name="matmul">&para;</a></h3>
--------------- 
+ 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Indexable>
@@ -293,8 +324,12 @@ mul(mats);
 
 <br>
 
+
+
+
+
 <h3 class="anchor">Integer Factorization <a class="anchor-link" title="permalink to section" href="#factor" name="factor">&para;</a></h3>
--------------- 
+ 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename T>

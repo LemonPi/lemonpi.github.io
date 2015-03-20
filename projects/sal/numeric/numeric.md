@@ -5,7 +5,7 @@ permalink: /projects/sal/numeric/index.html
 section: numeric
 ---
 
-#### [sal/algo/numerics.h --- numeric](https://github.com/LemonPi/algo/blob/master/numeric.h)
+#### [sal/algo/numerics.h](https://github.com/LemonPi/algo/blob/master/numeric.h)
 
 <table class="pretty">
 <tr><td><a class="doc-list-name" href="#exponent">modular_pow</a></td><td>modular exponentiation</td></tr>
@@ -76,7 +76,7 @@ T fibonacci(size_t n);
 
 <p class="doc-section">Parameters</p>
 <table class="pretty">
-<tr><td>n</td><td>nth fibonacci number, sequence starting: 0, 1, 1..</td></tr>
+<tr><td>n</td><td>nth fibonacci number, sequence starting: (n=0)0, 1, 1..</td></tr>
 </table>
 <p class="doc-section">Example</p>
 

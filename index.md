@@ -56,13 +56,9 @@ March 2014
 ----------------------------
 ##Professional Statement
 > ###As an engineer,
-> I believe engineering design is the iterative application of scientific knowledge and technical skills to solve real problems in a robust, usable, and efficient manner with the stakeholders in mind.
+> I believe engineering design is the iterative application of scientific knowledge and technical skills to solve real problems in a robust, usable, and efficient manner.
   
 
 > Good engineering is a balance of fitting theoretical models and trial and error through prototyping,  
-> and it often involves breaking down the problem and inventing a language of tools at each layer for a long-lasting, robust solution.
-
-> As you consider my exploits from past to present, you can see evidence of how I progressed from oversimplifying problems to appreciating complex issues.  
-
-> My personal strengths lie in adopting new tools and applying scientific knowledge to analyze real life situations.  
+> and it often involves breaking down the problem and inventing a language of tools at each conceptual layer for a long-lasting, robust solution.
 

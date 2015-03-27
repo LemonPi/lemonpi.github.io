@@ -22,7 +22,13 @@ public class Autolink {
 		    for (Element link : doc_links) {
 		    	String existing_link = keywords.get(link.text());
 		    	// hasn't already been written
-		    	if (existing_link == null) out.println(link.text() + ',' + link.attr("abs:href"));
+		    	if (existing_link == null) {
+		    		out.println(link.text() + ',' + link.attr("abs:href"));
+			    }
+		    	// name clash of different functions
+		    	else if (!link.attr("abs:href").equals(existing_link)) {
+		    		System.out.println("name clash: " + link.text());
+		    	}
 		    	page_words.put(link.text(), link.attr("abs:href"));
 		    }
 		} 

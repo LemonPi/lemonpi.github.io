@@ -626,7 +626,7 @@ Licensed under the MIT license
 
     JQConsole.prototype.Focus = function() {
       if (!this.IsDisabled()) {
-        this.$input_source.focus();
+        // this.$input_source.focus();
       }
       return void 0;
     };

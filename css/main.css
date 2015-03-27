@@ -155,6 +155,13 @@ pre>code {
 .gallery .box img {position: absolute;left: 0; height:320px; width:345px;}
 .gallery .box:hover .caption {opacity: 1}
 
+.hero {
+	position:absolute;
+	left:0 !important;
+	top:0 !important;
+	width:100% !important;
+	height:100% !important;
+}
 
 #github {
 	background-image:url("/res/github_before.png");

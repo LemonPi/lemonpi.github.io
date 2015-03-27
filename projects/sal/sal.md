@@ -1,10 +1,12 @@
 ---
-layout: interpreter
+layout: algorithms
 title: Simple Algorithms and Data Structures
 permalink: /projects/sal/index.html
 css: syntax
 group: projects
 ---
+
+
 <div class="text-block">
 <p>
 	Source and quick reference on <a href="https://github.com/LemonPi/sal">github</a><br>
@@ -15,9 +17,10 @@ group: projects
 </p>
 
 <p>
-	Detailed documentation with examples of usage for each header follows.
+	Detailed documentation with examples of usage for each header follows. <br>
 </p>
 </div>
+<h3><a href="tester.html"><b>Test algorithms online</b></a></h3>
 
 
 <a name="#algo" class="anchor">Algorithms</a>
@@ -55,8 +58,6 @@ group: projects
 </p>
 </div>
 
-<div id="console"></div>
-<div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
 
 
 <h2 class="anchor">Features <a class="anchor-link" title="permalink to section" href="#features" name="features">&para;</a></h2>
@@ -222,45 +223,3 @@ struct DJ_visitor {
  - C++ implementation experience (creating my own iterators, visitors, and lower level data structures)
  - Experience easily expressing ideas in efficient code
 
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
-<script src="algotest.js" type="text/javascript"></script>
-<script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-function expr_terminate(input) {
-	var paren_stack = new Array();
-	for (var i = 0; i < input.length; ++i) {
-		if (input.charAt(i) === '(') paren_stack.push('(');
-		if (input.charAt(i) === ')' && paren_stack.length) paren_stack.pop();
-	}
-	if (paren_stack.length) return paren_stack.length;
-	return false;
-}
-
-
-$(window).load(function () {
-	$("#console").width("80%");
-	var jqconsole = $("#console").jqconsole('SAL algorithm testing, generate random numbers first \n', '>> ');
-
-	var startPrompt = function() {
-		// start prompt with history enabled
-		jqconsole.Prompt(true, 
-		function(input) {
-			jqconsole.Write(Module.algo_str("algotest "+input+' '), 'jqconsole-output');
-			// restart prompt
-			startPrompt();
-		}, 
-		function(input) {
-			return false;
-			// check if expression's terminated
-		});
-		Module.print = Module.printErr = function(a) {
-			console.log(a);
-			jqconsole.Write(a + '\n');
-		};
-	};
-	startPrompt();
-});
-
-</script>

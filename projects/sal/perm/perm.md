@@ -19,7 +19,7 @@ section: perm
 
 
 
-<h3 class="anchor doc-header">Permutation <a class="anchor-link" title="permalink to section" href="#perm" name="perm">&para;</a></h3>
+<h3 class="anchor doc-header">Permutation <a class="anchor-link" title="permalink to section" href="#perm" name="perm">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -60,7 +60,7 @@ std::cout << word;
 
 
 
-<h3 class="anchor doc-header">All Permutations <a class="anchor-link" title="permalink to section" href="#allperms" name="allperms">&para;</a></h3>
+<h3 class="anchor doc-header">All Permutations <a class="anchor-link" title="permalink to section" href="#allperms" name="allperms">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -101,7 +101,7 @@ allperms_distinct(words);
 
 
 
-<h3 class="anchor doc-header">Combinations <a class="anchor-link" title="permalink to section" href="#combine" name="combine">&para;</a></h3>
+<h3 class="anchor doc-header">Combinations <a class="anchor-link" title="permalink to section" href="#combine" name="combine">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -154,7 +154,7 @@ combine(ints,
 
 
 
-<h3 class="anchor doc-header">Counting Combinations <a class="anchor-link" title="permalink to section" href="#count_combos" name="count_combos">&para;</a></h3>
+<h3 class="anchor doc-header">Counting Combinations <a class="anchor-link" title="permalink to section" href="#count_combos" name="count_combos">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}

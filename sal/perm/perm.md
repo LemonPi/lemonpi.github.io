@@ -1,7 +1,7 @@
 ---
 layout: algorithms
 title: Permutations and Combinations
-permalink: /projects/sal/perm/index.html
+permalink: /sal/perm/index.html
 section: perm
 ---
 

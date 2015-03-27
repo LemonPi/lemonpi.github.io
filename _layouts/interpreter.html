@@ -31,18 +31,18 @@
 			<li><a href="{{ site.baseurl }}principles.html">Principles</a></li>
 		{% endif %}
 		
-		{% if page.group == "process" %}
-			<li id="active"><a href="{{ site.baseurl }}process/">Process</a></li>
-		{% else %}
-			<li><a href="{{ site.baseurl }}process/">Process</a></li>
-		{% endif %}
-		
 		{% if page.group == "projects" %}
 			<li id="active"><a href="{{ site.baseurl }}projects/">Projects</a></li>
 		{% else %}
 			<li><a href="{{ site.baseurl }}projects/">Projects</a></li>
 		{% endif %}
 		
+		{% if page.group == "sal" %}
+			<li id="active"><a href="{{ site.baseurl }}sal/">SAL</a></li>
+		{% else %}
+			<li><a href="{{ site.baseurl }}sal/">SAL</a></li>
+		{% endif %}
+
 		{% if page.group == "evaluations" %}
 			<li id="active"><a href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
 		{% else %}

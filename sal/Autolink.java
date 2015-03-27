@@ -50,7 +50,17 @@ public class Autolink {
 	            line = br.readLine();
 	        }
 	    }
-	    catch (IOException e) {}
+	    catch (IOException e) {
+	    	// make file
+	    	File f = new File(dataname);
+	    	try {
+				f.createNewFile();
+	    	}
+	    	catch (IOException ee) {
+	    		ee.printStackTrace();
+	    	}
+	    }
+
 	}
 
 	public static void link_page(File file, String base_name) {
@@ -67,7 +77,7 @@ public class Autolink {
 
 		// look for unlinked keywords inside code blocks and link them
 		boolean modified = false;
-		Elements names = doc.select(".n, .nf");
+		Elements names = doc.select(link_elements);
 		for (Element name : names) {
 			// is a global keyword but not a page keyword
 			String abs_link = keywords.get(name.text());
@@ -128,6 +138,7 @@ public class Autolink {
 
 	static HashMap<String, String> keywords;	// keyword - link
 	static String dataname = "names.txt";
-	static String site_directory = "../../_site/projects/sal";
-	static String base_url = "http://johnsonzhong.me/projects/";
+	static String site_directory = "../_site/sal";
+	static String base_url = "http://johnsonzhong.me/";
+	static String link_elements = ".n, .nf";
 }

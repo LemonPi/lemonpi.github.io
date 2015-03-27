@@ -1,9 +1,9 @@
 ---
-layout: algorithms
+layout: default
 title: Simple Algorithms and Data Structures
-permalink: /projects/sal/index.html
+permalink: /sal/index.html
 css: syntax
-group: projects
+group: sal
 ---
 
 

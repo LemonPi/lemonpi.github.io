@@ -10,7 +10,7 @@ branch: base
 
 <div class="gallery">
 
-<a href="sal/"><div class="box">
+<a href="../sal/"><div class="box">
 <img src="/res/projects/lemonpi.png"/>
 <span class="caption">
 <h1 class="caption-title">SAL</h1>

@@ -12,7 +12,7 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div class="gallery" id="main-gallery">
 
-<a href="projects/sal/"><div class="box">
+<a href="sal/"><div class="box">
 <img src="res/projects/lemonpi.png"/>
 <span class="caption">
 <h1 class="caption-title">SAL</h1>

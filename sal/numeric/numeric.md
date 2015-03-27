@@ -1,7 +1,7 @@
 ---
 layout: algorithms
 title: Numeric algorithms
-permalink: /projects/sal/numeric/index.html
+permalink: /sal/numeric/index.html
 section: numeric
 ---
 

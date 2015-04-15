@@ -22,92 +22,57 @@ section: search
 
 
 
-<h3 class="anchor doc-header">Sieve of Eratosthenes <a class="anchor-link" title="permalink to section" href="#sieve" name="sieve">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Binary search <a class="anchor-link" title="permalink to section" href="#bin_search" name="bin_search">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
-template <typename big_int = unsigned long long>
-class Sieve;
+template <typename Iter, typename T, typename Cmp>  // special comparator requires less and eq methods, can compare cross types
+Iter bin_search(Iter begin, Iter end, const T& key, Cmp cmp);
 
-// constructor
-Sieve(big_int init_limit = 0, size_t seg_size = L1D_CACHE_SIZE);
+// no given comparator overload uses std::less
+template <typename Iter, typename T>
+Iter bin_search(Iter begin, Iter end, const T& key);
+
+// convenience overload for containers
+template <typename Sequence, typename T>
+typename Sequence::iterator bin_search(const Sequence& c, const T& key);
 {% endhighlight %}
 
 <p class="doc-section">Parameters</p>
 <table class="pretty">
-<tr><td>init_limit</td><td>initial limit to sieve up to</td></tr>
-<tr><td>seg_size</td><td>the batch size that primes are generated in</td></tr>
+<tr><td>begin</td><td>iterator pointing to the first sequence element</td></tr>
+<tr><td>end</td><td>iterator pointing to one past the last sequence element</td></tr>
+<tr><td>key</td><td>value to find; should be an argument to <code>cmp.eq</code> and <code>cmp.less</code></td></tr>
+<tr><td>cmp</td><td>comparator that should supply <code>bool less(T,T)</code> and <code>bool eq(T, T)</code></td></tr>
 </table>
 
 <p class="doc-section">Example</p>
 
 {% highlight c++ %}
-// keep a sieve object if continuous work with primes is needed
-using big_int = size_t;
-Sieve<big_int> sieve;
+std::vector<int> seq {1,3,12,14,15,18,20};
+// bin_search assumes sequence is in order and elements are comparable
+bin_search(seq.begin(), seq.end(), 12);
+// iterator to element 12
 
-// or to initialize with primes up to 1000 already generated
-Sieve<> alt_sieve(1000);
+bin_search(seq.begin(), seq.end(), 17);
+// iterator seq.end()
 {% endhighlight %}
 
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
-	Its working mechanism is depicted in the image below, where multiples of first encountered primes are marked. 
-	Although not the theoretical fastest prime generating algorithm (with complexity <code>O(nlglg(n))</code>),
-	an optimized Sieve of Eratosthenes is computationally the fastest way to do so. The most important optimization
-	is to split the sieve into segments, the most efficient size being the L1 CPU cache. This vastly reduces cache
-	misses, but most importantly lifts the memory limit on the largest prime sievable. Supposing 4GB of free memory,
-	a traditional sieve using a 4GB large bit array (8 bits per byte) could only treat primes under 16 billion.
-</p>
+	A fundamental algorithm used because of its <code>Θ(lg(n))</code> time complexity (n is sequence length).
+	This is in comparsion to linear sort, which has <code>Θ(n)</code> time complexity. As expected, this
+	lg(n) performance is due to reducing the problem size to half each run through the Divide and Conquer strategy.
+	Each iteration compares the median value against the target, relying on the sorted property to eliminate the
+	half that is on the opposite side of the target relative to the median. 
+
+</p> 
 <p>
-	The implementation is influenced by <a href="http://primesieve.org/">primesieve</a>, which boasts more
-	extensive optimizations than SAL's, but I hope that my version is more readable and usable as part of larger
-	projects.
-</div>
-
-<img src="sieve.gif">
-
-<br>
-
-
-
-
-
-<h3 class="anchor doc-header">Next prime <a class="anchor-link" title="permalink to section" href="#next_prime" name="next_prime">&para;</a></h3><br><br><br>
-
-<p class="doc-section">Declaration</p>
-{% highlight c++ %}
-big_int next_prime();
-big_int next_prime(big_int guess);
-{% endhighlight %}
-
-<p class="doc-section">Parameters</p>
-<table class="pretty">
-<tr><td>guess</td><td>a number immediately before the desired prime; returns the prime after if guess is a prime</td></tr>
-</table>
-
-<p class="doc-section">Example</p>
-
-{% highlight c++ %}
-// using sieve from before
-while (true) sieve.next_prime();
-// generate infinite stream of primes (each of big_int)
-
-sieve.next_prime(500);
-// prime immediately after 500 -> 503
-sieve.next_prime(503);
-// if guess is a prime, will return next prime 509
-{% endhighlight %}
-
-<p class="doc-section">Discussion</p>
-<div class="text-block">
-<p>
-	Often either a sequence of primes or a prime "next to" a number is needed. 
-	This method provides one means of doing so, the other one being closest_prime.
-	Using next_prime to generate primes will result in uneven performance as the
-	primes are sieved in segments at a time, with most of the work being at the boundary
-	of a segment. 
+	Some pitfalls to binary search are 1. it requires random access to the entire sequence, which implies
+	2. the entire sequence need to be loaded in memory (or disk access will slow it down dramatically), and for
+	small datasets (around n < 64) loses to linear search due to the lack of spacial locality. This issue will
+	likely be more apparent in the future when more advanced optimizations for space locality becomes implemented.
 </p>
 </div>
 
@@ -116,33 +81,96 @@ sieve.next_prime(503);
 
 
 
-<h3 class="anchor doc-header">Closest prime <a class="anchor-link" title="permalink to section" href="#closest_prime" name="closest_prime">&para;</a></h3><br><br><br>
+
+<h3 class="anchor doc-header">Intersection <a class="anchor-link" title="permalink to section" href="#intersection" name="intersection">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
-big_int closest_prime(big_int guess);
+template <typename Sequence>
+unordered_set<typename Sequence::value_type> intersection(const set<Sequence>& s);
 {% endhighlight %}
 
 <p class="doc-section">Parameters</p>
 <table class="pretty">
-<tr><td>guess</td><td>number around which a prime is wanted</td></tr>
+<tr><td>s</td><td>set of sequences from which the intersection should be taken on</td></tr>
 </table>
 
 <p class="doc-section">Example</p>
 
 {% highlight c++ %}
-sieve.closest_prime(50000);
-// big_int 49999
+std::vector<int> seq {1,3,12,14,15,18,20};
+std::vector<int> seq2 {1,3,5,6,7,8,20,32};
+std::vector<int> seq3 {2,3,6,9,20,32,45,55};
+
+intersection(std::set<vector<int>>{seq, seq2, seq3});
+// unordered_set {3, 20} (elements shared by all 3 sequences)
 {% endhighlight %}
 
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
-	Primes often have use in information encoding due to its unfactorable nature.
-	One application is finding acceptable sizes for hash tables. If the hash function
-	is any number of Universal hashes, then the size should be a prime close to a power
-	of two (such as <a href="http://en.wikipedia.org/wiki/Mersenne_prime">Mersenee primes</a>) 
-	to replace division with shifts and additions but also while reducing clustering.
+	Optimal with time complexity <code>O(n)</code> (n is total sum of sequence elements).
+	In the worst case, each element will be looked at if all elements are shared.
+	This algorithm, like many other element matching ones, is based on hashtable lookups, which 
+	give average <code>O(1)</code> complexity. For known value ranges that's uniquely mappable to natural numbers,
+	such as language alphabet, a fixed size array could be used with the value's number value as the hash. 
+</p>
+<p>
+	For example, the UTF-8 encoding represents characters with 8 bits, uniquely mapping each character to
+	a number between 0 and 255. An array of size 256 could be used to find the intersection and other characteristics
+	among UTF-8 sequences.
+</p>
+</div>
+
+<br>
+
+
+
+
+<h3 class="anchor doc-header">Order selection <a class="anchor-link" title="permalink to section" href="#selection" name="selection">&para;</a></h3><br><br><br>
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+template <typename Iter>
+Iter select(Iter begin, Iter end, size_t i);
+
+// convenience overload
+template <typename Sequence>
+typename Sequence::iterator select(Sequence& c, size_t i);
+{% endhighlight %}
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>begin</td><td>iterator pointing to the first sequence element</td></tr>
+<tr><td>end</td><td>iterator pointing to one past the last sequence element</td></tr>
+<tr><td>i</td><td>ith smallest element of a sequence to select (1 is smallest)</td></tr>
+</table>
+
+<p class="doc-section">Example</p>
+
+{% highlight c++ %}
+// no requirement on sortedness of course...
+std::vector<int> v {632, 32, 31, 50, 88, 77, 942, 5, 23};
+select(v.begin(), v.end(), 4);
+// iterator to 4th element (50)
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div class="text-block">
+<p>
+	Selecting for minimums and maximums are relatively easy tasks requiring <code>O(n)</code> time,
+	but finding an arbitrary ith ordered element requires a different approach.
+</p>
+<p>
+	The algorithm implemented is quickselect, which, as the name suggests, is very similar to quicksort with
+	<code>O(n)</code> performance.
+	Their approach is the same - choosing a pivot to partition the sequence around based on <, but unlike quicksort,
+	which recurses on both sides, quickselect recurses only on the side the target is on (found by comparing the
+	rank=(pivot-begin) of the pivot against i).
+</p>
+<p>
+	At the end of selection, the sequence will be partially sorted with the ith element being the ith smallest,
+	and everything smaller than it on its left while everything larger than it on the right, with no order guranteed.
 </p>
 </div>
 

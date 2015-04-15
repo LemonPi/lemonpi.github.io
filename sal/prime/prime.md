@@ -9,13 +9,13 @@ section: prime
 
 <table class="pretty">
 <tr><th><a class="doc-list-name" href="#sieve">Sieve</a></th><th>segmented sieve class that generates primes</th></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#next_prime">.next_prime</a></td><td>next prime in the sequence or after a guess</td></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#closest_prime">.closest_prime</a></td><td>the nearest prime to a guess</td></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#cur_prime">.cur_prime</a></td><td>current prime in the sequence</td></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#nth_prime">.nth_prime</a></td><td>nth prime, starting from 2(n=1)</td></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#primes_upto">.primes_upto</a></td><td>sequence of primes up to a upper limit</td></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#is_prime">.is_prime</a></td><td>check if guess is a prime number</td></tr>
-<tr><td>&ni; <a class="doc-list-name" href="#count">.count</a></td><td>number of primes in sequence below current prime or an upper limit</td></tr>
+<tr><td><a class="doc-list-name" href="#next_prime">.next_prime</a></td><td>next prime in the sequence or after a guess</td></tr>
+<tr><td><a class="doc-list-name" href="#closest_prime">.closest_prime</a></td><td>the nearest prime to a guess</td></tr>
+<tr><td><a class="doc-list-name" href="#cur_prime">.cur_prime</a></td><td>current prime in the sequence</td></tr>
+<tr><td><a class="doc-list-name" href="#nth_prime">.nth_prime</a></td><td>nth prime, starting from 2(n=1)</td></tr>
+<tr><td><a class="doc-list-name" href="#primes_upto">.primes_upto</a></td><td>sequence of primes up to a upper limit</td></tr>
+<tr><td><a class="doc-list-name" href="#is_prime">.is_prime</a></td><td>check if guess is a prime number</td></tr>
+<tr><td><a class="doc-list-name" href="#count">.count</a></td><td>number of primes in sequence below current prime or an upper limit</td></tr>
 </table>
 
 

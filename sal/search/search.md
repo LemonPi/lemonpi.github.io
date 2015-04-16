@@ -14,8 +14,8 @@ section: search
 <tr><td><a class="doc-list-name" href="#sub_match">sub_match</a></td><td>search for occurance of a substring inside a larger string</td></tr>
 <tr><td><a class="doc-list-name" href="#lc_subseq">lc_subseq</a></td><td>longest common subsequence between 2 sequences</td></tr>
 <tr><td><a class="doc-list-name" href="#lc_subseq">lc_subseq_len</a></td><td>length of longest common subsequence between 2 sequences</td></tr>
-<tr><th><a class="doc-list-name" href="#suffix_array">Suffix_array</a></th><th>efficient data structure for finding common substrings</th></tr>
-<tr><td><a class="doc-list-name" href="#lc_substr">.lc_substr</a></td><td>longest common substring</td></tr>
+<tr><th><a class="doc-list-name" href="suffix_array">Suffix_array</a></th><th>efficient data structure for indexing large texts</th></tr>
+<tr><td><a class="doc-list-name" href="#lc_substr">lc_substr</a></td><td>longest common substring using a Suffix array</td></tr>
 </table>
 
 
@@ -179,104 +179,102 @@ select(v.begin(), v.end(), 4);
 
 
 
-<h3 class="anchor doc-header">Current prime <a class="anchor-link" title="permalink to section" href="#cur_prime" name="cur_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Substring matching <a class="anchor-link" title="permalink to section" href="#sub_match" name="sub_match">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
-big_int cur_prime() const;
-{% endhighlight %}
-
-<p class="doc-section">Example</p>
-
-{% highlight c++ %}
-Sieve<> sieve;
-for (int i = 0; i < 100; ++i)
-	sieve.next_prime();
-
-sieve.cur_prime();
-// size_t 100th prime (n = 100)
-
-{% endhighlight %}
-
-<p class="doc-section">Discussion</p>
-<div class="text-block">
-<p>
-	Current prime in the sequence.
-</p>
-</div>
-
-<br>
-
-
-
-
-<h3 class="anchor doc-header">Nth prime <a class="anchor-link" title="permalink to section" href="#nth_prime" name="nth_prime">&para;</a></h3><br><br><br>
-
-<p class="doc-section">Declaration</p>
-{% highlight c++ %}
-big_int nth_prime(big_int nth);
+template <typename Indexable>
+typename Indexable::const_iterator sub_match(const Indexable& s, const Indexable& w);
 {% endhighlight %}
 
 <p class="doc-section">Parameters</p>
 <table class="pretty">
-<tr><td>nth</td><td>prime index starting with 2(n=1), 3(n=2)</td></tr>
+<tr><td>s</td><td>an indexable sequence; the larger one - the "sentence"</td></tr>
+<tr><td>w</td><td>the same type of sequence; the smaller one - the "word"</td></tr>
 </table>
 
 <p class="doc-section">Example</p>
 
 {% highlight c++ %}
-sieve.nth_prime(1000);
-// big_int 7919 (1000th prime)
+std::string a {"It was the best of times..."};
+std::string c {"the best"};
+
+sub_match(a, c);
+// const_iterator to 't' in a
 {% endhighlight %}
 
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
-	Prime numbering starts with an index of 1; nth = 0 or nth < 0 returns 0,
-	but beware of underflows if using an unsigned type such as size_t by default.
+	An <code>O(n)</code> (n is length of sentence) algorithm for finding a 
+	substring inside a larger sentence. This finds applications in biomedical computing,
+	such as finding a codon sequence inside a chromosome.
+</p>
+<p>
+	This algorithm uses the information implicit in where the matching failed inside the word
+	to prevent wasteful backtracking. An example from wikipedia:
+</p>
+<img src="submatch.png">
+<p>
+	When matching fails before 'A' with i=8, there is no possibility that another match started during the match,
+	as the word starts with 'P' and none have been encountered. For backtracking to be necessary, the matching
+	has to fail on a prefix of the word, such as "PA-" at i=9, and "PAR-" at i=18.
 </p>
 </div>
 
 <br>
 
 
-<h3 class="anchor doc-header">Primes up to <a class="anchor-link" title="permalink to section" href="#primes_upto" name="primes_upto">&para;</a></h3><br><br><br>
+
+
+<h3 class="anchor doc-header">Longest common subsequence <a class="anchor-link" title="permalink to section" href="#lc_subseq" name="lc_subseq">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
-const std::vector<big_int>& primes_upto(big_int lim);
+template <typename Indexable>
+Indexable lc_subseq(const Indexable& a, const Indexable& b);
+
+template <typename Indexable>
+size_t lc_subseq_len(const Indexable& a, const Indexable& b);
 {% endhighlight %}
 
 <p class="doc-section">Parameters</p>
 <table class="pretty">
-<tr><td>lim</td><td>upper limit for largest prime</td></tr>
+<tr><td>a</td><td>An indexable sequence</td></tr>
+<tr><td>b</td><td>Another sequence of the same type</td></tr>
 </table>
 
 <p class="doc-section">Example</p>
 
 {% highlight c++ %}
-sieve.nth_prime(1000);
-// big_int 7919 (1000th prime)
+std::string a {"It was the best of times..."};
+std::string b {"That's the best orange juice!"};
+
+lc_subseq(a, b);
+// string "as the best o ie"
+lc_subseq_len(a, b);
+// size_t 16
 {% endhighlight %}
 
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
-	Returns a reference to the internal prime vector. Note that the last member
-	is not guranteed to be the prime just under lim! 
-	(it will be if lim is greater than internal limit prior to running)
-	A separate copy guranteeing the last element is not done as that would be very inefficient and unncessary.
-	If the last prime is too large, use <code>sieve.count(lim) - 1</code> to retrieve index of the desired back.
+	A subsequence is made by removing some elements but keeping the same order.
+	A substring in addition needs to be from continuous elements. Finding the longest common subsequence (LCS)
+	is crucial for resolving similarity among data, important for data compression, revision control, and bioinformatics.
+</p>
+<p>
+	A dynamic programming approach is used since the LCS of the two
+	is also the LCS-last_matched_char of the two sequences less their last matched character.
+	This yields <code>O(n*m)</code> time and space performance (n is length of a, m is length of b) for
+	retrieving the LCS, and only <code>O(min(n,m))</code> space for retrieving the LCS length.
 </p>
 </div>
 
 <br>
 
 
-
-
-
-<h3 class="anchor doc-header">Check if prime <a class="anchor-link" title="permalink to section" href="#is_prime" name="is_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Longest common substring <a class="anchor-link" title="permalink to section" href="#lc_substr" name="lc_substr">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -286,53 +284,37 @@ bool is_prime(big_int guess);
 <p class="doc-section">Example</p>
 
 {% highlight c++ %}
-sieve.is_prime(sieve.nth_prime(420000));
-// bool true (the 420000th prime is a prime)
+std::string a {"It was the best of times..."};
+std::string b {"That's the best orange juice!"};
+// a wrapper around suffix array
+lc_substr(a, b);
+
+// with an integer sequence
+using Int_seq = std::vector<int>;
+Int_seq x {1,5,3,2,-1,6,2,1,4,3};
+Int_seq y {6,2,1,4,3,5,3,2,-1,-5,2,3,7};
+sal::Suffix_array<Int_seq> sa {x,y};
+
+Int_seq z {sa.lc_substr()};
+// Int_seq 6 2 1 4 3
 {% endhighlight %}
 
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
-	Accomplished by first filtering out <a href="../numeric/#factor">smooth numbers</a> (ones with small factors)
-	then performing a binary search on existing primes or sieving up to the number;
+	Using a suffix array, the longest common substring can be found in <code>O(n)</code> time
+	(although SAL's implemenation of a suffix array renders it <code>O(n(lg(n))^2)</code> time.
+	This is done by concatenating the two sequences and indexing it into a suffix array.
+
+	Then the longest common prefix (LCP) array is iterated over to find the maximum value filtering
+	out the substrings from the same initial sequence.
+
+	This algorithm can be extended to an arbitrary number of sequences, with the only alteration being
+	that the scan over the LCP array needs to filter on consecutive n-suffixes sharing a minimum prefix,
+	as well as additional checks for whether all initial sequences have been covered. 
 </p>
 </div>
 
 <br>
 
 
-
-
-
-
-<h3 class="anchor doc-header">Count primes under <a class="anchor-link" title="permalink to section" href="#count" name="count">&para;</a></h3><br><br><br>
-
-<p class="doc-section">Declaration</p>
-{% highlight c++ %}
-size_t count();
-size_t count(big_int upper);
-{% endhighlight %}
-
-<p class="doc-section">Parameters</p>
-<table class="pretty">
-<tr><td>upper</td><td>upper limit for largest prime</td></tr>
-</table>
-
-<p class="doc-section">Example</p>
-
-{% highlight c++ %}
-sieve.count(1000000);
-// size_t 78498 primes below a million 
-{% endhighlight %}
-
-<p class="doc-section">Discussion</p>
-<div class="text-block">
-<p>
-	Counting primes is more efficient than generating them and then counting
-	since a bit sieve is used for counting only (8 byte statuses in 1 byte).
-	Counting will not increase the current prime index or load primes into the
-	internal vector.
-</p>
-</div>
-
-<br>

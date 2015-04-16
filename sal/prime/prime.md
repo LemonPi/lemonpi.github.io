@@ -3,6 +3,7 @@ layout: algorithms
 title: Prime Generation and Manipulation
 permalink: /sal/prime/index.html
 section: prime
+classname: Sieve
 ---
 
 #### [sal/algo/prime.h](https://github.com/LemonPi/algo/blob/master/prime.h)
@@ -74,7 +75,7 @@ Sieve<> alt_sieve(1000);
 
 
 
-<h3 class="anchor doc-header">Next prime <a class="anchor-link" title="permalink to section" href="#next_prime" name="next_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Next prime | <code class="qualifier">{{page.classname}}::</code>`next_prime`<a class="anchor-link" title="permalink to section" href="#next_prime" name="next_prime">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -116,7 +117,7 @@ sieve.next_prime(503);
 
 
 
-<h3 class="anchor doc-header">Closest prime <a class="anchor-link" title="permalink to section" href="#closest_prime" name="closest_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Closest prime | <code class="qualifier">{{page.classname}}::</code>`closest_prime`<a class="anchor-link" title="permalink to section" href="#closest_prime" name="closest_prime">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -151,7 +152,7 @@ sieve.closest_prime(50000);
 
 
 
-<h3 class="anchor doc-header">Current prime <a class="anchor-link" title="permalink to section" href="#cur_prime" name="cur_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Current prime | <code class="qualifier">{{page.classname}}::</code>`cur_prime`<a class="anchor-link" title="permalink to section" href="#cur_prime" name="cur_prime">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -182,7 +183,7 @@ sieve.cur_prime();
 
 
 
-<h3 class="anchor doc-header">Nth prime <a class="anchor-link" title="permalink to section" href="#nth_prime" name="nth_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Nth prime | <code class="qualifier">{{page.classname}}::</code>`nth_prime`<a class="anchor-link" title="permalink to section" href="#nth_prime" name="nth_prime">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -212,7 +213,7 @@ sieve.nth_prime(1000);
 <br>
 
 
-<h3 class="anchor doc-header">Primes up to <a class="anchor-link" title="permalink to section" href="#primes_upto" name="primes_upto">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Primes up to | <code class="qualifier">{{page.classname}}::</code>`primes_upto`<a class="anchor-link" title="permalink to section" href="#primes_upto" name="primes_upto">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -248,7 +249,7 @@ sieve.nth_prime(1000);
 
 
 
-<h3 class="anchor doc-header">Check if prime <a class="anchor-link" title="permalink to section" href="#is_prime" name="is_prime">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Check if prime | <code class="qualifier">{{page.classname}}::</code>`is_prime`<a class="anchor-link" title="permalink to section" href="#is_prime" name="is_prime">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
@@ -277,7 +278,7 @@ sieve.is_prime(sieve.nth_prime(420000));
 
 
 
-<h3 class="anchor doc-header">Count primes under <a class="anchor-link" title="permalink to section" href="#count" name="count">&para;</a></h3><br><br><br>
+<h3 class="anchor doc-header">Count primes under | <code class="qualifier">{{page.classname}}::</code>`count`<a class="anchor-link" title="permalink to section" href="#count" name="count">&para;</a></h3><br><br><br>
 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}

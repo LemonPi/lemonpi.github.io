@@ -10,6 +10,15 @@ branch: base
 
 <div class="gallery">
 
+<a href="robot/"><div class="box">
+<img src="/res/projects/robot.png"/>
+<span class="caption">
+<h1 class="caption-title">Autonomous Robots</h1>
+Two robots playing connect-4 together on a randomized gamefield<br><br><br><br>
+Jan 2014 - Apr 2015
+</span>
+</div></a>
+
 <a href="../sal/"><div class="box">
 <img src="/res/projects/lemonpi.png"/>
 <span class="caption">
@@ -74,21 +83,15 @@ Nov 2013 - present
 </span>
 </div></a>
 
-<a href="binder/"><div class="box">
-<img src="binder.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Binder Misalignment</h1>
-Redesign of binder shields into a spring that offers a more convenient method of opening the rings <br>
-Nov 2013
-</span>
-</div></a>
 
 </div>
 
 <br><br><br><br><br><br>
 
  --------------------------
- - [**Simple Algorithms and Data Structures library**](sal/) - Oct 2014 to Jan 2014
+ - [**Autonomous Interacting Robots**](robot/) - Jan 2015 to Apr 2015
+
+ - [**Simple Algorithms and Data Structures library**](sal/) - Oct 2014 to Jan 2015
 
  - [**Clisp - Lisp interpreter**](clisp/) - Aug 2014
  

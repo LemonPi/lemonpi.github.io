@@ -28,7 +28,7 @@ group: sal
 - [numerics](numeric/)
 - [permutation and combination](perm/)
 - [prime generation and manipulation](prime/)
-- [basic searching, substring matching, and finding longest common features](search/)
+- [searching and matching](search/)
 - [comparison, distributive, and hybrid sorts](sort/)
 - [string edit distances](string/)
 - [utility and testing functions](utility/)

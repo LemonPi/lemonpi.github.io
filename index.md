@@ -12,8 +12,17 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div class="gallery" id="main-gallery">
 
+<a href="projects/robot/"><div class="box">
+<img src="/res/projects/robot.png"/>
+<span class="caption">
+<h1 class="caption-title">Autonomous Robots</h1>
+Two robots playing connect-4 together on a randomized gamefield<br><br><br><br>
+Jan 2014 - Apr 2015
+</span>
+</div></a>
+
 <a href="sal/"><div class="box">
-<img src="res/projects/lemonpi.png"/>
+<img src="/res/projects/lemonpi.png"/>
 <span class="caption">
 <h1 class="caption-title">SAL</h1>
 Simple Algorithms and Data structures<br><br><br><br>
@@ -22,7 +31,7 @@ Oct 2014 - Jan 2015
 </div></a>
 
 <a href="projects/clisp/"><div class="box">
-<img src="projects/clisp.png"/>
+<img src="/projects/clisp.png"/>
 <span class="caption">
 <h1 class="caption-title">Clisp</h1>
 Lisp interpreter (scheme dialect) in C++<br><br><br><br>
@@ -31,17 +40,8 @@ Aug 2014
 </div></a>
 
 
-<a href="projects/timewatch/"><div class="box">
-<img src="projects/timewatch.png"/>
-<span class="caption">
-<h1 class="caption-title">Timewatch</h1>
-Social platform and utility for trending activities and time management <br><br><br><br>
-Feb 2014 - present
-</span>
-</div></a>
-
 <a href="projects/icecube/"><div class="box">
-<img src="projects/icecube.png"/>
+<img src="/projects/icecube.png"/>
 <span class="caption">
 <h1 class="caption-title">ICE-Cube</h1>
 Meat Refridgeration without grid electricity <br><br><br><br>

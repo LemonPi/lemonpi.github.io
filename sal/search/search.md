@@ -14,8 +14,8 @@ section: search
 <tr><td><a class="doc-list-name" href="#sub_match">sub_match</a></td><td>search for occurance of a substring inside a larger string</td></tr>
 <tr><td><a class="doc-list-name" href="#lc_subseq">lc_subseq</a></td><td>longest common subsequence between 2 sequences</td></tr>
 <tr><td><a class="doc-list-name" href="#lc_subseq">lc_subseq_len</a></td><td>length of longest common subsequence between 2 sequences</td></tr>
-<tr><th><a class="doc-list-name" href="suffix_array">Suffix_array</a></th><th>efficient data structure for indexing large texts</th></tr>
 <tr><td><a class="doc-list-name" href="#lc_substr">lc_substr</a></td><td>longest common substring using a Suffix array</td></tr>
+<tr><th><a class="doc-list-name" href="suffix_array">Suffix_array</a></th><th>efficient data structure for indexing large texts</th></tr>
 </table>
 
 

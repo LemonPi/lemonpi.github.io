@@ -7,9 +7,10 @@ group: projects
 <div class="text-block">
 <p>
 	Source on <a href="https://github.com/LemonPi/Clisp">github</a><br>
-	I find learning Scheme and functional programming languages to help 
-	think about programs. Their emphasis on procedures and data's equivalence
-	along with their lack of state enforces modular designs.
+	I think every programmer should at least be introduced to functional programming languages.
+	Although not terribly popular in production, simply learning about it introduces a whole
+	new perspective on interpreting programs. Their emphasis on data's equivalence (including functions)
+	along with their (almost) lack of state enforces modular designs.
 	There's also the great teaching resource accompanying it in the form of
 	<a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/">SICP</a>.
 </p>

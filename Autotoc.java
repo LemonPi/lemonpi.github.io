@@ -1,3 +1,5 @@
+// usage: java Autodoc.java [FILEPATH]
+// creates toc_file in directory run, with the content being the table of contents
 import java.io.File;
 import java.util.*;
 import java.io.*;
@@ -27,6 +29,7 @@ public class Autotoc {
 
 		Tag div = Tag.valueOf("div");
 		Tag link = Tag.valueOf("a");
+		Tag paragraph = Tag.valueOf("p");
 
 		Element toc = new Element(div, "");
 		toc.addClass("toc");
@@ -44,7 +47,6 @@ public class Autotoc {
 			// System.out.format("%s %-30s %-20s %s\n", title_tag, title_name, title_link_name, title_link_href);
 
 			Element toc_title = new Element(link, "");
-			toc_title.addClass("toc-link");
 			toc_title.addClass("toc"+title_tag);
 			toc_title.attr("href", title_link_href);
 			toc_title.text(title_name);
@@ -52,6 +54,11 @@ public class Autotoc {
 			toc.appendChild(toc_title);
 		}
 
+		// add caption
+		Element caption = new Element(paragraph, "");
+		caption.addClass("toc-caption");
+		caption.text(toc_caption);
+		toc.appendChild(caption);
 
 		// flush to file
 		try {
@@ -82,5 +89,6 @@ public class Autotoc {
 	static String title_link_class = "anchor-link";
 	static String title_class = "anchor";
 	static String toc_file = "toc.md";
+	static String toc_caption = "(bolded sections are more interesting)";
 
 }

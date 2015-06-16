@@ -15,9 +15,11 @@ public class Autolink {
 		System.out.println(s);
 	}
 
+	// update "database" of keywords
 	public static HashMap<String, String> store_words(Elements doc_links) {
 		HashMap<String, String> page_words = new HashMap<>();
 
+		// open "database" of keywords
 		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(dataname, true)))) {
 		    for (Element link : doc_links) {
 		    	String existing_link = keywords.get(link.text());
@@ -32,12 +34,14 @@ public class Autolink {
 		    	page_words.put(link.text(), link.attr("abs:href"));
 		    }
 		} 
-		catch (IOException e) {}	
+		catch (IOException e) {
+			println("could not open: " + dataname)
+		}	
 
 		return page_words;
 	}
 
-	// reads keywords from local file (names.txt) and holds it in memory
+	// reads keywords from local file (names.txt) and hold it in memory
 	public static void read_words() {
 		keywords = new HashMap<String, String>();
 
@@ -68,7 +72,9 @@ public class Autolink {
 		try {
 			doc = Jsoup.parse(file, "UTF-8", base_name);
 		}
-		catch (IOException e) {}
+		catch (IOException e) {
+			println("file does not exist:" + file.getName());
+		}
 
 		Elements doc_links = doc.select("a.doc-list-name");
 
@@ -100,13 +106,14 @@ public class Autolink {
 				htmlWriter.flush();
 				htmlWriter.close();
 			}
-			catch (IOException e) {}
+			catch (IOException e) {
+				println("could not write to: " + file.getName());
+			}
 		}
 	} 
 
 
-
-
+	// link page on each valid html from base directory
     public static void walk(String path, String previous_path) {
     	// println("walking: " + path);
         File root = new File(path);
@@ -133,7 +140,6 @@ public class Autolink {
 		read_words();
 
 		walk(site_directory, "");
-
 	}
 
 	static HashMap<String, String> keywords;	// keyword - link

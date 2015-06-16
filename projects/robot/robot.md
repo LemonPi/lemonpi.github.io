@@ -23,7 +23,28 @@ group: projects
 </p>
 </div>
 
-
+<div class="toc">
+ <a class="toc-link toch2" href="#team">The Team</a>
+ <a class="toc-link toch2" href="#task">The Task</a>
+ <a class="toc-link toch2" href="#overview">System Overview</a>
+ <a class="toc-link toch3" href="#overview#decisions"><b>Key Design Decisions</b></a>
+ <a class="toc-link toch2" href="#strengths">Strengths</a>
+ <a class="toc-link toch2" href="#room_for_improvement">Room for Improvement</a>
+ <a class="toc-link toch2" href="#nav">Navigation</a>
+ <a class="toc-link toch3" href="#nav#odometry">Odometry</a>
+ <a class="toc-link toch3" href="#nav#gameplay">Gameplay Layers</a>
+ <a class="toc-link toch3" href="#nav#control">Motor Control</a>
+ <a class="toc-link toch3" href="#nav#pid">PID</a>
+ <a class="toc-link toch2" href="#correction"><b>Position Correction</b></a>
+ <a class="toc-link toch3" href="#correction#position">Passive Position Correct</a>
+ <a class="toc-link toch3" href="#correction#theta">Passive Theta Correct</a>
+ <a class="toc-link toch3" href="#correction#redline">Passive Red Line Correct</a>
+ <a class="toc-link toch3" href="#correction#touchwall">Touch Wall Correct</a>
+ <a class="toc-link toch2" href="#debug">Debugging and Integration</a>
+ <a class="toc-link toch2" href="#human"><b>Human Interaction</b></a>
+ <a class="toc-link toch2" href="#reflection"><b>Reflection</b></a>
+ <a class="toc-link toch2" href="#gains">Gains from Experience</a>
+</div>
 
 The two robots in action:
 

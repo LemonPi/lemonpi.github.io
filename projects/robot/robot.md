@@ -23,6 +23,8 @@ group: projects
 </p>
 </div>
 
+
+
 The two robots in action:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fF3lDIq3bEM" frameborder="0" allowfullscreen></iframe>
@@ -100,7 +102,8 @@ The two robots in action:
 
 </div>
 
-<img src="gameplay.png" name="gameplay_flowchart">
+<a name="gameplay_flowchart"> </a>
+<img src="gameplay.png">
 
 <div class="text-block">
 <p>
@@ -310,7 +313,9 @@ target_r = control_layer.speed - control_layer.angle;
 	The flowchart below summarizes the similarities and differences of the system for both robots.
 </p>
 </div>
-<img src="correction.png" name="correction_flowchart">
+
+<a name="correction_flowchart"> </a>
+<img src="correction.png">
 
 <div class="text-block">
 <p>
@@ -395,13 +400,101 @@ target_r = control_layer.speed - control_layer.angle;
 </p>
 </div>
 
+
+<h3 class="anchor">Touch Wall Correct <a class="anchor-link" title="permalink to section" href="#correction#touchwall" name="correction#touchwall">&para;</a></h3>
+<div class="text-block">
+<p>
+	Two sonars at the front and back of Gbot gives absolute position of both ends. These values are
+	averaged over 4 cycles and used to determine both the heading and the coordinate perpendicular to the wall
+	for Gbot. Since Gbot does not need to respond to a random environment, a more reliable but less robust
+	wall following strategy was used for its navigation. It would navigate hugging the walls along the left
+	side to the gameboard, after which it would only move along the x-axis to play balls in different columns.
+	The touch wall function is essential to keeping both the distance from the wall constant and the heading
+	parallel to the wall, as illustrated below:
+</p>
+</div>
+
+<img src="touch_wall.png">
+
+
+
+<h2 class="anchor">Debugging and Integration <a class="anchor-link" title="permalink to section" href="#debug" name="debug">&para;</a></h2>
+-------------------------
+<div class="text-block">
+<p>
+	Rbot's navigation system was designed to be the foundational system that would enable all the other behavious
+	to be simple. Since it could navigate anywhere and arrive at any theta, the other behaviours could assume
+	the robot has arrived at a location easy for the action to be carried out (such as right in front of a hopper
+	to get a ball). This is in contrast to many other team's finite state machine approach where each state had
+	to carry out its own navigation.
+</p>
+<p>
+	To debug navigation, a graphical framework was built using serial communication between the Arduino and laptop,
+	and the <a href="https://processing.org/">Processing</a> development environment. Each cycles' position is
+	plotted as a dot, with the colour representing the active layer. This gave us a huge advantage in comparing the
+	internal against the actual path travelled to pinpoint problematic layers and situations.
+</p>
+</div>
+
+<div class="frames">
+<img src="debug_map.png"><a name="debug_map"> </a>
+<p>Map produced by Processing at runtime; annotations added afterwards</p>
+</div>
+
+<div class="frames">
+<img src="physical_map.jpg">
+<p>Physical testing environment to match against internal map</p>
+</div>
+
+
+<h2 class="anchor">Human Interaction <a class="anchor-link" title="permalink to section" href="#human" name="human">&para;</a></h2>
+-------------------------
+<div class="text-block">
+<p>
+	The largest challenge to navigation was crossing lines unambiguously.
+	The navigation routing takes the shortest path to its next target, having no intelligence
+	of whether the path will be good or bad for correction purposes (how close does it pass intersections).
+	Building this into the system is <b>very hard</b>, and our attempts had varying success.
+	However, a human can decide what are good paths that compromise speed and correction opportunity very well.
+</p>
+<p>
+	The simplest and most robust solution is to allow a human to plot recommended waypoints 
+	at the start of the game using the graphical debugging framework. As seen in the <a href="#debug_map">debug map</a>
+	above, the selected waypoints allow the robot to pass through the center of many lines while keeping
+	the paths short.
+</p>
+</div>
+
+
+<h2 class="anchor">Reflection <a class="anchor-link" title="permalink to section" href="#reflection" name="reflection">&para;</a></h2>
+-------------------------
+<div class="text-block">
+<p>
+	We did not win the competition. Despite having by far the most sophisticated navigation and
+	correction software, we relied too much on this single system and underestimated the diffculty
+	we added by the interaction between two robots. I believe a single robot with our navigation
+	and correction system could easily win the competition since all but two other groups that I know of
+	went only for the static corner hoppers (which were further away and limited maximum number of balls to 8).
+</p>
+<p>
+	Or, keeping with two robots, a simpler, less versatile navigation system
+	could have been pursued. This would have led to earlier debugging of other components and
+	integration. Line following with a simple sensor bar would have likely worked adequately, and getting
+	the ball from the corner hoppers could have been explored.
+</p>
+<p>
+	Overall, too much complexity was attempted, which while successfully met, took too much time to
+	implement and resulted in not enough time to test the integration.
+</p>
+</div>
+
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">&para;</a></h2>
 -----------------------
- - C++ and functional programming experience
- - Javascript and Emscripten experience (porting LLVM to JS)
- - A lot of debugging experience...
- - Language design and processing experience
- - Understanding of run time environments
- - Introduction to 3rd party C++ libraries (boost)
- - Tons of fun
+ - Awesome friends
+ - Expanded willpower from consecutive all-nigthers...
+ - Basic control theory and PID
+ - Subsumption architecture experience
+ - Microcontroller progrmaming (Arduino with C++)
+ - Processing and graphical debugging frameworks
+ - Dead reckoning with correction (primitive form of 2D inertial navigation system)
  

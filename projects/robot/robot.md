@@ -54,7 +54,7 @@ The two robots in action:
 <h2 class="anchor">The Team <a class="anchor-link" title="permalink to section" href="#team" name="team">&para;</a></h2>
 -------------------------------
 
- - [Alyf](PLACEHOLDER) (Circuits)
+ - [Alyf](http://alyfjanmohamed.wix.com/design-portfolio) (Circuits)
  - [Howard](http://howarddpunan.wix.com/yuhaoduan) (Electromechanics)
  - Johnson (Microcontroller)
 

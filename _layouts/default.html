@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="/css/code.css" />
 {% endif %}
 <link rel="shortcut icon" href="/favicon.ico">
+<script type="text/javascript" src="/javascript/usability.js"></script>
 </head>
 <body>
 <div id="header">
@@ -26,40 +27,40 @@
 	<a href="http://www.linkedin.com/profile/view?id=282810346&trk=nav_responsive_tab_profile" title="linkedin"><div id="linkedin"></div></a>
 	<a href="https://github.com/lemonpi" title="github"><div id="github"></div></a>
 	
-<div id="titlearea"><h1><a href="{{ site.baseurl }}">Johnson Zhong's <p id="titletext">Design Portfolio</p></a>
+<div id="titlearea"><h1><a id="titlelink" href="{{ site.baseurl }}">Johnson Zhong's <p id="titletext">Design Portfolio</p></a>
 	</h1>
 </div>
 
 <div id="navbar">
     <ul id="navbar-menu">
 		{% if page.group == "principles" %}
-			<li id="active"><a href="{{ site.baseurl }}principles.html">Principles</a></li>
+			<li id="active"><a class="navlink" href="{{ site.baseurl }}principles.html">Principles</a></li>
 		{% else %}
-			<li><a href="{{ site.baseurl }}principles.html">Principles</a></li>
+			<li><a class="navlink" href="{{ site.baseurl }}principles.html">Principles</a></li>
 		{% endif %}
 		
 		{% if page.group == "projects" %}
-			<li id="active"><a href="{{ site.baseurl }}projects/">Projects</a></li>
+			<li id="active"><a class="navlink" href="{{ site.baseurl }}projects/">Projects</a></li>
 		{% else %}
-			<li><a href="{{ site.baseurl }}projects/">Projects</a></li>
+			<li><a class="navlink" href="{{ site.baseurl }}projects/">Projects</a></li>
 		{% endif %}
 		
 		{% if page.group == "sal" %}
-			<li id="active"><a href="{{ site.baseurl }}sal/">SAL</a></li>
+			<li id="active"><a class="navlink" href="{{ site.baseurl }}sal/">SAL</a></li>
 		{% else %}
-			<li><a href="{{ site.baseurl }}sal/">SAL</a></li>
+			<li><a class="navlink" href="{{ site.baseurl }}sal/">SAL</a></li>
 		{% endif %}
 
 		{% if page.group == "evaluations" %}
-			<li id="active"><a href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
+			<li id="active"><a class="navlink" href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
 		{% else %}
-			<li><a href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
+			<li><a class="navlink" href="{{ site.baseurl }}evaluations/">Evaluations</a></li>
 		{% endif %}
 		
 		{% if page.group == "about" %}
-			<li id="active"><a href="{{ site.baseurl }}about.html">About</a></li>
+			<li id="active"><a class="navlink" href="{{ site.baseurl }}about.html">About</a></li>
 		{% else %}
-			<li><a href="{{ site.baseurl }}about.html">About</a></li>
+			<li><a class="navlink" href="{{ site.baseurl }}about.html">About</a></li>
 		 {% endif %}
     </ul>
 </div>

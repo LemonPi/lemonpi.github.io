@@ -42,28 +42,36 @@ pre>code {
 #navbar-menu {
 	list-style-type:none;
 	display:block;
-	height:40px;
+	/*height:40px;*/
 	padding:0;
 	border-top:3px solid #1e2832;
 }
+.navlink {
+	text-decoration: none;
+	color:black;
+	display:block;padding:5px 32px 20px 32px;
+}
+.navlink:visited {color:black;}
+.navlink:active {border-top:1px solid #1e2832}
+.navlink:hover{text-decoration:none;color:#bebebe;background:#1e2832;}
+#active {border-top:1px solid #1e2832;color:#bebebe;background:#1e2832;}
+#active .navlink:visited {color:#bebebe;}
 #navbar-menu li {
 	float:left;
 	text-align:center;
 	padding:0px 0px 5px 0px;
 	height:40px;
 }
-#navbar-menu a {display:block;padding:5px 32px 20px 32px;}
-#navbar-menu a:active {border-top:1px solid #1e2832}
-#navbar-menu a:hover{color:#bebebe;background:#1e2832;}
-#navbar-menu #active {border-top:1px solid #1e2832;color:#bebebe;background:#1e2832;}
-#content {clear:both;margin:5%;position:relative;}
+
+#content {clear:both;margin:0 5%;position:relative;}
 
 #header {background:#333f50; line-height:normal; font-size:medium;}
-#header a {color:#e6e6e6;text-decoration:none;}
+/*#header a {color:#e6e6e6;text-decoration:none;}*/
 
 #titlearea {margin:0px 32px;padding:8px 0px;}
 #titlearea>h1 {margin:0;}
 #titletext {display:inline; color:#AAA}
+#titlelink, #titlelink:hover, #titlelink:active, #titlelink:visited {text-decoration:none; color:white;}
 .inline {display:inline;}
 #footer {padding:30px 32px 30px 32px;background:#333f50;color:#f0f0f0;}
 #history{position:absolute;right:50px;color:#f0f0f0;display:inline;}
@@ -101,13 +109,19 @@ pre>code {
 .toc {	
 	font:14px/22px normal helvetica, sans-serif;
 	padding:5px 0px;
-	width:320px;
+	width:20%;
 	border-left:3px solid #ccc;
 	background:#f0f2f4;
 	position:absolute;
-	left:65%;
-	top:0px;
+	right:-5%;
+	top:-46px;
+	height:100%;
  }
+.toc-fixed {
+	right:0;
+	top:0;
+	position:fixed;
+}
 .toc-title {margin:14px 0 0 18px;}
 .toc a {display:block; color:#0066CC; text-decoration:none;}
 .toc a:visited { color:#0066CC;}

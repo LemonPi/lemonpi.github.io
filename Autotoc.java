@@ -60,6 +60,11 @@ public class Autotoc {
 		caption.text(toc_caption);
 		toc.appendChild(caption);
 
+		Element toggle = new Element(paragraph, "");
+		toggle.addClass("toc-toggle");
+		toggle.text(toggle_text);
+		toc.appendChild(toggle);
+
 		// flush to file
 		try {
 			BufferedWriter htmlWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(toc_file), "UTF-8"));
@@ -90,5 +95,6 @@ public class Autotoc {
 	static String title_class = "anchor";
 	static String toc_file = "toc.md";
 	static String toc_caption = "(bolded sections are more interesting)";
+	static String toggle_text = "toggle TOC";
 
 }

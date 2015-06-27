@@ -1,23 +1,30 @@
 
 var toc;
+var toc_toggle;
 var header;
 var offset_from_top = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-toc = document.getElementsByClassName("toc");
 header = document.getElementById("header");
+toc = document.getElementsByClassName("toc");
 
-console.log(toc.length);
-if (toc.length) toc = toc[0];
+if (toc.length) {
+	toc = toc[0];
+	toc_toggle = toc.getElementsByClassName("toc-toggle");
+	toc_toggle = toc_toggle[0];
+}
 offset_from_top = header.offsetTop + header.offsetHeight;
 
 
 if (toc) {
-	console.log("adding scroll listener");
 	// both rising and falling edge
 	document.addEventListener('scroll', debounce(fix_toc, 200, true));
 	document.addEventListener('scroll', debounce(fix_toc, 200, false));
+
+	toc_toggle.addEventListener('click', function () {
+		toc.classList.toggle('toc-hidden');
+	}, false);
 }
 
 

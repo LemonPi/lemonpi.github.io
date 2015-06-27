@@ -45,6 +45,7 @@ group: projects
  <a class="toc-link toch2" href="#reflection"><b>Reflection</b></a>
  <a class="toc-link toch2" href="#gains">Gains from Experience</a>
  <p class="toc-caption">(bolded sections are more interesting)</p>
+ <p class="toc-toggle">toggle TOC</p>
 </div>
 
 The two robots in action:

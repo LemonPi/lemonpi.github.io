@@ -23,7 +23,7 @@ function expr_terminate(input) {
 
 
 $(window).load(function () {
-	var jqconsole = $("#console").jqconsole('SAL algorithm testing, generate random numbers first \n', '>> ');
+	var jqconsole = $("#console").jqconsole('SAL algorithm testing, type help for more info\nI recommend generating random numbers first \n', '>> ');
 
 	var startPrompt = function() {
 		// start prompt with history enabled

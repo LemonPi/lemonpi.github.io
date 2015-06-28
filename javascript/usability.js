@@ -9,15 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
 header = document.getElementById("header");
 toc = document.getElementsByClassName("toc");
 
+offset_from_top = header.offsetTop + header.offsetHeight;
 if (toc.length) {
 	toc = toc[0];
 	toc_toggle = toc.getElementsByClassName("toc-toggle");
 	toc_toggle = toc_toggle[0];
-}
-offset_from_top = header.offsetTop + header.offsetHeight;
-
-
-if (toc) {
 	// both rising and falling edge
 	document.addEventListener('scroll', debounce(fix_toc, 200, true));
 	document.addEventListener('scroll', debounce(fix_toc, 200, false));

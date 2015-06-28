@@ -12,13 +12,16 @@ group: projects
 	of bit arrays. I made this calculator to practice bit manipulation and familiarize
 	myself with more C++ along the way.
 </p>
+<p><i>See the github repository for the latest description of the project; this page is out of date.</i></p>
 </div>
 
 <div id="console"></div>
 <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
 
 Bincalc was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
-and run with [jq-console](https://github.com/replit/jq-console)
+and run with [jq-console](https://github.com/replit/jq-console)  
+
+<h3><a href="tester.html"><b>Fullscreen bincalc</b></a></h3>
 
 <h2 class="anchor">The Usual Tricks <a class="anchor-link" title="permalink to section" href="#tricks" name="tricks">¶</a></h2>
 <table class="pretty" style="font-family: Consolas; font-size: 14px;">
@@ -225,19 +228,25 @@ while (true) {
  
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
 <script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>
-<script src="bincalc.js" type="text/javascript"></script>
+<script src="binc.js" type="text/javascript"></script>
 <script type="text/javascript">
-$(function () {
-	var jqconsole = $("#console").jqconsole('Binary calculator  ex. a = (b10001101 ^ 0xF2) >> 1 \n', '>> ');
+$(window).load(function () {
+	var jqconsole = $("#console").jqconsole('Command line calculator supporting I/O in binary, hex, oct, and dec\nType funcs to see functions, modifiers to see modifiers\nex. a = (b10001101 ^ 0xF2) >> 1\n', '');
+
 	var startPrompt = function() {
 		// start prompt with history enabled
 		jqconsole.Prompt(true, 
 		function(input) {
-			jqconsole.Write(Module.calc_str(input) + '\n', 'jqconsole-output');
+			jqconsole.Write(Module.calc_str(input+'\n'), 'jqconsole-output');
 			// restart prompt
 			startPrompt();
-		});
+		}, 
+		function() {return false;});
+		Module.print = Module.printErr = function(a) {
+			jqconsole.Write(a + '\n');
+		};
 	};
 	startPrompt();
+	setTimeout(function(){jqconsole.Write('> ');}, 300);
 });
 </script>

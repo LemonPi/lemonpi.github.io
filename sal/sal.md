@@ -30,6 +30,8 @@ group: sal
 - [prime generation and manipulation](prime/)
 - [searching and matching](search/)
 - [comparison, distributive, and hybrid sorts](sort/)
+
+<h3>Everything after is still under construction</h3>
 - [string edit distances](string/)
 - [utility and testing functions](utility/)
 - [**graph searches**](graph_algo/)

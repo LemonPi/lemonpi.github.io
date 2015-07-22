@@ -9,6 +9,15 @@ branch: base
 <h1 style="text-align:center;font-size:50px;">Design Evaluations</h1>
 <div class="gallery">
 
+<a href="praxis/"><div class="box">
+<img src="/res/evaluations/praxis.png"/>
+<span class="caption">
+<h1 class="caption-title">Praxis Guide</h1>
+Quintessential engineering design course <br><br>
+May 2013 - 2014
+</span>
+</div></a>
+
 <a href="skulecourses/"><div class="box">
 <img src="skulecourses.jpg"/>
 <span class="caption">

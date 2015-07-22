@@ -1,4 +1,4 @@
-// usage: java Autodoc.java [FILEPATH]
+// usage: java Autodoc [FILEPATH]
 // creates toc_file in directory run, with the content being the table of contents
 import java.io.File;
 import java.util.*;
@@ -81,7 +81,8 @@ public class Autotoc {
 
 
 	public static void main(String[] args) {
-		if (args.length != 1) {System.out.println(args.length);println("Need to provide one file to parse"); return;}
+		if (args.length < 1) {System.out.println(args.length);println("Need to provide one file to parse"); return;}
+		if (args.length == 2) toc_caption = args[1];
 		String filename = args[0];
 		println("file to parse: " + filename);
 

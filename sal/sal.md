@@ -31,22 +31,26 @@ group: sal
 - [searching and matching](search/)
 - [comparison, distributive, and hybrid sorts](sort/)
 
-<h3>Everything after is still under construction</h3>
-- [string edit distances](string/)
-- [utility and testing functions](utility/)
-- [**graph searches**](graph_algo/)
-- [**important graph algorithms**](graph_algo/)
-- [**shortest paths for graphs and trees**](graph_algo/)
-- [linear programming](linear/)
-
-<a name="#data" class="anchor">Data structures</a>
----
-- [basic linked list](list/)
-- [binary heap](heap/)
-- [2D matrix](matrix/)
-- [red black tree and augmentations of it](tree/)
-- [interval tree](interval/)
-- [**directed and undirected graphs**](graph/)
+<details class="incomplete">
+<summary><strong>Everything in here is still under construction</strong></summary>
+<ul>
+	<li><a href="string/">string edit distances</a></li>
+	<li><a href="utility/">utility and testing functions</a></li>
+	<li><a href="graph_algo/">**graph searches**</a></li>
+	<li><a href="graph_algo/">**important graph algorithms**</a></li>
+	<li><a href="graph_algo/">**shortest paths for graphs and trees**</a></li>
+	<li><a href="linear/">linear programming</a></li>
+</ul>
+<ul>
+	<a name="#data" class="anchor">Data structures</a>
+	<li><a href="list/">basic linked list</a></li>
+	<li><a href="heap/">binary heap</a></li>
+	<li><a href="matrix/">2D matrix</a></li>
+	<li><a href="tree/">red black tree and augmentations of it</a></li>
+	<li><a href="interval/">interval tree</a></li>
+	<li><a href="graph/">**directed and undirected graphs**</a></li>
+</ul>
+</details>
 
 <div class="text-block">
 <p>

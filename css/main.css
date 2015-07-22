@@ -201,6 +201,10 @@ pre>code {
 	height:100% !important;
 }
 
+.incomplete {
+	font-size:smaller;
+}
+
 #github {
 	background-image:url("/res/github_before.png");
 	float:right;

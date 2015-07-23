@@ -13,45 +13,24 @@ group: about
 
 <div class="text-block">
 <p>
-	You've stumbled upon my <a href="/projects/portfolio"><b>site</b></a>!  
-	As a second year engineering science student, my class is developing a broad and deep foundation in the sciences.  
-	Simultaneously, we are learning how to apply that knowledge base to real life situations, as seen in the <a href="evaluations/">evaluations</a>.  
-	Our curriculum challenges us to move from first principles to implementation - taking an idea and converting it to technology.  
-	However, I am personally defined more by what I do beyond this curriculum.  
+	I'm a third year Engineering Science student at the University of Toronto in the Robotics option.
+	In my spare time, I like making high quality reusable tools, which can be found on my <a href="https://github.com/LemonPi">github</a>.
+	I enjoy general problem solving, especially those with a <a href="https://projecteuler.net/">mathematical tint</a>, and participate
+	in various <a href="res/ieee.jpg">programming competitions</a>. 
 </p>
 <p>
-	I believe having control over many tools and being able to switch perspectives are what makes a robust problem solver.  
-	To that effect, I turn every school assignment and projects I do outside of class into an opportunity to develop new skills and hone old ones.  
-	I started programming with C++ the summer of 2013, moving onto python in September.  
-	These languages became tools I used outside of class for <b>language design and processing</b> 
-	<a href="projects/bincalc/#second/"> (calculator abstract syntax tree) </a>
-	<a href="porjects/clisp/"> (programming language interpreter) </a>, 
-	<b>analysis and optimization</b> <a href="projects/bridgedesign/#design">(truss bridge design)</a>,  
-	<b>creative problem solving</b> <a href="res/ieee.jpg">(IEEEXtreme programming competition)</a>, and <b>communication</b> <a href="projects/binder/#prototype">(3D modelling)</a>.  
+	My projects generally involve language parsing, such as 
+	<a href="projects/bincalc/#second/">binc (binary calculator)</a> and
+	<a href="projects/clisp/">clisp (lisp interpreter)</a>.
+	My summer research includes optimizing <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing">CAD for FPGA routing</a>.
 </p>
 <p>
-	Beyond being robust, I also strive to be innovative.  
-	I believe innovation comes from making connections across disciplines and noticing minute details.  
-	This explains my choice in the engineering science program, which covers all areas of science,  
-	and my principle of designing for usability through attention to detail, which encourages innovation.  
-	Being innovative also comes from questioning assumptions and exploring boundaries.  
-	Here's a <a href="evaluations/skulecourses/">sample</a> of some of my sillyness :).  
+	Programming languages and me:<br>
+	<strong>C++</strong> - my favourite and most proficient language because of its generality and efficiency<br>
+	<strong>Python</strong> - my goto scripting language for its simplicity<br>
+	<strong>Haskell</strong> - the language I admire the most for its elegance (yet still cannot use very well)<br>
+	<strong>Javascript</strong> - the necessary evil of web development<br>
+	<strong>C</strong> - goto for embedded<br>
+	<strong>Java</strong> - the language I despise the most yet I still sometimes use<br>
 </p>
-<a href="res/resume.pdf">Resume</a>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 </div>

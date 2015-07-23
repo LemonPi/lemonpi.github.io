@@ -110,7 +110,7 @@ pre>code {
 .pretty .bar p {margin:2px;}
 
 
-.side {float:right;padding:0px 70px 0px 0px;}
+.side {float:right;padding:0px 70px 0px 10px;}
 .text-block {max-width:60%;}
 .text-block>p {margin-top:0em; margin-bottom:1em;}
 

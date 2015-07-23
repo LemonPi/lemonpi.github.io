@@ -51,6 +51,7 @@ The design of many products give them more value than the sum of their parts, wi
 
 Here are some artifacts seen through my engineering design perspective:
 
+ - [Praxis Guide - May 2013 to 2014](praxis/)
 
  - [Skule Courses upload page security silliness - Dec 16 2013](skulecourses/)
 

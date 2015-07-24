@@ -4,6 +4,7 @@ title: Timewatch
 permalink: /projects/timewatch/index.html
 group: projects
 ---
+<div class="block">
 <div class="text-block">
 <p>
 	<a href="http://timewatch.ca">Timewatch</a> is a social platform and productivity tool
@@ -151,4 +152,6 @@ group: projects
 	<i>Journal of Research in Personality</i> [Online]. 
 	vol. II, no. 3, pp. 245-261, 1991.
 <br>
+</div>
+
 </div>

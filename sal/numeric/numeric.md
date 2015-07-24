@@ -5,7 +5,8 @@ permalink: /sal/numeric/index.html
 section: numeric
 ---
 
-#### [sal/algo/numerics.h](https://github.com/LemonPi/algo/blob/master/numeric.h)
+<div class="block">
+<h4> <a href="https://github.com/LemonPi/algo/blob/master/numeric.h">sal/algo/numerics.h</a> </h4>
 
 <table class="pretty">
 <tr><td><a class="doc-list-name" href="#exponent">modular_pow</a></td><td>modular exponentiation</td></tr>
@@ -25,13 +26,11 @@ section: numeric
 <tr><td><a class="doc-list-name" href="#factor">num_factors</a></td><td>total number of factors (including composites)</td></tr>
 <tr><td><a class="doc-list-name" href="#factor">sum_factors</a></td><td>sum of all factors (including composites)</td></tr>
 </table>
+</div>
 
 
-
-
-
-<h3 class="anchor doc-header">Exponentiation <a class="anchor-link" title="permalink to section" href="#exponent" name="exponent">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Exponentiation <a class="anchor-link" title="permalink to section" href="#exponent" name="exponent">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 int modular_pow(int base, int exponent, int modulus);
@@ -59,15 +58,14 @@ int_pow(5, 3);
 	Some more examples <a href="http://en.wikipedia.org/wiki/Exponentiation_by_squaring#Fixed_base_exponent">here</a>.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Fibonacci <a class="anchor-link" title="permalink to section" href="#fibonacci" name="fibonacci">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Fibonacci <a class="anchor-link" title="permalink to section" href="#fibonacci" name="fibonacci">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename T>
@@ -86,9 +84,6 @@ fibonacci<Infint>(1000);
 {% endhighlight %}
 
 
-
-
-
 <p class="doc-section">Discussion</p>
 <div class="text-block">
 <p>
@@ -99,11 +94,11 @@ fibonacci<Infint>(1000);
 </p>
 <img src="fib.png">
 </div>
+</div>
 
-<br>
 
-<h3 class="anchor doc-header">Cyclic numbers <a class="anchor-link" title="permalink to section" href="#cyclic" name="cyclic">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Cyclic numbers <a class="anchor-link" title="permalink to section" href="#cyclic" name="cyclic">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t make_cyclic(int base, int prime);
@@ -139,15 +134,14 @@ cycle_length(10, 7);
 	by long division and collecting the digits.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Integer power <a class="anchor-link" title="permalink to section" href="#is_pow" name="is_pow">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Integer power <a class="anchor-link" title="permalink to section" href="#is_pow" name="is_pow">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 bool is_pow(int guess, int base);
@@ -166,15 +160,14 @@ is_pow(4194304,4);
 	Through divisions, checks whether guess is an integer power of base.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Perfect square <a class="anchor-link" title="permalink to section" href="#is_square" name="is_square">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Perfect square <a class="anchor-link" title="permalink to section" href="#is_square" name="is_square">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 bool is_square(long guess);
@@ -194,15 +187,14 @@ is_square(21489798124);
 	is written by <a href="http://stackoverflow.com/questions/295579/fastest-way-to-determine-if-an-integers-square-root-is-an-integer/18686659#18686659">maartinus from stackoverflow</a>.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Greatest Common Denominator <a class="anchor-link" title="permalink to section" href="#gcd" name="gcd">&para;</a></h3><br><br><br>
- 
+
+<h3 class="anchor doc-header">Greatest Common Denominator <a class="anchor-link" title="permalink to section" href="#gcd" name="gcd">&para;</a></h3>
+<div class="block"> 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 unsigned int gcd(int a, int b);
@@ -230,15 +222,14 @@ gcd(56, 91);
 	easier to memorize.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Euler's Totient <a class="anchor-link" title="permalink to section" href="#totient" name="totient">&para;</a></h3><br><br><br>
- 
+
+<h3 class="anchor doc-header">Euler's Totient <a class="anchor-link" title="permalink to section" href="#totient" name="totient">&para;</a></h3>
+<div class="block"> 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 unsigned long long totient(unsigned long long n);
@@ -275,15 +266,14 @@ totient(500);
 	With applications <a href="http://en.wikipedia.org/wiki/Euler%27s_theorem">here</a>.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Matrix Chain Multiplication <a class="anchor-link" title="permalink to section" href="#matmul" name="matmul">&para;</a></h3><br><br><br>
- 
+
+<h3 class="anchor doc-header">Matrix Chain Multiplication <a class="anchor-link" title="permalink to section" href="#matmul" name="matmul">&para;</a></h3>
+<div class="block"> 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Indexable>
@@ -321,15 +311,14 @@ mul(mats);
 	A(BC) = (30×5×60) + (10×30×60) = 9000 + 18000 = 27000 operations.
 </blockquote>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Integer Factorization <a class="anchor-link" title="permalink to section" href="#factor" name="factor">&para;</a></h3><br><br><br>
- 
+
+<h3 class="anchor doc-header">Integer Factorization <a class="anchor-link" title="permalink to section" href="#factor" name="factor">&para;</a></h3>
+<div class="block"> 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename T>
@@ -377,5 +366,4 @@ factorize_rough(semiprime);
 	for practical encounters. 
 </p>
 </div>
-
-<br>
+</div>

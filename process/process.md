@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 
 --------------------------
-
+<div class="block">
 <ol>
 	<h2 class="anchor"><li>Understand problem <a class="anchor-link" title="permalink to section" href="#step1" name="step1">¶</a></h2>
 		<ul>
@@ -234,4 +234,5 @@ $(document).ready(function() {
 	<i>Structure and Interpretation of Computer Programs [Online].</i> Available: 
 	<a href="http://mitpress.mit.edu/sicp/full-text/book/book.html">http://mitpress.mit.edu/sicp/full-text/book/book.html</a>
 <br>
+</div>
 </div>

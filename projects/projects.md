@@ -90,26 +90,33 @@ branch: base
 <br><br><br><br><br><br>
 
  --------------------------
- - [**Autonomous Interacting Robots**](robot/) - Jan 2015 to Apr 2015
 
- - [**Simple Algorithms and Data Structures library**](sal/) - Oct 2014 to Jan 2015
+<div class="block">
+ <h2 class="block">Archive</h2>
 
- - [**Clisp - Lisp interpreter**](clisp/) - Aug 2014
+<ul class="archive">
+ <li><a href="robot/"><strong>Autonomous Interacting Robots</strong></a> - Jan 2015 to Apr 2015</li>
+
+ <li><a href="sal/"><strong>Simple Algorithms and Data Structures library</strong></a> - Oct 2014 to Jan 2015</li>
+
+ <li><a href="clisp/"><strong>Clisp - Lisp interpreter</strong></a> - Aug 2014</li>
  
- - [Binary calculator](bincalc/) - July 2014
+ <li><a href="bincalc/">Binary calculator</a> - July 2014</li>
  
- - [**Timewatch**](timewatch/) - Feb 2014 and ongoing
+ <li><a href="timewatch/">Timewatch</a> - Feb 2014 and ongoing</li>
  
- - [**ICE-Cube Meat refrigeration without electricity**](icecube/) - March 2014
+ <li><a href="icecube/">ICE-Cube Meat refrigeration without electricity</a> - March 2014</li>
  
- - [Request for Proposal: Headsets and Glasses for communication operators](headset/) - Feb 2014
+ <li><a href="headset/">Request for Proposal: Headsets and Glasses for communication operators</a> - Feb 2014</li>
  
- - [User-real name matching game in C](namegame/) - Jan 2014
+ <li><a href="namegame/">User-real name matching game in C</a> - Jan 2014</li>
  
- - [**Engineering design portfolio**](portfolio/) - Nov 2013 and ongoing
+ <li><a href="portfolio/">Engineering design portfolio</a> - Nov 2013 and ongoing</li>
  
- - [**Conceptual Design: Binder ring misalignment**](binder/) - Nov 2013
+ <li><a href="binder/">Conceptual Design: Binder ring misalignment</a> - Nov 2013</li>
  
- - [Detailed Design: material selection for aerator](aerator.html) - Nov 2013
+ <li><a href="aerator.html">Detailed Design: material selection for aerator</a> - Nov 2013</li>
  
- - [CIV 102: Pedestrian truss bridge design](bridgedesign/) - Oct 2013
+ <li><a href="bridgedesign/">CIV 102: Pedestrian truss bridge design</a> - Oct 2013</li>
+ </ul>
+</div>

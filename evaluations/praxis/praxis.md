@@ -24,6 +24,7 @@ group: evaluations
  <p class="toc-toggle">toggle TOC</p>
 </div>
 
+<div class="block">
 <div class="text-block">
 <p>
 	What is Praxis?<br>
@@ -35,7 +36,7 @@ group: evaluations
 <p>
 	Undoubtedly the most polarizing course in the foundational years of
 	Engineering Science at UofT, many people either get it or think it's a waste of time.
-	I dedicate this page to tips on making the most out of what I considered the most defining course of the first two years.
+	I dedicate this page to tips and examples on making the most out of what I considered the most defining course of the first two years.
 </p>
 </div>
 
@@ -268,6 +269,7 @@ How to <strong>quantify quality</strong>
 <p>
 	Once you have your problem, now you need to consider what objectives and metrics a good solution would match.
 	I highly recommend creating a requirements table rather than an unorganized list. 
+</p>
 <p>
 	In terms of marks, choosing a good problem decides about 30%, presenting the community about 10%, and
 	the requirements decide 50% (presentation and others make up the rest). 
@@ -304,4 +306,6 @@ How to <strong>quantify quality</strong>
 <p>
 	For an example, see my team's <a href="/projects/icecube/">design for meat refrigeration without electricity</a>.
 </p>
+</div>
+
 </div>

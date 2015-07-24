@@ -4,12 +4,13 @@ title: Hi, I'm Johnson
 permalink: /about.html
 group: about
 ---
+
+<div class="block">
+
 <div class="side frames">
 <img src="res/self.jpg">
 <p>Johnson Zhong</p>
 </div>
-
-
 
 <div class="text-block">
 <p>
@@ -33,4 +34,6 @@ group: about
 	<strong>C</strong> - goto for embedded<br>
 	<strong>Java</strong> - the language I despise the most yet I still sometimes use<br>
 </p>
+</div>
+
 </div>

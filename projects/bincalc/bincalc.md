@@ -4,6 +4,7 @@ title: Binary Calculator
 permalink: /projects/bincalc/index.html
 group: projects
 ---
+<div class="block">
 <div class="text-block">
 <p>
 	Source on <a href="https://github.com/LemonPi/bincalc">github</a><br>
@@ -79,17 +80,21 @@ and run with [jq-console](https://github.com/replit/jq-console)
 
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">¶</a></h2>
 -------------------------------
-
-1. Clone code from [github](https://github.com/LemonPi/bincalc) or using cmd `git clone git://github.com/LemonPi/bincalc.git`
-2. Try **bc-windows** on windows, and on **bc-linux** on linux, else build it by following the rest of the steps
-3. Build with `make` in the directory if you have g++(gcc) with c++11 support
-4. Else either change (CC) in the makefile to your compiler of choice, or build with another tool
-5. Run with `./bc` or `bc` on windows in terminal 
-6. Tips:
-	- exit with `Ctrl + c`
-	- adjust how many binary digits is shown by changing `bit_num` in consts.h
-	- 0xnum is **hex**, 0num is **oct**, and bnum is **binary**
-	- change underlying type (default is double) by changing `rep_type` in consts.h
+<ol>
+	<li> Clone code from [github](https://github.com/LemonPi/bincalc) or using cmd `git clone git://github.com/LemonPi/bincalc.git`</li>
+	<li> Try **bc-windows** on windows, and on **bc-linux** on linux, else build it by following the rest of the steps</li>
+	<li> Build with `make` in the directory if you have g++(gcc) with c++11 support</li>
+	<li> Else either change (CC) in the makefile to your compiler of choice, or build with another tool</li>
+	<li> Run with `./bc` or `bc` on windows in terminal </li>
+	<li> Tips:
+		<ul>
+			<li>exit with `Ctrl + c`</li>
+			<li>adjust how many binary digits is shown by changing `bit_num` in consts.h</li>
+			<li>0xnum is **hex**, 0num is **oct**, and bnum is **binary**</li>
+			<li>change underlying type (default is double) by changing `rep_type` in consts.h</li>
+		</ul>
+	</li>
+</ol>
 
 <div class="frames">
 <img src="usage.png">
@@ -98,13 +103,15 @@ and run with [jq-console](https://github.com/replit/jq-console)
 
 <h2 class="anchor">First Version - Stack based <a class="anchor-link" title="permalink to section" href="#first" name="first">¶</a></h2>
 -----------------------------------
- - stack based, requires users to use reverse polish notation (2 3 + to express 2 + 3)
- - full support for `+, -, *, /, >>, <<, &, |, ^, and ~` operators
- - no support for order of operations
- - no support for variables
- - supports only positive integers
- - crash and memory leak free
- - 1 file, ~100 lines
+<ul>
+<li>stack based, requires users to use reverse polish notation (2 3 + to express 2 + 3)</li>
+	<li>full support for `+, -, *, /, >>, <<, &, |, ^, and ~` operators</li>
+	<li>no support for order of operations</li>
+	<li>no support for variables</li>
+	<li>supports only positive integers</li>
+	<li>crash and memory leak free</li>
+	<li>1 file, ~100 lines</li>
+</ul>
  
 <div class="text-block">
 <p>
@@ -120,13 +127,15 @@ and run with [jq-console](https://github.com/replit/jq-console)
 
 <h2 class="anchor">Second Version - Grammar added <a class="anchor-link" title="permalink to section" href="#second" name="second">¶</a></h2>
 --------------------------------------
- - stream based, conventional grammar
- - full support for `+, -, *, /, >>, <<, &, |, ^, and ~` operators
- - full support for order of operations
- - support for variables
- - supports only positive integers
- - crash and memory leak free
- - 1 file, ~200 lines
+<ul>
+	<li>stream based, conventional grammar</li>
+	<li>full support for `+, -, *, /, >>, <<, &, |, ^, and ~` operators</li>
+	<li>full support for order of operations</li>
+	<li>support for variables</li>
+	<li>supports only positive integers</li>
+	<li>crash and memory leak free</li>
+	<li>1 file, ~200 lines</li>
+</ul>
  
 <div class="text-block">
 <p>
@@ -138,13 +147,14 @@ and run with [jq-console](https://github.com/replit/jq-console)
 </p>
 </div>
 <img src="grammar.png">
-
- - everything is an expression
- - every expression is a term optionally `+/-` other terms
- - every term is a bit_term optionally `*//` other bit_terms
- - every bit_term is a unary_term optionally `>>/<</&/|/^` other unary_terms
- - every unary_term is a primary optionally ~/literal itself (later I will add negative, hex, and oct)
- - every primary is either a number, name, parentheses enclosed expression, or a unary operator symbol
+<ul>
+	<li>everything is an expression</li>
+	<li>every expression is a term optionally `+/-` other terms</li>
+	<li>every term is a bit_term optionally `*//` other bit_terms</li>
+	<li>every bit_term is a unary_term optionally `>>/<</&/|/^` other unary_terms</li>
+	<li>every unary_term is a primary optionally ~/literal itself (later I will add negative, hex, and oct)</li>
+	<li>every primary is either a number, name, parentheses enclosed expression, or a unary operator symbol</li>
+</ul>
  
 <div class="text-block">
 <p>
@@ -187,13 +197,15 @@ while (true) {
 
 <h2 class="anchor">Third Version - Files separated <a class="anchor-link" title="permalink to section" href="#third" name="third">¶</a></h2>
 -----------------------------
- - stream based, conventional grammar
- - full support for `+, -, *, /, %, >>, <<, &, |, ^, ~, !, and **` operators
- - full support for order of operations
- - support for variables
- - supports real numbers with decimal, octal, and hexadecimal bases
- - crash and memory leak free
- - 12 file, ~300 lines
+<ul>
+	<li>stream based, conventional grammar</li>
+	<li>full support for `+, -, *, /, %, >>, <<, &, |, ^, ~, !, and **` operators</li>
+	<li>full support for order of operations</li>
+	<li>support for variables</li>
+	<li>supports real numbers with decimal, octal, and hexadecimal bases</li>
+	<li>crash and memory leak free</li>
+	<li>12 file, ~300 lines</li>
+</ul>
  
 <div class="text-block">
 <p>
@@ -220,11 +232,13 @@ while (true) {
 
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 -----------------------
- - C++ experience
- - Language processing experience
- - Appreciation for C++'s offering of abstraction without overhead (fast and elegant code)
- - Bit manipulation practice
- 
+<ul>
+	<li>C++ experience</li>
+	<li>Language processing experience</li>
+	<li>Appreciation for C++'s offering of abstraction without overhead (fast and elegant code)</li>
+	<li>Bit manipulation practice</li>
+</ul>
+</div>
  
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
 <script src="/res/jq-console/jqconsole.min.js" type="text/javascript"></script>

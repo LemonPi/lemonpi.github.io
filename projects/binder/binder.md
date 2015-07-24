@@ -5,8 +5,11 @@ permalink: /projects/binder/index.html
 group: projects
 ---
 
+<div class="block">
+
 In a team of three, we considered how to solve the problem of binder misalignment.  
-Check out my team mates' documentation of their work on this project: [Cameron](http://cameronbuttazzoni.wix.com/design#!bringing-a-product-to-life/c228d) [David] (http://dasburey.wix.com/design-portfolio#!product-design/cfhz)  
+Check out my team mates' documentation of their work on this project: <a href="http://cameronbuttazzoni.wix.com/design#!bringing-a-product-to-life/c228d">Cameron</a>
+<a href="http://dasburey.wix.com/design-portfolio#!product-design/cfhz">David</a>
 <div class="frames">
 <img src="misaligned.jpg">
 <p>A typical misalignment</p>
@@ -50,8 +53,10 @@ This provides support for my lever arm hypothesis.
 
 We performed similar research to determine other main causes of misalignment
 
-- misplacement inside overloaded backpacks could cause yield misalignment over time  
-- blunt trauma could cause shift misalignment  
+<ul>
+	<li>misplacement inside overloaded backpacks could cause yield misalignment over time  </li>
+	<li>blunt trauma could cause shift misalignment  </li>
+</ul>
 
 We produced candidate solutions aiming to solve a single cause of misalignment,  
 following my engineering process's monomaniacal design step.
@@ -127,7 +132,9 @@ Close with the same push, with both sides constrained (in this case by the table
 
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">¶</a></h2>
 --------------------
-- Learned how to solid model and animate with OpenScad
-- Gained physical prototyping experience
-- Refined process: create a solution pool then combine component solutions
- 
+<ul>
+	<li>Learned how to solid model and animate with OpenScad</li>
+	<li>Gained physical prototyping experience</li>
+	<li>Refined process: create a solution pool then combine component solutions</li>
+</ul>
+</div>

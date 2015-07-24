@@ -5,7 +5,8 @@ permalink: /sal/sort/index.html
 section: sort
 ---
 
-#### [sal/algo/sort.h](https://github.com/LemonPi/algo/blob/master/sort.h)
+<div class="block">
+<h4><a href="https://github.com/LemonPi/algo/blob/master/sort.h">sal/algo/sort.h</a></h4>
 
 <table class="pretty">
 <tr><td><a class="doc-list-name" href="#parittion">partition</a></td><td>reorder elements of a sequence either around a pivot or based on a predicate</td></tr>
@@ -35,12 +36,12 @@ std::vector<int> u {632, 32, 31, 88, 77, 942, 5, 23};
 sort(v.begin(), v.end());
 {% endhighlight %}
 
+</div>
 
 
 
-
-<h3 class="anchor doc-header">Partition <a class="anchor-link" title="permalink to section" href="#partition" name="partition">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Partition <a class="anchor-link" title="permalink to section" href="#partition" name="partition">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>
@@ -82,13 +83,13 @@ partition(u.begin(), u.end(), [](int n){return n % 2;});
 	(only requiring a constant amount of memory for swap), the space complexity is <code>O(1)</code>.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
-<h3 class="anchor doc-header">Comparison sorts <a class="anchor-link" title="permalink to section" href="#comparison" name="comparison">&para;</a></h3><br><br><br>
-<div class="text-block">
+
+
+<h3 class="anchor doc-header">Comparison sorts <a class="anchor-link" title="permalink to section" href="#comparison" name="comparison">&para;</a></h3>
+<div class="block"><div class="text-block">
 <p>
 	Comparison sorts are distinguished by their use of binary comparison functions such as <code>std::less</code> (two inputs of the same type and a boolean output)
 	to sort sequences by doing pairwise comparisons. This requires a minimum amount of comparisons to retrieve
@@ -101,10 +102,11 @@ partition(u.begin(), u.end(), [](int n){return n % 2;});
 	data types.
 </p>
 </div>
+</div>
 
 
-<h3 class="anchor doc-header">Bubble sort <a class="anchor-link" title="permalink to section" href="#bub_sort" name="bub_sort">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Bubble sort <a class="anchor-link" title="permalink to section" href="#bub_sort" name="bub_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>
@@ -126,14 +128,14 @@ void bub_sort(Iter begin, const Iter end);
 </p> 
 </div>
 <img src="bub_sort.gif">
-<br>
+</div>
 
 
 
 
 
-<h3 class="anchor doc-header">Insertion sort <a class="anchor-link" title="permalink to section" href="#ins_sort" name="ins_sort">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Insertion sort <a class="anchor-link" title="permalink to section" href="#ins_sort" name="ins_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 // insertion sort using linear shifts
@@ -160,13 +162,14 @@ void ins_sort(const Iter begin, const Iter end);
 </p>
 </div>
 <img src="ins_sort.gif">
-<br>
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Merge sort <a class="anchor-link" title="permalink to section" href="#mer_sort" name="mer_sort">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Merge sort <a class="anchor-link" title="permalink to section" href="#mer_sort" name="mer_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>
@@ -183,12 +186,12 @@ void mer_sort(Iter begin, Iter end);
 </p>
 </div>
 <img src="mer_sort.gif">
-<br>
+</div>
 
 
 
-<h3 class="anchor doc-header">Quick sort <a class="anchor-link" title="permalink to section" href="#qck_sort" name="qck_sort">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Quick sort <a class="anchor-link" title="permalink to section" href="#qck_sort" name="qck_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>
@@ -205,13 +208,13 @@ void qck_sort(Iter begin, Iter end);
 </p>
 </div>
 <img src="qck_sort.gif">
-<br>
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Heap sort <a class="anchor-link" title="permalink to section" href="#heap_sort" name="heap_sort">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Heap sort <a class="anchor-link" title="permalink to section" href="#heap_sort" name="heap_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>
@@ -228,12 +231,12 @@ void heap_sort(Iter begin, Iter end);
 </p>
 </div>
 <img src="heap.gif">
-<br>
+</div>
 
 
 
-<h3 class="anchor doc-header">Distribution sorts <a class="anchor-link" title="permalink to section" href="#distribution" name="distribution">&para;</a></h3><br><br><br>
-<div class="text-block">
+<h3 class="anchor doc-header">Distribution sorts <a class="anchor-link" title="permalink to section" href="#distribution" name="distribution">&para;</a></h3>
+<div class="block"><div class="text-block">
 <p>
 	Distribution sorts have the strong assumption that the data type has a finite and known range.
 	For exmaple, 16 bit shorts are constrained between -32768 to 32767, which has the finite range of
@@ -246,12 +249,13 @@ void heap_sort(Iter begin, Iter end);
 	at least once. 
 </p>
 </div>
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Counting sort <a class="anchor-link" title="permalink to section" href="#cnt_sort" name="cnt_sort">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Counting sort <a class="anchor-link" title="permalink to section" href="#cnt_sort" name="cnt_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 // operator extracts certain information from the element, such as a digit
@@ -303,14 +307,15 @@ cnt_sort(v.begin(), v.end(), 256, [](int n){return (n & 0xFF000) >> 12;});
 </p>
 
 </div>
-<br>
+</div>
 
 
 
 
 
-<h3 class="anchor doc-header">Radix sort <a class="anchor-link" title="permalink to section" href="#rdx_sort" name="rdx_sort">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Radix sort <a class="anchor-link" title="permalink to section" href="#rdx_sort" name="rdx_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>   // use intermediate struct for partial specialization
@@ -369,12 +374,13 @@ cnt_sort(v.begin(), v.end(), 256, [](int n){return (n & 0xFF000) >> 12;});
 </p>
 
 </div>
-<br>
+</div>
 
 
 
-<h3 class="anchor doc-header">Hybrid sorts <a class="anchor-link" title="permalink to section" href="#hybrid" name="hybrid">&para;</a></h3><br><br><br>
-<div class="text-block">
+
+<h3 class="anchor doc-header">Hybrid sorts <a class="anchor-link" title="permalink to section" href="#hybrid" name="hybrid">&para;</a></h3>
+<div class="block"><div class="text-block">
 <p>
 	Hybrid sorts are usually what is used as standard libraries' general sorts, such as C++'s <code>std::sort</code>,
 	which is a variant called Introsort switching from quicksort to heap sort based on the recursion depth.
@@ -383,12 +389,13 @@ cnt_sort(v.begin(), v.end(), 256, [](int n){return (n & 0xFF000) >> 12;});
 	bookkeeping when to switch strategies.
 </p>
 </div>
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Tim sort <a class="anchor-link" title="permalink to section" href="#tim_sort" name="tim_sort">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Tim sort <a class="anchor-link" title="permalink to section" href="#tim_sort" name="tim_sort">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>   // use intermediate struct for partial specialization
@@ -447,4 +454,4 @@ cnt_sort(v.begin(), v.end(), 256, [](int n){return (n & 0xFF000) >> 12;});
 </p>
 
 </div>
-<br>
+</div>

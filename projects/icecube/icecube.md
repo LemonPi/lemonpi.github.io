@@ -4,6 +4,7 @@ title: ICE-Cube Meat Refrigeration Without Electricity
 permalink: /projects/icecube/index.html
 group: projects
 ---
+<div class="block">
 <div class="text-block">
 <p>
 	In response to the <a href="meatrefridgeration.pdf">request for proposal</a> 
@@ -378,4 +379,6 @@ Changes from first to second prototype:
 <a name="ref1">[1]</a> McGuire F. M. 
 	<i>Thermal & Solar Reflectance of Stainless Steel</i> [Online]. Available:
 	<a href="http://www.metalresources.net/images/stories/PDF%20Pages/SAVE_ENERGY_SolarReflectance.pdf">http://www.metalresources.net/images/stories/PDF%20Pages/SAVE_ENERGY_SolarReflectance.pdf</a>
+</div>
+
 </div>

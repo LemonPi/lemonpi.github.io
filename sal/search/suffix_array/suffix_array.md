@@ -6,6 +6,7 @@ section: search
 classname: Suffix_array
 ---
 
+<div class="block">
 <table class="pretty">
 <tr><th><a class="doc-list-name" href="#suffix_array">Suffix_array</a></th><th>efficient data structure for indexing large texts</th></tr>
 <tr><td><a class="doc-list-name" href="#size">.size</a></td><td>give number of suffixes</td></tr>
@@ -14,10 +15,10 @@ classname: Suffix_array
 <tr><td><a class="doc-list-name" href="#lcp">.common_prefix_len</a></td><td>give length of longest common prefix between adjacent suffixes</td></tr>
 <tr><td><a class="doc-list-name" href="#occurrance">.occurrance</a></td><td>list positions in the original text where a substring occurred </td></tr>
 </table>
+</div>
 
-
-<h3 class="anchor doc-header">Suffix array <a class="anchor-link" title="permalink to section" href="#suffix_array" name="suffix_array">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Suffix array <a class="anchor-link" title="permalink to section" href="#suffix_array" name="suffix_array">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Sequence = std::string>
@@ -64,14 +65,14 @@ sal::Suffix_array<> sa {text};
 	Variations of suffix array are usually behind the convenient <code>ctrl+f</code> features in editors and browsers.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Number of suffixes | <code class="qualifier">{{page.classname}}::</code>`size` <a class="anchor-link" title="permalink to section" href="#size" name="size">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Number of suffixes | <code class="qualifier">{{page.classname}}::</code>size <a class="anchor-link" title="permalink to section" href="#size" name="size">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t size() const;
@@ -83,13 +84,14 @@ size_t size() const;
 	The number of suffixes is equal to the length of the original text (new suffixs for each character).
 </p>
 </div>
-<br>
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Suffix array summarization | <code class="qualifier">{{page.classname}}::</code>`print` <a class="anchor-link" title="permalink to section" href="#print" name="print">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Suffix array summarization | <code class="qualifier">{{page.classname}}::</code>print <a class="anchor-link" title="permalink to section" href="#print" name="print">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 void print() const;
@@ -124,10 +126,11 @@ void print() const;
 	so "ternation" and "tion" both share 't' as a prefix.
 </p>
 </div>
-<br>
+</div>
 
-<h3 class="anchor doc-header">Suffix array indices | <code class="qualifier">{{page.classname}}::</code>`suffix` <a class="anchor-link" title="permalink to section" href="#suffix" name="suffix">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">Suffix array indices | <code class="qualifier">{{page.classname}}::</code>suffix <a class="anchor-link" title="permalink to section" href="#suffix" name="suffix">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t suffix(size_t ith_suffix) const;
@@ -155,10 +158,11 @@ sa.suffix(2);
 	The actual suffix is the substring from the index returned to <code>text.end()</code>.
 </p>
 </div>
-<br>
+</div>
 
-<div> <h3 class="anchor doc-header">Longest common prefix | <code class="qualifier">{{page.classname}}::</code><code>common_prefix_len</code><a class="anchor-link" title="permalink to section" href="#lcp" name="lcp">&para;</a></h3><br><br><br>
-</div> 
+
+<div> <h3 class="anchor doc-header">Longest common prefix | <code class="qualifier">{{page.classname}}::</code><code>common_prefix_len</code><a class="anchor-link" title="permalink to section" href="#lcp" name="lcp">&para;</a></h3>
+<div class="block"></div> 
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t common_prefix_len(size_t ith_suffix) const;
@@ -184,12 +188,13 @@ sa.common_prefix_len(2);
 	This array enables a lot of applications to be efficient, such as search queries for occurrances.
 </p>
 </div>
-<br>
+</div>
 
 
 
-<h3 class="anchor doc-header">All occurrances of substring | <code class="qualifier">{{page.classname}}::</code>`occurrance` <a class="anchor-link" title="permalink to section" href="#occurrance" name="occurrance">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">All occurrances of substring | <code class="qualifier">{{page.classname}}::</code>occurrance <a class="anchor-link" title="permalink to section" href="#occurrance" name="occurrance">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 std::vector<size_t> occurrance(const Sequence& target) const;
@@ -232,4 +237,5 @@ for (size_t starting_location : whales) std::cout << starting_location << ' ';
 	An alternative without building the LCP is to use two binary searches to find the first
 	and last occurrance of it and taking the difference.
 </p>
+</div>
 </div>

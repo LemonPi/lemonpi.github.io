@@ -4,6 +4,7 @@ title: Clisp - Lisp interpreter
 permalink: /projects/clisp/index.html
 group: projects
 ---
+<div class="block">
 <div class="text-block">
 <p>
 	Source on <a href="https://github.com/LemonPi/Clisp">github</a><br>
@@ -271,6 +272,8 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
  - Understanding of run time environments
  - Introduction to 3rd party C++ libraries (boost)
  - Tons of fun
+
+</div>
  
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
 <script src="clisp.js" type="text/javascript"></script>

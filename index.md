@@ -54,11 +54,13 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 
 ----------------------------
-##Professional Statement
-> ###As an engineer,
-> I believe engineering design is the iterative application of scientific knowledge and technical skills to solve real problems in a robust, usable, and efficient manner.
+<div class="block">
+<h2>Professional Statement</h2>
+<blockquote><h4>As an engineer,</h4>
+I believe engineering design is the iterative application of scientific knowledge and technical skills to solve real problems in a robust, usable, and efficient manner.
   
 
-> Good engineering is a balance of fitting theoretical models and trial and error through prototyping,  
-> and it often involves breaking down the problem and inventing a language of tools at each conceptual layer for a long-lasting, robust solution.
-
+Good engineering is a balance of fitting theoretical models and trial and error through prototyping,  
+and it often involves breaking down the problem and inventing a language of tools at each conceptual layer for a long-lasting, robust solution.
+</blockquote>
+</div>

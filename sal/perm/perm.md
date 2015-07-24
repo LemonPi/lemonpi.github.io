@@ -5,7 +5,8 @@ permalink: /sal/perm/index.html
 section: perm
 ---
 
-#### [sal/algo/perm.h](https://github.com/LemonPi/algo/blob/master/perm.h)
+<div class="block">
+<h4><a href="https://github.com/LemonPi/algo/blob/master/perm.h">sal/algo/perm.h</a></h4>
 
 <table class="pretty">
 <tr><td><a class="doc-list-name" href="#perm">perm</a></td><td>indexed permutation of a sequence</td></tr>
@@ -14,13 +15,14 @@ section: perm
 <tr><td><a class="doc-list-name" href="#combine">combine</a></td><td>all pairwise combinations using given operator</td></tr>
 <tr><td><a class="doc-list-name" href="#count_combos">count_combos</a></td><td>number of ways to reach a sum given a set of values (change-making problem)</td></tr>
 </table>
+</div>
 
 
 
 
 
-<h3 class="anchor doc-header">Permutation <a class="anchor-link" title="permalink to section" href="#perm" name="perm">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Permutation <a class="anchor-link" title="permalink to section" href="#perm" name="perm">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Indexable>
@@ -53,15 +55,14 @@ std::cout << word;
 	and run on separate cores.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">All Permutations <a class="anchor-link" title="permalink to section" href="#allperms" name="allperms">&para;</a></h3><br><br><br>
 
+<h3 class="anchor doc-header">All Permutations <a class="anchor-link" title="permalink to section" href="#allperms" name="allperms">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Indexable>
@@ -95,14 +96,14 @@ allperms_distinct(words);
 	permutations and storing them in <code>std::vector</code> and <code>std::set</code> for distinct.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Combinations <a class="anchor-link" title="permalink to section" href="#combine" name="combine">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Combinations <a class="anchor-link" title="permalink to section" href="#combine" name="combine">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter, typename Op>
@@ -148,14 +149,14 @@ combine(ints,
 	element is odd and second element is even.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Counting Combinations <a class="anchor-link" title="permalink to section" href="#count_combos" name="count_combos">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Counting Combinations <a class="anchor-link" title="permalink to section" href="#count_combos" name="count_combos">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename T>
@@ -184,5 +185,4 @@ count_combos(coins, 200);
 	how many ways can you make a certain amount of change given certain coins (unlimited amount of each).
 </p>
 </div>
-
-<br>
+</div>

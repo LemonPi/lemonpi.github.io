@@ -4,6 +4,7 @@ title: Headsets and Glasses - RFP
 permalink: /projects/headset/index.html
 group: projects
 ---
+<div class="block">
 <div class="text-block">
 <p>
 	A request for proposal (RFP) looking at the discomfort of wearing headsets and glasses,
@@ -183,3 +184,5 @@ group: projects
  - Experience in contacting communities and finding opportunities
  - Experience in creating meaningful visuals
  - Appreciation of requirements' importance and what makes for strong requirements
+
+ </div>

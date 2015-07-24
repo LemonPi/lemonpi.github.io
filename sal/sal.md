@@ -6,7 +6,7 @@ css: syntax
 group: sal
 ---
 
-
+<div class="block">
 <div class="text-block">
 <p>
 	Source and quick reference on <a href="https://github.com/LemonPi/sal">github</a><br>
@@ -20,8 +20,8 @@ group: sal
 	Detailed documentation with examples of usage for each header follows. <br>
 </p>
 </div>
-<h3><a href="tester.html"><b>Test algorithms online</b></a></h3>
 
+<h3><a href="tester.html"><b>Test algorithms online</b></a></h3>
 
 <a name="#algo" class="anchor">Algorithms</a>
 ---
@@ -229,3 +229,4 @@ struct DJ_visitor {
  - C++ implementation experience (creating my own iterators, visitors, and lower level data structures)
  - Experience easily expressing ideas in efficient code
 
+</div>

@@ -4,8 +4,8 @@ title: Searches and Matching
 permalink: /sal/search/index.html
 section: search
 ---
-
-#### [sal/algo/search.h](https://github.com/LemonPi/algo/blob/master/search.h)
+<div class="block">
+<h4><a href="https://github.com/LemonPi/algo/blob/master/search.h">sal/algo/search.h</a></h4>
 
 <table class="pretty">
 <tr><td><a class="doc-list-name" href="#bin_search">bin_search</a></td><td>binary search on ordered sequence</td></tr>
@@ -17,13 +17,13 @@ section: search
 <tr><td><a class="doc-list-name" href="#lc_substr">lc_substr</a></td><td>longest common substring using a Suffix array</td></tr>
 <tr><th><a class="doc-list-name" href="suffix_array">Suffix_array</a></th><th>efficient data structure for indexing large texts</th></tr>
 </table>
+</div>
 
 
 
 
-
-<h3 class="anchor doc-header">Binary search <a class="anchor-link" title="permalink to section" href="#bin_search" name="bin_search">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Binary search <a class="anchor-link" title="permalink to section" href="#bin_search" name="bin_search">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter, typename T, typename Cmp>  // special comparator requires less and eq methods, can compare cross types
@@ -75,15 +75,15 @@ bin_search(seq.begin(), seq.end(), 17);
 	likely be more apparent in the future when more advanced optimizations for space locality becomes implemented.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Intersection <a class="anchor-link" title="permalink to section" href="#intersection" name="intersection">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Intersection <a class="anchor-link" title="permalink to section" href="#intersection" name="intersection">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Sequence>
@@ -121,14 +121,14 @@ intersection(std::set<vector<int>>{seq, seq2, seq3});
 	among UTF-8 sequences.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Order selection <a class="anchor-link" title="permalink to section" href="#selection" name="selection">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Order selection <a class="anchor-link" title="permalink to section" href="#selection" name="selection">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Iter>
@@ -173,14 +173,14 @@ select(v.begin(), v.end(), 4);
 	and everything smaller than it on its left while everything larger than it on the right, with no order guranteed.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Substring matching <a class="anchor-link" title="permalink to section" href="#sub_match" name="sub_match">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Substring matching <a class="anchor-link" title="permalink to section" href="#sub_match" name="sub_match">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Indexable>
@@ -221,14 +221,14 @@ sub_match(a, c);
 	has to fail on a prefix of the word, such as "PA-" at i=9, and "PAR-" at i=18.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Longest common subsequence <a class="anchor-link" title="permalink to section" href="#lc_subseq" name="lc_subseq">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Longest common subsequence <a class="anchor-link" title="permalink to section" href="#lc_subseq" name="lc_subseq">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename Indexable>
@@ -270,12 +270,12 @@ lc_subseq_len(a, b);
 	retrieving the LCS, and only <code>O(min(n,m))</code> space for retrieving the LCS length.
 </p>
 </div>
+</div>
 
-<br>
 
 
-<h3 class="anchor doc-header">Longest common substring <a class="anchor-link" title="permalink to section" href="#lc_substr" name="lc_substr">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Longest common substring <a class="anchor-link" title="permalink to section" href="#lc_substr" name="lc_substr">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 bool is_prime(big_int guess);
@@ -314,7 +314,7 @@ Int_seq z {sa.lc_substr()};
 	as well as additional checks for whether all initial sequences have been covered. 
 </p>
 </div>
+</div>
 
-<br>
 
 

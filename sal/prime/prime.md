@@ -6,7 +6,8 @@ section: prime
 classname: Sieve
 ---
 
-#### [sal/algo/prime.h](https://github.com/LemonPi/algo/blob/master/prime.h)
+<div class="block">
+<h4><a href="https://github.com/LemonPi/algo/blob/master/prime.h">sal/algo/prime.h</a></h4>
 
 <table class="pretty">
 <tr><th><a class="doc-list-name" href="#sieve">Sieve</a></th><th>segmented sieve class that generates primes</th></tr>
@@ -18,13 +19,13 @@ classname: Sieve
 <tr><td><a class="doc-list-name" href="#is_prime">.is_prime</a></td><td>check if guess is a prime number</td></tr>
 <tr><td><a class="doc-list-name" href="#count">.count</a></td><td>number of primes in sequence below current prime or an upper limit</td></tr>
 </table>
+</div>
 
 
 
 
-
-<h3 class="anchor doc-header">Sieve of Eratosthenes <a class="anchor-link" title="permalink to section" href="#sieve" name="sieve">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Sieve of Eratosthenes <a class="anchor-link" title="permalink to section" href="#sieve" name="sieve">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 template <typename big_int = unsigned long long>
@@ -68,15 +69,15 @@ Sieve<> alt_sieve(1000);
 </div>
 
 <img src="sieve.gif">
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Next prime | <code class="qualifier">{{page.classname}}::</code>`next_prime`<a class="anchor-link" title="permalink to section" href="#next_prime" name="next_prime">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Next prime | <code class="qualifier">{{page.classname}}::</code>next_prime<a class="anchor-link" title="permalink to section" href="#next_prime" name="next_prime">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 big_int next_prime();
@@ -111,14 +112,14 @@ sieve.next_prime(503);
 	of a segment. 
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Closest prime | <code class="qualifier">{{page.classname}}::</code>`closest_prime`<a class="anchor-link" title="permalink to section" href="#closest_prime" name="closest_prime">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Closest prime | <code class="qualifier">{{page.classname}}::</code>closest_prime<a class="anchor-link" title="permalink to section" href="#closest_prime" name="closest_prime">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 big_int closest_prime(big_int guess);
@@ -146,14 +147,14 @@ sieve.closest_prime(50000);
 	to replace division with shifts and additions but also while reducing clustering.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Current prime | <code class="qualifier">{{page.classname}}::</code>`cur_prime`<a class="anchor-link" title="permalink to section" href="#cur_prime" name="cur_prime">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Current prime | <code class="qualifier">{{page.classname}}::</code>cur_prime<a class="anchor-link" title="permalink to section" href="#cur_prime" name="cur_prime">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 big_int cur_prime() const;
@@ -177,14 +178,14 @@ sieve.cur_prime();
 	Current prime in the sequence.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
-<h3 class="anchor doc-header">Nth prime | <code class="qualifier">{{page.classname}}::</code>`nth_prime`<a class="anchor-link" title="permalink to section" href="#nth_prime" name="nth_prime">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Nth prime | <code class="qualifier">{{page.classname}}::</code>nth_prime<a class="anchor-link" title="permalink to section" href="#nth_prime" name="nth_prime">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 big_int nth_prime(big_int nth);
@@ -209,12 +210,12 @@ sieve.nth_prime(1000);
 	but beware of underflows if using an unsigned type such as size_t by default.
 </p>
 </div>
+</div>
 
-<br>
 
 
-<h3 class="anchor doc-header">Primes up to | <code class="qualifier">{{page.classname}}::</code>`primes_upto`<a class="anchor-link" title="permalink to section" href="#primes_upto" name="primes_upto">&para;</a></h3><br><br><br>
-
+<h3 class="anchor doc-header">Primes up to | <code class="qualifier">{{page.classname}}::</code>primes_upto<a class="anchor-link" title="permalink to section" href="#primes_upto" name="primes_upto">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 const std::vector<big_int>& primes_upto(big_int lim);
@@ -242,15 +243,15 @@ sieve.nth_prime(1000);
 	If the last prime is too large, use <code>sieve.count(lim) - 1</code> to retrieve index of the desired back.
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
-<h3 class="anchor doc-header">Check if prime | <code class="qualifier">{{page.classname}}::</code>`is_prime`<a class="anchor-link" title="permalink to section" href="#is_prime" name="is_prime">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Check if prime | <code class="qualifier">{{page.classname}}::</code>is_prime<a class="anchor-link" title="permalink to section" href="#is_prime" name="is_prime">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 bool is_prime(big_int guess);
@@ -270,16 +271,16 @@ sieve.is_prime(sieve.nth_prime(420000));
 	then performing a binary search on existing primes or sieving up to the number;
 </p>
 </div>
-
-<br>
-
+</div>
 
 
 
 
 
-<h3 class="anchor doc-header">Count primes under | <code class="qualifier">{{page.classname}}::</code>`count`<a class="anchor-link" title="permalink to section" href="#count" name="count">&para;</a></h3><br><br><br>
 
+
+<h3 class="anchor doc-header">Count primes under | <code class="qualifier">{{page.classname}}::</code>count<a class="anchor-link" title="permalink to section" href="#count" name="count">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t count();
@@ -307,5 +308,4 @@ sieve.count(1000000);
 	internal vector.
 </p>
 </div>
-
-<br>
+</div>

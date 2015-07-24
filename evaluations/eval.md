@@ -47,15 +47,19 @@ Sept 2013
 
 </div>
 ----------------------
+
+<div class="block">
 The design of many products give them more value than the sum of their parts, with the opposite being true as well.
 
 Here are some artifacts seen through my engineering design perspective:
 
- - [Praxis Guide - May 2013 to 2014](praxis/)
+<ul class="archive">
+ <li><a href="praxis/">Praxis Guide</a> - May 2013 to 2014</li>
 
- - [Skule Courses upload page security silliness - Dec 16 2013](skulecourses/)
+ <li><a href="skulecourses/">Skule Courses upload page security silliness</a> - Dec 16 2013</li>
 
- - [Proctor Silex Hand Mixer - Sept 25 2013](handmixer/)
+ <li><a href="handmixer/">Proctor Silex Hand Mixer</a> - Sept 25 2013</li>
  
- - [GBC Shredmaster 50s - Sept 19 2013](shredder/)
- 
+ <li><a href="shredder/">GBC Shredmaster 50s</a> - Sept 19 2013</li>
+</ul>
+</div>

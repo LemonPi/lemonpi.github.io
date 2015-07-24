@@ -5,6 +5,23 @@ permalink: /handbook/index.html
 group: process
 css: handbook
 ---
+<div class="toc">
+	<a class="toc-link toch2" href="#tools">Tools</a> 
+	<a class="toc-link toch3" href="#decomposition">Functional decomposition</a>  
+	<a class="toc-link toch3" href="#wishful">Wishful thinking</a>
+	<a class="toc-link toch3" href="#reframe">Reframing (reconsidering the problem)</a>
+	<a class="toc-link toch3" href="#research">Research</a> 
+	<a class="toc-link toch3" href="#pugh">Pugh charts</a>  
+	<a class="toc-link toch3" href="#comparison">Comparison matrix</a>
+	<a class="toc-link toch2" href="#teamwork">Teamwork</a>
+		<a class="toc-link toch3" href="#meetings">Meetings</a>
+		<a class="toc-link toch3" href="#unperformant">Unperformant team members</a>
+		<a class="toc-link toch3" href="#atmosphere">Team atmosphere</a>
+		<a class="toc-link toch3" href="#parallel">Parallel tasks</a>
+ <p class="toc-toggle">toggle TOC</p>	
+</div>	
+
+<div class="block">
 <div class="text-block">
 <p>
 	Collected here are my assessment and guideline on technical tools and teamwork strategies.
@@ -17,27 +34,7 @@ css: handbook
 </p>
 </div>
 
-<div class="toc">
-<a class="toc-link" href="#tools"><h3 class="toc-title">Tools</h3></a> 
-<ol>
-	<li><a class="toc-link" href="#decomposition">Functional decomposition</a>  
-	<li><a class="toc-link" href="#wishful">Wishful thinking</a>
-	<li><a class="toc-link" href="#reframe">Reframing (reconsidering the problem)</a>
-	<li><a class="toc-link" href="#research">Research</a> 
-	<li><a class="toc-link" href="#pugh">Pugh charts</a>  
-	<li><a class="toc-link" href="#comparison">Comparison matrix</a>
-<ol>
-</div>	
 
-<div class="toc">
-<a class="toc-link" href="#teamwork"><h3 class="toc-title">Teamwork</h3></a>
-<ol>
-	<li><a class="toc-link" href="#meetings">Meetings</a>
-	<li><a class="toc-link" href="#unperformant">Unperformant team members</a>
-	<li><a class="toc-link" href="#atmosphere">Team atmosphere</a>
-	<li><a class="toc-link" href="#parallel">Parallel tasks</a>
-<ol>
-</div>	
 
 <h2 class="anchor">Technical Tools <a class="anchor-link" title="permalink to section" href="#tools" name="tools">¶</a></h2>
 -------------------------
@@ -409,4 +406,6 @@ The top box will cover causes while the bottom box covers remedies.
 	"Request for Proposal: Reducing the Discomfort of Wearing Headsets with Glasses for Toronto Police Communication Operators," 
 	University of Toronto, Feb. 17, 2014.	
 <br>
+</div>
+
 </div>

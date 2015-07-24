@@ -4,9 +4,14 @@ title: Name Game - C String Processing
 permalink: /projects/namegame/index.html
 group: projects
 ---
-Source on [github](https://github.com/LemonPi/LameNameGame)  
+<div class="block">
+<div class="text-block">
+<p>
+Source on <a href="https://github.com/LemonPi/LameNameGame">github</a><br>  
 I made this game as a side project to explore string processing in C, which my CSC190 professor specifically mentioned not to do.  
 The game requires a Unix based user list and quizzes you on the user's real names given their username. 
+</p>
+</div>
 
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">¶</a></h2>
 ------------------------
@@ -42,30 +47,40 @@ The best way to learn seems to be
 <p>Clearly define all the data structure at the start</p>
 </div>
 
-Each person's name(s) and id are stored inside a name\_data object for easy referencing.  
-Names are stored in an array of C-strings to accommodate for multiple names; **dynamic allocation is a possibility for optimization**.  
-The master\_storage doesn't store the objects directly because they unnecessarily uses up memory; instead the name\_data objects are dynamically created.  
-In the future master\_storage could also be dynamically allocated for optimization.  
-
+<div class="text-block">
+<p>
+Each person's name(s) and id are stored inside a name_data object for easy referencing.  
+Names are stored in an array of C-strings to accommodate for multiple names; <strong>dynamic allocation is a possibility for optimization</strong>.  
+The master_storage doesn't store the objects directly because they unnecessarily uses up memory; instead the name_data objects are dynamically created.  
+In the future master_storage could also be dynamically allocated for optimization.  
+</p>
+<p>
 I altered the existing strtok function (which splits strings) because it skipped neighbouring delimiting characters.  
 My strsplit function returns empty string instead, which enables a regular format - name field is always the 5th element.  
+</p>
 <div class="frames">
 <img src="strsplit.png">
 <p>Based off of GNU libc's implementation</p>
 </div>
-
+<p>
 Parsing the user file and playing the game were implemented as separate functions for modularity.  
 The initialize function scans each user list line, skipping if it doesn't contain the filter string used to define a group.  
-Name\_data objects are created after filtering so that no memory is wasted on people that won't be quizzed.  
-
+Name_data objects are created after filtering so that no memory is wasted on people that won't be quizzed.  
+</p>
+<p>
 The valid lines are then broken into fields, the first always being their id and the fifth always being their full name.  
 The full name is further split into parts to award part matches.  
+</p>
 
+<p>
 The play function randomly picks a name; a future update could be to make it so that the same name is not repeated.  
 The play function is similar in splitting the strings up, then it compares each part of the guess to each part of the name.
+</p>
 
+<p>
 Messing around with pointers of pointers of pointers inevitably introduced some errors.  
 It was a great opportunity to practice **backtracing with gdb** and debugging C code in general (the run time errors are not informative at all).
+</p>
 <div class="frames">
 <img src="gdb.png">
 <p>Wonderful feeling when everything finally works</p>
@@ -78,3 +93,5 @@ It was a great opportunity to practice **backtracing with gdb** and debugging C 
 - Appreciation that C is probably not the best language for string processing
 - More defined programming process (define components such as data structure and functions first, then implement)
 - Fun
+
+</div>

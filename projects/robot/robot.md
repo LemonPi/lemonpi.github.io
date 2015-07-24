@@ -4,24 +4,6 @@ title: Autonomous Interacting Robots
 permalink: /projects/robot/index.html
 group: projects
 ---
-<div class="text-block">
-<p>
-	Together in a team of 3, we created two autonomous robots that could play
-	connect-4 with ping pong balls on a <b>partially randomized gamefield</b>. Key features include:
-</p>
-<ul>	
-	<li>an event driven gameplay loop (20Hz)
-	<li>parallel position correct loop (100Hz)
-	<li>human graphical interface for plotting waypoints
-	<li>dead reckoning position system with multiple corrections
-	<li>remembering and following waypoints
-</ul>
-<p> These unique features allowed us
-	to quickly and consistently retrieve balls from the higher risk and reward randomized ball hoppers. 
-	For more detailed coverage of the mechanical and electrical components, see 
-	<a href="design_report.pdf">full design document</a>
-</p>
-</div>
 
 <div class="toc">
  <a class="toc-link toch2" href="#team">The Team</a>
@@ -47,6 +29,29 @@ group: projects
  <p class="toc-caption">(bolded sections are more interesting)</p>
  <p class="toc-toggle">toggle TOC</p>
 </div>
+
+
+<div class="block">
+<div class="text-block">
+<p>
+	Together in a team of 3, we created two autonomous robots that could play
+	connect-4 with ping pong balls on a <b>partially randomized gamefield</b>. Key features include:
+</p>
+<ul>	
+	<li>an event driven gameplay loop (20Hz)</li>
+	<li>parallel position correct loop (100Hz)</li>
+	<li>human graphical interface for plotting waypoints</li>
+	<li>dead reckoning position system with multiple corrections</li>
+	<li>remembering and following waypoints</li>
+</ul>
+<p> These unique features allowed us
+	to quickly and consistently retrieve balls from the higher risk and reward randomized ball hoppers. 
+	For more detailed coverage of the mechanical and electrical components, see 
+	<a href="design_report.pdf">full design document</a>
+</p>
+</div>
+
+
 
 The two robots in action:
 
@@ -145,11 +150,11 @@ The two robots in action:
 	into semi-independent tasks:
 </p>
 <ol>
-	<li>Grabbing the ball
-	<li>Lifting and playing the ball
-	<li>Moving and navigating
-	<li>Locating and avoiding hoppers
-	<li>Reading gameboard state
+	<li>Grabbing the ball</li>
+	<li>Lifting and playing the ball</li>
+	<li>Moving and navigating</li>
+	<li>Locating and avoiding hoppers</li>
+	<li>Reading gameboard state</li>
 </ol>
 <p>
 	The tasks could be naturally divided into two camps - retriever (<b>Rbot</b>) {1,3,4} 
@@ -523,3 +528,4 @@ target_r = control_layer.speed - control_layer.angle;
  - Processing and graphical debugging frameworks
  - Dead reckoning with correction (primitive form of 2D inertial navigation system)
  
+</div>

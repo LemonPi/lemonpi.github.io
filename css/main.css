@@ -148,6 +148,7 @@ pre>code {
 	right:0;
 	top:72px;
 	height:100%;
+	box-sizing:border-box;
  }
 .toc-fixed {
 	top:0;
@@ -160,7 +161,7 @@ pre>code {
 .toch3 {padding-left:2.5em;}
 .toc-caption {padding-left:1em; font-size:12px; color:grey;}
 .toc-toggle {bottom:82px; position:absolute; left:50%; margin-left:-30px; cursor:pointer; color:#0066CC;}
-.toc-hidden {border:0;background-color:transparent;}
+.toc-hidden {border:3px transparent;background-color:transparent;}
 .toc-hidden .toc-title {visibility:hidden;}
 .toc-hidden .toc-link {visibility:hidden;}
 .toc-hidden .toc-caption {visibility:hidden;}
@@ -310,8 +311,7 @@ pre>code {
 		box-sizing:border-box;
 	}
 	h1,h2 {text-align:center;}
-	li {overflow:auto;}
-	iframe {width:100%;}
+	/*iframe {width:100%;}*/
 	pre {overflow:auto;width:100%;}
 	img {
 		box-sizing:border-box;
@@ -351,7 +351,8 @@ pre>code {
 		display:inherit;
 	}
 	::-webkit-scrollbar {width:0;}
-	#content>p, #content>details, #content>h3 {text-align:center;}
+	.block {margin:0;}
+	.block>p, .block>details, .block>h3, .block>h4 {text-align:center;}
 }
 .slideUp{
 	animation-name: slideUp;

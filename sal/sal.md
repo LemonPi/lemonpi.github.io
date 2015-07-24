@@ -86,8 +86,8 @@ Simple implementation of efficient algorithms
 <h2 class="anchor">Getting started <a class="anchor-link" title="permalink to section" href="#getting_started" name="getting_started">&para;</a></h2>
 -------------------------------
 1. open cmd/terminal and change directory to somewhere in your include path (ex. /usr/local/include)
-2. type `git clone --recursive git@github.com:LemonPi/sal.git`
-3. if you missed(2.html and cloned it without `--recursive`, get the submodules with `git submodule update --init`
+2. type <pre><code>git clone --recursive git@github.com:LemonPi/sal.git</code></pre>
+3. if you missed #2 and cloned it without `--recursive`, get the submodules with `git submodule update --init`
 
 
 <h2 class="anchor">Motivation <a class="anchor-link" title="permalink to section" href="#motivation" name="motivation">&para;</a></h2>

@@ -5,9 +5,12 @@ permalink: /principles.html
 group: principles
 ---
 
-My vision of good engineering design should seek these objectives in order of importance: 
-robustness, usability, and efficiency.  
-
+<div class="text-block">
+<p>
+	My vision of good engineering design should seek these objectives in order of importance: 
+	robustness, usability, and efficiency.  
+</p>
+</div>
 
 > ###*Robust* solutions are designed for real life, where the environment is constantly changing.  
 > Designing for robustness often involves making the product simple (less parts often means less susceptible to noise).  

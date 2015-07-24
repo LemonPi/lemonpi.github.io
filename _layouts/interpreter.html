@@ -2,6 +2,7 @@
 <html prefix="og: htttp://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="{{ page.title }} - Johnson Zhong's Design Portfolio" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://lemonpi.github.io/{{ page.url }}" />
@@ -16,12 +17,13 @@
 <body>
 <div id="header">
 
-	<a href="{{ site.baseurl }}res/resume.pdf" title="resume"><div id="resume"></div></a>
-	<a href="http://www.linkedin.com/profile/view?id=282810346&trk=nav_responsive_tab_profile" title="linkedin"><div id="linkedin"></div></a>
-	<a href="https://github.com/lemonpi" title="github"><div id="github"></div></a>
+	<div id="iconlinks_box">
+	<a href="https://github.com/lemonpi" title="github"><div id="github" class="iconlink"></div></a>
+	<a href="http://www.linkedin.com/profile/view?id=282810346&trk=nav_responsive_tab_profile" title="linkedin"><div id="linkedin" class="iconlink"></div></a>
+	<a href="{{ site.baseurl }}res/resume.pdf" title="resume"><div id="resume" class="iconlink"></div></a>
+	</div>
 	
-<div id="titlearea"><h1><a id="titlelink" href="{{ site.baseurl }}">Johnson Zhong's <p id="titletext">Design Portfolio</p></a>
-	</h1>
+	<div id="titlearea"><h1><a id="titlelink" href="{{ site.baseurl }}"><p id="titlename">Johnson Zhong's</p> <p id="titletext">Design Portfolio</p></a></h1></div>
 </div>
 
 <div id="navbar">
@@ -57,7 +59,6 @@
 		 {% endif %}
     </ul>
 </div>
-</div>
 <div id="content">
 {% if page.branch != "base" %}
 	<h1>{{ page.title }}</h1>
@@ -66,7 +67,7 @@
 </div>
 
 <div id="footer">
-<p class="reverse">ac.liamtoh</p><p class="reverse">@gnohznosnhoj</p><a id="history" href="https://github.com/LemonPi/lemonpi.github.io/commits/master/{{page.path}}">page history</a>
+<div id="contact"><p class="reverse">ac.liamtoh</p><p class="reverse">@gnohznosnhoj</p></div><a id="history" href="https://github.com/LemonPi/lemonpi.github.io/commits/master/{{page.path}}">page history</a>
 </div>
 </body>
 </html>

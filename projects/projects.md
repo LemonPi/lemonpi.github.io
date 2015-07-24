@@ -10,78 +10,79 @@ branch: base
 
 <div class="gallery">
 
-<a href="robot/"><div class="box">
-<img src="/res/projects/robot.png"/>
-<span class="caption">
-<h1 class="caption-title">Autonomous Robots</h1>
-Two robots playing connect-4 together on a randomized gamefield<br><br><br><br>
-Jan 2014 - Apr 2015
-</span>
-</div></a>
+	<a href="/projects/robot/"><div class="box">
+	<img src="/res/projects/robot.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Autobots</h1>
+	<p class="caption-desc">Two robots playing connect-4 together on a randomized gamefield</p>
+	<p class="caption-date">Jan 2014 - Apr 2015</p>
+	</span>
+	</div></a>
+	
 
-<a href="../sal/"><div class="box">
-<img src="/res/projects/lemonpi.png"/>
-<span class="caption">
-<h1 class="caption-title">SAL</h1>
-Simple Algorithms and Data structures<br><br><br><br>
-Oct 2014 - Jan 2015
-</span>
-</div></a>
+	<a href="/sal/"><div class="box">
+	<img src="/res/projects/lemonpi.png"/>
+	<span class="caption">
+	<h1 class="caption-title">SAL</h1>
+	<p class="caption-desc">Simple Algorithms and Data structures</p>
+	<p class="caption-date">Oct 2014 - Jan 2015</p>
+	</span>
+	</div></a>
 
-<a href="clisp/"><div class="box">
-<img src="clisp.png"/>
-<span class="caption">
-<h1 class="caption-title">Clisp</h1>
-Lisp interpreter (scheme dialect) in C++<br><br><br><br>
-Aug 2014
-</span>
-</div></a>
+	<a href="/projects/clisp/"><div class="box">
+	<img src="/projects/clisp.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Clisp</h1>
+	<p class="caption-desc">Lisp interpreter (scheme dialect) in C++</p>
+	<p class="caption-date">Aug 2014</p>
+	</span>
+	</div></a>
 
-<a href="bincalc/"><div class="box">
-<img src="bincalc.png"/>
-<span class="caption">
-<h1 class="caption-title">Bincalc</h1>
-Binary calculator for bit manipulation practice and stream processing<br><br><br><br>
-July 2014
-</span>
-</div></a>
+	<a href="/projects/bincalc/"><div class="box">
+	<img src="/projects/bincalc.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Bincalc</h1>
+	<p class="caption-desc">Binary calculator for bit manipulation practice and stream processing</p>
+	<p class="caption-date">July 2014</p>
+	</span>
+	</div></a>
 
-<a href="timewatch/"><div class="box">
-<img src="timewatch.png"/>
-<span class="caption">
-<h1 class="caption-title">Timewatch</h1>
-Social platform and utility for trending activities and time management <br><br><br><br>
-Feb 2014 - present
-</span>
-</div></a>
+	<a href="/projects/timewatch/"><div class="box">
+	<img src="/projects/timewatch.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Timewatch</h1>
+	<p class="caption-desc">Social platform and utility for trending activities and time management</p>
+	<p class="caption-date">Feb 2014 - present</p>
+	</span>
+	</div></a>
 
-<a href="icecube/"><div class="box">
-<img src="icecube.png"/>
-<span class="caption">
-<h1 class="caption-title">ICE-Cube</h1>
-Meat Refridgeration without grid electricity <br><br><br><br>
-March 2014
-</span>
-</div></a>
+	<a href="/projects/icecube/"><div class="box">
+	<img src="/projects/icecube.png"/>
+	<span class="caption">
+	<h1 class="caption-title">ICE-Cube</h1>
+	<p class="caption-desc">Meat Refridgeration without grid electricity</p>
+	<p class="caption-date">March 2014</p>
+	</span>
+	</div></a>
 
-<a href="headset/"><div class="box">
-<img src="headset.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Headset and Glasses</h1>
-Request for Proposal on the discomfort of wearing both together <br><br>
-Feb 2014
-</span>
-</div></a>
+	<a href="/projects/headset/"><div class="box">
+	<img src="/projects/headset.jpg"/>
+	<span class="caption">
+	<h1 class="caption-title">Headset Discomfort</h1>
+	<p class="caption-desc">Request for Proposal on the discomfort of wearing both together</p>
+	<p class="caption-date">Feb 2014</p>	
+	</span>
+	</div></a>
 
 
-<a href="portfolio/"><div class="box">
-<img src="portfolio.jpg"/>
-<span class="caption">
-<h1 class="caption-title">Engineering Design Portfolio</h1>
-The making of this portfolio <br><br><br>
-Nov 2013 - present
-</span>
-</div></a>
+	<a href="/projects/portfolio/"><div class="box">
+	<img src="/projects/portfolio.jpg"/>
+	<span class="caption">
+	<h1 class="caption-title">Portfolio</h1>
+	<p class="caption-desc">The making of this portfolio</p>
+	<p class="caption-date">Nov 2013 - present</p>		
+	</span>
+	</div></a>
 
 
 </div>

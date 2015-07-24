@@ -4,7 +4,7 @@ title: Welcome
 permalink: /index.html
 branch: base
 ---
-<h1 style="text-align:center;font-size:80px;">Welcome</h1>
+<h1 style="text-align:center;">Welcome</h1>
 <p align="center">Take a look around my engineering design portfolio,  <br>
 where I present my <a href="principles.html">conception</a> of good design and showcase my recent projects.  
 <br></p>
@@ -12,42 +12,42 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div class="gallery" id="main-gallery">
 
-<a href="projects/robot/"><div class="box">
-<img src="/res/projects/robot.png"/>
-<span class="caption">
-<h1 class="caption-title">Autonomous Robots</h1>
-Two robots playing connect-4 together on a randomized gamefield<br><br><br><br>
-Jan 2014 - Apr 2015
-</span>
-</div></a>
+	<a href="projects/robot/"><div class="box">
+	<img src="/res/projects/robot.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Autobots</h1>
+	<p class="caption-desc">Two robots playing connect-4 together on a randomized gamefield</p>
+	<p class="caption-date">Jan 2014 - Apr 2015</p>
+	</span>
+	</div></a>
 
-<a href="sal/"><div class="box">
-<img src="/res/projects/lemonpi.png"/>
-<span class="caption">
-<h1 class="caption-title">SAL</h1>
-Simple Algorithms and Data structures<br><br><br><br>
-Oct 2014 - Jan 2015
-</span>
-</div></a>
+	<a href="sal/"><div class="box">
+	<img src="/res/projects/lemonpi.png"/>
+	<span class="caption">
+	<h1 class="caption-title">SAL</h1>
+	<p class="caption-desc">Simple Algorithms and Data structures</p>
+	<p class="caption-date">Oct 2014 - Jan 2015</p>
+	</span>
+	</div></a>
 
-<a href="projects/clisp/"><div class="box">
-<img src="/projects/clisp.png"/>
-<span class="caption">
-<h1 class="caption-title">Clisp</h1>
-Lisp interpreter (scheme dialect) in C++<br><br><br><br>
-Aug 2014
-</span>
-</div></a>
+	<a href="projects/clisp/"><div class="box">
+	<img src="/projects/clisp.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Clisp</h1>
+	<p class="caption-desc">Lisp interpreter (scheme dialect) in C++</p>
+	<p class="caption-date">Aug 2014</p>
+	</span>
+	</div></a>
 
 
-<a href="projects/icecube/"><div class="box">
-<img src="/projects/icecube.png"/>
-<span class="caption">
-<h1 class="caption-title">ICE-Cube</h1>
-Meat Refridgeration without grid electricity <br><br><br><br>
-March 2014
-</span>
-</div></a>
+	<a href="projects/icecube/"><div class="box">
+	<img src="/projects/icecube.png"/>
+	<span class="caption">
+	<h1 class="caption-title">ICE-Cube</h1>
+	<p class="caption-desc">Meat Refridgeration without grid electricity</p>
+	<p class="caption-date">March 2014</p>
+	</span>
+	</div></a>
 
 </div>
 

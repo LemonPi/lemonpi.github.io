@@ -281,10 +281,12 @@ struct Layer {
 <p>red circle is boundary, white is with avoid_boundary active</p>
 </div>
 
+<div class="text-block">
 <p>
 	For more detail on the implementation of each layer see the
 	<a href="design_report.pdf">full design document</a>.
 </p>
+</div>
 
 
 <h3 class="anchor">Motor Control <a class="anchor-link" title="permalink to section" href="#nav#control" name="nav#control">&para;</a></h3>

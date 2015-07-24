@@ -201,9 +201,9 @@ pre>code {
 	justify-content:space-between;
 	width:100%;
 }
-.box .caption-title {flex:0.8;margin:0;padding-bottom:40px;}
-.box .caption-desc {flex:1;}
-.box .caption-date {flex:1;}
+.box .caption-title {margin:0;padding-bottom:40px;}
+.box .caption-desc {}
+.box .caption-date {}
 .box img {position: absolute;left: 0;}
 .box:hover .caption {opacity: 1}
 

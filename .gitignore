@@ -7,4 +7,5 @@ drawings.svg
 !algotest.js
 *.lock
 *class
+*log.txt
 toc.md

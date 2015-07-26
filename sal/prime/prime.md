@@ -6,6 +6,20 @@ section: prime
 classname: Sieve
 ---
 
+<div class="toc">
+	<a class="toc-link toch2" href="#Sieve">Sieve</a>
+	<a class="toc-link toch3" href="#set_limit">set_limit</a>
+	<a class="toc-link toch3" href="#next_prime">next_prime</a>
+	<a class="toc-link toch3" href="#closest_prime">closest_prime</a>
+	<a class="toc-link toch3" href="#nth_prime">nth_prime</a>
+	<a class="toc-link toch3" href="#cur_prime">cur_prime</a>
+	<a class="toc-link toch3" href="#primes_upto">primes_upto</a>
+	<a class="toc-link toch3" href="#count">count</a>
+	<a class="toc-link toch3" href="#is_prime">is_prime</a>
+<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
+</div>
+
 <div class="block">
 <h4><a href="https://github.com/LemonPi/algo/blob/master/prime.h">sal/algo/prime.h</a></h4>
 
@@ -20,7 +34,6 @@ classname: Sieve
 <tr><td><a class="doc-list-name" href="#count">.count</a></td><td>number of primes in sequence below current prime or an upper limit</td></tr>
 </table>
 </div>
-
 
 
 

@@ -1,38 +1,79 @@
-
+var blocks;
+var num_blocks;
 var toc;
 var toc_toggle;
 var header;
 var offset_from_top = 1;
+var page_height;
 
 document.addEventListener('DOMContentLoaded', function() {
 
 header = document.getElementById("header");
 toc = document.getElementsByClassName("toc");
+page_height = document.body.offsetHeight;
 
 if (toc.length) {
+	blocks = document.getElementsByClassName("block");
+	num_blocks = blocks.length;
+	for (var i = 0; i < num_blocks; ++i)
+		blocks[i].classList.add('block-toc');
+
 	toc = toc[0];
 	toc_toggle = toc.getElementsByClassName("toc-toggle");
 	toc_toggle = toc_toggle[0];
 	// both rising and falling edge
 	document.addEventListener('scroll', throttle(fix_toc, 200));
+	// only have to listen at the bottom, so can debounce instead (less expensive)
+	document.addEventListener('scroll', debounce(toggle_toggle, 200, false));
+
+	document.onkeydown = hotkeys;
 
 	toc_toggle.addEventListener('click', function () {
 		toc.classList.toggle('toc-hidden');
+		for (var i = 0; i < num_blocks; ++i)
+			blocks[i].classList.toggle('block-toc');
 	}, false);
 }
 
 
 });
 
-
-// var tot_time = new Date().getTime();
+var arrow = {left:37, up:38, right:39, down:40};
+function hotkeys(e) {
+	if (e.ctrlKey) {
+		switch (e.keyCode) {
+			case arrow.left:
+				if (hasClass(toc, 'toc-hidden')) {
+					toc.classList.remove('toc-hidden');
+					for (var i = 0; i < num_blocks; ++i)
+						blocks[i].classList.add('block-toc');
+				}
+				break;
+			case arrow.right:
+				if (!hasClass(toc, 'toc-hidden')) {
+					toc.classList.add('toc-hidden');
+					for (var i = 0; i < num_blocks; ++i)
+						blocks[i].classList.remove('block-toc');					
+				}
+				break;
+			default: break;
+		}
+	}
+}
 
 function fix_toc(e) {
-	// var new_time = new Date().getTime();
-	// console.log("firing: " + (new_time - tot_time));
-	// tot_time = new_time;
 	window.scrollY >= offset_from_top ? toc.classList.add('toc-fixed') :
 										toc.classList.remove('toc-fixed');
+}
+
+function toggle_toggle(e) {
+	(window.innerHeight + window.scrollY) >= page_height ? toc_toggle.classList.add('hidden') :
+														   toc_toggle.classList.remove('hidden');
+}
+
+
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
 // limit firing to leading or falling edges; originally from http://davidwalsh.name/function-debounce

@@ -30,7 +30,6 @@ blockquote {
 xmp {
 	word-wrap:break-word;
 }
-
 pre {
 	line-height: 140%;
 	padding:0px 20px;
@@ -45,6 +44,8 @@ pre>code {
 	padding:0;
 	background:inherit;
 }
+.hidden {visibility:hidden;}
+
 #navbar {
 	margin-bottom:20px;
 }
@@ -71,6 +72,8 @@ pre>code {
 
 #content {clear:both;margin:0;position:relative;}
 .block {margin:0 5%;}
+.block-toc {margin-right:220px;}
+.block-toc .text-block {max-width:95%;}
 
 #header {
 	line-height:normal; 
@@ -160,8 +163,8 @@ pre>code {
 .toch2 {padding-left:1em;}
 .toch3 {padding-left:2.5em;}
 .toc-caption {padding-left:1em; font-size:12px; color:grey;}
-.toc-toggle {bottom:82px; position:absolute; left:50%; margin-left:-30px; cursor:pointer; color:#0066CC;}
-.toc-hidden {border:3px transparent;background-color:transparent;}
+.toc-toggle {bottom:82px; position:absolute; width:100%; text-align:center; cursor:pointer; color:#0066CC;}
+.toc-hidden {border-left:3px solid transparent;background-color:transparent;}
 .toc-hidden .toc-title {visibility:hidden;}
 .toc-hidden .toc-link {visibility:hidden;}
 .toc-hidden .toc-caption {visibility:hidden;}
@@ -272,6 +275,8 @@ pre>code {
 	.text-block {
 		max-width:100%;
 	}
+	.block .text-block {max-width:100%;}
+	.block-toc {margin-right:initial;}
 }
 @media (max-width:500px) {
 	#header{margin-bottom:72px;}
@@ -353,6 +358,7 @@ pre>code {
 	::-webkit-scrollbar {width:0;}
 	.block {margin:0;}
 	.block>p, .block>details, .block>h3, .block>h4 {text-align:center;}
+
 }
 .slideUp{
 	animation-name: slideUp;

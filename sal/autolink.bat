@@ -1,2 +1,2 @@
-rm names.txt && java Autolink && java Autolink 
+rm names.txt && java ../autotools/Autolink && java ../autotools/Autolink 
 cmd /k

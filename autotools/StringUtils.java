@@ -1,9 +1,32 @@
-// taken from Gnawer's answer on stackoverflow: http://stackoverflow.com/a/24575417/3368722
+package autotools;
 import java.io.StringWriter;
 import java.util.HashMap;
 
 public class StringUtils {
+    public static String[] split_into_words(String line) {
+        line = line.replaceAll("[,<>]", "");    
+        return line.split("\\s+");
+    }    
+    public static String removeExtension(String s) {
+        String separator = System.getProperty("file.separator");
+        String filename;
 
+        // Remove the path upto the filename.
+        int lastSeparatorIndex = s.lastIndexOf(separator);
+        if (lastSeparatorIndex == -1) {
+            filename = s;
+        } else {
+            filename = s.substring(lastSeparatorIndex + 1);
+        }
+
+        // Remove the extension.
+        int extensionIndex = filename.lastIndexOf(".");
+        if (extensionIndex == -1)
+            return filename;
+
+        return filename.substring(0, extensionIndex);
+    }
+    // taken from Gnawer's answer on stackoverflow: http://stackoverflow.com/a/24575417/3368722
     public static final String unescapeHtml3(final String input) {
         StringWriter writer = null;
         int len = input.length();

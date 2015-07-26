@@ -11,6 +11,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.jsoup.parser.Tag;
+import org.jsoup.nodes.Entities.EscapeMode;
 
 public class Autodoc {
 
@@ -69,9 +70,11 @@ public class Autodoc {
 	public static class Function {
 		public String declaration;
 		public String name;	// short form to be referred to in html
-		Function(String dec, String n) {
+		public List<String> params;
+		Function(String dec, String n, List<String> ps) {
 			declaration = dec;
 			name = n;
+			params = ps;
 		}
 	}
 	public static First_word get_first_word(String line) {
@@ -95,6 +98,7 @@ public class Autodoc {
 
 		return first_word;
 	}
+
 	public static String[] split_into_words(String line) {
 		line = line.replaceAll("[,<>]", "");	
 		return line.split("\\s+");
@@ -120,8 +124,8 @@ public class Autodoc {
 		return declaration;
 	}
 	public static Function get_function(String line, First_word func_info, Class current_class) {
-		// all functions are declared with a '{' at the end
-		if (line.indexOf('{') < 0) return null;
+		// all global functions are declared with a '{' at the end (class members can be declared, match those times instead)
+		if (current_class == null && line.indexOf('{') < 0) return null;
 		// check to see if (type) can be found - assumes the first word is a type, or qualified otherwise
 		int lp_index = line.indexOf('(');
 		int rp_index = line.indexOf(')');
@@ -139,10 +143,13 @@ public class Autodoc {
 			else if (call_beg.contains(c)) possible_call = true; 
 		}
 		if (name_start_index > -1) func_name = func_name.substring(name_start_index + 1);
+		// skip class member definitions outside of class definition since the declaration has been seen already
+		if (func_name.indexOf("::") > -1) return null;
 		// can be excused of containing operators if is an operator
 		if (possible_call && !func_name.startsWith("operator")) return null;
 
 		String func_dec;
+		List<String> func_params = new ArrayList<String>();
 		// right next to each other, no parameters such as operator()()
 		if (rp_index == lp_index + 1) {
 			// fix operator()()
@@ -153,16 +160,26 @@ public class Autodoc {
 			func_dec = line.substring(0, term_index).trim() + statement_term;
 		}
 		else {
-			String func_params = line.substring(lp_index+1, rp_index);
-			println("func params: " + func_params);
-			if (!is_type(get_first_word(func_params).word)) return null;
+			String[] params_with_types = line.substring(lp_index+1, rp_index).split(",");
+			// last word is param name
+			for (String param : params_with_types) {
+				// default parameter, get rid of = value
+				if (param.indexOf('=') > -1) 
+					param = param.split("=")[0];
+				param = param.trim();
+				func_params.add(trim_first_char(param.substring(param.lastIndexOf(' ') + 1), "&*"));
+			}
+
+			if (!is_type(get_first_word(params_with_types[0]).word)) return null;
 			func_dec = line.substring(0, rp_index+1) + statement_term;
 		}
 
 		println("func name: " + '[' + func_name + ']');
+		for (String param : func_params) print('[' + param + "] ");
+		if (!func_params.isEmpty()) println("");
 
 		func_dec = decorate_with_template(func_dec, func_info.indent_level);
-		Function func = new Function(func_dec, func_name);
+		Function func = new Function(func_dec, func_name, func_params);
 		// add as member function instead of global function
 		if (current_class != null) {
 			// for sure is a member function else check indent level is nested
@@ -195,6 +212,10 @@ public class Autodoc {
 	}
 	public static void println(String s) {
 		System.out.println(s);
+	}
+	public static String trim_first_char(String word, String delims) {
+		if (delims.indexOf(word.charAt(0)) > -1) return word.substring(1);
+		return word;
 	}
 	public static String removeExtension(String s) {
 	    String separator = System.getProperty("file.separator");
@@ -320,22 +341,184 @@ public class Autodoc {
 
 		return dec;
 	}
-	// public static void create_toc(File file) {
-	// 	Document doc = null;
-	// 	try {
-	// 		doc = Jsoup.parse(file, "UTF-8", "");
-	// 	}
-	// 	catch (IOException e) {
-	// 		println("could not load file" + file.getName());
-	// 	}
+	public static Element create_header(String name) {
+		Element header = new Element(h3, "");
+		header.addClass("anchor");
+		header.addClass("doc-header");
+		header.text(name + ' ');
 
-	// 	Tag div = Tag.valueOf("div");
-	// 	Tag link = Tag.valueOf("a");
-	// 	Tag paragraph = Tag.valueOf("p");
+		Element header_link = new Element(link, "");
+		header_link.addClass("anchor-link");
+		header_link.attr("href", "#"+name);
+		header_link.attr("name", name);
+		header_link.attr("title", "permalink to section");
+		header_link.text("&para;");
 
+		header.appendChild(header_link);
+		return header;
+	}
+	public static Element create_doc_header(String name) {
+		Element header = new Element(paragraph, "");
+		header.addClass("doc-section");
+		header.text(name);
+		return header;
+	}
+	// list of related functions to be in the same block
+	public static Element create_block(List<Function> funcs) {
+		Element block = new Element(div, "");
+		block.addClass("block");
+
+		block.appendText("\n\n");
+		block.appendChild(create_doc_header("Declaration"));
+		block.appendText("\n");
+		// collect then append function declarations as TextNode
+		StringBuilder func_decs = new StringBuilder();
+		func_decs.append("{% highlight c++ %}");
+		for (Function func : funcs) {
+			func_decs.append("\n");
+			func_decs.append(func.declaration);
+			func_decs.append("\n");
+		}
+		func_decs.append("{% endhighlight %}\n");
+		block.appendText(func_decs.toString());
+
+
+		block.appendText("\n\n");
+		block.appendChild(create_doc_header("Parameters"));
+		block.appendText("\n");
+		Element param_table = new Element(table, "");
+		param_table.addClass("pretty");
+		// union of parameters in functions
+		List<String> params = new ArrayList<String>();
+		for (Function func : funcs) {
+			for (String p : func.params) {
+				if (params.indexOf(p) < 0) params.add(p);
+			}
+		}
+		// each param gets a row
+		param_table.appendText("\n");
+		for (String param : params) {
+			Element param_row = new Element(tr, "");
+			Element param_name = new Element(td, "");
+			param_name.text(param);
+			Element param_desc = new Element(td, "");
+			param_row.appendChild(param_name);
+			param_row.appendChild(param_desc);
+			param_table.appendChild(param_row);
+			param_table.appendText("\n");
+		}
+		block.appendChild(param_table);
+		block.appendText("\n");
+
+
+		block.appendChild(create_doc_header("Return value"));
+		block.appendText("\n\n");
+
+
+		block.appendChild(create_doc_header("Example"));
+		block.appendText("\n{% highlight c++ %}\n\n{% endhighlight %}\n");
+
+
+		block.appendText("\n");
+		block.appendChild(create_doc_header("Discussion"));
+		block.appendText("\n");
+		Element discussion_block = new Element(div, "");
+		discussion_block.appendText("\n");
+		Element discussion_paragraph = new Element(paragraph, "");
+		discussion_paragraph.appendText("\n\t\n");
+		discussion_block.appendChild(discussion_paragraph);
+		discussion_block.appendText("\n");
+		block.appendChild(discussion_block);
+
+		return block;
+	}
+	public static Element create_func_list(Declarations dec) {
+		Element wrapper_block = new Element(div, "");
+		wrapper_block.addClass("block");
+		wrapper_block.appendText("\n");
+
+		Element github_link = new Element(link, "");
+		github_link.attr("href", github_base + source_section + github_branch + source_topic + ".h");
+		github_link.text(library_name + doc_source);
+		Element wrapper_h4 = new Element(h4, "");
+		wrapper_h4.appendChild(github_link);
+		wrapper_h4.appendText("\n");
+		wrapper_block.appendChild(wrapper_h4);
+
+		Element func_list = new Element(table, "");
+		func_list.addClass("pretty");
+		func_list.appendText("\n");
+		// add functions in order but without repeat
+		Set<String> listed_names = new HashSet<String>();
+		for (Function func : dec.functions) {
+			if (listed_names.contains(func.name)) continue;
+			listed_names.add(func.name);
+
+			Element row = new Element(tr, "");
+			Element name_cell = new Element(td, "");
+
+			Element func_link = new Element(link, "");
+			func_link.addClass("doc-list-name");
+			func_link.attr("href", "#"+func.name);
+			func_link.text(func.name);
+			name_cell.appendChild(func_link);
+
+			Element desc_cell = new Element(td, "");
+			row.appendChild(name_cell);
+			row.appendChild(desc_cell);
+			row.appendText("\n");
+			func_list.appendChild(row);
+		}
+		func_list.appendText("\n");
+
+		wrapper_block.appendChild(func_list);
+		return wrapper_block;
+	}
+	public static void create_doc(File file, Declarations dec) {
+		Document doc = new Document("");
+		doc.outputSettings(new Document.OutputSettings().prettyPrint(false).escapeMode(EscapeMode.xhtml));//makes html() preserve linebreaks and spacing
+
+		// yaml header
+		StringBuilder yaml_header = new StringBuilder(100);
+		yaml_header.append("---\nlayout: algorithms\ntitle: \npermalink: ");
+		yaml_header.append('/');
+		yaml_header.append(library_name);
+		yaml_header.append(source_topic);
+		yaml_header.append("/index.html\nsection: ");
+		yaml_header.append(source_topic);
+		yaml_header.append("\n---\n\n");
+		doc.appendText(yaml_header.toString());
+
+		doc.appendChild(create_func_list(dec));
+		doc.appendText("\n\n\n\n");
+
+		// each function gets a block
+		for (int f = 0; f < dec.functions.size(); ++f) {
+			String func_name = dec.functions.get(f).name;
+
+			Element header = create_header(func_name);
+
+			List<Function> related_funcs = new ArrayList<Function>();
+			related_funcs.add(dec.functions.get(f));
+			// rely on short circuit of && to force ++f to be evaluated before the check
+			while (++f < dec.functions.size() && dec.functions.get(f).name.equals(func_name)) {
+				related_funcs.add(dec.functions.get(f));
+			}
+
+			println("Related functions: " + func_name);
+			for (Function func : related_funcs)
+				println(func.declaration);
+			println("");
+
+			Element func_block = create_block(related_funcs);
+			if (func_block == null) println("null block how come?");
+			doc.appendChild(header);
+			doc.appendText("\n");
+			doc.appendChild(func_block);
+			doc.appendText("\n\n\n\n\n\n");
+		}
 	// 	Element toc = new Element(div, "");
 	// 	toc.addClass("toc");
-
 
 	// 	Elements titles = doc.getElementsByClass(title_class);
 
@@ -367,17 +550,18 @@ public class Autodoc {
 	// 	toggle.text(toggle_text);
 	// 	toc.appendChild(toggle);
 
-	// 	// flush to file
-	// 	try {
-	// 		BufferedWriter htmlWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(toc_file), "UTF-8"));
-	// 		htmlWriter.write(toc.toString());
-	// 		htmlWriter.flush();
-	// 		htmlWriter.close();
-	// 	}
-	// 	catch (IOException e) {
-	// 		println("could not open: " + toc_file);
-	// 	}
-	// } 
+		System.out.print(StringUtils.unescapeHtml3(doc.toString()));
+		// flush to file
+		try {
+			BufferedWriter htmlWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+			htmlWriter.write(StringUtils.unescapeHtml3(doc.toString()));
+			htmlWriter.flush();
+			htmlWriter.close();
+		}
+		catch (IOException e) {
+			println("could not open: " + file.getPath());
+		}
+	} 
 
 
 	public static void init_keywords() {
@@ -407,20 +591,7 @@ public class Autodoc {
 		call_beg.add('/');
 		call_beg.add('.');
 	}
-
-	public static void main(String[] args) {
-		if (args.length < 1) {System.out.println(args.length);println("usage: java Autodoc <source_file>"); return;}
-		init_keywords();
-
-		doc_source = args[0];
-		File source = new File(library_dir.resolve(doc_source).toString());
-
-		doc_file = removeExtension(source.getName()) + ".md";
-
-		println("source: " + source.getPath());
-		println("doc_file: " + doc_file);
-
-		Declarations dec = read_declarations(source);
+	public static void print_declarations(Declarations dec) {
 		println("\nDeclared classes");
 		for (Class clas : dec.classes) {
 			println(clas.declaration);
@@ -433,13 +604,48 @@ public class Autodoc {
 		for (Function func : dec.functions) {
 			println(func.declaration);
 			println("");
-		}
+		}		
+	}
+	public static void main(String[] args) {
+		if (args.length < 1) {System.out.println(args.length);println("usage: java Autodoc <source_file>"); return;}
+		init_keywords();
+
+		doc_source = args[0];
+		source_section = doc_source.split("/",2)[0];
+		source_topic = removeExtension(doc_source.split("/",2)[1]);
+
+		new File(source_topic).mkdirs();	// if it doesn't exist
+		File source = new File(library_dir.resolve(doc_source).toString());
+
+		doc_file = source_topic + "/" + source_topic + ".md";
+
+		println("source: " + source.getPath());
+		println("doc_file: " + doc_file);
+
+		Declarations dec = read_declarations(source);
+		print_declarations(dec);
+		create_doc(new File(doc_file), dec);
 	}
 
+	static Tag h3 = Tag.valueOf("h3");
+	static Tag h4 = Tag.valueOf("h4");
+	static Tag div = Tag.valueOf("div");
+	static Tag link = Tag.valueOf("a");
+	static Tag paragraph = Tag.valueOf("p");
+	static Tag table = Tag.valueOf("table");
+	static Tag tr = Tag.valueOf("tr");
+	static Tag td = Tag.valueOf("td");
+
+	// paths relative to my local copy of sal, this should be modifiable...
 	static Path library_dir = Paths.get(System.getProperty("user.home") + "/Documents/mylibs/sal/");
 	static String doc_readme = "README.md";
 	static String doc_source;
+	static String source_section;	// algo, data
+	static String source_topic;		// sort, prime...
 	static String doc_file;
+	static String github_base = "https://github.com/LemonPi/";
+	static String github_branch = "/blob/master/";
+	static String library_name = "sal/";
 
 	// temporarily introduce types to the namespace
 	static List<Template> templates;

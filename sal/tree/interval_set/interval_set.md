@@ -2,14 +2,10 @@
 layout: algorithms
 title: 
 permalink: /sal/tree/interval_set/index.html
-section: tree/interval_set
+section: tree
 ---
 
-<div class="toc">
-	<a class="toc-link toch3" href="#operator<<">operator<<</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/tree/interval_set.h">sal/data/tree/interval_set.h</a>
 </h4><table class="pretty">
 <tr><td><a class="doc-list-name" href="#operator<<">operator<<</a></td><td></td></tr>

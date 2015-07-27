@@ -1,8 +1,8 @@
 ---
 layout: algorithms
-title: 
+title: Adjacency_matrix_directed
 permalink: /sal/graph/adjacency_matrix/Adjacency_matrix_directed/index.html
-section: graph/adjacency_matrix
+section: graph
 classname: Adjacency_matrix_directed
 ---
 
@@ -10,7 +10,7 @@ classname: Adjacency_matrix_directed
 	<a class="toc-link toch2" href="#Adjacency_matrix_directed">Adjacency_matrix_directed</a>
 	<a class="toc-link toch3" href="#num_edge">num_edge</a>
 	<a class="toc-link toch3" href="#add_edge">add_edge</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/adjacency_matrix.h">sal/data/graph/adjacency_matrix.h</a>

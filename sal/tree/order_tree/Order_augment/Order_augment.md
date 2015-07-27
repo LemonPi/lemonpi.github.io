@@ -1,8 +1,8 @@
 ---
 layout: algorithms
-title: 
+title: Order_augment
 permalink: /sal/tree/order_tree/Order_augment/index.html
-section: tree/order_tree
+section: tree
 classname: Order_augment
 ---
 
@@ -14,7 +14,7 @@ classname: Order_augment
 	<a class="toc-link toch3" href="#select">select</a>
 	<a class="toc-link toch3" href="#rank">rank</a>
 	<a class="toc-link toch3" href="#print">print</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/tree/order_tree.h">sal/data/tree/order_tree.h</a>

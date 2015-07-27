@@ -1,19 +1,12 @@
 ---
 layout: algorithms
-title: 
+title: Edge
 permalink: /sal/graph/common/Edge/index.html
-section: graph/common
+section: graph
 classname: Edge
 ---
 
-<div class="toc">
-	<a class="toc-link toch2" href="#Edge">Edge</a>
-	<a class="toc-link toch3" href="#source">source</a>
-	<a class="toc-link toch3" href="#dest">dest</a>
-	<a class="toc-link toch3" href="#weight">weight</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/common.h">sal/data/graph/common.h</a>
 </h4><table class="pretty">
 <tr><th><a class="doc-list-name" href="#Edge">Edge</a></th><th></th></tr>

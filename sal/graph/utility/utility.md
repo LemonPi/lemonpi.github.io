@@ -2,7 +2,7 @@
 layout: algorithms
 title: 
 permalink: /sal/graph/utility/index.html
-section: graph/utility
+section: graph
 ---
 
 <div class="toc">
@@ -11,7 +11,7 @@ section: graph/utility
 	<a class="toc-link toch3" href="#transpose">transpose</a>
 	<a class="toc-link toch3" href="#strongly_connected">strongly_connected</a>
 	<a class="toc-link toch3" href="#min_span_tree">min_span_tree</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/utility.h">sal/data/graph/utility.h</a>

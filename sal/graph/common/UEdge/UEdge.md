@@ -1,17 +1,12 @@
 ---
 layout: algorithms
-title: 
+title: UEdge
 permalink: /sal/graph/common/UEdge/index.html
-section: graph/common
+section: graph
 classname: UEdge
 ---
 
-<div class="toc">
-	<a class="toc-link toch3" href="#get_weight">get_weight</a>
-	<a class="toc-link toch2" href="#UEdge">UEdge</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/common.h">sal/data/graph/common.h</a>
 </h4><table class="pretty">
 <tr><th><a class="doc-list-name" href="#UEdge">UEdge</a></th><th></th></tr>

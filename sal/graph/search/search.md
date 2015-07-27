@@ -2,7 +2,7 @@
 layout: algorithms
 title: 
 permalink: /sal/graph/search/index.html
-section: graph/search
+section: graph
 ---
 
 <div class="toc">
@@ -11,7 +11,7 @@ section: graph/search
 	<a class="toc-link toch3" href="#dfs">dfs</a>
 	<a class="toc-link toch3" href="#dfs_recurse">dfs_recurse</a>
 	<a class="toc-link toch3" href="#dfs_visit">dfs_visit</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/search.h">sal/data/graph/search.h</a>

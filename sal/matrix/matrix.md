@@ -12,7 +12,7 @@ section: matrix
 	<a class="toc-link toch3" href="#operator+">operator+</a>
 	<a class="toc-link toch3" href="#operator-">operator-</a>
 	<a class="toc-link toch3" href="#operator<<">operator<<</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/matrix.h">sal/data/matrix.h</a>

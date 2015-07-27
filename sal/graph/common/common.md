@@ -1,8 +1,8 @@
 ---
 layout: algorithms
-title: 
+title: Common Graph Structures
 permalink: /sal/graph/common/index.html
-section: graph/common
+section: graph
 ---
 
 <div class="block">

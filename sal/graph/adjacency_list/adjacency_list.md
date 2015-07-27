@@ -2,7 +2,7 @@
 layout: algorithms
 title: 
 permalink: /sal/graph/adjacency_list/index.html
-section: graph/adjacency_list
+section: graph
 ---
 
 <div class="block">

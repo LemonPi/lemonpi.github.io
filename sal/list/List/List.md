@@ -1,6 +1,6 @@
 ---
 layout: algorithms
-title: 
+title: List
 permalink: /sal/list/List/index.html
 section: list
 classname: List
@@ -15,7 +15,7 @@ classname: List
 	<a class="toc-link toch3" href="#erase">erase</a>
 	<a class="toc-link toch3" href="#remove_dup">remove_dup</a>
 	<a class="toc-link toch3" href="#print">print</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/list.h">sal/data/list.h</a>

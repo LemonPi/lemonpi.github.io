@@ -1,6 +1,6 @@
 ---
 layout: algorithms
-title: Trees
+title: Red-black Trees
 permalink: /sal/tree/index.html
 section: tree
 ---

@@ -1,8 +1,8 @@
 ---
 layout: algorithms
-title: 
+title: Adjacent_const_iterator
 permalink: /sal/graph/adjacency_list/Adjacent_const_iterator/index.html
-section: graph/adjacency_list
+section: graph
 classname: Adjacent_const_iterator
 ---
 
@@ -17,7 +17,7 @@ classname: Adjacent_const_iterator
 	<a class="toc-link toch3" href="#operator!=">operator!=</a>
 	<a class="toc-link toch3" href="#dest">dest</a>
 	<a class="toc-link toch3" href="#weight">weight</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/adjacency_list.h">sal/data/graph/adjacency_list.h</a>

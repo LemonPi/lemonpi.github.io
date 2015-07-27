@@ -2,14 +2,10 @@
 layout: algorithms
 title: 
 permalink: /sal/graph/linear/index.html
-section: graph/linear
+section: graph
 ---
 
-<div class="toc">
-	<a class="toc-link toch3" href="#feasible">feasible</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/linear.h">sal/data/graph/linear.h</a>
 </h4><table class="pretty">
 <tr><td><a class="doc-list-name" href="#feasible">feasible</a></td><td></td></tr>

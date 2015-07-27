@@ -1,17 +1,12 @@
 ---
 layout: algorithms
-title: 
+title: Graph_single_visitor
 permalink: /sal/graph/search/Graph_single_visitor/index.html
-section: graph/search
+section: graph
 classname: Graph_single_visitor
 ---
 
-<div class="toc">
-	<a class="toc-link toch2" href="#Graph_single_visitor">Graph_single_visitor</a>
-	<a class="toc-link toch3" href="#initialize_vertex">initialize_vertex</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/search.h">sal/data/graph/search.h</a>
 </h4><table class="pretty">
 <tr><th><a class="doc-list-name" href="#Graph_single_visitor">Graph_single_visitor</a></th><th></th></tr>

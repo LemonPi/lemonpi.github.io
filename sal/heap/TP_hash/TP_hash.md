@@ -1,16 +1,12 @@
 ---
 layout: algorithms
-title: 
+title: TP_hash
 permalink: /sal/heap/TP_hash/index.html
 section: heap
 classname: TP_hash
 ---
 
-<div class="toc">
-	<a class="toc-link toch3" href="#operator()">operator()</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/heap.h">sal/data/heap.h</a>
 </h4><table class="pretty">
 <tr><th><a class="doc-list-name" href="#TP_hash">TP_hash</a></th><th></th></tr>

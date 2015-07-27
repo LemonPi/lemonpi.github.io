@@ -133,7 +133,11 @@ public class Autodoc {
 		// check to see if (type) can be found - assumes the first word is a type, or qualified otherwise
 		int lp_index = line.indexOf('(');
 		int rp_index = line.indexOf(')');
-		if (lp_index < 0 || rp_index < 0) return null;
+		if (lp_index < 0) {
+			println("not function: no parameter list");
+			return null;
+		}
+		if (rp_index < 0) rp_index = line.length() - 1;	// could be multiple line
 
 		// the word preceeding '('
 		String func_name = line.substring(0, lp_index).trim();
@@ -150,7 +154,10 @@ public class Autodoc {
 		// skip class member definitions outside of class definition since the declaration has been seen already
 		if (func_name.indexOf("::") > -1) return null;
 		// can be excused of containing operators if is an operator
-		if (possible_call && !func_name.startsWith("operator")) return null;
+		if (possible_call && !func_name.startsWith("operator")) {
+			println("not function: possible call");
+			return null;
+		}
 
 		String func_dec;
 		List<String> func_params = new ArrayList<String>();
@@ -174,7 +181,10 @@ public class Autodoc {
 				func_params.add(trim_first_char(param.substring(param.lastIndexOf(' ') + 1), "&*"));
 			}
 
-			if (!is_type(get_first_word(params_with_types[0]).word)) return null;
+			if (!is_type(get_first_word(params_with_types[0]).word)) {
+				println("not function: parameter is invalid type");
+				return null;
+			}
 			func_dec = line.substring(0, rp_index+1) + statement_term;
 		}
 
@@ -202,6 +212,11 @@ public class Autodoc {
 		return func;
 	}
 	public static Class get_class(String line, First_word class_info) {
+		// private class defined inside the private scope of the latest class
+		if (!cur_classes.isEmpty() && cur_classes.get(cur_classes.size()-1).private_scope) {
+			println("privately declared class");
+			return null;
+		}
 		// all classes are declared with a '{' at the end
 		int term_index = line.indexOf('{');
 		if (term_index < 0) term_index = line.length();
@@ -551,7 +566,9 @@ public class Autodoc {
 
 		// yaml header
 		StringBuilder yaml_header = new StringBuilder(100);
-		yaml_header.append("---\nlayout: algorithms\ntitle: \npermalink: ");
+		yaml_header.append("---\nlayout: algorithms\ntitle: ");
+		if (cur_class != null) yaml_header.append(cur_class.name);
+		yaml_header.append("\npermalink: ");
 		yaml_header.append('/');
 		yaml_header.append(library_name);
 		yaml_header.append(source_topic);
@@ -739,7 +756,7 @@ public class Autodoc {
 		Document doc = create_doc(dec, null);
 		// for all additional functions, should create sub
 		// table of contents for generated document
-		if (dec.functions.size() > 4) {
+		if (dec.functions.size() > toc_threshold) {
 			Element toc = Autotoc.create_toc(doc);
 			doc.childNode(0).after(toc);
 		}
@@ -753,8 +770,10 @@ public class Autodoc {
 		// documentation page for each class
 		for (Class clas : dec.classes) {
 			Document class_doc = create_doc(dec, clas);
-			Element class_toc = Autotoc.create_toc(class_doc);
-			class_doc.childNode(0).after(class_toc);
+			if (clas.member_funcs.size() > toc_threshold) {
+				Element class_toc = Autotoc.create_toc(class_doc);
+				class_doc.childNode(0).after(class_toc);
+			}
 
 			// class name becomes topic under the source topic namespace (ex. prime/Sieve)
 			File class_output = get_output_file(clas.name, source_topic + '/', opts);
@@ -778,6 +797,7 @@ public class Autodoc {
 	static Tag th = Tag.valueOf("th");
 	static Tag td = Tag.valueOf("td");
 
+	static int toc_threshold = 4;	// number of functions before a table of contents should be created
 	// paths relative to my local copy of sal, this should be modifiable...
 	static Path library_dir = Paths.get(System.getProperty("user.home") + "/Documents/mylibs/sal/");
 	static Path portfolio_dir = Paths.get(System.getProperty("user.home") + "/Documents/portfolio/sal/");
@@ -813,10 +833,11 @@ public class Autodoc {
 	private static String namespace_scopeword = "namespace";
 	private static Set<String> alias_keywords = new HashSet<String>();
 	private static Set<String> user_type_keywords = new HashSet<String>();
-	private static Set<String> types = Stream.of("volatile", "const", "static", "constexpr",
+	private static Set<String> types = Stream.of("volatile", "const", "static", "constexpr", "typename",
 			"void", "size_t", "int", "short", "long", "char", "uint32_t", "double", "float", "bool",
 			"vector", "queue", "string", "stack",
 			"std::vector", "std::queue", "std::string", "std::stack",
+			"SPM",
 			"ostream", "std::ostream").collect(Collectors.toCollection(HashSet::new));
 	private static Set<String> class_member_keywords = Stream.of("static", "virtual").collect(Collectors.toCollection(HashSet::new));
 	private static Set<String> access_modifiers = Stream.of("private:", "public:", "protected:").collect(Collectors.toCollection(HashSet::new));

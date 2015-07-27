@@ -40,13 +40,12 @@ group: sal
 	<li><a href="graph/shortest/"><strong>shortest paths for graphs and trees</strong></a></li>
 	<li><a href="graph/linear/">linear programming with graphs</a></li>
 </ul>
+<a name="#data" class="anchor">Data structures</a>
 <ul>
-	<a name="#data" class="anchor">Data structures</a>
 	<li><a href="list/">basic linked list</a></li>
 	<li><a href="heap/">binary heap</a></li>
 	<li><a href="matrix/">2D matrix</a></li>
 	<li><a href="tree/">red black tree and augmentations of it</a></li>
-	<li><a href="interval/">interval tree</a></li>
 	<li><a href="graph/"><strong>directed and undirected graphs</strong></a></li>
 </ul>
 

@@ -1,8 +1,8 @@
 ---
 layout: algorithms
-title: 
+title: Treap
 permalink: /sal/tree/treap/Treap/index.html
-section: tree/treap
+section: tree
 classname: Treap
 ---
 
@@ -22,7 +22,7 @@ classname: Treap
 	<a class="toc-link toch3" href="#begin">begin</a>
 	<a class="toc-link toch3" href="#end">end</a>
 	<a class="toc-link toch3" href="#print">print</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/tree/treap.h">sal/data/tree/treap.h</a>

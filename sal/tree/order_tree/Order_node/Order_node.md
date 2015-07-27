@@ -1,16 +1,12 @@
 ---
 layout: algorithms
-title: 
+title: Order_node
 permalink: /sal/tree/order_tree/Order_node/index.html
-section: tree/order_tree
+section: tree
 classname: Order_node
 ---
 
-<div class="toc">
-	<a class="toc-link toch2" href="#Order_node">Order_node</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/tree/order_tree.h">sal/data/tree/order_tree.h</a>
 </h4><table class="pretty">
 <tr><th><a class="doc-list-name" href="#Order_node">Order_node</a></th><th></th></tr>

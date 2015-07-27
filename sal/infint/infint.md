@@ -5,10 +5,7 @@ permalink: /sal/infint/index.html
 section: infint
 ---
 
-<div class="toc">
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/infint.h">sal/data/infint.h</a>
 </h4><table class="pretty">
 

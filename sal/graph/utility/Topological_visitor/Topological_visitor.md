@@ -1,19 +1,17 @@
 ---
 layout: algorithms
-title: 
+title: Topological_visitor
 permalink: /sal/graph/utility/Topological_visitor/index.html
-section: graph/utility
+section: graph
 classname: Topological_visitor
 ---
 
-<div class="toc">
-	<a class="toc-link toch2" href="#Topological_visitor">Topological_visitor</a>
-<p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
-</div><div class="block">
+<div class="block">
 <h4><a href="https://github.com/LemonPi/data/blob/master/graph/utility.h">sal/data/graph/utility.h</a>
 </h4><table class="pretty">
 <tr><th><a class="doc-list-name" href="#Topological_visitor">Topological_visitor</a></th><th></th></tr>
+<tr><td><a class="doc-list-name" href="#finish_vertex">finish_vertex</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#back_edge">back_edge</a></td><td></td></tr>
 </table></div>
 
 
@@ -30,6 +28,72 @@ Topological_visitor(Output_iter o);
 <p class="doc-section">Parameters</p>
 <table class="pretty">
 <tr><td>o</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">finish_vertex | <code class="qualifier">Topological_visitor::</code>finish_vertex<a class="anchor-link" href="#finish_vertex" name="finish_vertex" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+template <typename Graph>
+void finish_vertex(typename Graph::vertex_type u, const Graph&);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>u</td><td></td></tr>
+<tr><td>Graph&</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">back_edge | <code class="qualifier">Topological_visitor::</code>back_edge<a class="anchor-link" href="#back_edge" name="back_edge" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+template <typename Graph>
+void back_edge(typename Graph::vertex_type u, const Graph&);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>u</td><td></td></tr>
+<tr><td>Graph&</td><td></td></tr>
 </table>
 <p class="doc-section">Return value</p>
 

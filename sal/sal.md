@@ -31,15 +31,14 @@ group: sal
 - [searching and matching](search/)
 - [comparison, distributive, and hybrid sorts](sort/)
 
-<details class="incomplete">
-<summary><strong>Everything in here is still under construction</strong></summary>
+<h3><strong>Everything after still under construction</strong></h3>
 <ul>
 	<li><a href="string/">string edit distances</a></li>
 	<li><a href="utility/">utility and testing functions</a></li>
-	<li><a href="graph_algo/">**graph searches**</a></li>
-	<li><a href="graph_algo/">**important graph algorithms**</a></li>
-	<li><a href="graph_algo/">**shortest paths for graphs and trees**</a></li>
-	<li><a href="linear/">linear programming</a></li>
+	<li><a href="graph/search/"><strong>graph searches</strong></a></li>
+	<li><a href="graph/utility/"><strong>utility graph algorithms</strong></a></li>
+	<li><a href="graph/shortest/"><strong>shortest paths for graphs and trees</strong></a></li>
+	<li><a href="graph/linear/">linear programming with graphs</a></li>
 </ul>
 <ul>
 	<a name="#data" class="anchor">Data structures</a>
@@ -48,9 +47,8 @@ group: sal
 	<li><a href="matrix/">2D matrix</a></li>
 	<li><a href="tree/">red black tree and augmentations of it</a></li>
 	<li><a href="interval/">interval tree</a></li>
-	<li><a href="graph/">**directed and undirected graphs**</a></li>
+	<li><a href="graph/"><strong>directed and undirected graphs</strong></a></li>
 </ul>
-</details>
 
 <div class="text-block">
 <p>

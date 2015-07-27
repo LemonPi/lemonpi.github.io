@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 header = document.getElementById("header");
 toc = document.getElementsByClassName("toc");
-page_height = document.body.offsetHeight;
+setTimeout(function(){page_height = document.body.offsetHeight - 10;}, 1000);	// after images load
 
 if (toc.length) {
 	blocks = document.getElementsByClassName("block");

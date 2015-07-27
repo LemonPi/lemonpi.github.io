@@ -17,7 +17,7 @@ classname: Sieve
 	<a class="toc-link toch3" href="#count">c</a>
 	<a class="toc-link toch3" href="#is_prime">i</a>
 <p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC</p>
+<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/algo/blob/master/prime.h">sal/algo/prime.h</a>
 </h4><table class="pretty">

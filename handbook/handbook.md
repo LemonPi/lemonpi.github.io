@@ -18,7 +18,7 @@ css: handbook
 		<a class="toc-link toch3" href="#unperformant">Unperformant team members</a>
 		<a class="toc-link toch3" href="#atmosphere">Team atmosphere</a>
 		<a class="toc-link toch3" href="#parallel">Parallel tasks</a>
- <p class="toc-toggle">toggle TOC</p>	
+ <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>	
 </div>	
 
 <div class="block">

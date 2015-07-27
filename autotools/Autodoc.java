@@ -204,12 +204,14 @@ public class Autodoc {
 	public static Class get_class(String line, First_word class_info) {
 		// all classes are declared with a '{' at the end
 		int term_index = line.indexOf('{');
-		if (term_index < 0) return null;
-
+		if (term_index < 0) term_index = line.length();
 		--term_index;
 		while (line.charAt(term_index) == ' ') --term_index;
 
 		String class_name = get_first_word(line.substring(class_info.word.length())).word;
+		int name_end_index = class_name.length() - 1;
+		while (!Character.isLetterOrDigit(class_name.charAt(name_end_index))) --name_end_index;
+		class_name = class_name.substring(0, name_end_index + 1);
 		println("class name: " + '[' + class_name + ']');
 
 		String class_dec = line.substring(0, term_index+1) + statement_term;
@@ -558,7 +560,7 @@ public class Autodoc {
 			yaml_header.append(cur_class.name);
 		}
 		yaml_header.append("/index.html\nsection: ");
-		yaml_header.append(source_topic);
+		yaml_header.append(source_topic.split("/",2)[0]);
 		if (cur_class != null) {
 			yaml_header.append("\nclassname: ");
 			yaml_header.append(cur_class.name);
@@ -702,12 +704,14 @@ public class Autodoc {
 		// no advanced argument parsing...
 		// resolve conflict if not forcing
 		new File(portfolio_dir.resolve(namespace + topic).toString()).mkdirs();				// make directory if it doesn't exist
+		String[] topic_levels = topic.split("/");
+		String topic_name = topic_levels[topic_levels.length-1];
+		File output = new File(portfolio_dir.resolve(namespace + topic + "/" + topic_name + ".md").toString());
 
-		File output = new File(portfolio_dir.resolve(namespace + topic + "/" + topic + ".md").toString());
 		if (options.size() < 2 || (!options.contains("-f") && !options.contains("--force"))) {
 			int version = 1;
 			while (output.exists()) {
-				output = new File(portfolio_dir.resolve(namespace + topic + "/" + topic + version + ".md").toString());
+				output = new File(portfolio_dir.resolve(namespace + topic + "/" + topic_name + version + ".md").toString());
 				++version;
 			}
 		}
@@ -732,19 +736,19 @@ public class Autodoc {
 
 		List<String> opts = Arrays.asList(args);
 		// main document for all the namespace scope functions and class declarations
-		if (!dec.functions.isEmpty()) {
-			Document doc = create_doc(dec, null);
-			// for all additional functions, should create sub
-			// table of contents for generated document
+		Document doc = create_doc(dec, null);
+		// for all additional functions, should create sub
+		// table of contents for generated document
+		if (dec.functions.size() > 4) {
 			Element toc = Autotoc.create_toc(doc);
 			doc.childNode(0).after(toc);
-
-			File output = get_output_file(source_topic, "", opts);
-			println("output: " + output.getPath());
-
-			System.out.print(StringUtils.unescapeHtml3(doc.toString()));
-			flush_doc(doc, output);
 		}
+
+		File output = get_output_file(source_topic, "", opts);
+		println("output: " + output.getPath());
+
+		System.out.print(StringUtils.unescapeHtml3(doc.toString()));
+		flush_doc(doc, output);
 
 		// documentation page for each class
 		for (Class clas : dec.classes) {

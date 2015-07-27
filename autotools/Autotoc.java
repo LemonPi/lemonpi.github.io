@@ -104,8 +104,8 @@ public class Autotoc {
 	static String title_link_class = "anchor-link";
 	static String title_class = "anchor";
 	static String toc_file = "toc.md";
-	static String toc_caption = "(bolded sections are more interesting)";
-	static String toggle_text = "toggle TOC";
+	static String toc_caption = "";
+	static String toggle_text = "toggle TOC (ctrl + &#8660;)";
 	private static String name_delims = "\\|";
 
 }

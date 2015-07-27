@@ -161,8 +161,8 @@ sa.suffix(2);
 </div>
 
 
-<div> <h3 class="anchor doc-header">Longest common prefix | <code class="qualifier">{{page.classname}}::</code><code>common_prefix_len</code><a class="anchor-link" title="permalink to section" href="#lcp" name="lcp">&para;</a></h3>
-<div class="block"></div> 
+<h3 class="anchor doc-header">Longest common prefix | <code class="qualifier">{{page.classname}}::</code><code>common_prefix_len</code><a class="anchor-link" title="permalink to section" href="#lcp" name="lcp">&para;</a></h3>
+<div class="block">
 <p class="doc-section">Declaration</p>
 {% highlight c++ %}
 size_t common_prefix_len(size_t ith_suffix) const;

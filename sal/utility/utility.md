@@ -19,23 +19,27 @@ section: utility
 	<a class="toc-link toch3" href="#ftostr">ftostr</a>
 	<a class="toc-link toch3" href="#test_constexpr">test_constexpr</a>
 <p class="toc-caption">(bolded sections are more interesting)</p>
-<p class="toc-toggle">toggle TOC</p>
+<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div><div class="block">
 <h4><a href="https://github.com/LemonPi/algo/blob/master/utility.h">sal/algo/utility.h</a>
 </h4><table class="pretty">
-<tr><td><a class="doc-list-name" href="#print">print</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#append">append</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#tol">tol</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#randgen">randgen</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#randint">randint</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#natrual">natrual</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#perturb">perturb</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#ftovec">ftovec</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#rand_vlist">rand_vlist</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#shuffled_vlist">shuffled_vlist</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#ftostr">ftostr</a></td><td></td>
-</tr><tr><td><a class="doc-list-name" href="#test_constexpr">test_constexpr</a></td><td></td>
-</tr>
+<tr><td><a class="doc-list-name" href="#print">print</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#append">append</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#tol">tol</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#randgen">randgen</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#randint">randint</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#natrual">natrual</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#perturb">perturb</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#ftovec">ftovec</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#rand_vlist">rand_vlist</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#shuffled_vlist">shuffled_vlist</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#ftostr">ftostr</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#test_constexpr">test_constexpr</a></td><td></td></tr>
+
+<tr><th><a class="doc-list-name" href="Rand_int">Rand_int</a></th><th></th></tr>
+<tr><th><a class="doc-list-name" href="Timer">Timer</a></th><th></th></tr>
+<tr><th><a class="doc-list-name" href="Pointer_hash">Pointer_hash</a></th><th></th></tr>
+
 </table></div>
 
 
@@ -222,11 +226,6 @@ int randint(int max);
 {% highlight c++ %}
 int natrual();
 {% endhighlight %}
-
-
-<p class="doc-section">Parameters</p>
-<table class="pretty">
-</table>
 <p class="doc-section">Return value</p>
 
 <p class="doc-section">Example</p>

@@ -1,0 +1,239 @@
+---
+layout: algorithms
+title: 
+permalink: /sal/tree/order_tree/Order_augment/index.html
+section: tree/order_tree
+classname: Order_augment
+---
+
+<div class="toc">
+	<a class="toc-link toch2" href="#Order_augment">Order_augment</a>
+	<a class="toc-link toch3" href="#insert">insert</a>
+	<a class="toc-link toch3" href="#erase">erase</a>
+	<a class="toc-link toch3" href="#operator[]">operator[]</a>
+	<a class="toc-link toch3" href="#select">select</a>
+	<a class="toc-link toch3" href="#rank">rank</a>
+	<a class="toc-link toch3" href="#print">print</a>
+<p class="toc-caption">(bolded sections are more interesting)</p>
+<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
+</div><div class="block">
+<h4><a href="https://github.com/LemonPi/data/blob/master/tree/order_tree.h">sal/data/tree/order_tree.h</a>
+</h4><table class="pretty">
+<tr><th><a class="doc-list-name" href="#Order_augment">Order_augment</a></th><th></th></tr>
+<tr><td><a class="doc-list-name" href="#insert">insert</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#erase">erase</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#operator[]">operator[]</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#select">select</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#rank">rank</a></td><td></td></tr>
+<tr><td><a class="doc-list-name" href="#print">print</a></td><td></td></tr>
+</table></div>
+
+
+
+<h2 class="anchor doc-header">Order_augment <a class="anchor-link" href="#Order_augment" name="Order_augment" title="permalink to section">&para;</a></h2>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+Order_augment() = default;
+{% endhighlight %}
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">insert | <code class="qualifier">Order_augment::</code>insert<a class="anchor-link" href="#insert" name="insert" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+void insert(T data);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>data</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">erase | <code class="qualifier">Order_augment::</code>erase<a class="anchor-link" href="#erase" name="erase" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+void erase(T data);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>data</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">operator[] | <code class="qualifier">Order_augment::</code>operator[]<a class="anchor-link" href="#operator[]" name="operator[]" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+iterator operator[](size_t rank);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>rank</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">select | <code class="qualifier">Order_augment::</code>select<a class="anchor-link" href="#select" name="select" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+iterator select(size_t rank);
+
+const_iterator select(size_t rank);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>rank</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">rank | <code class="qualifier">Order_augment::</code>rank<a class="anchor-link" href="#rank" name="rank" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+size_t rank(NP node);
+{% endhighlight %}
+
+
+<p class="doc-section">Parameters</p>
+<table class="pretty">
+<tr><td>node</td><td></td></tr>
+</table>
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+
+<h3 class="anchor doc-header">print | <code class="qualifier">Order_augment::</code>print<a class="anchor-link" href="#print" name="print" title="permalink to section">&para;</a></h3>
+<div class="block">
+
+<p class="doc-section">Declaration</p>
+{% highlight c++ %}
+void print() const;
+{% endhighlight %}
+<p class="doc-section">Return value</p>
+
+<p class="doc-section">Example</p>
+{% highlight c++ %}
+
+{% endhighlight %}
+
+<p class="doc-section">Discussion</p>
+<div>
+<p>
+	
+</p>
+</div></div>
+
+
+
+
+

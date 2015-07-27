@@ -21,7 +21,7 @@ group: evaluations
  <a class="toc-link toch3" href="#rfp">Request for Proposal (RFP)</a>
  <a class="toc-link toch3" href="#showcase">Showcase</a>
  <p class="toc-caption">(bolded sections are more interesting)</p>
- <p class="toc-toggle">toggle TOC</p>
+ <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div>
 
 <div class="block">

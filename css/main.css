@@ -169,7 +169,6 @@ pre>code {
 .toc-hidden .toc-title {visibility:hidden;}
 .toc-hidden .toc-link {visibility:hidden;}
 .toc-hidden .toc-caption {visibility:hidden;}
-/*.toc-fixed .toc-toggle {bottom:10px;}*/
 
 .reference {font-family:"Calibri", "Lucida Grande", Sans-Serif;}
 .frames {box-sizing:border-box;display:inline-flex;flex-direction:column;position:relative;margin:10px;padding:10px;background:#e6e6e6;}
@@ -310,6 +309,9 @@ pre>code {
 	.gallery .box .caption {opacity:1}
 	.box .caption-title {line-height:40px;}
 	.anchor {margin:40px 0 5px 0;text-align:center;}
+	body {
+		font-size:1em;
+	}
 	blockquote {
 		width:initial;
 		margin:10px 10px;
@@ -317,7 +319,7 @@ pre>code {
 		box-sizing:border-box;
 	}
 	h1,h2 {text-align:center;}
-	/*iframe {width:100%;}*/
+	iframe {width:100%;}
 	pre {overflow:auto;width:100%;}
 	img {
 		box-sizing:border-box;

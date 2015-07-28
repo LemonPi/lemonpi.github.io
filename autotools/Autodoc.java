@@ -18,6 +18,7 @@ public class Autodoc {
 		public boolean class_scope();
 		public boolean visible_dec();
 		public List<Function> get_functions();
+		public List<String> get_attributes();
 		public String get_name();
 		public Template get_template();
 		public void add_function(Function f);
@@ -39,6 +40,9 @@ public class Autodoc {
 			return false;
 		}		
 		public List<Function> get_functions() {
+			return null;
+		}
+		public List<String> get_attributes() {
 			return null;
 		}
 		public String get_name() {
@@ -78,6 +82,9 @@ public class Autodoc {
 		}
 		public List<Function> get_functions() {
 			return functions;
+		}
+		public List<String> get_attributes() {
+			return globals;
 		}
 		public String get_name() {
 			return "global namespace";
@@ -156,6 +163,9 @@ public class Autodoc {
 		}		
 		public List<Function> get_functions() {
 			return member_funcs;
+		}
+		public List<String> get_attributes() {
+			return members;
 		}
 		public String get_name() {
 			return name;
@@ -240,6 +250,7 @@ public class Autodoc {
 			print("new type: ");
 			println(new_type);			
 		}
+
 		public boolean is_type(String word) {
 			if (types.contains(word)) return true;
 			if (template != null && template.types.contains(word)) return true;
@@ -249,6 +260,10 @@ public class Autodoc {
 			}	
 			return false;		
 		}
+		public boolean weak_declaration(String word) {
+			return weak_references.contains(word);
+		}
+
 		public boolean read_char() throws IOException {
 			return (c = br.read()) != -1;
 		}
@@ -261,6 +276,7 @@ public class Autodoc {
 				word_builder.append((char)c);
 			// has to check here since every caller works with the next character
 			if (c == scope_term) exit_namespace();
+			else if (c == '{') enter_namespace();
 			return word_builder.toString();
 		}
 		// read from the end of a word to the next word
@@ -269,6 +285,7 @@ public class Autodoc {
 			while (Character.isWhitespace(c)) if ((c = br.read()) == -1) return null;
 			return read_word(c);			
 		}
+
 		public void skip_statement() throws IOException {
 			while (read_char() && c != statement_term);
 		}
@@ -320,11 +337,14 @@ public class Autodoc {
 				boolean valid_param_type = false;
 				String fp = params_with_types[0];
 				// perhaps declared like void foo(int&);
-				if (fp.indexOf(' ') < 0) valid_param_type = is_type(StringUtils.trim_last(fp, "&*"));
-				else valid_param_type = is_type(StringUtils.trim_last(fp.substring(0, fp.indexOf(' ')), "&*"));
+				if (fp.indexOf(' ') < 0) fp = StringUtils.trim_last(fp, "&*");
+				else fp = StringUtils.trim_last(fp.substring(0, fp.indexOf(' ')), "&*");
+				if (fp.indexOf('<') > -1) fp = fp.substring(0, fp.indexOf('<'));
+
+				valid_param_type = is_type(fp);
 
 				if (!valid_param_type) {
-					println("not function: parameter is invalid type");
+					println("not function: parameter is invalid type: " + fp);
 					return null;
 				}
 				// last word is param name
@@ -373,6 +393,7 @@ public class Autodoc {
 			sb.append((char)c);
 			String class_name = read_word();
 			sb.append(class_name);
+			sb.append((char)c);
 
 			boolean private_scope = true;
 			if (word.equals("struct")) private_scope = false;
@@ -393,7 +414,7 @@ public class Autodoc {
 				else if (c == '{') {
 					add_new_type(class_name);
 					int term_index = sb.length() - 2;
-					while (!Character.isJavaIdentifierPart(sb.charAt(term_index))) --term_index;
+					while (Character.isWhitespace(sb.charAt(term_index))) --term_index;
 					sb.setCharAt(++term_index, statement_term);
 					Class clas = new Class(sb.substring(0, term_index+1), class_name, private_scope, template);
 					template = null;
@@ -448,6 +469,10 @@ public class Autodoc {
 			println("word: " + word);
 
 			if (word.equals(template_keyword)) parse_template(word);
+			else if (weak_declaration(word)) {
+				println("weak declaration: ");
+				skip_statement();
+			}
 			else if (is_type(word)) {
 				println("type: ");
 				parse_type(word);
@@ -484,9 +509,11 @@ public class Autodoc {
 					}
 				}
 				// else aliasing new local type
-				else add_new_type(next_word);
-				// have to terminate statement, and nothing interesting afterwards
-				skip_statement();
+				else {
+					add_new_type(next_word);
+					// have to terminate statement, and nothing interesting afterwards
+					skip_statement();
+				}
 			}										
 		}
 		public void enter_namespace() throws IOException {
@@ -528,9 +555,15 @@ public class Autodoc {
 
 				switch ((char) c) {
 					// prcompilation
-					case '#':
-						skip_line();
+					case '#': {
+						String preprocessing = br.readLine();
+						if (preprocessing.contains("include") && preprocessing.indexOf('<') > 0) {
+							String new_data = preprocessing.substring(preprocessing.indexOf('<')+1, preprocessing.indexOf('>'));
+							add_new_type(new_data);
+							add_new_type("std::"+new_data);
+						}
 						break;
+					}
 					// potential comment, ignore line
 					case '/':
 						c = br.read();
@@ -586,12 +619,13 @@ public class Autodoc {
 
 		private static String scope_seq = "::";
 		private static String namespace_scopeword = "namespace";
+		private static Set<String> weak_references = Stream.of("friend").collect(Collectors.toCollection(HashSet::new));
 		private static Set<String> alias_keywords = Stream.of("using", "typedef").collect(Collectors.toCollection(HashSet::new));
 		private static Set<String> user_type_keywords = Stream.of("struct", "class").collect(Collectors.toCollection(HashSet::new));
-		private static Set<String> types = Stream.of("volatile", "const", "static", "constexpr", "typename",
+		private static Set<String> types = Stream.of("volatile", "const", "static", "constexpr", "typename", 
 				"void", "size_t", "int", "short", "long", "char", "uint32_t", "double", "float", "bool",
-				"vector", "queue", "string", "stack",
-				"std::vector", "std::queue", "std::string", "std::stack",
+				"vector", "queue", "string", "stack", "istream",
+				"std::vector", "std::queue", "std::string", "std::stack", "std::istream",
 				"SPM",
 				"ostream", "std::ostream").collect(Collectors.toCollection(HashSet::new));
 		private static Set<String> class_member_keywords = Stream.of("static", "virtual").collect(Collectors.toCollection(HashSet::new));
@@ -609,6 +643,12 @@ public class Autodoc {
 			return null;
 		}
 	}
+
+
+	// --------------------------------------------
+	//	Document creation methods
+	// --------------------------------------------
+
 	public static Element create_header(Tag header_type, String name) {
 		Element header = new Element(header_type, "");
 		header.addClass("anchor");
@@ -654,7 +694,7 @@ public class Autodoc {
 		return header;
 	}
 	// list of related functions to be in the same block
-	public static Element create_block(List<Function> funcs) {
+	public static Element create_block(List<Function> funcs, Namespace ns) {
 		Element block = new Element(div, "");
 		block.addClass("block");
 
@@ -668,6 +708,17 @@ public class Autodoc {
 			func_decs.append("\n");
 			func_decs.append(func.declaration);
 			func_decs.append("\n");
+		}
+		// if currently detailing the core functions of the namespace
+		println("creating block for related: " + funcs.get(0).name);
+		if (ns != null && funcs.get(0).name.equals(ns.get_name()) && !ns.get_attributes().isEmpty()) {
+			println("creating public attributes");
+			func_decs.append("\npublic:\n");
+			for (String attr : ns.get_attributes()) {
+				func_decs.append("\t");
+				func_decs.append(attr);
+				func_decs.append("\n");
+			}
 		}
 		func_decs.append("{% endhighlight %}\n");
 		block.appendText(func_decs.toString());
@@ -843,7 +894,7 @@ public class Autodoc {
 				println(func.declaration);
 			println("");
 
-			Element func_block = create_block(related_funcs);
+			Element func_block = create_block(related_funcs, ns);
 			if (func_block == null) println("null block how come?");
 			doc.appendChild(header);
 			doc.appendText("\n");
@@ -918,16 +969,16 @@ public class Autodoc {
 			println(clas.declaration);
 			println("API:");
 			for (Function member : clas.member_funcs) 
-				println(member.declaration.replaceAll("^", "\t"));
+				println("\t" + member.declaration.replaceAll("\n", "\n\t"));
 			println("data:");
 			for (String member : clas.members) 
-				println(member.replaceAll("^", "\t"));
+				println("\t" + member.replaceAll("\n", "\n\t"));
 			println("private:");
 			for (Function member : clas.private_member_funcs) 
-				println(member.declaration.replaceAll("^", "\t"));
+				println("\t" + member.declaration.replaceAll("\n", "\n\t"));
 			println("private members:");
 			for (String member : clas.private_members) 
-				println(member.replaceAll("^", "\t"));
+				println("\t" + member.replaceAll("\n", "\n\t"));
 			println("");
 		}
 		println("\nDeclared functions");
@@ -979,12 +1030,6 @@ public class Autodoc {
 
 		// main document for all the namespace scope functions and class declarations
 		Document doc = create_doc(dec, null, null);
-		// for all additional functions, should create sub
-		// table of contents for generated document
-		if (dec.functions.size() > toc_threshold || collapse_classes) {
-			Element toc = Autotoc.create_toc(doc);
-			doc.childNode(0).after(toc);
-		}
 
 
 
@@ -1002,15 +1047,20 @@ public class Autodoc {
 				File class_output = get_output_file(clas.name, source_topic + '/');
 				println("class output: " + class_output.getPath());
 				System.out.print(StringUtils.unescapeHtml3(class_doc.toString()));
-				// flush_doc(class_doc, class_output);
+				flush_doc(class_doc, class_output);
 
 			}
 		}
-
+		// for all additional functions, should create sub
+		// table of contents for generated document
+		if (dec.functions.size() > toc_threshold || collapse_classes) {
+			Element toc = Autotoc.create_toc(doc);
+			doc.childNode(0).after(toc);
+		}
 		File output = get_output_file(source_topic, "");
 		println("output: " + output.getPath());
 		System.out.print(StringUtils.unescapeHtml3(doc.toString()));
-		// flush_doc(doc, output);
+		flush_doc(doc, output);
 	}
 	// commandline options
 	private static boolean force_override = false;

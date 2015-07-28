@@ -7,6 +7,14 @@ public class StringUtils {
         line = line.replaceAll("[,<>]", "");    
         return line.split("\\s+");
     }    
+    public static String trim_first(String word, String delims) {
+        if (delims.indexOf(word.charAt(0)) > -1) return word.substring(1);
+        return word;
+    }
+    public static String trim_last(String word, String delims) {
+        if (delims.indexOf(word.charAt(word.length()-1)) > -1) return word.substring(0, word.length()-1);
+        return word;
+    }
     public static String removeExtension(String s) {
         String separator = System.getProperty("file.separator");
         String filename;

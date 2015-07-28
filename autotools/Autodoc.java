@@ -14,26 +14,96 @@ import org.jsoup.parser.Tag;
 import org.jsoup.nodes.Entities.EscapeMode;
 
 public class Autodoc {
+	public static interface Namespace {
+		public boolean class_scope();
+		public boolean visible_dec();
+		public List<Function> get_functions();
+		public String get_name();
+		public Template get_template();
+		public void add_function(Function f);
+		public void add_class(Class c);
+		public void add_member(String m);
+		public void add_template(Template t);
+		public void modify_access(String modifier);
+	}
+	public static class Anonymous_ns implements Namespace {
+		Template template;
+		Anonymous_ns() {
+			template = null;
+		}
 
+		public boolean class_scope() {
+			return false;
+		}
+		public boolean visible_dec() {
+			return false;
+		}		
+		public List<Function> get_functions() {
+			return null;
+		}
+		public String get_name() {
+			return "anonymous or function";
+		}
+		public Template get_template() {
+			return template;
+		}
+		public void add_function(Function f) {}
+		public void add_class(Class c) {}
+		public void add_member(String m) {}
+		public void add_template(Template t) {
+			template = t;
+		}
+		public void modify_access(String modifier) {}
+	}
 	private static class First_word {
 		public String word;
 		public int indent_level;
 	}
-	public static class Declarations {
+	public static class Declarations implements Namespace {
 		public List<Class> classes;
 		public List<Function> functions;
+		public List<String> globals;
+		Template template;
 		Declarations() {
 			classes = new ArrayList<Class>();
 			functions = new ArrayList<Function>();
+			globals = new ArrayList<String>();
+			template = null;
 		}
+		public boolean class_scope() {
+			return false;
+		}
+		public boolean visible_dec() {
+			return true;
+		}
+		public List<Function> get_functions() {
+			return functions;
+		}
+		public String get_name() {
+			return "global namespace";
+		}
+		public Template get_template() {
+			return template;
+		}
+		public void add_function(Function f) {
+			functions.add(f);
+		}
+		public void add_class(Class c) {
+			classes.add(c);
+		}
+		public void add_member(String m) {
+			globals.add(m);
+		}
+		public void add_template(Template t) {
+			template = t;
+		}
+		public void modify_access(String modifier) {}
 	}
 	public static class Template {
 		public String declaration;
 		Set<String> types;
-		public int indent_level;
-		Template(String line, int il) {
+		Template(String line) {
 			declaration = line;
-			indent_level = il;
 			types = new HashSet<String>();
 
 			String[] words = StringUtils.split_into_words(line);
@@ -51,28 +121,66 @@ public class Autodoc {
 		public boolean add_type(String type) {
 			return types.add(type);
 		}
+
+		private static String template_typeword = "typename";
 	}
-	public static class Class {
+	public static class Class implements Namespace {
 		public String declaration;
 		public String name;
 		public List<Function> member_funcs;
 		public List<Function> private_member_funcs;
-		public int indent_level;
+		public List<String> members;
+		public List<String> private_members;
 		public boolean private_scope;	// whether members currently seen are private or public
-		Class(String dec, String n, int il, boolean default_scope) {
-			declaration = dec;
+		Template template;
+		Class(String dec, String n, boolean default_scope, Template t) {
+			if (t != null) declaration = t.declaration + '\n' + dec;
+			else declaration = dec;
 			name = n;
-			indent_level = il;
 			private_scope = default_scope;
 			member_funcs = new ArrayList<Function>();
 			private_member_funcs = new ArrayList<Function>();
+			members = new ArrayList<String>();
+			private_members = new ArrayList<String>();
+			template = t;
 		}
-		public void add_member(Function func) {
-			member_funcs.add(func);
+		public void add_member_func(Function func) {
+			if (private_scope) private_member_funcs.add(func);
+			else member_funcs.add(func);
+		}	
+		public boolean class_scope() {
+			return true;
 		}
-		public void add_private_member(Function func) {
-			private_member_funcs.add(func);
+		public boolean visible_dec() {
+			return true;
 		}		
+		public List<Function> get_functions() {
+			return member_funcs;
+		}
+		public String get_name() {
+			return name;
+		}
+		public Template get_template() {
+			return template;
+		}	
+		public void add_function(Function f) {
+			if (private_scope) private_member_funcs.add(f);
+			else member_funcs.add(f);
+		}
+		public void add_class(Class c) {
+			return;	// not implemented yet
+		}	
+		public void add_member(String m) {
+			if (private_scope) private_members.add(m);
+			else members.add(m);
+		}
+		public void add_template(Template t) {
+			template = t;
+		}
+		public void modify_access(String modifier) {
+			if (modifier.startsWith("private")) private_scope = true;
+			else private_scope = false;			
+		}			
 	}	
 	public static class Function {
 		public String declaration;
@@ -84,161 +192,6 @@ public class Autodoc {
 			params = ps;
 		}
 	}
-	public static First_word get_first_word(String line) {
-		First_word first_word = new First_word();
-
-		int indent = 0;
-		while (indent < line.length() && indent_delim.contains(line.charAt(indent))) ++indent;
-		first_word.indent_level = indent;
-
-		String trimmed_line = line.substring(indent);
-		int space_index = trimmed_line.indexOf(' ');
-		if (space_index > -1) {
-			trimmed_line = trimmed_line.substring(0, space_index);
-			for (Character term_char : name_term) {
-				int term_index = trimmed_line.indexOf(term_char);
-				if (term_index > -1) trimmed_line = trimmed_line.substring(0, term_index);
-			}
-		}
-		// trimmed to the first word
-		first_word.word = trimmed_line;
-
-		return first_word;
-	}
-
-
-	public static void add_new_type(String line, First_word first_word) {
-		String new_type = get_first_word(line.substring(first_word.word.length())).word;
-		types.add(new_type);
-		print("new type: ");
-		println(new_type);
-	}
-	public static boolean is_type(String word) {
-		if (types.contains(word)) return true;
-		// check templates for temporary types
-		for (Template template : templates) {
-			if (template.types.contains(word)) return true;
-		}
-		return false;
-	}
-	public static String decorate_with_template(String declaration, int indent_level) {
-		if (templates.isEmpty()) return declaration;
-		Template temp = templates.get(templates.size() - 1);
-		if (temp.indent_level == indent_level) return temp.declaration + '\n' + declaration;
-		return declaration;
-	}
-	public static Function get_function(String line, First_word func_info, Class current_class) {
-		// all global functions are declared with a '{' at the end (class members can be declared, match those times instead)
-		if (current_class == null && line.indexOf('{') < 0) return null;
-		// check to see if (type) can be found - assumes the first word is a type, or qualified otherwise
-		int lp_index = line.indexOf('(');
-		int rp_index = line.indexOf(')');
-		if (lp_index < 0) {
-			println("not function: no parameter list");
-			return null;
-		}
-		if (rp_index < 0) rp_index = line.length() - 1;	// could be multiple line
-
-		// the word preceeding '('
-		String func_name = line.substring(0, lp_index).trim();
-		// try to disqualify name to distinguish from a function call (unless )
-		int name_start_index = -1;
-		boolean possible_call = false;
-		for (int i = func_name.length()-1; i >= 0; --i) {
-			char c = func_name.charAt(i);
-			if (c == ' ' && name_start_index == -1) name_start_index = i;
-			// a function call rather than function declaration
-			else if (call_beg.contains(c)) possible_call = true; 
-		}
-		if (name_start_index > -1) func_name = func_name.substring(name_start_index + 1);
-		// skip class member definitions outside of class definition since the declaration has been seen already
-		if (func_name.indexOf("::") > -1) return null;
-		// can be excused of containing operators if is an operator
-		if (possible_call && !func_name.startsWith("operator")) {
-			println("not function: possible call");
-			return null;
-		}
-
-		String func_dec;
-		List<String> func_params = new ArrayList<String>();
-		// right next to each other, no parameters such as operator()()
-		if (rp_index == lp_index + 1) {
-			// fix operator()()
-			if (func_name.startsWith("operator")) func_name += "()";
-
-			int term_index = rp_index + 1;
-			while (!dec_term.contains(line.charAt(term_index))) ++term_index;
-			func_dec = line.substring(0, term_index).trim() + statement_term;
-		}
-		else {
-			String[] params_with_types = line.substring(lp_index+1, rp_index).split(",");
-			// last word is param name
-			for (String param : params_with_types) {
-				// default parameter, get rid of = value
-				if (param.indexOf('=') > -1) 
-					param = param.split("=")[0];
-				param = param.trim();
-				func_params.add(trim_first_char(param.substring(param.lastIndexOf(' ') + 1), "&*"));
-			}
-
-			if (!is_type(get_first_word(params_with_types[0]).word)) {
-				println("not function: parameter is invalid type");
-				return null;
-			}
-			func_dec = line.substring(0, rp_index+1) + statement_term;
-		}
-
-		println("func name: " + '[' + func_name + ']');
-		for (String param : func_params) print('[' + param + "] ");
-		if (!func_params.isEmpty()) println("");
-
-		func_dec = decorate_with_template(func_dec, func_info.indent_level);
-		Function func = new Function(func_dec, func_name, func_params);
-		// add as member function instead of global function
-		if (current_class != null) {
-			// for sure is a member function else check indent level is nested
-			if (class_member_keywords.contains(func_info.word) || func_info.indent_level > current_class.indent_level) {
-				if (current_class.private_scope) {
-					current_class.add_private_member(func);
-					println("private class member: " + func.declaration);
-				}
-				else {
-					current_class.add_member(func);
-					println("class member: " + func.declaration);
-				}
-				return null;
-			}
-		}
-		return func;
-	}
-	public static Class get_class(String line, First_word class_info) {
-		// private class defined inside the private scope of the latest class
-		if (!cur_classes.isEmpty() && cur_classes.get(cur_classes.size()-1).private_scope) {
-			println("privately declared class");
-			return null;
-		}
-		// all classes are declared with a '{' at the end
-		int term_index = line.indexOf('{');
-		if (term_index < 0) term_index = line.length();
-		--term_index;
-		while (line.charAt(term_index) == ' ') --term_index;
-
-		String class_name = get_first_word(line.substring(class_info.word.length())).word;
-		int name_end_index = class_name.length() - 1;
-		while (!Character.isLetterOrDigit(class_name.charAt(name_end_index))) --name_end_index;
-		class_name = class_name.substring(0, name_end_index + 1);
-		println("class name: " + '[' + class_name + ']');
-
-		String class_dec = line.substring(0, term_index+1) + statement_term;
-		class_dec = decorate_with_template(class_dec, class_info.indent_level);
-
-		boolean private_scope = true;
-		if (class_info.word.equals("struct")) private_scope = false;
-		println("private scope: " + private_scope);
-
-		Class cur_class = new Class(class_dec, class_name, class_info.indent_level, private_scope);
-		return cur_class;
-	}
 
 	// utility functions
 	public static void print(String s) {
@@ -247,128 +200,414 @@ public class Autodoc {
 	public static void println(String s) {
 		System.out.println(s);
 	}
-	public static String trim_first_char(String word, String delims) {
-		if (delims.indexOf(word.charAt(0)) > -1) return word.substring(1);
-		return word;
-	}
-	public static boolean exit_template(int indent_level) {
-		if (!templates.isEmpty() && templates.get(templates.size()-1).indent_level == indent_level) {
-			println("exiting template: " + templates.get(templates.size()-1).declaration + '\n');
-			templates.remove(templates.size()-1);
-			return true;
-		}		
-		return false;
-	}
-	public static boolean exit_class(int indent_level) {
-		if (!cur_classes.isEmpty() && cur_classes.get(cur_classes.size()-1).indent_level == indent_level) {
-			println("exiting class: " + cur_classes.get(cur_classes.size()-1).declaration + '\n');
-			cur_classes.remove(cur_classes.size()-1);
-			return true;
-		}
-		return false;
-	}
-	public static boolean modify_class_access(String modifier) {
-		if (!cur_classes.isEmpty()) {
-			// protected and public are both part of its API
-			if (modifier.startsWith("private")) cur_classes.get(cur_classes.size()-1).private_scope = true;
-			else cur_classes.get(cur_classes.size()-1).private_scope = false;
-			return true;
-		}
-		return false;
-	}
+
 	// input is source file
-	public static Declarations read_declarations(File file) {
-		Declarations dec = new Declarations();
-		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-			String line = null;
+	public static class Declaration_stream {
+		BufferedReader br;
+		Declarations dec;
 
-			// stack of seen declarations (and that are still in scope)
-			templates = new ArrayList<Template>(); 
-			cur_classes = new ArrayList<Class>();
+		Deque<Namespace> nss;
+		// current namespace (should always be the top namespace in nss)		
+		Namespace ns;
+		// namespace under construction
+		Namespace new_ns;
 
-			while ((line = br.readLine()) != null) {
-				First_word first_word = get_first_word(line);
-				line = line.substring(first_word.indent_level);
+		Template template;	// current template, attaches onto next namespace it sees
+		// current character
+		int c;
 
-				println("first word: " + first_word.indent_level + " " + first_word.word);
-				// found nothing?
-				if (first_word.word.length() < 1) continue;
-				// terminates a scope
-				else if (first_word.word.charAt(0) == scope_term) {
-					exit_template(first_word.indent_level);
-					if (line.length() > 1 && line.charAt(1) == statement_term) 
-						exit_class(first_word.indent_level);
+		Declaration_stream(File file) {
+			try {
+				br = new BufferedReader(new FileReader(file));
+				dec = new Declarations();
+				nss = new ArrayDeque<Namespace>();
+				nss.push(dec);
+				ns = dec;
+				new_ns = new Anonymous_ns();
+				template = null;
+				c = 0;
+				println("starting namespace: " + (nss.size() - 1) + " " + ns.get_name());
+			}
+			catch (IOException e) {
+				println("could not read: " + file.getPath());
+				dec = null;
+			}
+		}
+
+
+		public void add_new_type(String new_type) {
+			types.add(new_type);
+			print("new type: ");
+			println(new_type);			
+		}
+		public boolean is_type(String word) {
+			if (types.contains(word)) return true;
+			if (template != null && template.types.contains(word)) return true;
+			// check existing nested namespaces for the name
+			for (Namespace n : nss) {
+				if (n.get_template() != null && n.get_template().types.contains(word)) return true;
+			}	
+			return false;		
+		}
+		public boolean read_char() throws IOException {
+			return (c = br.read()) != -1;
+		}
+		// read with the first character being c (ch is just an overload)
+		public String read_word(int ch) throws IOException {
+			StringBuilder word_builder = new StringBuilder();
+			word_builder.append((char)c);
+			// && short circuit to force read first
+			while ((read_char()) && (Character.isJavaIdentifierPart(c) || c == scope_op))
+				word_builder.append((char)c);
+			// has to check here since every caller works with the next character
+			if (c == scope_term) exit_namespace();
+			return word_builder.toString();
+		}
+		// read from the end of a word to the next word
+		public String read_word() throws IOException {
+			c = br.read();
+			while (Character.isWhitespace(c)) if ((c = br.read()) == -1) return null;
+			return read_word(c);			
+		}
+		public void skip_statement() throws IOException {
+			while (read_char() && c != statement_term);
+		}
+		public void skip_line() throws IOException {
+			while (read_char() && c != '\n');
+		}		
+		public Function get_function(String line) {
+			// assumes caller found both parenthesis
+			int lp_index = line.indexOf('(');
+			int rp_index = line.indexOf(')');
+			if (lp_index < 0 || rp_index < 0) {
+				println("not function: lacks parenthesis");
+				return null;
+			} 
+
+			// the word preceeding '('
+			String func_name = line.substring(0, lp_index).trim();
+			// try to disqualify name to distinguish from a function call (unless )
+			int name_start_index = -1;
+			boolean possible_call = false;
+			for (int i = func_name.length()-1; i >= 0; --i) {
+				char c = func_name.charAt(i);
+				if (c == ' ' && name_start_index == -1) name_start_index = i;
+				// a function call rather than function declaration
+				else if (call_beg.contains(c)) possible_call = true; 
+			}
+			if (name_start_index > -1) func_name = func_name.substring(name_start_index + 1);
+			// skip class member definitions outside of class definition since the declaration has been seen already
+			if (func_name.indexOf("::") > -1) return null;
+			// can be excused of containing operators if is an operator
+			if (possible_call && !func_name.startsWith("operator")) {
+				println("not function: possible call");
+				return null;
+			}
+
+			int term_index = line.length() - 2;
+			while (Character.isWhitespace(line.charAt(term_index)) || line.charAt(term_index) == '{') --term_index;
+			String func_dec = line.substring(0,term_index+1) + statement_term;
+
+			List<String> func_params = new ArrayList<String>();
+			// right next to each other, no parameters such as operator()()
+			if (rp_index == lp_index + 1) {
+				// fix operator()()
+				if (func_name.startsWith("operator")) func_name += "()";
+			}
+			else {
+				String[] params_with_types = line.substring(lp_index+1, rp_index).split(",");
+				// verify first param preceeded by type
+				boolean valid_param_type = false;
+				String fp = params_with_types[0];
+				// perhaps declared like void foo(int&);
+				if (fp.indexOf(' ') < 0) valid_param_type = is_type(StringUtils.trim_last(fp, "&*"));
+				else valid_param_type = is_type(StringUtils.trim_last(fp.substring(0, fp.indexOf(' ')), "&*"));
+
+				if (!valid_param_type) {
+					println("not function: parameter is invalid type");
+					return null;
 				}
-				// modifies class member access
-				else if (access_modifiers.contains(first_word.word)) {
-					println("access modifier: " + first_word.word);
-					modify_class_access(first_word.word);
+				// last word is param name
+				for (String param : params_with_types) {
+					// default parameter, get rid of = value
+					if (param.indexOf('=') > -1) 
+						param = param.split("=")[0];
+					param = param.trim();
+
+					func_params.add(StringUtils.trim_first(param.substring(param.lastIndexOf(' ')+1), "&*"));
 				}
-				// add to template stack
-				else if (first_word.word.startsWith(template_keyword)) {
-					print("\ntemplate: ");
-					// insert space if necessary
-					if (line.charAt(template_keyword.length()) != ' ') 
-						line = line.substring(0,template_keyword.length()) + ' ' + line.substring(template_keyword.length());
-					Template template = new Template(line, first_word.indent_level);
-					templates.add(template);
-					println(line);
+			}
+
+			println("func name: " + '[' + func_name + ']');
+			for (String param : func_params) print('[' + param + "] "); if (!func_params.isEmpty()) println("");
+
+			Function func = new Function(decorate_with_template(func_dec), func_name, func_params);
+			return func;
+		}
+		public String decorate_with_template(String declaration) {
+			if (template != null) {
+				declaration = template.declaration + '\n' + declaration;
+				template = null;
+			}
+			return declaration;
+		}
+		// parsing functions take the first word (template, class, struct, ...)
+		public void parse_template(String word) throws IOException {
+			StringBuilder sb = new StringBuilder(word);
+			sb.append((char)c);
+			
+			while (read_char()) {
+				sb.append((char)c);
+				if (c == '<') break;
+			}
+			int template_level = 1;	// 1 level of <>, finish reading by counting '>'
+			while (template_level != 0 && (read_char())) {
+				sb.append((char)c);
+				if (c == '<') ++template_level;
+				else if (c == '>') --template_level;
+			}
+			template = new Template(sb.toString());
+		}
+		public void parse_class(String word) throws IOException {
+			StringBuilder sb = new StringBuilder(word);
+			sb.append((char)c);
+			String class_name = read_word();
+			sb.append(class_name);
+
+			boolean private_scope = true;
+			if (word.equals("struct")) private_scope = false;
+			println("private scope: " + private_scope);
+
+
+			while (read_char()) {
+				sb.append((char)c);
+				if (c == statement_term) {
+					add_new_type(class_name);
+					Class clas = new Class(sb.toString(), class_name, private_scope, template);
+					template = null;
+					ns.add_class(clas);
+					new_ns = clas;
+					println("class: " + clas.declaration);
+					return;
 				}
-				// populating local type keywords
-				else if (alias_keywords.contains(first_word.word)) {
-					print("\nalias: ");
-					println(line);
-					// using something from a namespace without giving new name
-					if (line.contains(namespace_scopeword)) {
-						// just ignore bringing whole namespaces 
-						String[] alias_words = line.split(scope_seq);
-						// using specific name from namespace
-						if (alias_words.length > 1) {
-							println("bringing in name: " + alias_words[alias_words.length - 1]);
-							types.add(alias_words[alias_words.length - 1]);
+				else if (c == '{') {
+					add_new_type(class_name);
+					int term_index = sb.length() - 2;
+					while (!Character.isJavaIdentifierPart(sb.charAt(term_index))) --term_index;
+					sb.setCharAt(++term_index, statement_term);
+					Class clas = new Class(sb.substring(0, term_index+1), class_name, private_scope, template);
+					template = null;
+					ns.add_class(clas);
+					new_ns = clas;
+					enter_namespace();
+					println("class: " + clas.declaration);
+					return;
+				}
+			}			
+		}
+		public void parse_type(String word) throws IOException {
+			StringBuilder sb = new StringBuilder(word);
+			sb.append((char)c);
+			
+			int potential = 0;	// 0 for no potential, 1 for (, 2 for both ()
+			if (c == '(') potential = 1;	// '(' following classname
+			while (read_char()) {
+				sb.append((char)c);
+				// System.out.println("[" + (char)c + ']');
+				// potential start of function
+				if (c == '(') potential = 1;
+				else if (c == ')' && potential == 1) potential = 2;
+				else if (dec_term.contains((char)c) || (potential == 2 && c == ':')) {
+					if (potential == 2) {
+						Function func = get_function(sb.toString());
+						if (func != null) {
+							println("function: " + func.declaration);
+							ns.add_function(func);
 						}
 					}
-					// else aliasing new local type
-					else {
-						// templated alias
-						exit_template(first_word.indent_level);
-						add_new_type(line, first_word);
+					// could be public class member
+					else if (ns.class_scope()) {
+						// if terminated on a default initializer, such as size_t n {3};
+						if (c != statement_term) {
+							while (read_char() && c != statement_term) sb.append((char)c);
+							sb.append(statement_term);
+						}
+						String class_member = sb.toString();
+						println("class member: " + class_member);
+						ns.add_member(class_member);
+					}
+					if (c == '{') enter_namespace();
+					return;
+				}
+			}			
+		}
+
+		public void parse_keyword() throws IOException {
+			String word = read_word(c);
+			if (word == null) return;
+			println("word: " + word);
+
+			if (word.equals(template_keyword)) parse_template(word);
+			else if (is_type(word)) {
+				println("type: ");
+				parse_type(word);
+			}
+			else if (access_modifiers.contains(word)) {
+				println("access modifier: ");
+				ns.modify_access(word);
+			}
+			// ignore namespace sal { declarations
+			else if (word.equals(namespace_scopeword)) {
+				println("assuming sal namespace:");
+				while (read_char()) if (c == '{') return;
+			}
+			// new user defined type
+			else if (user_type_keywords.contains(word)) {
+				print("\nuser type: ");
+				parse_class(word);
+			}
+			else if (alias_keywords.contains(word)) {
+				print("alias: ");
+
+				// using something from a namespace without giving new name
+				String next_word = read_word();
+				if (next_word == null) return;
+				println("next word: " + next_word);
+
+				if (next_word.equals(namespace_scopeword)) {
+					// just ignore bringing whole namespaces 
+					String[] alias_words = br.readLine().split(scope_seq);
+					// using specific name from namespace
+					if (alias_words.length > 1) {
+						println("bringing in name: " + alias_words[alias_words.length - 1]);
+						types.add(alias_words[alias_words.length - 1]);
 					}
 				}
-				// new user defined type
-				else if (user_type_keywords.contains(first_word.word)) {
-					print("\nuser type: ");
-					println(line);
-
-					Class cur_class = get_class(line, first_word);
-					if (cur_class != null) {
-						// add to both all declarations and the current classes (for tracking function membership)
-						dec.classes.add(cur_class);
-						cur_classes.add(cur_class);
-						add_new_type(line, first_word);
-						println("class: " + cur_class.declaration);
-					}
+				// else aliasing new local type
+				else add_new_type(next_word);
+				// have to terminate statement, and nothing interesting afterwards
+				skip_statement();
+			}										
+		}
+		public void enter_namespace() throws IOException {
+			// worthwhile to keep track of because declarations can be seen
+			if (new_ns.visible_dec()) {
+				println("\nbegin namespace: " + nss.size() + " " + new_ns.get_name());
+				if (template != null) {
+					new_ns.add_template(template);
+					template = null;
 				}
-				// either a variable or function or class member declaration
-				else if (is_type(first_word.word) || (!cur_classes.isEmpty() && class_member_keywords.contains(first_word.word))) {
-					println("declaration: " + line);
+				nss.push(new_ns);
+				// traverse "inwards" in namespace
+				ns = new_ns;
+				new_ns = new Anonymous_ns();			
+				return;
+			}
+			println("\nskipping anonymous namespace");
+			// skip to end of anonymous namespace
+			int scope_level = 1;
+			while (read_char() && scope_level != 0) {
+				if (c == '{') ++scope_level;
+				else if (c == '}') --scope_level;
+			}
+		}
+		public void exit_namespace() {
+			// traverse "outwards"
+			println("end namespace: " + ns.get_name());
+			nss.pop();
+			if (!nss.isEmpty()) {
+				ns = nss.peek();
+				println("back on: " + (nss.size() - 1) + " " + ns.get_name() + '\n');
+			}
+			new_ns = new Anonymous_ns();
+		}
+		public void read_declarations() throws IOException {
+			while (read_char()) {
+				// skip all whitespaces
+				while (Character.isWhitespace(c)) if ((c = br.read()) == -1) return;
 
-					Class cur_class = null;
-					if (!cur_classes.isEmpty()) cur_class = cur_classes.get(cur_classes.size()-1);
-
-					Function func = get_function(line, first_word, cur_class);
-					if (func != null) {
-						dec.functions.add(func);
-						println("function: " + func.declaration);
-					}
+				switch ((char) c) {
+					// prcompilation
+					case '#':
+						skip_line();
+						break;
+					// potential comment, ignore line
+					case '/':
+						c = br.read();
+						if (c == '/') skip_line();
+						else if (c == '*') {
+							while (read_char()) {
+								if (c == '*' && ((read_char()) && c == '/')) break;
+							}
+						}
+						break;
+						// else not a comment and should drop down
+					case '{':
+						enter_namespace();
+						break;
+					case '}':
+						exit_namespace();
+						break;
+					// begin function
+					case '(':
+						// assumes mark set at the start of 
+						break;
+					case ')':
+						break;
+					case ':':
+						break;
+					case ';':
+						break;
+					// keywords
+					default:
+						if (Character.isJavaIdentifierStart(c)) parse_keyword();
 				}
 			}
 		}
-		catch (IOException e) {
-			println("could not read: " + file.getPath());
+
+		public Declarations get_declarations() {
+			return dec;
 		}
 
-		return dec;
+		// static members
+		private static Set<Character> indent_delim = Stream.of(' ', '\t').collect(Collectors.toCollection(HashSet::new));
+		private static char scope_term = '}';
+		private static char scope_op = ':';
+		private static char statement_term = ';';
+		// ordered (by chance of cutting name short) characters that would force a name to be finished
+		private static List<Character> name_term = Stream.of('<','&','*','(').collect(Collectors.toCollection(ArrayList::new));
+		// characters that would force a declaration to be finished (after a right parenthesis)
+		private static Set<Character> dec_term = Stream.of('{',';').collect(Collectors.toCollection(HashSet::new));
+		// characters that distinguish a function call from definition (before a left parenthesis)
+		private static Set<Character> call_beg = Stream.of('{',',','=','+','-','/','.').collect(Collectors.toCollection(HashSet::new));
+
+		private static String template_typeword = "typename";
+		private static String template_keyword = "template";
+
+		private static String scope_seq = "::";
+		private static String namespace_scopeword = "namespace";
+		private static Set<String> alias_keywords = Stream.of("using", "typedef").collect(Collectors.toCollection(HashSet::new));
+		private static Set<String> user_type_keywords = Stream.of("struct", "class").collect(Collectors.toCollection(HashSet::new));
+		private static Set<String> types = Stream.of("volatile", "const", "static", "constexpr", "typename",
+				"void", "size_t", "int", "short", "long", "char", "uint32_t", "double", "float", "bool",
+				"vector", "queue", "string", "stack",
+				"std::vector", "std::queue", "std::string", "std::stack",
+				"SPM",
+				"ostream", "std::ostream").collect(Collectors.toCollection(HashSet::new));
+		private static Set<String> class_member_keywords = Stream.of("static", "virtual").collect(Collectors.toCollection(HashSet::new));
+		private static Set<String> access_modifiers = Stream.of("private:", "public:", "protected:").collect(Collectors.toCollection(HashSet::new));		
+	}
+
+	public static Declarations read_declaration_stream(File file) {
+		try {
+			Declaration_stream ds = new Declaration_stream(file);
+			ds.read_declarations();
+			return ds.get_declarations();
+		}
+		catch (IOException e) {
+			println("could not read from: " + file.getPath());
+			return null;
+		}
 	}
 	public static Element create_header(Tag header_type, String name) {
 		Element header = new Element(header_type, "");
@@ -501,6 +740,17 @@ public class Autodoc {
 		row.appendChild(desc_cell);
 		return row;
 	}	
+	public static void add_members_to_dec_list(Element dec_list, Class cur_class) {
+			Set<String> listed_members = new HashSet<String>();
+					
+			listed_members.add(cur_class.name);	// constructors and core functions
+			for (Function func : cur_class.member_funcs) {
+				if (listed_members.contains(func.name)) continue;
+				listed_members.add(func.name);
+				dec_list.appendChild(create_dec_list_row(td, func.name, false));
+				dec_list.appendText("\n");
+			}		
+	}
 	public static Element create_dec_list(Declarations dec, Class cur_class) {
 		Element wrapper_block = new Element(div, "");
 		wrapper_block.addClass("block");
@@ -535,124 +785,115 @@ public class Autodoc {
 			for (Class clas : dec.classes) {
 				if (listed_classes.contains(clas.name)) continue;
 				listed_classes.add(clas.name);
-				dec_list.appendChild(create_dec_list_row(th, clas.name, true));
+				// add class name and all its members directly
+				if (collapse_classes) {
+					dec_list.appendChild(create_dec_list_row(th, clas.name, false));
+					add_members_to_dec_list(dec_list, clas);
+				}
+				else {
+					dec_list.appendChild(create_dec_list_row(th, clas.name, true));
+				}
 				dec_list.appendText("\n");
 			}
 			dec_list.appendText("\n");
 		}
-		// only detail the single class and its members
+		// working on a class document
 		else {
 			// class constructors and core methods
 			dec_list.appendChild(create_dec_list_row(th, cur_class.name, false));
 			dec_list.appendText("\n");
 			// add member functions in order but without repeat
-			Set<String> listed_members = new HashSet<String>();
-			
-			listed_members.add(cur_class.name);	// constructors and core functions
-			for (Function func : cur_class.member_funcs) {
-				if (listed_members.contains(func.name)) continue;
-				listed_members.add(func.name);
-				dec_list.appendChild(create_dec_list_row(td, func.name, false));
-				dec_list.appendText("\n");
-			}
+			add_members_to_dec_list(dec_list, cur_class);
 		}
 
 		wrapper_block.appendChild(dec_list);
 		return wrapper_block;
 	}
-	public static Document create_doc(Declarations dec, Class cur_class) {
+	public static void create_all_blocks(Document doc, Namespace ns) {
+		List<Function> funcs = ns.get_functions();
+		Set<String> parsed_names = new HashSet<String>();
+		boolean parsed_core_members = false;
+
+		for (int f = 0; f < funcs.size(); ++f) {
+			String func_name = funcs.get(f).name;
+			if (parsed_names.contains(func_name)) continue;
+			parsed_names.add(func_name);
+
+			Element header;
+			if (ns.class_scope()) {
+				// use h2 for class core
+				if (!parsed_core_members && func_name.equals(ns.get_name())) {
+					header = create_header(h2, func_name);
+					parsed_core_members = true;
+				}
+				else header = create_member_header(h3, func_name, ns.get_name());
+			}
+			else header = create_header(h3, func_name);
+
+
+			List<Function> related_funcs = new ArrayList<Function>();
+			related_funcs.add(funcs.get(f));
+			// linear search from current location for all related ones (if a related one was earlier in index, this function would be covered)
+			for (int ff = f + 1; ff < funcs.size(); ++ff)
+				if (funcs.get(ff).name.equals(func_name))
+					related_funcs.add(funcs.get(ff));
+
+			println("Related functions: " + func_name);
+			for (Function func : related_funcs)
+				println(func.declaration);
+			println("");
+
+			Element func_block = create_block(related_funcs);
+			if (func_block == null) println("null block how come?");
+			doc.appendChild(header);
+			doc.appendText("\n");
+			doc.appendChild(func_block);
+			doc.appendText("\n\n\n\n\n\n");
+		}
+	}
+	public static Document create_doc(Declarations dec, Class cur_class, Document base_doc) {
 		Document doc = new Document("");
 		doc.outputSettings(new Document.OutputSettings().prettyPrint(false).escapeMode(EscapeMode.xhtml));//makes html() preserve linebreaks and spacing
 
-		// yaml header
-		StringBuilder yaml_header = new StringBuilder(100);
-		yaml_header.append("---\nlayout: algorithms\ntitle: ");
-		if (cur_class != null) yaml_header.append(cur_class.name);
-		yaml_header.append("\npermalink: ");
-		yaml_header.append('/');
-		yaml_header.append(library_name);
-		yaml_header.append(source_topic);
-		if (cur_class != null) {
+		// yaml header only for the base document, or class documents when they're not being collapsed
+		if (cur_class == null || !collapse_classes) {
+			StringBuilder yaml_header = new StringBuilder(100);
+			yaml_header.append("---\nlayout: algorithms\ntitle: ");
+			if (cur_class != null) yaml_header.append(cur_class.name);
+			yaml_header.append("\npermalink: ");
 			yaml_header.append('/');
-			yaml_header.append(cur_class.name);
-		}
-		yaml_header.append("/index.html\nsection: ");
-		yaml_header.append(source_topic.split("/",2)[0]);
-		if (cur_class != null) {
-			yaml_header.append("\nclassname: ");
-			yaml_header.append(cur_class.name);
-		}
-		yaml_header.append("\n---\n\n");
-		doc.appendText(yaml_header.toString());
+			yaml_header.append(library_name);
+			yaml_header.append(source_topic);
+			if (cur_class != null) {
+				yaml_header.append('/');
+				yaml_header.append(cur_class.name);
+			}
+			yaml_header.append("/index.html\nsection: ");
+			yaml_header.append(source_topic.split("/",2)[0]);
+			if (cur_class != null) {
+				yaml_header.append("\nclassname: ");
+				yaml_header.append(cur_class.name);
+			}
+			yaml_header.append("\n---\n\n");
+			doc.appendText(yaml_header.toString());
 
-		doc.appendChild(create_dec_list(dec, cur_class));
-		doc.appendText("\n\n\n\n");
+			doc.appendChild(create_dec_list(dec, cur_class));
+			doc.appendText("\n\n\n\n");
+		}
 
 		// working on the namespace scope functions
-		Set<String> parsed_names = new HashSet<String>();
 		if (cur_class == null) {
-			for (int f = 0; f < dec.functions.size(); ++f) {
-				String func_name = dec.functions.get(f).name;
-				if (parsed_names.contains(func_name)) continue;
-				parsed_names.add(func_name);
-
-				Element header = create_header(h3, func_name);
-
-				List<Function> related_funcs = new ArrayList<Function>();
-				related_funcs.add(dec.functions.get(f));
-				// linear search from current location for all related ones (if a related one was earlier in index, this function would be covered)
-				for (int ff = f + 1; ff < dec.functions.size(); ++ff)
-					if (dec.functions.get(ff).name.equals(func_name))
-						related_funcs.add(dec.functions.get(ff));
-
-				println("Related functions: " + func_name);
-				for (Function func : related_funcs)
-					println(func.declaration);
-				println("");
-
-				Element func_block = create_block(related_funcs);
-				if (func_block == null) println("null block how come?");
-				doc.appendChild(header);
-				doc.appendText("\n");
-				doc.appendChild(func_block);
-				doc.appendText("\n\n\n\n\n\n");
-			}
+			create_all_blocks(doc, dec);
 		}
 		// working on a specific class, refer to that instead of dec for declarations
 		else {
+			// work off of base doc instead
+			if (collapse_classes) doc = base_doc;
 			println("creating doc for class: " + cur_class.name);
-			boolean parsed_core_members = false;
-			for (int f = 0; f < cur_class.member_funcs.size(); ++f) {
-				String member_name = cur_class.member_funcs.get(f).name;
-				if (parsed_names.contains(member_name)) continue;
-				parsed_names.add(member_name);
+			create_all_blocks(doc, cur_class);			
 
-				// use h2 for class core
-				Element header;
-				if (!parsed_core_members && member_name.equals(cur_class.name)) {
-					header = create_header(h2, member_name);
-					parsed_core_members = true;
-				}
-				else header = create_member_header(h3, member_name, cur_class.name);
-
-
-				List<Function> related_members = new ArrayList<Function>();
-				related_members.add(cur_class.member_funcs.get(f));
-				for (int ff = f + 1; ff < cur_class.member_funcs.size(); ++ff)
-					if (cur_class.member_funcs.get(ff).name.equals(member_name))
-						related_members.add(cur_class.member_funcs.get(ff));	
-
-				println("Related member functions: " + member_name);
-				for (Function func : related_members)
-					println(func.declaration);
-				println("");
-				
-				Element member_block = create_block(related_members);	
-				doc.appendChild(header);
-				doc.appendText("\n");
-				doc.appendChild(member_block);
-				doc.appendText("\n\n\n\n\n\n");					
-			}
+			// null signifies no work was done on own document
+			if (collapse_classes) return null;
 		}
 
 		return doc;
@@ -670,45 +911,23 @@ public class Autodoc {
 		}		
 	}
 
-	public static void init_keywords() {
-		alias_keywords.add("using");
-		alias_keywords.add("typedef");
 
-		user_type_keywords.add("struct");
-		user_type_keywords.add("class");
-
-		indent_delim.add(' ');
-		indent_delim.add('\t');
-
-		dec_term.add(':');
-		dec_term.add('{');
-		dec_term.add(';');
-
-		name_term.add('<');
-		name_term.add('&');
-		name_term.add('*');
-		name_term.add('(');
-
-		call_beg.add('{');
-		call_beg.add(',');
-		call_beg.add('=');
-		call_beg.add('+');
-		call_beg.add('-');
-		call_beg.add('/');
-		call_beg.add('.');
-	}
 	public static void print_declarations(Declarations dec) {
 		println("\nDeclared classes");
 		for (Class clas : dec.classes) {
 			println(clas.declaration);
 			println("API:");
-			for (Function member : clas.member_funcs) {
+			for (Function member : clas.member_funcs) 
 				println(member.declaration.replaceAll("^", "\t"));
-			}
+			println("data:");
+			for (String member : clas.members) 
+				println(member.replaceAll("^", "\t"));
 			println("private:");
-			for (Function member : clas.private_member_funcs) {
+			for (Function member : clas.private_member_funcs) 
 				println(member.declaration.replaceAll("^", "\t"));
-			}			
+			println("private members:");
+			for (String member : clas.private_members) 
+				println(member.replaceAll("^", "\t"));
 			println("");
 		}
 		println("\nDeclared functions");
@@ -717,7 +936,13 @@ public class Autodoc {
 			println("");
 		}		
 	}
-	public static File get_output_file(String topic, String namespace, List<String> options) {
+	public static void parse_args(String[] args) {
+		for (String arg : args) {
+			if (!force_override && (arg.equals("-f") || arg.equals("--force"))) force_override = true;
+			else if (!collapse_classes && (arg.equals("-c") || arg.equals("--collapse"))) collapse_classes = true;
+		}
+	}
+	public static File get_output_file(String topic, String namespace) {
 		// no advanced argument parsing...
 		// resolve conflict if not forcing
 		new File(portfolio_dir.resolve(namespace + topic).toString()).mkdirs();				// make directory if it doesn't exist
@@ -725,7 +950,7 @@ public class Autodoc {
 		String topic_name = topic_levels[topic_levels.length-1];
 		File output = new File(portfolio_dir.resolve(namespace + topic + "/" + topic_name + ".md").toString());
 
-		if (options.size() < 2 || (!options.contains("-f") && !options.contains("--force"))) {
+		if (!force_override) {
 			int version = 1;
 			while (output.exists()) {
 				output = new File(portfolio_dir.resolve(namespace + topic + "/" + topic_name + version + ".md").toString());
@@ -736,7 +961,8 @@ public class Autodoc {
 	}
 	public static void main(String[] args) {
 		if (args.length < 1) {System.out.println(args.length);println("usage: java Autodoc <source_file>"); return;}
-		init_keywords();
+		// init_keywords();
+		parse_args(args);
 
 		doc_source = args[0];
 		source_section = doc_source.split("/",2)[0];
@@ -748,42 +974,47 @@ public class Autodoc {
 
 
 
-		Declarations dec = read_declarations(source);
+		Declarations dec = read_declaration_stream(source);
 		print_declarations(dec);
 
-		List<String> opts = Arrays.asList(args);
 		// main document for all the namespace scope functions and class declarations
-		Document doc = create_doc(dec, null);
+		Document doc = create_doc(dec, null, null);
 		// for all additional functions, should create sub
 		// table of contents for generated document
-		if (dec.functions.size() > toc_threshold) {
+		if (dec.functions.size() > toc_threshold || collapse_classes) {
 			Element toc = Autotoc.create_toc(doc);
 			doc.childNode(0).after(toc);
 		}
 
-		File output = get_output_file(source_topic, "", opts);
-		println("output: " + output.getPath());
 
-		System.out.print(StringUtils.unescapeHtml3(doc.toString()));
-		flush_doc(doc, output);
 
 		// documentation page for each class
 		for (Class clas : dec.classes) {
-			Document class_doc = create_doc(dec, clas);
-			if (clas.member_funcs.size() > toc_threshold) {
-				Element class_toc = Autotoc.create_toc(class_doc);
-				class_doc.childNode(0).after(class_toc);
+			Document class_doc = create_doc(dec, clas, doc);
+			// will be null if collapsing classes into the base document
+			if (class_doc != null) {
+				if (clas.member_funcs.size() > toc_threshold) {
+					Element class_toc = Autotoc.create_toc(class_doc);
+					class_doc.childNode(0).after(class_toc);
+				}
+
+				// class name becomes topic under the source topic namespace (ex. prime/Sieve)
+				File class_output = get_output_file(clas.name, source_topic + '/');
+				println("class output: " + class_output.getPath());
+				System.out.print(StringUtils.unescapeHtml3(class_doc.toString()));
+				// flush_doc(class_doc, class_output);
+
 			}
-
-			// class name becomes topic under the source topic namespace (ex. prime/Sieve)
-			File class_output = get_output_file(clas.name, source_topic + '/', opts);
-			println("class output: " + class_output.getPath());
-			System.out.print(StringUtils.unescapeHtml3(class_doc.toString()));
-
-			flush_doc(class_doc, class_output);
 		}
 
+		File output = get_output_file(source_topic, "");
+		println("output: " + output.getPath());
+		System.out.print(StringUtils.unescapeHtml3(doc.toString()));
+		// flush_doc(doc, output);
 	}
+	// commandline options
+	private static boolean force_override = false;
+	private static boolean collapse_classes = false;
 
 	static Tag h2 = Tag.valueOf("h2");
 	static Tag h3 = Tag.valueOf("h3");
@@ -796,6 +1027,8 @@ public class Autodoc {
 	static Tag tr = Tag.valueOf("tr");
 	static Tag th = Tag.valueOf("th");
 	static Tag td = Tag.valueOf("td");
+
+	private static String scope_seq = "::";
 
 	static int toc_threshold = 4;	// number of functions before a table of contents should be created
 	// paths relative to my local copy of sal, this should be modifiable...
@@ -811,34 +1044,4 @@ public class Autodoc {
 	static String github_branch = "/blob/master/";
 	static String library_name = "sal/";
 
-	// temporarily introduce types to the namespace
-	private static List<Template> templates;
-	// temporarily modify functions to be members
-	private static List<Class> cur_classes;
-
-	private static Set<Character> indent_delim = new HashSet<Character>();
-	private static char scope_term = '}';
-	private static char statement_term = ';';
-	// ordered (by chance of cutting name short) characters that would force a name to be finished
-	private static List<Character> name_term = new ArrayList<Character>();
-	// characters that would force a declaration to be finished (after a right parenthesis)
-	private static Set<Character> dec_term = new HashSet<Character>();
-	// characters that distinguish a function call from definition (before a left parenthesis)
-	private static Set<Character> call_beg = new HashSet<Character>();
-
-	private static String template_typeword = "typename";
-	private static String template_keyword = "template";
-
-	private static String scope_seq = "::";
-	private static String namespace_scopeword = "namespace";
-	private static Set<String> alias_keywords = new HashSet<String>();
-	private static Set<String> user_type_keywords = new HashSet<String>();
-	private static Set<String> types = Stream.of("volatile", "const", "static", "constexpr", "typename",
-			"void", "size_t", "int", "short", "long", "char", "uint32_t", "double", "float", "bool",
-			"vector", "queue", "string", "stack",
-			"std::vector", "std::queue", "std::string", "std::stack",
-			"SPM",
-			"ostream", "std::ostream").collect(Collectors.toCollection(HashSet::new));
-	private static Set<String> class_member_keywords = Stream.of("static", "virtual").collect(Collectors.toCollection(HashSet::new));
-	private static Set<String> access_modifiers = Stream.of("private:", "public:", "protected:").collect(Collectors.toCollection(HashSet::new));
 }

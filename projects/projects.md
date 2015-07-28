@@ -11,7 +11,7 @@ branch: base
 <div class="gallery">
 
 	<a href="/projects/robot/"><div class="box">
-	<img src="/res/projects/robot.png"/>
+	<img src="/res/projects/robot.jpg"/>
 	<span class="caption">
 	<h1 class="caption-title">Autobots</h1>
 	<p class="caption-desc">Two robots playing connect-4 together on a randomized gamefield</p>

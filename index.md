@@ -3,6 +3,7 @@ layout: default
 title: Welcome
 permalink: /index.html
 branch: base
+load: fast
 ---
 <h1 style="text-align:center;">Welcome</h1>
 <p align="center">Take a look around my engineering design portfolio,  <br>
@@ -13,7 +14,7 @@ where I present my <a href="principles.html">conception</a> of good design and s
 <div class="gallery" id="main-gallery">
 
 	<a href="projects/robot/"><div class="box">
-	<img src="/res/projects/robot.png"/>
+	<img src="/res/projects/robot.jpg"/>
 	<span class="caption">
 	<h1 class="caption-title">Autobots</h1>
 	<p class="caption-desc">Two robots playing connect-4 together on a randomized gamefield</p>

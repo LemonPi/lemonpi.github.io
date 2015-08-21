@@ -10,7 +10,7 @@ group: projects
  <a class="toc-link toch2" href="#problem">VPR's Routing Problem</a>  
  <a class="toc-link toch2" href="#profiling">Determing Cause</a>  
  <a class="toc-link toch2" href="#theorizing"><strong>Theorizing Solution</strong></a>  
- <a class="toc-link toch3" href="#theorizing#dangers">Dangers of Iterative Rerouting</a>  
+ <a class="toc-link toch3" href="#theorizing#dangers">Dangers of incremental rerouting</a>  
  <a class="toc-link toch3" href="#theorizing#solution">Circumventing Danger</a>  
  <a class="toc-link toch2" href="#pruning">Route Tree Pruning</a>  
  <a class="toc-link toch2" href="#results"><strong>Resulting Improvement</strong></a>  
@@ -32,7 +32,7 @@ group: projects
 	as that was the run-time bottleneck.
 </p>
 <p>
-	My biggest contribution was the development of iterative rerouting through route tree pruning:
+	My biggest contribution was the development of incremental rerouting through route tree pruning:
 </p>
 <ul>	
 	<li>3x speedup on large benchmarks <a href="summary.xlsx">test results</a></li>
@@ -242,7 +242,7 @@ group: projects
 </div>
 
 
-<h3 class="anchor">Dangers of Iterative Rerouting <a class="anchor-link" title="permalink to section" href="#theorizing#dangers" name="theorizing#dangers">&para;</a></h3>
+<h3 class="anchor">Dangers of incremental rerouting <a class="anchor-link" title="permalink to section" href="#theorizing#dangers" name="theorizing#dangers">&para;</a></h3>
 
 <div class="text-block">
 <p>
@@ -305,7 +305,7 @@ group: projects
 
 <div class="text-block">
 <p>
-	Iterative rerouting through pruning the route tree has 2 main benefits:
+	incremental rerouting through pruning the route tree has 2 main benefits:
 	<ul>
 		<li>It generally decreases n from the <a href="#connection_legal_probability">previous equation</a>
 		from iteration to iteration, gradually reducing the effective size of each net</li>
@@ -327,7 +327,7 @@ group: projects
 <div class="text-block">
 <p>
 	Data collection is still an on-going process, but current tests uniformly supports
-	the fact that iterative rerouting through pruning results in substantial speedups,
+	the fact that incremental rerouting through pruning results in substantial speedups,
 	particularly for large circuits, without a degredation in routability and quality.
 </p>
 </div>
@@ -336,7 +336,7 @@ group: projects
 
 <div class="text-block">
 <p>
-	Something interesting from the previous figure is that iterative rerouting changes the
+	Something interesting from the previous figure is that incremental rerouting changes the
 	shape of the time per iteration profile to look more like low-stress routing (as it is flatter relative to the first iteration).
 	This suggests that routability might have been improved. This is still being tested by attempting to route at
 	lower channel widths than before.
@@ -364,7 +364,7 @@ group: projects
 	that we are interested in making easier.
 </p>
 <p>
-	However, that's not to say that we should not care about how iterative rerouting affects smaller benchmarks.
+	However, that's not to say that we should not care about how incremental rerouting affects smaller benchmarks.
 </p>
 <p>
 	As seen in the figure above, smaller benchmarks receive less than 1.5x speedup, but using a threshold of 64

@@ -118,7 +118,7 @@ group: projects
 <p>
 	Due to this difficulty, a heuristics approach is required to complete routing in a
 	finite amount of time. <a href="http://dl.acm.org/citation.cfm?doid=201310.201328">Pathfinder</a> is the high level algorithm used, which iteratively tries to eliminate congestion
-	by adjusting the cost of resources based on past usage using simulated annealing.
+	by evolving the cost of each resource based on their past usage.
 	The concept of <strong>criticality</strong> is how close a connection is to
 	being the slowest connection in the circuit (and thus the speed that the 
 	rest of the circuit must run at).

@@ -10,6 +10,15 @@ branch: base
 
 <div class="gallery">
 
+	<a href="/projects/vpr/"><div class="box">
+	<img src="/res/projects/vpr_speedup.png"/>
+	<span class="caption">
+	<h1 class="caption-title">VPR Speedup</h1>
+	<p class="caption-desc">Speeding up FPGA CAD router through iterative rerouting</p>
+	<p class="caption-date">May 2015 - Aug 2015</p>
+	</span>
+	</div></a>
+
 	<a href="/projects/robot/"><div class="box">
 	<img src="/res/projects/robot.jpg"/>
 	<span class="caption">
@@ -75,15 +84,6 @@ branch: base
 	</div></a>
 
 
-	<a href="/projects/portfolio/"><div class="box">
-	<img src="/projects/portfolio.jpg"/>
-	<span class="caption">
-	<h1 class="caption-title">Portfolio</h1>
-	<p class="caption-desc">The making of this portfolio</p>
-	<p class="caption-date">Nov 2013 - present</p>		
-	</span>
-	</div></a>
-
 
 </div>
 
@@ -95,6 +95,8 @@ branch: base
  <h2 class="block">Archive</h2>
 
 <ul class="archive">
+ <li><a href="vpr/"><strong>VPR Router Optimization</strong></a> - May 2015 to Aug 2015</li>
+
  <li><a href="robot/"><strong>Autonomous Interacting Robots</strong></a> - Jan 2015 to Apr 2015</li>
 
  <li><a href="sal/"><strong>Simple Algorithms and Data Structures library</strong></a> - Oct 2014 to Jan 2015</li>

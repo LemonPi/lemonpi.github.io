@@ -1,0 +1,436 @@
+---
+layout: default
+title: VPR Router Optimization
+permalink: /projects/vpr/index.html
+group: projects
+---
+
+<div class="toc">  
+ <a class="toc-link toch2" href="#introduction">Introduction and Terminology</a>  
+ <a class="toc-link toch2" href="#problem">VPR's Routing Problem</a>  
+ <a class="toc-link toch2" href="#profiling">Determing Cause</a>  
+ <a class="toc-link toch2" href="#theorizing"><strong>Theorizing Solution</strong></a>  
+ <a class="toc-link toch3" href="#theorizing#dangers">Dangers of Iterative Rerouting</a>  
+ <a class="toc-link toch3" href="#theorizing#solution">Circumventing Danger</a>  
+ <a class="toc-link toch2" href="#pruning">Route Tree Pruning</a>  
+ <a class="toc-link toch2" href="#results"><strong>Resulting Improvement</strong></a>  
+ <a class="toc-link toch2" href="#improvements">Future Improvements</a>  
+ <a class="toc-link toch2" href="#acknowledgements">Acknowledgements</a>  
+ <a class="toc-link toch2" href="#gains">Gains from Experience</a> 
+ <p class="toc-caption"></p> 
+ <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p> 
+</div>
+
+<div class="block">
+<div class="text-block">
+<p>
+	Over the summer of 2015 and under the supervision of Professor <a href="http://www.eecg.utoronto.ca/~vaughn/">Vaughn Betz</a>, 
+	I worked on the router for VPR - a packing, placement, and routing CAD tool for FPGAs.
+	It is one part of the <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing">verilog-to-routing</a> (VTR) toolchain. 
+
+	My work was specifically on optimizing the router for large circuits, 
+	as that was the run-time bottleneck.
+</p>
+<p>
+	My biggest contribution was the development of iterative rerouting through route tree pruning:
+</p>
+<ul>	
+	<li>3x speedup on large benchmarks <a href="summary.xlsx">test results</a></li>
+	<li>speedup scales with the size of the circuit: <a href="#speedup_vs_size">graph</a></li>
+	<li>no degradation in circuit quality measured in critical path delay: <a href="#critical_path_delay">graph</a></li>
+</ul>
+
+<p>
+	<a href="poster_revised.pdf">Poster summary of results</a><br>
+	(2nd place in ECE poster category for UnERD 2015)
+</p>
+<p> 
+	Additionally, I developed a quality of results (QoR) and benchmarks tracking toolchain called <a href="http://github.com/LemonPi">benchtracker</a>:
+</p>
+<ul>	
+	<li>allows visualization on arbitrarily specific data through chaining filters</li>
+	<li>database based backend that supports selection of arbitrarily specific data</li>
+	<li>integration into VTR's <a href="http://islanders.eecg.utoronto.ca:8080/">buildbot process</a></li>
+	<li>adoption by VTR researchers for tracking their own research</li>
+	<li>web plotter developed by fellow summer student Hanqing Zeng</li>
+</ul>
+</div>
+
+<h2 class="anchor">Introduction and Terminology <a class="anchor-link" title="permalink to section" href="#introduction" name="introduction">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	<strong>Field Programmable Gate Arrays</strong> (FPGAs) are basically reprogrammable hardware that
+	can become any circuit "in the field" after it has been manufactured. It accomplishes this through its
+	organization into arrays of <strong>logic blocks</strong>: self contained collections of 
+	lookup tables and flip flops that can preform basic functions, and <strong>channels</strong> that allow
+	an extremely high degree of versatility in number of unique configurations. The number of wires in
+	each channel is termed its <strong>channel width</strong>.
+</p>
+<p>
+	Although not as efficient as application specific integrated circuits (ASIC) for
+	performing any specific task, FPGAs can be mass produced with very little investment risk
+	and is still fast enough to enable many real-time accelerations. Applications of
+	FPGAs mainly lie in communication infrastructure (cell phone towers and internet routers)
+	and in accelerating data centers, such as Microsoft's <a href="http://research.microsoft.com/en-us/projects/catapult/">project Catapult</a> and Intel's planned incorporation
+	of FPGAs into its server-targetted <a href="http://www.extremetech.com/extreme/184828-intel-unveils-new-xeon-chip-with-integrated-fpga-touts-20x-performance-boost">Xeon chips</a>.
+</p>
+<p>
+	The greatest difficulty in working with FPGAs is often not designing or manufacturing the chip itself, 
+	but enabling developers and users to convert their description of circuits into physical circuits on the FPGA.
+</p>
+<p>
+	This is the job of CAD tools, which must:
+</p>
+<ul>
+	<li>convert the description (in verilog or some other high level language) into circuit elements (lookup tables, flip flops)</li>
+	<li><strong>pack</strong> the circuit elements into logic blocks while keeping track of the necessary connections</li>
+	<li><strong>place</strong> the logic blocks so the necessary connections are as short as possible</li>
+	<li><strong>route</strong> the logical connections into physical connections by choosing pins and wires to take</li>
+</ul>
+
+<p>
+	The routing stage will be the one under focus, as it is the most difficult task
+	with the largest problem space. Each electrical signal, a <strong>net</strong>,
+	starts from some logic block (the <strong>source</strong>), and
+	must use one of the block's output pins to reach one or more other logic blocks (the <strong>sinks</strong>) through
+	one of their input pins. The distinction between source and output pin and sink and input pin is made
+	because often many pins are logically equivalent, but the signal must travel through only one of them.
+	The number of sinks a net has is called its <strong>fanout</strong>.
+	A path from a source to a specific sink is called a <strong>connection</strong>.
+</p>
+<img src="net.png">
+<p>
+	The problem is when two nets want to pass through the same wire.
+	This is electrically impossible, as two signals cannot exist on the same
+	conductor at one time (it cannot be both 1 and 0), causing what is
+	called <strong>congestion</strong>.
+
+	The router must make the fastest circuit possible by keeping connections short
+	while eliminating congestion.
+</p>
+<p>
+	The problem of <a href="http://epubs.siam.org/doi/abs/10.1137/0132071">creating rectilinear steiner trees is NP-complete (Garey, Johnson 1976)</a>. That is the
+	continuous version of routing a single net. Since the FPGA router must use
+	existing resources (pins and wires are placed already), the problem becomes discrete
+	and harder to solve. On top of that, many nets must be all routed.
+</p>
+<p>
+	Due to this difficulty, a heuristics approach is required to complete routing in a
+	finite amount of time. <a href="http://dl.acm.org/citation.cfm?doid=201310.201328">Pathfinder</a> is the high level algorithm used, which iteratively tries to eliminate congestion
+	by adjusting the cost of resources based on past usage using simulated annealing.
+	The concept of <strong>criticality</strong> is how close a connection is to
+	being the slowest connection in the circuit (and thus the speed that the 
+	rest of the circuit must run at).
+</p>
+</div>
+
+
+<h2 class="anchor">VPR's Routing Problem <a class="anchor-link" title="permalink to section" href="#problem" name="problem">&para;</a></h2>
+-------------------------------
+
+<div class="text-block">
+<p>
+	VPR is a research oriented FPGA CAD tool that, unlike commercial tools, can map any
+	kind of circuit to any kind of architecture. In that sense, it is crucial
+	for researching new FPGA architectures. 
+</p>
+<p>
+	One key obstacle to VPR's usefulness is the run-time bottleneck from the routing stage.
+	This prevents VPR from being used on large, realistic circuits, which only tend to get
+	bigger and more complex as time goes on.
+</p>
+<p>
+	To tackle this problem, I first profiled the router over various circuits to
+	determine the cause of the long route time.
+</p>
+</div>
+
+
+
+<h2 class="anchor">Determing Cause <a class="anchor-link" title="permalink to section" href="#profiling" name="profiling">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	Through profiling over many different benchmarks and visualizing the results
+	(with some python scripts and the help of matplotlib), several trends emerged
+	that directed my search for a solution.
+</p>
+<p>
+	The first clue was the time spent on nets of various fanouts. The following
+	pie chart shows the distribution for a circuit representative of the ones difficult to route.
+</p>
+</div>
+
+<div class="frames">
+<img src="timeonfanout.png">
+<p>Time spent on nets of each fanout</p>
+</div>
+
+<div class="text-block">
+<p>
+	The parallel pie chart of the number of nets of each fanout is not shown since
+	the high fanout nets accounted for <strong>less than 0.1%</strong> of them.
+	This disproportionate amount of time spent motivates a focus on high fanout nets. 
+</p>
+</div>
+
+<div class="text-block">
+<p>
+	Another clue is the time per iteration for different difficulties of routing.
+	I expected the profile for a easy to route circuits to look different than one
+	that was difficult to route.
+</p>
+</div>
+
+<img src="timeperiteration.png">
+
+<div class="text-block">
+<p>
+	For an easy to route circuit (low stress), the time is monotonically decreasing.
+	We spend the most amount of time in the first iteration to find the fastest
+	possible routing, and have an easy time resolving congestion. However, for those
+	that are difficult to route and thus take a long time, most of the time is spent
+	resolving congestion in the middle iterations. This suggests considering how to
+	reduce the amount of congestion generated in order to provide a speedup.
+</p>
+</div>
+
+<h2 class="anchor">Theorizing Solution <a class="anchor-link" title="permalink to section" href="#theorizing" name="theorizing">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	Combining the focus on high fanout nets and congestion, 
+	I hypothesized that the difficulty with high fanout nets was due to the
+	instability of their routing. Because of their large size, it was much more
+	likely that one of the wires in its choices is illegal. However, <i>each 
+	source-to-sink connection has an equal amount of probability
+	for being congested</i>, controlling for criticality (more critical connections are
+	given priority and are less likely to be congested). 
+</p>
+<p>
+	What this translates to is that for any iteration,
+	high fanout nets likely have legal connections to a large number of sinks, but
+	gets rerouted anyway due to a small number of congested connections.
+	Rerouting the net entirely gives each connection an equal probability of being legal (again controlling for criticality),
+	which is higher than the last iteration because the Pathfinder algorithm updated
+	congestion to be more expensive.
+</p>
+<p>
+	In equation terms, if <code>i</code> is the iteration, 
+	<code>n</code> the fanout of the net, <code>p</code> the probability of a connection
+	being legal, and <code>f</code> the factor that p increases by each iteration, then the chance
+	of a net being legal is
+
+	<a name="connection_legal_probability"> </a>
+	<pre><code>P = (p*f^i)^n</code></pre>
+</p>
+<p>
+	The term <code>(p*f^i)</code> will always be smaller or equal to 1, so taking
+	it to the nth power can only make it smaller. From this equation it becomes
+	intuitive why a large amount of time is spent resolving the congestion for
+	high fanout nets.
+</p>
+<p>
+	I think we can do better. The most significant improvements will come from
+	reducing the nth power term, in essence reducing the size of the net to be routed.
+</p>
+<p>
+	The idea of rerouting only the illegal connections comes naturally from this approach,
+	but there are some dangers of applying this carelessly.
+</p>
+</div>
+
+
+<h3 class="anchor">Dangers of Iterative Rerouting <a class="anchor-link" title="permalink to section" href="#theorizing#dangers" name="theorizing#dangers">&para;</a></h3>
+
+<div class="text-block">
+<p>
+	The biggest danger in routing only illegal connections is settling for
+	local minima. 
+</p>
+<p>
+	In terms of results, this manifest in lower quality
+	circuits produced (greater critical path delay), and reduced
+	routability. While the problem space shrinks from iteration to iteration,
+	the solution space also shrinks since there are less legal wires
+	to choose from. The circuit essentially <strong>calcifies</strong> and we are no longer
+	guaranteed to complete routing. This is due to the <i>impossibility of knowing
+	which connection could best use a certain resource</i> until the last iteration.
+	By rerouting only the illegal connections, we assume our first guess is correct.
+</p>
+</div>
+
+<h3 class="anchor">Circumventing Danger <a class="anchor-link" title="permalink to section" href="#theorizing#solution" name="theorizing#solution">&para;</a></h3>
+
+<div class="text-block">
+<p>
+	The solution to those dangers is to somehow shrink the problem space while keeping
+	the solution space the same size. The technique in the next section
+	details how this can be done.
+</p>
+</div>
+
+
+<h2 class="anchor">Route Tree Pruning <a class="anchor-link" title="permalink to section" href="#pruning" name="pruning">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	The conceptual basis for how to smartly reroute is first explained.
+	A net can be viewed as a tree with the source as the root and the sinks as the leaves.
+	Connections are the unique path from the root to the sink, and may be in its own
+	branch or share physical resources (nodes) with another connection of the same net.
+	Each iteration produces a route tree for each net, regardless of it being legal or not.
+	The pathfinder algorithm stops when all such trees are legal.
+</p>
+</div>
+
+<img src="route_tree.png">
+
+<div class="text-block">
+<p>
+	What's currently done is if a tree was found to be illegal in any way, it would be chopped down and
+	regrown from the root. Due to the logical equivalence of output pins, this can cause oscillatory behaviour 
+	in jumping between the choice of several output pins. 
+</p>
+<p>
+	Instead of chopping the tree, at the start of each iteration, we can examine the route tree from the previous iteration
+	and prune it by cutting off branches that don't legally lead to a sink. The key detail
+	to not calcifying and reducing our solution space is to <i>allow non-congested nets
+	to become congested if another net deems it needs a node more</i> than the previous one.
+</p>
+</div>
+
+<img src="pruning.png">
+
+<div class="text-block">
+<p>
+	Iterative rerouting through pruning the route tree has 2 main benefits:
+	<ul>
+		<li>It generally decreases n from the <a href="#connection_legal_probability">previous equation</a>
+		from iteration to iteration, gradually reducing the effective size of each net</li>
+		<li>It stabilizes large fanout nets by choosing an output pin to leave out of
+		(output pins are usually logically equivalent)</li>
+	</ul>
+</p>
+<p>
+	Pruning can be further improved when it is selectively done. The basic selection would be to only
+	prune route trees of nets that are beyond a certain fanout. This is referred to as the pruning <strong>threshold</strong>
+	below, and results show that setting a reasonable threshold (around 32 to 64, depending on circuit size) improves
+	stability and avoidance of local minima. As we'll see below, rerouting every net can lead to calcification and settling for
+	local minima, resulting in poor results.
+</p>
+</div>
+
+<h2 class="anchor">Resulting Improvement <a class="anchor-link" title="permalink to section" href="#results" name="results">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	Data collection is still an on-going process, but current tests uniformly supports
+	the fact that iterative rerouting through pruning results in substantial speedups,
+	particularly for large circuits, without a degredation in routability and quality.
+</p>
+</div>
+
+<img src="segmentation.png">
+
+<div class="text-block">
+<p>
+	Something interesting from the previous figure is that iterative rerouting changes the
+	shape of the time per iteration profile to look more like low-stress routing (as it is flatter relative to the first iteration).
+	This suggests that routability might have been improved. This is still being tested by attempting to route at
+	lower channel widths than before.
+</p>
+</div>
+
+<div class="text-block">
+<p>
+	The dramatic 3.34x speedup was for the most difficult benchmark - the gains for easier benchmarks are more modest.
+	This intuitively makes sense since the most difficult benchmarks are usually the ones with the largest margins for improvement,
+	particularly in terms of having a greater portion of high fanout nets.
+</p>
+<p>
+	The figure below shows the speedup relative to the difficulty of the benchmark, as measured by the baseline route time.
+</p>
+</div>
+
+<a name="speedup_vs_size"> </a>
+<img src="speedup_vs_size.png">
+
+<div class="text-block">
+<p>
+	As the trendlines show, the more difficult the circuit, the more of a speedup we gain.
+	This is a <i>very important</i> property for any optimization since it is really the difficult benchmarks
+	that we are interested in making easier.
+</p>
+<p>
+	However, that's not to say that we should not care about how iterative rerouting affects smaller benchmarks.
+</p>
+<p>
+	As seen in the figure above, smaller benchmarks receive less than 1.5x speedup, but using a threshold of 64
+	gurantees that no benchmarks degrade in route time. Not using a threshold (threshold equal to 0) can degrade runtime to a 2x slowdown.
+	More importantly, we should be concerned about degredations in circuit quality, in critical path delay, as shown below.
+</p>
+</div>
+
+<a name="critical_path_delay"> </a>
+<img src="critical_path_delay.png">
+
+<div class="text-block">
+<p>
+	The figure above shows that there is around 5% degredation if we threshold too low, but this can be prevented by using
+	a high enough threshold. The optimal threshold depends on the distribution of fanout for that particular circuit. 
+	The geometric mean is used to normalize the weight of all benchmarks to prevent a single outlier froming dominating the results.
+</p>
+</div>
+
+<h2 class="anchor">Future Improvements <a class="anchor-link" title="permalink to section" href="#improvements" name="improvements">&para;</a></h2>
+-------------------------
+<div class="text-block">
+<p>
+	To reduce the critical path, in addition to branches not reaching a sink, legal branches that are highly critical and sub-optimal could be
+	pruned as well. Its criticality and optimality is found by comparing against the
+	first iteration where the time delay was the only parameter optimized for. This would be a promising method for improving circuit quality,
+	but from my observations the critical path delay does not degrade significantly from the first iteration onwards, suggesting a 
+	small margin for improvement in the router for quality.
+</p>
+<p>
+	To reduce the runtime even further, the fact that the router is now aware of connections can be exploited to implement connection specific bounding
+	boxs. Currently bounding boxes are net wide, but large fanout nets can have connections that are far apart from each other, reducing the effect of the
+	bounding box. A bounding box reduces the number of nodes expanded while trying to route to each particular sink, but may hurt quality and routability since
+	it is not guaranteed that the optimal path would be inside the bounding box (it is just assumed to be likely).
+</p>
+</div>
+
+<h2 class="anchor">Acknowledgements <a class="anchor-link" title="permalink to section" href="#acknowledgements" name="acknowledgements">&para;</a></h2>
+-------------------------
+<div class="text-block">
+<p>
+	I would like to thank my supervising professor Vaughn Betz for his personable guidance, which really made for a pleasant introduction to 
+	university level research, for his creation of VPR, without which I would not have a basis for my work, and for his interesting insights on life.
+</p>
+<p>
+	My supervising graduate student <a href="http://www.eecg.utoronto.ca/~kmurray/">Kevin Murray</a> deserves credit for being an ever-present
+	source of helpful feedback, especially in the frustrating times of debugging. Sorry for all the puns you had to
+	hear sitting next to me.
+</p>
+<p>
+	Thanks to Hanqing Zeng, my fellow summer researcher, for his dedication - he would work until 8pm and even then still work at home - on improving
+	the pathfinder cost estimator, motivating me to spend some weekends at the lab, without which I would not have reached such positive results. As well,
+	I'd like to thank him for his contribution of and continued support of benchtracker's plotter.
+</p>
+<p>
+	Lastly I thank <a href="http://www.nserc-crsng.gc.ca/index_eng.asp">NSERC</a> for its financial support of my research over the summer
+	and the opportunity it creates for students like me to pursue meaningful research.
+</p>
+</div>
+
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">&para;</a></h2>
+-----------------------
+ - experience theorizing solutions and pursuing approaches without guaranteed eventual success
+ - experience working on a large open source legacy code base
+ - experience with profiling tools such as callgrind, kcachegrind, and gperftools
+ - a lot of debugging experience - particularly how to catch nasty memory corruption using a combination of gdb and valgrind
+ - knowledge of the FPGA world and its emerging relevance
+
+</div>

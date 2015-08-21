@@ -13,6 +13,15 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div class="gallery" id="main-gallery">
 
+	<a href="/projects/vpr/"><div class="box">
+	<img src="/res/projects/vpr_speedup.png"/>
+	<span class="caption">
+	<h1 class="caption-title">VPR Speedup</h1>
+	<p class="caption-desc">Speeding up FPGA CAD router through iterative rerouting</p>
+	<p class="caption-date">May 2015 - Aug 2015</p>
+	</span>
+	</div></a>
+
 	<a href="projects/robot/"><div class="box">
 	<img src="/res/projects/robot.jpg"/>
 	<span class="caption">
@@ -40,15 +49,6 @@ where I present my <a href="principles.html">conception</a> of good design and s
 	</span>
 	</div></a>
 
-
-	<a href="projects/icecube/"><div class="box">
-	<img src="/projects/icecube.png"/>
-	<span class="caption">
-	<h1 class="caption-title">ICE-Cube</h1>
-	<p class="caption-desc">Meat Refridgeration without grid electricity</p>
-	<p class="caption-date">March 2014</p>
-	</span>
-	</div></a>
 
 </div>
 

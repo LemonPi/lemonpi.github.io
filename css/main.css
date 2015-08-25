@@ -64,7 +64,7 @@ pre>code {
 .navlink:active {border-top:1px solid #1e2832;margin-bottom:-1px;}
 .navlink:hover{text-decoration:none;color:#bebebe;background:#1e2832;}
 #active {border-top:1px solid #1e2832;color:#bebebe;background:#1e2832;}
-#active .navlink:visited {color:#bebebe;}
+#active .navlink:visited, #active .navlink {color:#bebebe;}
 #navbar-menu li {
 	float:left;
 	text-align:center;

@@ -9,12 +9,14 @@ group: projects
  <a class="toc-link toch2" href="#introduction">Introduction and Terminology</a>  
  <a class="toc-link toch2" href="#problem">VPR's Routing Problem</a>  
  <a class="toc-link toch2" href="#profiling">Determing Cause</a>  
- <a class="toc-link toch2" href="#theorizing"><strong>Theorizing Solution</strong></a>  
+ <a class="toc-link toch2" href="#theorizing"><b>Theorizing Solution</b></a>  
  <a class="toc-link toch3" href="#theorizing#dangers">Dangers of incremental rerouting</a>  
  <a class="toc-link toch3" href="#theorizing#solution">Circumventing Danger</a>  
  <a class="toc-link toch2" href="#pruning">Route Tree Pruning</a>  
- <a class="toc-link toch2" href="#results"><strong>Resulting Improvement</strong></a>  
- <a class="toc-link toch2" href="#improvements">Future Improvements</a>  
+ <a class="toc-link toch2" href="#results"><b>Resulting Improvement</b></a>  
+ <a class="toc-link toch2" href="#improvements">Further Improvements</a>  
+ <a class="toc-link toch3" href="#improvements#targeted_reroute"><b>Targeted Rerouting</b></a>  
+ <a class="toc-link toch3" href="#improvements#connection_bounding_box">Connection Bounding Box</a>  
  <a class="toc-link toch2" href="#acknowledgements">Acknowledgements</a>  
  <a class="toc-link toch2" href="#gains">Gains from Experience</a> 
  <p class="toc-caption"></p> 
@@ -38,6 +40,7 @@ group: projects
 	<li>3x speedup on large benchmarks <a href="summary.xlsx">test results</a></li>
 	<li>speedup scales with the size of the circuit: <a href="#speedup_vs_size">graph</a></li>
 	<li>no degradation in circuit quality measured in critical path delay: <a href="#critical_path_delay">graph</a></li>
+	<li>up to 30% improvement in circuit quality measured in critical path delay for difficult circuits (take a lot of iterations to route): <a href="#targeted_rerouting">targeted rerouting</a></li>
 </ul>
 
 <p>
@@ -384,16 +387,63 @@ group: projects
 </p>
 </div>
 
-<h2 class="anchor">Future Improvements <a class="anchor-link" title="permalink to section" href="#improvements" name="improvements">&para;</a></h2>
+<h2 class="anchor">Further Improvements <a class="anchor-link" title="permalink to section" href="#improvements" name="improvements">&para;</a></h2>
 -------------------------
 <div class="text-block">
 <p>
-	To reduce the critical path, in addition to branches not reaching a sink, legal branches that are highly critical and sub-optimal could be
-	pruned as well. Its criticality and optimality is found by comparing against the
-	first iteration where the time delay was the only parameter optimized for. This would be a promising method for improving circuit quality,
-	but from my observations the critical path delay does not degrade significantly from the first iteration onwards, suggesting a 
-	small margin for improvement in the router for quality.
+	The change from a net to a connection as the basic unit of routing enables
+	us to increase specificity in what to route. As seen, this can improve runtime
+	through incremental rerouting, but it can also improve circuit quality.
 </p>
+</div>
+
+<h3 class="anchor">Targeted Rerouting <a class="anchor-link" title="permalink to section" href="#improvements#targeted_reroute" name="improvements#targeted_reroute">&para;</a></h3>
+-------------------------
+<div class="text-block">
+<p>
+	To reduce the critical path, in addition to branches not reaching a sink, we can <strong>target</strong> legal branches that are 
+<ul>
+	<li>highly critical</li>
+	<li>sub-optimal compared to first iteration (when only timing is considered)</li>
+</ul>
+	to be forcibly rerouted.
+	
+	For most circuits, this approach does not significantly improve circuit quality since
+	the critical path delay does not degrade much from the first iteration, suggesting a 
+	small margin for improvement in the router for quality.
+
+	However, more difficult circuits take more iterations for Pathfinder to consider, and on
+	each iteration the congestion cost factor is multiplied by a constant > 1, resulting in geometric growth.
+	In later iterations, settling for local minima (calcification) becomes a real danger, particularly with 
+	incremental rerouting, so this approach helps greatly here.
+
+	The following is a very difficult circuit that benefits greatly from targeted rerouting:
+</p>
+</div>
+
+<a name="targeted_rerouting"> </a>
+<img src="targeted_rerouting.png">
+
+<div class="text-block">
+<p>
+	The general shape of the graph is represenative of other difficult circuits. 
+	The spikes indicate the algorithm's ability to reject suboptimal connections.
+	The addition of this ability did not damage its convergence, as it converged in
+	less iterations than without targeted rerouting.
+
+	For circuits that take enough iterations for the baseline critical path delay to
+	grow siginificantly beyond the lower bound delay, targeted rerouting <strong>achieves up to
+	30% improvement</strong> even in comparison to the baseline (not to mention with just
+	incremental rerouting).
+
+	This approach is still being tested on different incremental rerouting configurations (including baseline)
+	and circuits.
+</p>
+</div>
+
+<h3 class="anchor">Connection Bounding Box <a class="anchor-link" title="permalink to section" href="#improvements#connection_bounding_box" name="improvements#connection_bounding_box">&para;</a></h3>
+-------------------------
+<div class="text-block">
 <p>
 	To reduce the runtime even further, the fact that the router is now aware of connections can be exploited to implement connection specific bounding
 	boxs. Currently bounding boxes are net wide, but large fanout nets can have connections that are far apart from each other, reducing the effect of the

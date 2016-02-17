@@ -1,0 +1,3 @@
+[submodule "projects/snowfun"]
+	path = projects/snowfun
+	url = https://github.com/LemonPi/SnowFun

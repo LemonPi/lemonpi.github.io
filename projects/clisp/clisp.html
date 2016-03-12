@@ -27,29 +27,30 @@ group: projects
 <div id="console"></div>
 <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> 
 
-Clisp was cross compiled from C++ to JS using [Emscripten](https://github.com/kripken/emscripten/), 
-and run with [jq-console](https://github.com/replit/jq-console)
-
-Simple library [here](funcs.scm)
-
+Clisp was cross compiled from C++ to JS using <a href="https://github.com/kripken/emscripten/">Emscripten</a>, and run with <a href="https://github.com/replit/jq-console">jq-console</a>
+Simple library <a href="funcs.scm">here</a>
 <h2 class="anchor">Instructions <a class="anchor-link" title="permalink to section" href="#instructions" name="instructions">&para;</a></h2>
--------------------------------
+<!--- new section -->
 
-1. [**Get boost**](http://www.boost.org/users/download/) if you don't have it 
-2. Clone code from [github](https://github.com/LemonPi/bincalc) or using cmd `git clone git://github.com/LemonPi/bincalc.git`
-3. Build with `make` in the directory if you have g++(gcc) with c++11 support
-4. Else either change (CC) in the makefile to your compiler of choice, or build with another tool
-5. Run with `./clisp` or `./clisp [filename] [-p]` with -p to force printing during file evaluation, which by default is silent
-6. Tips:
-	- exit with `Ctrl + c`
-	- comment with ;
-	- include files, which can themselves include other files, with `(include funcs.scm)`
-		- don't recursively include a file unless you really like recursion
-	- don't clash with keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not, empty?, include, begin`
-	- prefix name with quote for string: `'string`
-	- concatenate strings with `(cat 'something 'something_else)`
-	- expressions must be terminated with appropriate ), whitespace is ignored
-	- put expression arguments at end of arglist (names, numbers, and strings in front) `(proc x anotherproc 5 'string (expr))` 
+<ol>
+	<li><a href="http://www.boost.org/users/download/">**Get boost**</a> if you don't have it 
+	<li>Clone code from <a href="https://github.com/LemonPi/bincalc">github</a> or using cmd `git clone git://github.com/LemonPi/bincalc.git`
+	<li>Build with `make` in the directory if you have g++(gcc) with c++11 support
+	<li>Else either change (CC) in the makefile to your compiler of choice, or build with another tool
+	<li>Run with `./clisp` or `./clisp [filename] [-p]` with -p to force printing during file evaluation, which by default is silent
+	<li>Tips:
+</ol>
+
+<ul>
+	<li>comment with ;
+	<li>include files, which can themselves include other files, with `(include funcs.scm)`
+	<li>don't recursively include a file unless you really like recursion
+	<li>don't clash with keywords: `define, lambda, cond, cons, car, cdr, cat, list, else, and, or, not, empty?, include, begin`
+	<li>prefix name with quote for string: `'string`
+	<li>concatenate strings with `(cat 'something 'something_else)`
+	<li>expressions must be terminated with appropriate ), whitespace is ignored
+	<li>put expression arguments at end of arglist (names, numbers, and strings in front) `(proc x anotherproc 5 'string (expr))` 
+</ul>
 
 
 <div class="frames">
@@ -60,8 +61,7 @@ Simple library [here](funcs.scm)
 With some definitions in funcs.scm:
 
 
-```
-; semicolon comments
+<pre><code>; semicolon comments
 (include funcs.scm)	; essentially copy paste entire file here
 (define compose (lambda (f g)
 		(lambda (x)
@@ -79,35 +79,43 @@ With some definitions in funcs.scm:
 (define square (nth-power 2))	
 (define cube (nth-power 3))	
 (define square\_and\_cube (compose square cube))
-```
+</code></pre>
 
 <h2 class="anchor">Strengths <a class="anchor-link" title="permalink to section" href="#strengths" name="strengths">&para;</a></h2>
--------------------------------
- - relatively simple ~550 lines of non comment code with clearly separated components
- - fast and has optimized tail recursion
- - highly modular design allows easy addition of features
-	- added support for comments and file inclusion in about 5 extra lines
- - concepts are clearly reflected in the implementation and representation 
-	- driver loop prints the evaluated value of the read expression in the global environment 
-	`cout << eval(expr(print_res), e0)`
-	- a Cell could hold many different types of values, but only one at a time
-	- a Procedure is a closure object implemented as a class holding a list as parameters, another list as body, and a pointer to defining frame (for non-local variables)
-	- Environments are Env* (Env pointer) that point to a specific frame holding definitions and a pointer to its outer frame
-	- arguments can be any cell, as long as the semantics is correct as defined in the proc
+<!--- new section -->
+<ul>
+	<li>relatively simple ~550 lines of non comment code with clearly separated components
+	<li>fast and has optimized tail recursion
+	<li>highly modular design allows easy addition of features
+	<li>added support for comments and file inclusion in about 5 extra lines
+	<li>concepts are clearly reflected in the implementation and representation 
+	<li>driver loop prints the evaluated value of the read expression in the global environment 
+</ul>
+
+<ul>
+	<li>a Cell could hold many different types of values, but only one at a time
+	<li>a Procedure is a closure object implemented as a class holding a list as parameters, another list as body, and a pointer to defining frame (for non-local variables)
+	<li>Environments are Env* (Env pointer) that point to a specific frame holding definitions and a pointer to its outer frame
+	<li>arguments can be any cell, as long as the semantics is correct as defined in the proc
+</ul>
 
 <h2 class="anchor">Room for Improvement <a class="anchor-link" title="permalink to section" href="#room_for_improvement" name="room_for_improvement">&para;</a></h2>
--------------------------------
- - [Done] could pass an expression when there's an error in it rather than terminating the program (high priority)
- - [Done] could optimize tail recursion to allow deep recursion for certain procedure forms (currently stack is limited to around 20 levels)
- - could trim down Cell size to 24 bytes from 40 by storing List* instead of List in Cell 
- (but would have to store Lists on heap or custom stack, additional memory management)
- - requires expression arguments to be placed at end of arglist when mixed with other types of arguments
- - stack relies on C++'s implementation of stack, so adding call/cc (exceptions) and multi-threading would be troublesome and incomplete
- - extra 7 bytes of padding could be used to store relevant information
+<!--- new section -->
+<ul>
+	<li>[Done] could pass an expression when there's an error in it rather than terminating the program (high priority)
+	<li>[Done] could optimize tail recursion to allow deep recursion for certain procedure forms (currently stack is limited to around 20 levels)
+	<li>could trim down Cell size to 24 bytes from 40 by storing List* instead of List in Cell 
+</ul>
+
+<ul>
+	<li>requires expression arguments to be placed at end of arglist when mixed with other types of arguments
+	<li>stack relies on C++'s implementation of stack, so adding call/cc (exceptions) and multi-threading would be troublesome and incomplete
+	<li>extra 7 bytes of padding could be used to store relevant information
+</ul>
 
 
 <h2 class="anchor">Lexer <a class="anchor-link" title="permalink to section" href="#lexer" name="lexer">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	This lexer is very similar to the last one I worked on for <a href="/projects/bincalc/">bincalc</a>.
@@ -125,19 +133,20 @@ With some definitions in funcs.scm:
 </div>
 
 <h2 class="anchor">Data Structure <a class="anchor-link" title="permalink to section" href="#data" name="data">&para;</a></h2>
--------------------------------
+<!--- new section -->
 Designing the data structure was the most challenging part of this project. <br>
 I had some criteria for potential designs:  
 
- 1. reflects concept of a single value cell (can't hold multiple values as once)
- 2. cheap access and transportation (copying/moving/returning)
- 3. space efficient
- 4. safe runtime usage
+<ol>
+	<li>reflects concept of a single value cell (can't hold multiple values as once)
+	<li>cheap access and transportation (copying/moving/returning)
+	<li>space efficient
+	<li>safe runtime usage
+</ol>
 
 One obvious design is to store every possible value into the Cell, leading to 
 
-![full data cell](fulldatacell.png) 
-
+<img src="fulldatacell.png">full data cell</a> 
 
 <div class="text-block">
 <p>
@@ -152,11 +161,10 @@ One obvious design is to store every possible value into the Cell, leading to
 </p>
 </div>
 
--------------------------------
+<hr><!--- new section -->
 The other obvious design is to use polymorphism - having various Cell types share a common interface.
 
-![polymorphic cell](polymorphiccell.png)
-
+<img src="polymorphiccell.png">polymorphic cell</a>
 <div class="text-block">
 <p>
 	This design achieves the multi-type, single-value concept and decreases individual Cell sizes.
@@ -170,7 +178,7 @@ The other obvious design is to use polymorphism - having various Cell types shar
 </p>
 </div>
 
--------------------------------
+<hr><!--- new section -->
 <div class="text-block">
 <p>
 	A <a href="http://msdn.microsoft.com/en-CA/library/5dxy4b7b.aspx">union</a> is ideal here. Unfortunately, the native C++ union requires
@@ -182,8 +190,7 @@ The other obvious design is to use polymorphism - having various Cell types shar
 </p>
 </div>
 
-![large variant cell](largevariantcell.png)
-
+<img src="largevariantcell.png">large variant cell</a>
 <div class="text-block">
 <p>
 	This design has some of polymorphism's benefits (smaller data size, true to concept of multi-type single-value), 
@@ -198,10 +205,9 @@ The other obvious design is to use polymorphism - having various Cell types shar
 </p>
 </div>
 
-![variant cell](variantcell.png)
-
+<img src="variantcell.png">variant cell</a>
 <h2 class="anchor">Environment Model <a class="anchor-link" title="permalink to section" href="#environment" name="environment">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	The run-time environment was the most interesting thing to work on.
@@ -221,13 +227,12 @@ The other obvious design is to use polymorphism - having various Cell types shar
 	Example from <a href="http://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope">Wikipedia:</a>.
 </p>
 </div>
-```
-x=1
+<pre><code>x=1
 function g () { echo $x ; x=2 ; }
 function f () { local x=3 ; g ; }
 f # dynamic g has access to f's x and prints 3; lexical g prints 1 and modifies the global
 echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modified x to be 2
-```
+</code></pre>
 
 <div class="text-block">
 <p>
@@ -238,8 +243,7 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
 	and allows the use of higher order procedures and the idiom of returning procedures.
 </p>
 </div>
-```
-(define (nth-power n)
+<pre><code>(define (nth-power n)
 		(lambda (x)
 				(expt x n)))) 	; n is bound to nth-power's n
 				
@@ -248,30 +252,33 @@ echo $x # dynamic g modifies f's local x, so global x is 1, while lexical g modi
 (define cube (nth-power 3))	
 
 (cube 5)
-```
+</code></pre>
 
-![closure](environment.png)
-
+<img src="environment.png">closure</a>
 <div class="text-block">
 <p>
 	Here are 4 environments, with environment II equal to III. Calling (cube 5) 
 	results in the following actions:
 </p>
 </div>	
- 1. 5 is bound to x, resolving to (expt 5 n) 
- 2. n looked for through env IV, finds n = 3 in cube frame, resolving to (expt 5 3)
- 3. expt would've been expanded out to primitives during nth-power's definition
- 4. expression can be fully evaluated
+<ol>
+	<li>5 is bound to x, resolving to (expt 5 n) 
+	<li>n looked for through env IV, finds n = 3 in cube frame, resolving to (expt 5 3)
+	<li>expt would've been expanded out to primitives during nth-power's definition
+	<li>expression can be fully evaluated
+</ol>
 
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">&para;</a></h2>
------------------------
- - C++ and functional programming experience
- - Javascript and Emscripten experience (porting LLVM to JS)
- - A lot of debugging experience...
- - Language design and processing experience
- - Understanding of run time environments
- - Introduction to 3rd party C++ libraries (boost)
- - Tons of fun
+<!--- new section -->
+<ul>
+	<li>C++ and functional programming experience
+	<li>Javascript and Emscripten experience (porting LLVM to JS)
+	<li>A lot of debugging experience...
+	<li>Language design and processing experience
+	<li>Understanding of run time environments
+	<li>Introduction to 3rd party C++ libraries (boost)
+	<li>Tons of fun
+</ul>
 
 </div>
  

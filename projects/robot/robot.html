@@ -58,11 +58,13 @@ The two robots in action:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fF3lDIq3bEM" frameborder="0" allowfullscreen></iframe>
 
 <h2 class="anchor">The Team <a class="anchor-link" title="permalink to section" href="#team" name="team">&para;</a></h2>
--------------------------------
+<!--- new section -->
 
- - [Alyf](http://alyfjanmohamed.wix.com/design-portfolio) (Circuits)
- - [Howard](http://howarddpunan.wix.com/yuhaoduan) (Electromechanics)
- - Johnson (Microcontroller)
+<ul>
+	<li><a href="http://alyfjanmohamed.wix.com/design-portfolio">Alyf</a> (Circuits)
+	<li><a href="http://howarddpunan.wix.com/yuhaoduan">Howard</a> (Electromechanics)
+	<li>Johnson (Microcontroller)
+</ul>
 
 
 <div class="frames">
@@ -72,21 +74,22 @@ The two robots in action:
 
 
 <h2 class="anchor">The Task <a class="anchor-link" title="permalink to section" href="#task" name="task">&para;</a></h2>
--------------------------------
- - 7 minute games
- - deposit ping pong balls into the gameboard at the middle of the gamefield
- - each ball = 1 point, connecting 4 awards additional 4 points for you and -2 for the opponent
- - 2 static hoppers on the far corners, each holding 4 balls
- - 2 randomly placed hoppers in the center, each holding 7 balls
- - the robot(s) can only manipulate 1 ball at a time
- - gamefield is gridded in 20x20 cm blocks with black lines
- - a red line down the center
- - $250 limit on components used
- - 3kg limit on mass
- - 40x40x40cm total size constraint
+<!--- new section -->
+<ul>
+	<li>7 minute games
+	<li>deposit ping pong balls into the gameboard at the middle of the gamefield
+	<li>each ball = 1 point, connecting 4 awards additional 4 points for you and -2 for the opponent
+	<li>2 static hoppers on the far corners, each holding 4 balls
+	<li>2 randomly placed hoppers in the center, each holding 7 balls
+	<li>the robot(s) can only manipulate 1 ball at a time
+	<li>gamefield is gridded in 20x20 cm blocks with black lines
+	<li>a red line down the center
+	<li>$250 limit on components used
+	<li>3kg limit on mass
+	<li>40x40x40cm total size constraint
+</ul>
 
- [Full game description](game_desc.pdf)
-
+ <a href="game_desc.pdf">Full game description</a>
 
 <div class="frames">
 <img src="gamefield.png">
@@ -95,7 +98,7 @@ The two robots in action:
 
 
 <h2 class="anchor">System Overview <a class="anchor-link" title="permalink to section" href="#overview" name="overview">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	The central philosophy driving our design was to shift complexity to systems that are
@@ -181,25 +184,29 @@ The two robots in action:
 
 
 <h2 class="anchor">Strengths <a class="anchor-link" title="permalink to section" href="#strengths" name="strengths">&para;</a></h2>
--------------------------------
- - fast average ball retrieval time (~30s per ball)
- - arbitrary waypoint (human plotted) traversal
- - reliable retrieval from random middle hoppers (~90% success rate)
- - independent and pipelined ball retrieval and ball placement in gameboard
- - robust navigation system (position correction allows the retriever to stay in the game without reset)
+<!--- new section -->
+<ul>
+	<li>fast average ball retrieval time (~30s per ball)
+	<li>arbitrary waypoint (human plotted) traversal
+	<li>reliable retrieval from random middle hoppers (~90% success rate)
+	<li>independent and pipelined ball retrieval and ball placement in gameboard
+	<li>robust navigation system (position correction allows the retriever to stay in the game without reset)
+</ul>
 
 <h2 class="anchor">Room for Improvement <a class="anchor-link" title="permalink to section" href="#room_for_improvement" name="room_for_improvement">&para;</a></h2>
--------------------------------
- - **interface system mechanically unreliable** (largest pitfall resulting in multiple resets)
- 	- somewhat distance sensitive to the gap between robots
- 	- large gap introduced misses if gamefield is not flat
- 	- small gap introduced sliding if the two robots touch each other while maneuvering
- - cheap mechanical system resulted in tradeoff between reliability and speed
- 	- wheels would slide too much when going beyond half speed
+<!--- new section -->
+<ul>
+	<li>**interface system mechanically unreliable** (largest pitfall resulting in multiple resets)
+	<li>somewhat distance sensitive to the gap between robots
+	<li>large gap introduced misses if gamefield is not flat
+	<li>small gap introduced sliding if the two robots touch each other while maneuvering
+	<li>cheap mechanical system resulted in tradeoff between reliability and speed
+	<li>wheels would slide too much when going beyond half speed
+</ul>
 
 
 <h2 class="anchor">Navigation <a class="anchor-link" title="permalink to section" href="#nav" name="nav">&para;</a></h2>
--------------------------------
+<!--- new section -->
 
 <div class="text-block">
 
@@ -234,8 +241,7 @@ The two robots in action:
 </p>
 </div>
 
-```
-// displacements in mm
+<pre><code>// displacements in mm
 double displacement_l = dir_l * (double)instant_tick_l * MM_PER_TICK_L;
 double displacement_r = dir_r * (double)instant_tick_r * MM_PER_TICK_R;
 double displacement = (displacement_l + displacement_r) * 0.5;
@@ -247,7 +253,7 @@ else tot_distance -= displacement;
 theta += atan2(displacement_l - displacement_r, BASE_WIDTH);
 x += displacement * cos(theta);
 y += displacement * sin(theta);
-```
+</code></pre>
 
 <div class="frames">
 <img src="wheel_encoder.png">
@@ -332,7 +338,7 @@ target_r = control_layer.speed - control_layer.angle;
 
 
 <h2 class="anchor">Position Correction <a class="anchor-link" title="permalink to section" href="#correction" name="correction">&para;</a></h2>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	Since each robot has a different array of sensors, their position correct systems are also very different.
@@ -449,7 +455,7 @@ target_r = control_layer.speed - control_layer.angle;
 
 
 <h2 class="anchor">Debugging and Integration <a class="anchor-link" title="permalink to section" href="#debug" name="debug">&para;</a></h2>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	Rbot's navigation system was designed to be the foundational system that would enable all the other behavious
@@ -478,7 +484,7 @@ target_r = control_layer.speed - control_layer.angle;
 
 
 <h2 class="anchor">Human Interaction <a class="anchor-link" title="permalink to section" href="#human" name="human">&para;</a></h2>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	The largest challenge to navigation was crossing lines unambiguously.
@@ -497,7 +503,7 @@ target_r = control_layer.speed - control_layer.angle;
 
 
 <h2 class="anchor">Reflection <a class="anchor-link" title="permalink to section" href="#reflection" name="reflection">&para;</a></h2>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	We did not win the competition. Despite having by far the most sophisticated navigation and
@@ -519,13 +525,15 @@ target_r = control_layer.speed - control_layer.angle;
 </div>
 
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">&para;</a></h2>
------------------------
- - Awesome friends
- - Expanded willpower from consecutive all-nigthers...
- - Basic control theory and PID
- - Subsumption architecture experience
- - Microcontroller progrmaming (Arduino with C++)
- - Processing and graphical debugging frameworks
- - Dead reckoning with correction (primitive form of 2D inertial navigation system)
- 
+<!--- new section -->
+<ul>
+	<li>Awesome friends
+	<li>Expanded willpower from consecutive all-nigthers...
+	<li>Basic control theory and PID
+	<li>Subsumption architecture experience
+	<li>Microcontroller progrmaming (Arduino with C++)
+	<li>Processing and graphical debugging frameworks
+	<li>Dead reckoning with correction (primitive form of 2D inertial navigation system)
+</ul>
+
 </div>

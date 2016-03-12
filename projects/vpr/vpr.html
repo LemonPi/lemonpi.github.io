@@ -60,7 +60,7 @@ group: projects
 </div>
 
 <h2 class="anchor">Introduction and Terminology <a class="anchor-link" title="permalink to section" href="#introduction" name="introduction">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	<strong>Field Programmable Gate Arrays</strong> (FPGAs) are basically reprogrammable hardware that
@@ -130,7 +130,7 @@ group: projects
 
 
 <h2 class="anchor">VPR's Routing Problem <a class="anchor-link" title="permalink to section" href="#problem" name="problem">&para;</a></h2>
--------------------------------
+<!--- new section -->
 
 <div class="text-block">
 <p>
@@ -152,7 +152,7 @@ group: projects
 
 
 <h2 class="anchor">Determing Cause <a class="anchor-link" title="permalink to section" href="#profiling" name="profiling">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	Through profiling over many different benchmarks and visualizing the results
@@ -200,7 +200,7 @@ group: projects
 </div>
 
 <h2 class="anchor">Theorizing Solution <a class="anchor-link" title="permalink to section" href="#theorizing" name="theorizing">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	Combining the focus on high fanout nets and congestion, 
@@ -276,7 +276,7 @@ group: projects
 
 
 <h2 class="anchor">Route Tree Pruning <a class="anchor-link" title="permalink to section" href="#pruning" name="pruning">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	The conceptual basis for how to smartly reroute is first explained.
@@ -326,7 +326,7 @@ group: projects
 </div>
 
 <h2 class="anchor">Resulting Improvement <a class="anchor-link" title="permalink to section" href="#results" name="results">&para;</a></h2>
--------------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	Data collection is still an on-going process, but current tests uniformly supports
@@ -388,7 +388,7 @@ group: projects
 </div>
 
 <h2 class="anchor">Further Improvements <a class="anchor-link" title="permalink to section" href="#improvements" name="improvements">&para;</a></h2>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	The change from a net to a connection as the basic unit of routing enables
@@ -398,7 +398,7 @@ group: projects
 </div>
 
 <h3 class="anchor">Targeted Rerouting <a class="anchor-link" title="permalink to section" href="#improvements#targeted_reroute" name="improvements#targeted_reroute">&para;</a></h3>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	To reduce the critical path, in addition to branches not reaching a sink, we can <strong>target</strong> legal branches that are 
@@ -442,7 +442,7 @@ group: projects
 </div>
 
 <h3 class="anchor">Connection Bounding Box <a class="anchor-link" title="permalink to section" href="#improvements#connection_bounding_box" name="improvements#connection_bounding_box">&para;</a></h3>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	To reduce the runtime even further, the fact that the router is now aware of connections can be exploited to implement connection specific bounding
@@ -453,7 +453,7 @@ group: projects
 </div>
 
 <h2 class="anchor">Acknowledgements <a class="anchor-link" title="permalink to section" href="#acknowledgements" name="acknowledgements">&para;</a></h2>
--------------------------
+<!--- new section -->
 <div class="text-block">
 <p>
 	I would like to thank my supervising professor Vaughn Betz for his personable guidance, which really made for a pleasant introduction to 
@@ -476,11 +476,13 @@ group: projects
 </div>
 
 <h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains" name="gains">&para;</a></h2>
------------------------
- - experience theorizing solutions and pursuing approaches without guaranteed eventual success
- - experience working on a large open source legacy code base
- - experience with profiling tools such as callgrind, kcachegrind, and gperftools
- - a lot of debugging experience - particularly how to catch nasty memory corruption using a combination of gdb and valgrind
- - knowledge of the FPGA world and its emerging relevance
+<!--- new section -->
+<ul>
+	<li>experience theorizing solutions and pursuing approaches without guaranteed eventual success
+	<li>experience working on a large open source legacy code base
+	<li>experience with profiling tools such as callgrind, kcachegrind, and gperftools
+	<li>a lot of debugging experience - particularly how to catch nasty memory corruption using a combination of gdb and valgrind
+	<li>knowledge of the FPGA world and its emerging relevance
+</ul>
 
 </div>

@@ -44,7 +44,6 @@ css: syntax
 
 
 <h2 class="anchor">Working with the canvas <a class="anchor-link" title="permalink to section" href="#canvas" name="canvas">&para;</a></h2>
--------------------------------
 <div class="text-block">
 <p>
 	The canvas is where we draw to. Each one is a DOM element with a width and height, which you
@@ -105,7 +104,6 @@ da.showCanvas("player_avatar");
 
 
 <h2 class="anchor">Using the Player object <a class="anchor-link" title="permalink to section" href="#player" name="player">&para;</a></h2>
--------------------------------
 
 <div class="text-block">
 <p>
@@ -118,17 +116,16 @@ da.showCanvas("player_avatar");
 </p>
 <ul>
 <li><b>core statistics</b> - game specific values, some of which are provided by default.
-	Physique is calculated from these.
+	Physique is calculated from these.</li>
 <li><b>physique</b> - read only values for each physical part of a body calculated
-	from core statistics and modifiers each time the Player is drawn.
+	from core statistics and modifiers each time the Player is drawn.</li>
 <li><b>Mods</b> - modifiers either from temporary status effects, clothing worn, or
 	genetic variation. These do not get calculated each time the Player is drawn, so to actually
-	change how the player is drawn, either change its value under Mods, or if it's a core stat change that.
-</li>
+	change how the player is drawn, either change its value under Mods, or if it's a core stat change that.</li>
+</ul>
 </div>
 
 <h3 class="anchor">Creating the Player <a class="anchor-link" title="permalink to section" href="#player#create" name="player#create">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	To create a player, call:
@@ -194,7 +191,6 @@ PC = da.createRandomCharacter(fembias);
 
 
 <h3 class="anchor">Drawing the Player <a class="anchor-link" title="permalink to section" href="#player#draw" name="player#draw">&para;</a></h3>
--------------------------------
 {% highlight javascript %}
 // EXAMPLE how to draw our character to that canvas
 var ex = da.drawfigure("player_avatar", PC);
@@ -208,7 +204,6 @@ var ex = da.drawfigure("player_avatar", PC);
 
 
 <h3 class="anchor">Interacting with a Player object <a class="anchor-link" title="permalink to section" href="#player#interact" name="player#interact">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	You can modify core stats and Mods on the Player object directly.
@@ -237,7 +232,6 @@ var changed = PC.changeClothes("cashmere_turtleneck");
 
 
 <h2 class="anchor">Extending the Player object <a class="anchor-link" title="permalink to section" href="#extend" name="extend">&para;</a></h2>
--------------------------------
 <div class="text-block">
 <p>
 	To add stats and Mods, instead of defining something on the Player prototoype, extend the Player.limit objects:
@@ -296,7 +290,6 @@ function myCreateRandomCharacter(bias) {
 
 
 <h3 class="anchor">Changing how physique is calculated <a class="anchor-link" title="permalink to section" href="#extend#draw" name="extend#draw">&para;</a></h3>
--------------------
 <div class="text-block">
 <p>
 	Once you add your own stats and modifiers, to get them to have an impact on the drawing,
@@ -387,7 +380,6 @@ da.Player.prototype.calcSkin = function() {
 
 
 <h2 class="anchor">Clothing <a class="anchor-link" title="permalink to section" href="#clothes" name="clothes">&para;</a></h2>
--------------------------------
 
 <div class="text-block">
 <p>
@@ -444,7 +436,6 @@ may have multiple drawing opportunities.
 
 
 <h3 class="anchor">Creating custom patterns <a class="anchor-link" title="permalink to section" href="#clothes#patterns" name="clothes#patterns">&para;</a></h3>
--------------------------------
 {% highlight javascript %}
 da.preloadPattern({name:"checkered", reptition:"repeat", format:"png", dataurl:"iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE3NDQ1MDdCREI4QjExRTU4ODU1RURBNEJFMDk2MEFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE3NDQ1MDdDREI4QjExRTU4ODU1RURBNEJFMDk2MEFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTc0NDUwNzlEQjhCMTFFNTg4NTVFREE0QkUwOTYwQUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTc0NDUwN0FEQjhCMTFFNTg4NTVFREE0QkUwOTYwQUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz79WpsFAAAAJElEQVR42mL8//8/AxJgZGRE5jIx4AU0lWZE46O5dCCdBhBgAEU3BhAw4WsWAAAAAElFTkSuQmCC"});
 {% endhighlight %}
@@ -460,7 +451,6 @@ da.preloadPattern({name:"checkered", reptition:"repeat", format:"png", dataurl:"
 
 
 <h3 class="anchor">Creating custom clothing templates <a class="anchor-link" title="permalink to section" href="#clothes#templates" name="clothes#templates">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	An exciting part of this tool is creating your own content in the form of new clothing templates!
@@ -511,7 +501,6 @@ da.ctp.bot.drawTightPants = function(stroke, fill) {
 
 
 <h2 class="anchor">Advanced drawing <a class="anchor-link" title="permalink to section" href="#drawing" name="drawing">&para;</a></h2>
--------------------------------
 <div class="text-block">
 <p>
 	There are many helper functions to make drawing a lot easier. Learning to use those functions
@@ -520,7 +509,6 @@ da.ctp.bot.drawTightPants = function(stroke, fill) {
 </div>
 
 <h3 class="anchor">Debugging curves <a class="anchor-link" title="permalink to section" href="#drawing#debug" name="drawing#debug">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	The tester is your friend and it will tell you a lot of useful debugging information
@@ -556,7 +544,6 @@ da.drawPoints(ctx, null, ex.thigh.out, da.tracePoint(ex.kneepit,1), ex.calf.out,
 
 
 <h3 class="anchor">Splitting curves <a class="anchor-link" title="permalink to section" href="#drawing#split" name="drawing#split">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	Often you want a point someway along the curve between two control points.
@@ -611,7 +598,6 @@ da.ctp.bot.drawPencilSkirt = function(stroke, fill) {
 
 
 <h3 class="anchor">Average quadratic <a class="anchor-link" title="permalink to section" href="#drawing#avgquad" name="drawing#avgquad">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	A curve that you might want to commonly draw is a quadratic curve with the control point somewhere
@@ -639,7 +625,6 @@ up at hairstart, but somewhere before it (at least 0.2 along the curve, and at m
 
 
 <h3 class="anchor">Custom hairstyles <a class="anchor-link" title="permalink to section" href="#drawing#hair" name="drawing#hair">&para;</a></h3>
--------------------------------
 <div class="text-block">
 <p>
 	Probably the hardest templates to create, it takes some familiarity with the drawing code

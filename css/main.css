@@ -44,6 +44,18 @@ pre>code {
 	padding:0;
 	background:inherit;
 }
+h2:after {
+	content:"";
+    display: block;
+    height:2px;
+    background: #bbb;
+}
+h3:after {
+	content:"";
+	display:block;
+	height:1px;
+	background:#ccc;
+}
 .hidden {visibility:hidden;}
 
 #navbar {

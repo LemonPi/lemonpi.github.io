@@ -25,6 +25,7 @@ group: sal
 
 <a name="#algo" class="anchor">Algorithms</a>
 ---
+
 - [numerics](numeric/)
 - [permutation and combination](perm/)
 - [prime generation and manipulation](prime/)
@@ -65,6 +66,7 @@ group: sal
 
 <h2 class="anchor">Features <a class="anchor-link" title="permalink to section" href="#features" name="features">&para;</a></h2>
 -------------------------------
+
 Decoupled algorithms so most files are standalone 
 
 - contest friendly 

@@ -131,13 +131,10 @@ set<typename Container::value_type> combine(Container& c, Op op, Pred pred);
 {% highlight c++ %}
 std::vector<int> ints {1,2,3,4,5,6};
 
-combine(ints, [](int a, int b){return a + b;});
-// set<int> 2 3 4 5 6 7 8 9 10 11 12 handshake by adding
+combine(ints, <a href="int a, int b"></a>{return a + b;});// set<int> 2 3 4 5 6 7 8 9 10 11 12 handshake by adding
 
 combine(ints,
-	[](int a, int b){return a + b;},
-	[](int a, int b){return (a & 1) && (b & 1);});
-// set<int> 2 4 6 8 10 handshake by adding odd elements
+	<a href="int a, int b"></a>{return a + b;},	<a href="int a, int b"></a>{return (a & 1) && (b & 1);});// set<int> 2 4 6 8 10 handshake by adding odd elements
 {% endhighlight %}
 
 <p class="doc-section">Discussion</p>

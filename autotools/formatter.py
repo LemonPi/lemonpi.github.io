@@ -45,7 +45,7 @@ def format_file(infilename, tohtml=False):
 				outf.write("</ol>\n\n")
 
 			else:
-				outf.write(l)
+				outf.write(format_link(l))
 
 	# replace the original file
 	try:

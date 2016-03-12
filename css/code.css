@@ -4,6 +4,7 @@
   color: #faf6e4;
   background-color: #122b3b;
   overflow: auto;
+  margin-bottom:10px;
 }
 .pseudo {
   margin:0;

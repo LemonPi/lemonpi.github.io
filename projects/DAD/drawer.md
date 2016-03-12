@@ -1,0 +1,781 @@
+---
+layout: default
+title: Dynamic Avatar Drawer
+permalink: /projects/DAD/index.html
+group: projects
+css: syntax
+---
+
+<div class="toc">  
+ <a class="toc-link toch2" href="#canvas">Working with the canvas</a>  
+ <a class="toc-link toch2" href="#player">Using the Player object</a>  
+ <a class="toc-link toch3" href="#player#create">Creating the Player</a>  
+ <a class="toc-link toch3" href="#player#draw">Drawing the Player</a>  
+ <a class="toc-link toch3" href="#player#interact">Interacting with a Player object</a>  
+ <a class="toc-link toch2" href="#extend">Extending the Player object</a>  
+ <a class="toc-link toch3" href="#extend#draw">Changing how physique is calculated</a>  
+ <a class="toc-link toch2" href="#clothes">Clothing</a>  
+ <a class="toc-link toch3" href="#clothes#patterns">Creating custom patterns</a>  
+ <a class="toc-link toch3" href="#clothes#templates">Creating custom clothing templates</a>  
+ <a class="toc-link toch2" href="#drawing">Advanced drawing</a>  
+ <a class="toc-link toch3" href="#drawing#debug">Debugging curves</a>  
+ <a class="toc-link toch3" href="#drawing#split">Splitting curves</a>  
+ <a class="toc-link toch3" href="#drawing#avgquad">Average quadratic</a>  
+ <a class="toc-link toch3" href="#drawing#hair">Custom hairstyles</a> 
+ <p class="toc-caption"></p> 
+ <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p> 
+</div>
+
+<div class="block">
+<div class="text-block">
+<p>
+	This is a tool for developers of text-based games to draw characters dynamically based on
+	their statistics. It supports multilayered clothing that scales with the drawn characters,
+	large range of drawable characters, and an easy to use API that allows you extend the system
+	for your own game.
+</p>
+<p>
+	The tool is most suited for games to be played in browser, as the drawing methods it calls
+	acts on HTML canvas elements. It comes in the form of a Javascript module named da, which
+	<b>the first thing you should do is copy the entire content of da.js to the top of your 
+	Javascript code</b>.
+</p>
+</div>
+
+
+<h2 class="anchor">Working with the canvas <a class="anchor-link" title="permalink to section" href="#canvas" name="canvas">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	The canvas is where we draw to. Each one is a DOM element with a width and height, which you
+	have to set when you first create it.
+</p>
+<p>
+	The following code snippet shows how to first get a parent DOM element, and then creating
+	a canvas inside of that element.
+</p>
+</div>
+
+{% highlight javascript %}
+// EXAMPLE how to add a canvas to the HTML
+var canvas_holder = document.getElementById("testbody");
+// getting it for the first time, so create it with those style overrides
+var canvas = da.getCanvas("player_avatar", {
+	parent:canvas_holder,
+	border:"1px solid black",
+	width:800,
+	height:1500,
+});
+{% endhighlight %}
+
+
+<div class="text-block">
+<p>
+	When you create the canvas, the second argument is any CSS overrides you'd like to provide.
+	If parent's not provided, it prepends to document.body.
+</p>
+<p>
+	All functions accept either the canvas ID (a string), or the actual canvas element itself.
+	Working with the canvas ID is probably better for more users, but anytime you want 
+	the canvas element itself, you can call:
+</p>
+</div>
+
+{% highlight javascript %}
+// assume the canvas has been created
+var canvas = da.getCanvas("player_avatar");
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	To toggle whether the canvas can be seen or not:
+</p>
+</div>
+
+{% highlight javascript %}
+// hiding it and then immediately showing it again
+da.hideCanvas("player_avatar");
+da.showCanvas("player_avatar");
+{% endhighlight %}
+<div class="text-block">
+<p>
+
+</p>
+</div>
+
+
+<h2 class="anchor">Using the Player object <a class="anchor-link" title="permalink to section" href="#player" name="player">&para;</a></h2>
+-------------------------------
+
+<div class="text-block">
+<p>
+	This section just shows how to create a Player object and how to draw it. Later sections
+	will describe how to extend it for your own game by adding stats and changing the way
+	they're drawn.
+</p>
+<p>
+	The key components of a Player object which you need to know:
+</p>
+<ul>
+<li><b>core statistics</b> - game specific values, some of which are provided by default.
+	Physique is calculated from these.
+<li><b>physique</b> - read only values for each physical part of a body calculated
+	from core statistics and modifiers each time the Player is drawn.
+<li><b>Mods</b> - modifiers either from temporary status effects, clothing worn, or
+	genetic variation. These do not get calculated each time the Player is drawn, so to actually
+	change how the player is drawn, either change its value under Mods, or if it's a core stat change that.
+</li>
+</div>
+
+<h3 class="anchor">Creating the Player <a class="anchor-link" title="permalink to section" href="#player#create" name="player#create">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	To create a player, call:
+</p>
+</div>
+{% highlight javascript %}
+// EXAMPLE creating a specific Player object (either the PC or an NPC)
+var PC = new da.Player({
+	name 		: "HAL 9000",
+	occupation 	: "Pod Bay Opener",
+	// provide specific values here to override the default ones set
+	str			: 5,
+	dex			: 5,
+	con			: 5,
+	wil			: 5,
+	age			: 26,
+
+	// unset ones inside these objects will get their default values
+	Mods 		: {
+		// doesn't matter if the property names are wrapped in quotes or not
+		"amazon":0,
+		"breasts":4,
+		"lips":2,
+		"lipw":-3,
+		"lipt":2,
+		"liph":-1,
+		"lipc":3,
+		"browc":5,
+	},
+	physique 	: {
+		"hairc":13,
+		"hairstyle":3,
+		"height":6,
+		"hairlength":19,
+		irisc:-20,
+	},
+	worn 		: {
+		"top":{2:"cashmere_turtleneck"},
+		"bot":{3:"blue_plaid_pencil_skirt"},
+		"shoes":{3:"classic_black_pumps"},
+		"acc":{1:"solid_black_hold_ups"},
+	},
+});
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	You could also randomly generate a character with a femininity bias between -1 and 1,
+	with positive values being more feminine.
+</p>
+</div>
+
+{% highlight javascript %}
+var fembias = 0.5;
+PC = da.createRandomCharacter(fembias);
+{% endhighlight %}
+<div class="text-block">
+<p>
+
+</p>
+</div>
+
+
+
+<h3 class="anchor">Drawing the Player <a class="anchor-link" title="permalink to section" href="#player#draw" name="player#draw">&para;</a></h3>
+-------------------------------
+{% highlight javascript %}
+// EXAMPLE how to draw our character to that canvas
+var ex = da.drawfigure("player_avatar", PC);
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	The drawfigure function returns an export containing locations of <b>drawpoints</b> (explained later).
+</p>
+</div>
+
+
+<h3 class="anchor">Interacting with a Player object <a class="anchor-link" title="permalink to section" href="#player#interact" name="player#interact">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	You can modify core stats and Mods on the Player object directly.
+	The only special function you have to call is when changing into and out of clothes.
+	It could be done manually as well, but the function just takes care of a lot of
+	the nitty gritty details such as applying modifiers. 
+</p>
+</div>
+
+{% highlight javascript %}
+// either change into it if not wearing it already, else remove it and place it in PC.inv
+var changed = PC.changeClothes("cashmere_turtleneck");
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	The function takes in a clothing name, as stored in da.clothes, and
+	returns a clothing name. If the clothing name is the same, then you changed into it,
+	else it returns the name of the clothes you changed out of to wear the passed in one.
+</p>
+<p>
+	Note that <b>removing the input clothes from PC.inv or some other source is your job</b>
+	when you call this function. If you don't there will be duplicates!
+</p>
+</div>
+
+
+<h2 class="anchor">Extending the Player object <a class="anchor-link" title="permalink to section" href="#extend" name="extend">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	To add stats and Mods, instead of defining something on the Player prototoype, extend the Player.limit objects:
+</p>
+</div>
+
+{% highlight javascript %}
+// create additional core stat of int (intelligence) with default value of 5
+// give the stat some bounds and distribution
+da.Player.statLimits["int"] = {low:0, high:10, avg:5, stdev:2.5, bias:0.3};
+// bias (positive means more feminine characters will have higher score)
+
+// you can do the same with modifiers
+// as soon as you create a new stat, a new modifier will automatically be created
+// creating a modifier is exactly the same
+da.Player.modLimits["tanned"] = {low:0, high:1e9, avg:1, stdev:2, bias:0};
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+Not all stats and modifiers have to drawn, and instead can be used for your game logic.
+For constantly changing values, put them inside <b>vitals</b>.
+</p>
+</div>
+
+{% highlight javascript %}
+da.Player.vitalLimits["maxhp"] = {low:10, high:20, avg:14, stdev:3, bias:0};
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	If you want more complicated creation of vitals, such as adjusting maxhp
+	based on other stats and creating a current hp vital, you could do that by
+	creating a constructor wrapper:
+</p>
+</div>
+
+{% highlight javascript %}
+function myCreateRandomCharacter(bias) {
+	// first create the character randomly
+	var PC = da.createRandomCharacter(bias);
+
+	// modify stats based on the generated stats
+	PC.vitals.maxhp += PC.str;
+	// create a new vital to always initialize to 100% of maxhp
+	PC.vitals.hp = PC.vitals.maxhp;
+
+	return PC;
+}
+{% endhighlight %}
+<div class="text-block">
+<p>
+
+</p>
+</div>
+
+
+<h3 class="anchor">Changing how physique is calculated <a class="anchor-link" title="permalink to section" href="#extend#draw" name="extend#draw">&para;</a></h3>
+-------------------
+<div class="text-block">
+<p>
+	Once you add your own stats and modifiers, to get them to have an impact on the drawing,
+	you have to extend how physique is calculated. <b>The physique values are your main API in changing
+	how the player is drawn</b>.
+</p>
+<p>
+	Default physique values can be found in Player.physiqueLimits, and is listed below:
+</p>
+</div>
+
+{% highlight javascript %}
+var physiqueLimits = {
+	hairc: 		{low:-5,high:120,avg:10,stdev:12},	// jet black to platinum blonde (40) to silver white (100) to pure white (~200)
+	hairstyle: 	{low:0,high:da.drawHairFront.length-1,avg:1,stdev:1},		// bald (0) to parted at middle hair style (1)
+	height: 	{low:-10,high:25,avg:6,stdev:3},		// 4'5" (-10) to 5'7" (10) to 6'6" (25) (need some canvas teweaking?)
+	irisc: 		{low:-20,high:100,avg:5,stdev:20},	// red (~-20) to brown (0) to green (10) to blue (20) to purple (40)
+	skin: 		{low:-20,high:50,avg:10,stdev:30},	// translucent (-20) to porcelein (-10) to fair (-5) to tanned (5) to brown (15) pure black (50)
+	breastrows: {low:0,high:0,avg:0,stdev:0},		// should only have 1 row...
+	gentialscnt:{low:0,high:2,avg:1,stdev:0.1},
+	face: 		{low:-8,high:28,avg:10,stdev:5},		// hypermasculine (-5) to androgenous (10) to feminine (25)
+	eyes: 		{low:-20,high:25,avg:0,stdev:15},		// squinty eyes (-15) to super surprise (25)
+	lips: 		{low:-20,high:40,avg:0,stdev:10},	// thin line (-20) to duck lips (40)
+	hairlength: {low:-1,high:100,avg:5,stdev:13},	// short (-1) to floor touching (100)
+	shoulders: 	{low:-4,high:60,avg:18,stdev:18},	// freakishly strong (-4) to boyish (15) to feminine (25) emaciated (60)
+	breasts: 	{low:-5,high:100,avg:10,stdev:8},	// flat (-5) to A (10) to B (13) to C (15) to D (18) to DD (20) to E (23) to ... to gargantuan (100) 
+	nipples: 	{low:0,high:40,avg:8,stdev:8},				// nonexistent (0) to prominent (15) to udders (40)
+	testes: 	{low:-20,high:35,avg:0,stdev:8},		// gigantic (-20) to nothing there (11) to deep slit (35)  
+	penis: 		{low:-10,high:20,avg:0,stdev:4},		// footlong (-10) to nothing there (20)
+	waist: 		{low:-20,high:35,avg:8,stdev:8},		// pregnant (-20) to flat (0) to toned (5) to narrow (10) to pinched (30)
+	hips: 		{low:-10,high:50,avg:0,stdev:7},		// narrow (-10) to normal (0) to wide (15) to fertility goddess (30)
+	butt: 		{low:-10,high:40,avg:10,stdev:10},	// nonexistent (-10) to normal (10) to titanic (40)			
+	legs: 		{low:-5,high:55,avg:15,stdev:10},	// leg day (-5) to boyish (10) to neutral (15) to lithe (20) to curvy (30) to gigantic thighs (50)
+};
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	To change the way physiques are calculated, override the respective calcPhysique function
+	on the Player prototype; a list of them is below:
+</p>
+</div>
+
+{% highlight javascript %}
+this.physique.skin = this.calcSkin();
+this.physique.face = this.calcFace();
+this.physique.eyes = this.calcEyes();
+this.physique.lips = this.calcLips();
+this.physique.hairlength = this.calcHairLength();
+this.physique.shoulders = this.calcShoulders();
+this.physique.breasts = this.calcBreasts();
+this.physique.nipples = this.calcNipples();
+this.physique.testes = this.calcTestes(true);
+this.physique.penis = this.calcPenis();
+this.physique.waist = this.calcWaist();
+this.physique.hips = this.calcHips();
+this.physique.butt = this.calcButt();
+this.physique.legs = this.calcLegs();
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	For example, we change how skin colour is calculated to include the int stat and tanned modifier we added.
+</p>
+</div>
+
+{% highlight javascript %}
+// keep track of how we were doing it before
+var prevCalcSkin = da.Player.prototype.calcSkin;
+
+da.Player.prototype.calcSkin = function() {
+	var s = prevCalcSkin.call(this);
+	// could potentially return not a number, meaning a string was used
+	if (isNaN(s)) return s;
+
+	// remember higher values are darker
+	// higher intelligence probably means they stay in doors more, so lighter skin
+	return s + this.Mods.tanned - this.int;	
+}
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	Keeping a reference to the previous way of doing it is the recommended way of extending
+	the calcPhysique functions.
+</p>
+</div>
+
+
+<h2 class="anchor">Clothing <a class="anchor-link" title="permalink to section" href="#clothes" name="clothes">&para;</a></h2>
+-------------------------------
+
+<div class="text-block">
+<p>
+	All clothes is defined under da.clothes, and all clothing templates are defined under da.ctp.
+	da.clothes maps a string name to the actual clothing object. A reminder: please always
+	change into and out of clothes using the changeClothes function on the Player object.
+</p>
+<p>
+	Below is a sample definition of a new piece of clothing, using existing templates:
+</p>
+</div>
+
+{% highlight javascript %}
+da.clothes["cashmere_tank"] = new Clothing({
+	name: 	"cashmere tank top",
+	price: 	75,
+	loc: 	"top",	// default locations include top, bot, shoes, and acc
+	layer: 	2,		// cannot be worn with other clothing at the same location with the same layer
+	// optional, requires your system to display it
+	longdesc:"expensive looking tank top that isn't really suited for working out in.",	
+	// draw using a template
+	drawunderbreasts: 	ctp.top.drawTankTop("rgb(200,200,200)",da.getPattern("white_cashmere")),
+	drawunderhair: ctp.top.drawShirtBreasts("rgb(200,200,200)",da.getPattern("white_cashmere")),
+});
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	For the clothes to be drawn, it must have at least 1 drawing function, starting with "draw"
+	and including a location or at what point in the drawing process it should be drawn. A list
+	of those draw opportunities are listed below in order of when they occur (subject to additions):
+</p>
+</div>
+
+{% highlight javascript %}
+drawbehindback
+drawundergenitals
+drawunderbreasts
+drawunderchin
+drawunderhair
+drawafterall
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+Each of those template drawing functions take a stroke and a fill.
+This is the case for most templates. A stroke can be any CSS compliant color,
+so "rgb(r,g,b)", "black", "rgba(r,g,b,a)", and so on would work. Fill is the
+same but with the addition that patterns can be passed in. How to create
+these custom patterns will be covered next. Note that a single piece of clothing
+may have multiple drawing opportunities.
+</p>
+</div>
+
+
+<h3 class="anchor">Creating custom patterns <a class="anchor-link" title="permalink to section" href="#clothes#patterns" name="clothes#patterns">&para;</a></h3>
+-------------------------------
+{% highlight javascript %}
+da.preloadPattern({name:"checkered", reptition:"repeat", format:"png", dataurl:"iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE3NDQ1MDdCREI4QjExRTU4ODU1RURBNEJFMDk2MEFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE3NDQ1MDdDREI4QjExRTU4ODU1RURBNEJFMDk2MEFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTc0NDUwNzlEQjhCMTFFNTg4NTVFREE0QkUwOTYwQUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTc0NDUwN0FEQjhCMTFFNTg4NTVFREE0QkUwOTYwQUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz79WpsFAAAAJElEQVR42mL8//8/AxJgZGRE5jIx4AU0lWZE46O5dCCdBhBgAEU3BhAw4WsWAAAAAElFTkSuQmCC"});
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	Create and cache a pattern by calling da.preloadPattern, providing a name and a way to get at the source.
+	The above passes it in as a <b>dataurl</b>; other options are providing a <b>url</b> property linking
+	to an external source, or a <b>path</b> property containing the path to a local image (not recommended).
+	All future access to the pattern will be done via da.getPattern(pattern_name), such as passing it in as a fill. The <b>recommended format is a 10x10 png</b> in dataurl form. Provide only 1 of the source options.
+</p>
+</div>
+
+
+<h3 class="anchor">Creating custom clothing templates <a class="anchor-link" title="permalink to section" href="#clothes#templates" name="clothes#templates">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	An exciting part of this tool is creating your own content in the form of new clothing templates!
+	The process has been extremely simplified by the framework, and an example is shown below:
+</p>
+</div>
+{% highlight javascript %}
+da.ctp.bot.drawTightPants = function(stroke, fill) {
+	// for midrift to ankle coverage with any kind of fill (can be a function that returns gradient or pattern)
+	function drawHalf(ctx, ex, mods) {
+		ctx.moveTo(ex.pelvis.x, ex.pelvis.y);
+		ctx.quadraticCurveTo(ex.pelvis.cp3.x, ex.pelvis.cp3.y, ex.hip.x, ex.hip.y);
+		// from center of waist to side
+
+		da.drawPoints(ctx, null, ex.thigh.out, ex.kneepit, ex.calf.out, ex.ankle.outtop, da.adjustPoint(ex.ankle.out,0,-3));
+		// bottom of the pants
+		ctx.quadraticCurveTo(ex.ankle.intop.x*0.5+ex.ankle.out.x*0.5, ex.ankle.out.y+2,
+				ex.ankle.intop.x, ex.ankle.intop.y-3);
+
+		da.drawPoints(ctx, null, ex.calf.in, ex.kneecap, ex.kneecap.top, ex.groin, ex.groin.in);
+	}
+	return da.getFullDrawer(stroke, fill, 2, drawHalf);
+}
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	Usually clothing is drawn symmetrically, so there is a higher level function da.getFullDrawer
+	that produces a drawer for both sides of the body when you provide it the stroke, fill, stroke width,
+	and the half drawer function.
+</p>
+<p>
+	Drawing will involve connecting different <b>drawpoints</b> that is exported out to you 
+	using quadratic and bezier curves. A key tool to working with draw points and experimenting 
+	with clothing templates is the included tester. Toggle draw points to see where each draw point is
+	and how they move with different physique values.
+</p>
+<p>
+	The very convenient function da.drawPoints takes in a ctx, a starting point - <b>if null, it
+	will continue from the last point drawn to</b> - and a variable
+	list of draw points to connect in a "tight" manner, following the curves of the body if those
+	points follow one another. Again, use the tester to view which drawpoints follow one another.
+</p>
+<p>
+	You can shift drawpoints for example to create baggy clothing via <code>da.adjustPoint(ex.ankle.out,0,-3)</code>, which moves the outer ankle 3 units up and adjusts its curve control points.
+</p>
+</div>
+
+
+<h2 class="anchor">Advanced drawing <a class="anchor-link" title="permalink to section" href="#drawing" name="drawing">&para;</a></h2>
+-------------------------------
+<div class="text-block">
+<p>
+	There are many helper functions to make drawing a lot easier. Learning to use those functions
+	will save you a lot of time in trying to create a new clothing template or hairstyle.
+</p>
+</div>
+
+<h3 class="anchor">Debugging curves <a class="anchor-link" title="permalink to section" href="#drawing#debug" name="drawing#debug">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	The tester is your friend and it will tell you a lot of useful debugging information
+	in the console (F12 to bring up developer tools -> console). Clicking on the canvas
+	will output the x and y internal position of that point. <b>The horizontal reflection is done across x=79</b>. Also note that the internal coordinates are invariant when you size the canvas differently.
+</p>
+<p>
+	Something really useful is being able to see the control points of a curve.
+	You can do this easily by adding a number at the end of a <code>ctx.bezierCurveTo</code> or 
+	<code>ctx.quadraticCurveTo</code> call, as shown below:
+</p>
+</div>
+
+{% highlight javascript %}
+ctx.quadraticCurveTo(ex.pelvis.cp3.x, ex.pelvis.cp3.y, ex.hip.x, ex.hip.y, 1);
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	That will show the start and endpoints of the curve, as well as its control point.
+	The number at the end indicates how large to draw the debugging info; for small details 
+	such as eyes, you'd want a small number such as 0.5.
+</p>
+<p>
+	This can also be done inside of a chained <code>da.drawPoints</code> call, which hopefully
+	most of your drawing will be done with <code>da.tracePoint(point, radius)</code>:
+</p>
+</div>
+
+{% highlight javascript %}
+da.drawPoints(ctx, null, ex.thigh.out, da.tracePoint(ex.kneepit,1), ex.calf.out, ex.ankle.outtop, da.adjustPoint(ex.ankle.out,0,-3));
+{% endhighlight %}
+
+
+<h3 class="anchor">Splitting curves <a class="anchor-link" title="permalink to section" href="#drawing#split" name="drawing#split">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	Often you want a point someway along the curve between two control points.
+	The convenient function to get that point is <code>da.splitCurve(p1,p2,t)</code>
+	where t is between 0 and 1 (you can go beyond this range, but that's for advanced users).
+	The template case study for this will be the pencil skirt template:
+</p>
+</div>
+{% highlight javascript linenos %}
+da.ctp.bot.drawPencilSkirt = function(stroke, fill) {
+	function drawHalf(ctx, ex, mods) {
+		// these skirts are relatively high waisted
+		ctx.moveTo(ex.bellybutton.bot.x, ex.bellybutton.bot.y-2);
+		var sp = da.splitCurve(ex.waist, ex.hip,0.5);
+
+		ctx.bezierCurveTo(79-4,ex.bellybutton.bot.y-2,
+			sp.right.p1.x+3, (sp.right.p1.y+ex.bellybutton.bot.y)/2,
+			sp.right.p1.x, sp.right.p1.y);
+
+		// copy it to avoid editing the original drawpoint!
+		var p2 = Object.assign({},sp.right.p2);
+		p2.cp1 = sp.right.cp1;
+		p2.cp2 = sp.right.cp2;
+
+		// goes down to cover the knee
+		da.drawPoints(ctx, null, p2, ex.thigh.out, ex.kneepit);
+
+		// close up to the middle
+		ctx.bezierCurveTo(ex.kneepit.x+5,ex.kneepit.y+4,
+			79-3, ex.kneepit.y+4,
+			79, ex.kneepit.y+4);
+
+	}
+	return da.getFullDrawer(stroke, fill, 2, drawHalf);
+}
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	The split happens on line 5, where we want to be halfway between the waist and hips.
+	The returned sp object has both a left and right, each with starting point (p1),
+	end point (p2), and either 1 or 2 control points (cp1, cp2).
+</p>
+<p>
+	<code>da.drawPoints</code> will either draw a straight line, quadratic curve, or bezier
+	curve to a certain point depending on if it has no control points defined under it (p.cp1 doesn't exist),
+	only cp1 exists, or if cp1 and cp2 both exist, respectively. You have to set it under
+	p2 as shown in lines 12-14. <b>You have to copy the split point using Object.assign to
+	avoid editing the original drawpoint</b>. 
+</p>
+</div>
+
+
+<h3 class="anchor">Average quadratic <a class="anchor-link" title="permalink to section" href="#drawing#avgquad" name="drawing#avgquad">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	A curve that you might want to commonly draw is a quadratic curve with the control point somewhere
+	along the line connecting the two points, perturbed to the side slightly. You can do so
+	easily with <code>averageQuadratic(ctx, p1, p2, t, dx, dy, st, et)</code>. st and et are optional
+	parameters specifying the starting and end "time" along the curve. So if you put st=0.5, et=0.8,
+	the curve will be drawn starting halfway and finish drawing 80% of the way there. Again, t is between
+	0 and 1. dx and dy should not both be 0, otherwise you get a straight line. An advanced example is below:
+</p>
+</div>
+
+{% highlight javascript %}
+da.averageQuadratic(ctx, bangstart, hairstart, 0.5, -3, -3, 0.05, da.clamp(0.2+hl*0.004,0,1));
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+Here we start from bangstart, a point on the tip of the bangs, and curve up to hairstart, which is 
+the root of the hair on top. We want the control point to be halfway along the way, disturbed 3 units
+to the left and 3 up, so that the curve bends more heavily towards the top to represent depth.
+Our st=0.5 so we don't actually start at bangstart, but slightly above it, and don't actually end
+up at hairstart, but somewhere before it (at least 0.2 along the curve, and at most 1 depending on hl=hairlength).
+</p>
+</div>
+
+
+<h3 class="anchor">Custom hairstyles <a class="anchor-link" title="permalink to section" href="#drawing#hair" name="drawing#hair">&para;</a></h3>
+-------------------------------
+<div class="text-block">
+<p>
+	Probably the hardest templates to create, it takes some familiarity with the drawing code
+	and some creative sauce. The example below is how the side braid is drawn (be warned, it might
+	blow your mind slightly :O)
+</p>
+</div>
+
+{% highlight javascript %}
+// append the drawers to drawHairBack and drawHairFront, now PC.physique.hairstyle needs to be that index to have that hair
+da.drawHairBack.push(function(ctx, ex) {
+	drawSideBraidsBack(ctx, ex);
+	ctx.fill();
+	ctx.stroke();
+});
+
+// also append to drawHairFront
+da.drawHairFront.push(function(ctx, ex) {
+	da.reflectHorizontal(ctx);
+	// asymmetrical hair, so we first draw the right side
+	drawOtherSideBraidsFront(ctx, ex);
+	ctx.fill();
+	ctx.stroke();
+	// reflect back to the left side
+	da.reflectHorizontal(ctx);
+	// draw the actual braided hair
+	drawSideBraidsFront(ctx, ex);
+	ctx.fill();
+	ctx.stroke();
+	// return back to original orientation
+	da.reflectHorizontal(ctx);
+});
+{% endhighlight %}
+
+<div class="text-block">
+<p>
+	That's the easy boilerplate code, the actual drawing code follows:
+</p>
+</div>
+
+{% highlight javascript linenos %}
+function drawSideBraidsBack(ctx, ex) {
+	ctx.save();
+	ctx.beginPath();
+	var hl = ex.hairlength+10;
+
+	// draw front parting
+	var hairtip = {x:ex.skull.x+5, y:ex.skull.y-2-hl*0.01};
+	var hairbot = {x:ex.ear.bot.x-2-hl*0.03, y:ex.ear.bot.y+hl*0.05,
+		cp1:{x:hairtip.x-27-hl*0.02, y:hairtip.y-5}};
+	hairbot.cp2 = {x:hairbot.x-5, y:hairbot.y-10};
+	hairtip.cp1 = {x:hairbot.x+5, y:hairbot.y-20};
+	hairtip.cp2 = {x:hairtip.x+5+hl*0.1, y:hairtip.y+20+hl*0.1};
+	var hairback = {x:79, y:hairbot.y+hl*0.5,
+		cp1:{x:60, y:hairbot.y+hl*0.5}};
+
+	// to the other side of ears
+	var tuckedhair = {x:2*79-ex.ear.bot.x, y:ex.ear.bot.y,
+		cp1:{x:80+hl*0.2,y:ex.chin.bot.y}};
+	da.drawPoints(ctx, hairtip, hairbot, hairback, tuckedhair);
+}
+
+function drawOtherSideBraidsFront(ctx, ex) {
+	// save the original styles before we start drawing
+	ctx.save();
+	ctx.beginPath();
+	var hl = ex.hairlength;
+
+	var hairtip = {x:ex.skull.x-5, y:ex.skull.y-2-hl*0.01};
+	var hairbot = da.adjustPoint(ex.ear.top,-2,2);
+	da.drawPoints(ctx, hairtip, hairbot);
+	da.averageQuadratic(ctx, hairbot, hairtip, 0.5, 10, 5);
+
+	// restore the original styles before we started drawing
+	ctx.restore();		
+}
+
+
+function drawSideBraidsFront(ctx, ex) {
+	ctx.save();
+	ctx.beginPath();
+	var hl = ex.hairlength+10;
+
+	// draw front parting
+	var hairtip = {x:ex.skull.x+5, y:ex.skull.y-2-hl*0.01};
+	var hairbot = {x:ex.ear.bot.x-2-hl*0.03, y:ex.ear.bot.y+hl*0.05,
+		cp1:{x:hairtip.x-27-hl*0.02, y:hairtip.y-5}};
+	hairbot.cp2 = {x:hairbot.x-5, y:hairbot.y-10};
+	hairtip.cp1 = {x:hairbot.x+5, y:hairbot.y-20};
+	hairtip.cp2 = {x:hairtip.x+5+hl*0.1, y:hairtip.y+20+hl*0.1};
+
+	da.drawPoints(ctx, hairtip, hairbot, hairtip);
+	ctx.restore();	
+
+	// draw braids (wow turned out pretty complicated)
+	if (hl > 30) {
+		ctx.fill();
+		ctx.stroke();
+		ctx.beginPath();
+
+		var braidtop = {x:hairbot.x-hl*0.01, y:hairbot.y+10};
+		var braidtip = {x:braidtop.x+hl*0.3, y:braidtop.y+hl};
+		var braidend = {x:ex.neck.top.x-5, y:ex.neck.top.y+5};
+		// var braidend = {x:braidtop.x+4+hl*0.04, y:braidtop.y};
+
+		ctx.moveTo(hairbot.x, hairbot.y);
+		ctx.lineTo(braidtop.x, braidtop.y);
+		var outcp1 = da.averageQuadratic(ctx, braidtop, braidtip, 0.5, -hl*0.2, hl*0.2);
+		var outcp2 = da.averageQuadratic(ctx, braidtip, braidend, 0.5, -hl*0.2, hl*0.2);
+		var i = 0, j = 0.05;
+		var outer = da.splitQuadratic({p1:braidtop,p2:braidtip,cp1:outcp1},i).left.p2;
+		var inner = da.splitQuadratic({p1:braidend,p2:braidtip,cp1:outcp2},j).left.p2;
+		ctx.fill();
+		ctx.stroke();
+		ctx.beginPath();
+
+		for (; i < 1 && j < 1;) {
+			i += 10/hl;
+			outer = da.splitQuadratic({p1:braidtop,p2:braidtip,cp1:outcp1},i).left.p2;	
+			j += 10/hl;
+			inner = da.splitQuadratic({p1:braidend,p2:braidtip,cp1:outcp2},j+(10-2*j)/hl).left.p2;
+			ctx.moveTo(outer.x, outer.y);
+			da.averageQuadratic(ctx, outer, inner, 0.5, -10+5*j,2);
+			ctx.moveTo(inner.x, inner.y);
+			da.averageQuadratic(ctx, inner, outer, 0.5, 10-5*i,-5);
+
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+		}
+
+		// extra stray hair for detail
+		var stray = da.splitCurve(hairbot,hairtip,0.7).left.p2;
+		ctx.moveTo(stray.x, stray.y);
+		ctx.bezierCurveTo(stray.x+5, stray.y+10, braidtop.x-10, braidtop.y-20, braidtop.x, braidtop.y+10);
+		ctx.fillStyle = "rgba(0,0,0,0)";
+	}
+}
+{% endhighlight %}

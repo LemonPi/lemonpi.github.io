@@ -95,6 +95,8 @@ branch: base
  <h2 class="block">Archive</h2>
 
 <ul class="archive">
+ <li><a href="DAD/">Dynamic avatar drawer</a> - Feb 2016</li>
+ 
  <li><a href="vpr/"><strong>VPR Router Optimization</strong></a> - May 2015 to Aug 2015</li>
 
  <li><a href="robot/"><strong>Autonomous Interacting Robots</strong></a> - Jan 2015 to Apr 2015</li>

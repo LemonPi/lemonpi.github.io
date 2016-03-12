@@ -70,8 +70,10 @@ bin_search(seq.begin(), seq.end(), 17);
 </p> 
 <p>
 	Some pitfalls to binary search are 1. it requires random access to the entire sequence, which implies
-	2. the entire sequence need to be loaded in memory (or disk access will slow it down dramatically), and for
-	small datasets (around n < 64) loses to linear search due to the lack of spacial locality. This issue will
+<ol>
+	<li>the entire sequence need to be loaded in memory (or disk access will slow it down dramatically), and for
+</ol>
+
 	likely be more apparent in the future when more advanced optimizations for space locality becomes implemented.
 </p>
 </div>

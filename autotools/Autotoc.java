@@ -89,6 +89,7 @@ public class Autotoc {
 			try {
 				BufferedWriter htmlWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(toc_file), "UTF-8"));
 				htmlWriter.write(StringUtils.unescapeHtml3(toc.toString()));
+				System.out.print(StringUtils.unescapeHtml3(toc.toString()));
 				htmlWriter.flush();
 				htmlWriter.close();
 			}

@@ -65,15 +65,15 @@
 				
     </ul>
 </div>
-<div id="content">
-{% if page.branch != "base" %}
-	<h1 id="pagetitle">{{ page.title }}</h1>
-{% endif %}
-{{ content }}
-</div>
 
-<div id="footer">
-<div id="contact"><p class="reverse">ac.liamtoh</p><p class="reverse">@gnohznosnhoj</p></div><a id="history" href="https://github.com/LemonPi/lemonpi.github.io/commits/master/{{page.path}}">page history</a>
-</div>
+	<div id="content">
+	{% if page.branch != "base" %}
+		<h1 id="pagetitle">{{ page.title }}</h1>
+	{% endif %}
+	{{ content }}
+	</div>
+
+	{% include footer.html %}
+
 </body>
 </html>

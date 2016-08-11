@@ -4,6 +4,7 @@ drawings.svg
 *test*
 *temp*
 !tester.md
+!tester.html
 !algotest.js
 *.lock
 *class

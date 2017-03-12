@@ -13,6 +13,15 @@ where I present my <a href="principles.html">conception</a> of good design and s
 
 <div class="gallery" id="main-gallery">
 
+	<a href="/projects/snowfun/"><div class="box">
+	<img src="/res/projects/snowfun.png"/>
+	<span class="caption">
+	<h1 class="caption-title">Snowfun</h1>
+	<p class="caption-desc">A fun way to learn functional programming</p>
+	<p class="caption-date">Jan 2016</p>
+	</span>
+	</div></a>
+
 	<a href="/projects/vpr/"><div class="box">
 	<img src="/res/projects/vpr_speedup.png"/>
 	<span class="caption">
@@ -37,15 +46,6 @@ where I present my <a href="principles.html">conception</a> of good design and s
 	<h1 class="caption-title">SAL</h1>
 	<p class="caption-desc">Simple Algorithms and Data structures</p>
 	<p class="caption-date">Oct 2014 - Jan 2015</p>
-	</span>
-	</div></a>
-
-	<a href="projects/clisp/"><div class="box">
-	<img src="/projects/clisp.png"/>
-	<span class="caption">
-	<h1 class="caption-title">Clisp</h1>
-	<p class="caption-desc">Lisp interpreter (scheme dialect) in C++</p>
-	<p class="caption-date">Aug 2014</p>
 	</span>
 	</div></a>
 

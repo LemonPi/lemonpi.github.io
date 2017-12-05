@@ -97,83 +97,75 @@ $(document).ready(function() {
 --------------------------
 <div class="block">
 <ol>
-	<h2 class="anchor"><li>Understand problem <a class="anchor-link" title="permalink to section" href="#step1" name="step1">¶</a></h2>
+	<h2 class="anchor"><li>Understand problem <a class="anchor-link" title="permalink to section" href="#step1" name="step1">¶</a></li></h2>
 		<ul>
-			<li>Consider the <b>causes and impacts</b> of problem to give basis for reframing
+			<li>Consider the <b>causes and impacts</b> of problem to give basis for reframing</li>
 			<ul>
-				<li>Physically reconstruct problem then apply physics models to analyze problem factors
-				<li>Research literature relevant to problem 
-				<li>Set initial constraints and objectives to guide solution generation
+				<li>Physically reconstruct problem then apply physics models to analyze problem factors</li>
+				<li>Research literature relevant to problem</li>
+				<li>Set initial constraints and objectives to guide solution generation</li>
 			</ul>
-			<li>Determine key stakeholders
+			<li>Determine key stakeholders</li>
 			<ul>
-				<li>who will use the solution 
-				<li>who will the use of the solution effect 
-				<li>who will produce the solution
+				<li>who will use the solution </li>
+				<li>who will the use of the solution effect </li>
+				<li>who will produce the solution</li>
 			</ul>
 		</ul>
-	</li>
 
-	<h2 class="anchor"><li>Break problem down to its components - what needs to be done? <a class="anchor-link" title="permalink to section" href="#step2" name="step2">¶</a></h2>
+	<h2 class="anchor"><li>Break problem down to its components - what needs to be done? <a class="anchor-link" title="permalink to section" href="#step2" name="step2">¶</a></li></h2>
 		<ul>
-			<li>Pick as independent components as you can (ex. drawing a picture --> outlining, colouring)
-			<li>Keep breaking it down until the components are as independent and easy to approach as necessary
+			<li>Pick as independent components as you can (ex. drawing a picture --> outlining, colouring)</li>
+			<li>Keep breaking it down until the components are as independent and easy to approach as necessary</li>
 		</ul>
-	</li>
 	
-	<h2 class="anchor"><li>Generate specialized solutions for each component problem (monomaniacal design) <a class="anchor-link" title="permalink to section" href="#step3" name="step3">¶</a></h2>
+	<h2 class="anchor"><li>Generate specialized solutions for each component problem (monomaniacal design) <a class="anchor-link" title="permalink to section" href="#step3" name="step3">¶</a></li></h2>
 		<ul>
-			<li>Relate problem to one solved in nature (biomimicry)
-			<li>Consider what can provide forces if something needs to be moved
-			<li>Consider buckling or bending to fold something
-			<li>Consider friction to hold two things together but still allow for lateral shearing
-			<li>Keep all solutions inside the solution pool; no elimination as revision might use a previously rejected solution
+			<li>Relate problem to one solved in nature (biomimicry)</li>
+			<li>Consider what can provide forces if something needs to be moved</li>
+			<li>Consider buckling or bending to fold something</li>
+			<li>Consider friction to hold two things together but still allow for lateral shearing</li>
+			<li>Keep all solutions inside the solution pool; no elimination as revision might use a previously rejected solution</li>
 		</ul>
-	</li>
 	
-	<h2 class="anchor"><li>Compare solutions based on my <a href="/principles.html">principles</a>, adjusted for what the context demands <a class="anchor-link" title="permalink to section" href="#step4" name="step4">¶</a></h2>
+	<h2 class="anchor"><li>Compare solutions based on my <a href="/principles.html">principles</a>, adjusted for what the context demands <a class="anchor-link" title="permalink to section" href="#step4" name="step4">¶</a></li></h2>
 		<ul>
-			<li>Use Pugh chart for performance comparison 
-			<li>Use simple comparison matrix for general appeal
-			<li>Don't be afraid to challenge stakeholder requirements if they haven't understood the problem
+			<li>Use Pugh chart for performance comparison </li>
+			<li>Use simple comparison matrix for general appeal</li>
+			<li>Don't be afraid to challenge stakeholder requirements if they haven't understood the problem</li>
 		</ul>
-	</li>
 	
-	<h2 class="anchor"><li>Combine component solutions <a class="anchor-link" title="permalink to section" href="#step5" name="step5">¶</a></h2>
+	<h2 class="anchor"><li>Combine component solutions <a class="anchor-link" title="permalink to section" href="#step5" name="step5">¶</a></li></h2>
 		<ul>
-			<li>Keep unused components inside solution pool, <b>key to making the solution robust</b>
-			<li>Switch components if the requirements or environment changes (ex. now needs to operate in a corrosive environment)
+			<li>Keep unused components inside solution pool, <b>key to making the solution robust</b></li>
+			<li>Switch components if the requirements or environment changes (ex. now needs to operate in a corrosive environment)</li>
 		</ul>
-	</li>
 	
-	<h2 class="anchor"><li>Prototype - allows better understanding of solution and possible issues with design <a class="anchor-link" title="permalink to section" href="#step6" name="step6">¶</a></h2>
+	<h2 class="anchor"><li>Prototype - allows better understanding of solution and possible issues with design <a class="anchor-link" title="permalink to section" href="#step6" name="step6">¶</a></li></h2>
 		<ul>
-			<li>Have at least one <b>purpose</b>
+			<li>Have at least one <b>purpose</b></li>
 			<ul>
-				<li>Prove and communicate concept
-				<li>Communicate shape and appearance
-				<li>Demonstrate feasibility
-				<li>Show functionality
+				<li>Prove and communicate concept</li>
+				<li>Communicate shape and appearance</li>
+				<li>Demonstrate feasibility</li>
+				<li>Show functionality</li>
 			</ul>
-			<li>Prototype is ideally physical, to scale, and functional
-			<li>Start with conceptual drawings by hand or with Inkscape
+			<li>Prototype is ideally physical, to scale, and functional</li>
+			<li>Start with conceptual drawings by hand or with Inkscape</li>
 		</ul>
-	</li>
 	
-	<h2 class="anchor"><li>Refine solutions <a class="anchor-link" title="permalink to section" href="#step7" name="step7">¶</a></h2>
+	<h2 class="anchor"><li>Refine solutions <a class="anchor-link" title="permalink to section" href="#step7" name="step7">¶</a></li></h2>
 		<ul>
-			<li>Can one part perform multiple functions?
+			<li>Can one part perform multiple functions?</li>
 			<ul>
-				<li>Can structural elements also become functional ones?
-				<li>How will the user interact with it?
-				<li>How will it be stored and cleaned?
-				<li>How long do I have to spend explaining how to use it and what it does?
+				<li>Can structural elements also become functional ones?</li>
+				<li>How will the user interact with it?</li>
+				<li>How will it be stored and cleaned?</li>
+				<li>How long do I have to spend explaining how to use it and what it does?</li>
 			</ul>
 		</ul>
-	</li>
 	
-	<h2 class="anchor"><li>Refine understanding of the problem at each step and adjust solutions accordingly <a class="anchor-link" title="permalink to section" href="#step8" name="step8">¶</a></h2>
-	</li>
+	<h2 class="anchor"><li>Refine understanding of the problem at each step and adjust solutions accordingly <a class="anchor-link" title="permalink to section" href="#step8" name="step8">¶</a></li></h2>
 </ol>   
 
 
@@ -181,7 +173,6 @@ $(document).ready(function() {
  <a class="handbook" id="handbook-inline" href="/handbook/">Tools Handbook</a>
 
 <h2 class="anchor">Analysis of Process <a class="anchor-link" title="permalink to section" href="#analysis" name="analysis">¶</a></h2>
-----------------------------
 <div class="text-block">
 <p>
 	My process is characterized by being <b>cyclical</b> and by heavily <b>relying on functional decomposition</b>.
@@ -216,7 +207,6 @@ $(document).ready(function() {
 </div>
 
 <h2 class="anchor">References <a class="anchor-link" title="permalink to section" href="#reference" name="reference">¶</a></h2>
--------------------------
 <div class="reference">
 <a name="ref1">[1]</a> NASA, 
 	(2008, Feb 7). <i>Engineering Design Process</i> [Online]. Available:

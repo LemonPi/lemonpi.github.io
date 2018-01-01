@@ -8,21 +8,17 @@
 <meta property="og:url" content="https://lemonpi.github.io/{{ page.url }}" />
 <meta property="og:image" content="https://lemonpi.github.io/ogimg.png" />
 <title>{{ page.title }} - SAL Documentation</title>
-<link rel="stylesheet" href="{{ site.baseurl }}css/main.css" />
-<link rel="stylesheet" href="/css/code.css" />
-<link rel="shortcut icon" href="/favicon.ico">
-<script type="text/javascript" src="/javascript/usability.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/code.css" />
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+<script type="text/javascript" src="{{ site.baseurl }}/javascript/usability.js"></script>
 </head>
 <body>
 <div id="header">
 
-	<div id="iconlinks_box">
-	<a href="https://github.com/lemonpi" title="github"><div id="github" class="iconlink"></div></a>
-	<a href="http://www.linkedin.com/profile/view?id=282810346&trk=nav_responsive_tab_profile" title="linkedin"><div id="linkedin" class="iconlink"></div></a>
-	<a href="{{ site.baseurl }}res/resume.pdf" title="resume"><div id="resume" class="iconlink"></div></a>
-	</div>
+	{% include iconlinks.html %}
 	
-	<div id="titlearea"><h1><a id="titlelink" href="/sal/"><p id="titlename">Simple Algorithms</p> <p id="titletext">Library</p></a></h1></div>
+	<div id="titlearea"><h1><a id="titlelink" href="{{ site.baseurl }}/sal/"><p id="titlename">Simple Algorithms</p> <p id="titletext">Library</p></a></h1></div>
 </div>
 
 <div id="navbar">

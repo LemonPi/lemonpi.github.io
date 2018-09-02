@@ -1,0 +1,72 @@
+---
+layout: single
+title: Kepler Communications Internship
+permalink: /projects/kepler/index_old.html
+group: projects
+---
+
+<div class="text-block">
+    <p>
+        For 12 weeks during the summer of 2018
+        I worked at <a href="http://www.keplercommunications.com/">Kepler Communications</a>
+        as a software engineering intern.
+
+        I designed and implemented the mission control software backend
+        to replace a third party solution which was not scalable and had usability issues.
+    </p>
+</div>
+
+<h2 class="anchor">Entities <a class="anchor-link" title="permalink to section" href="#entities"
+                               name="entities">&para;</a></h2>
+<!--- new section -->
+<ul>
+    <li>satellite - orbiting around Earth</li>
+    <li>ground stations - giant antennas around Earth that physically transmit and receive</li>
+    <li>operations computer (ops) - computer(s) managing operations that handles information to
+        and from multiple ground stations
+    </li>
+</ul>
+
+<h2 class="anchor">Challenges <a class="anchor-link" title="permalink to section" href="#challenges"
+                                 name="challenges">&para;</a></h2>
+<!--- new section -->
+<div class="text-block">
+    <p>
+        Kepler works with low earth orbit satellites that orbit around Earth very quickly.
+        Communication is only possible when they're visible to a ground station, usually
+        lasting around 10 minutes each with many hour gaps in between.
+        These opportunities are called <strong>passes</strong>.
+    </p>
+    <p>
+        The link quality increases as the altitude of the satellite relative to the ground
+        station increases, up to a maximum in the middle of the pass. Packets are frequently
+        lost, especially when the altitude is low.
+    </p>
+</div>
+
+<h2 class="anchor">MCS Backend <a class="anchor-link" title="permalink to section" href="#mcs"
+                                  name="mcs">&para;</a></h2>
+<!--- new section -->
+<div class="text-block">
+    <p>
+        The MCS backend is a software library and a collection of scripts. Its interface includes
+        calling the library functions, running the scripts, and querying/writing to a central
+        database.
+    </p>
+    <p>
+        It's responsible for communicating with the satellites and automating operations
+        through task scheduling.
+    </p>
+</div>
+
+<h2 class="anchor">Features <a class="anchor-link" title="permalink to section" href="#features"
+                               name="features">&para;</a></h2>
+<!--- new section -->
+<ol>
+    <li>Scalable to many satellites and ops machines</li>
+    <li>Flexible in choosing communication protocol on a per satellite basis</li>
+    <li>Task scheduling and resumption across passes</li>
+</ol>
+
+<h3 class="anchor">Scalable <a class="anchor-link" title="permalink to section" href="#features"
+                               name="features">&para;</a></h3>

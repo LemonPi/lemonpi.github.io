@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html prefix="og: htttp://ogp.me/ns#">
+
+{% include head.html %}
+
+<body>
+
+	{% include header.html %}
+
+
+	<div id="content">
+	{% if page.branch != "base" %}
+		<h1 id="pagetitle">{{ page.title }}</h1>
+	{% endif %}
+		<div class="block">
+			{{ content }}
+		</div>
+	</div>
+
+	{% include footer.html %}
+
+</body>
+
+</html>

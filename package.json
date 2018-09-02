@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/LemonPi/lemonpi.github.io/issues"
   },
-  "homepage": "https://github.com/LemonPi/lemonpi.github.io#readme"
+  "homepage": "https://github.com/LemonPi/lemonpi.github.io#readme",
+  "dependencies": {
+    "showdown": "^1.8.6"
+  }
 }

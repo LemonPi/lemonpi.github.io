@@ -15,7 +15,7 @@ to replace a third party solution which was not scalable and had usability issue
 ## Entities
 
 - satellite - orbiting around Earth
-- ground stations - giant antennas around Earth that physically transmit and receive</li>
+- ground stations - giant antennas around Earth that physically transmit and receive
 - operations computer (ops) - computer(s) managing operations that handles information to
     and from multiple ground stations
     
@@ -38,3 +38,9 @@ database.
 
 It's responsible for communicating with the satellites and automating operations
 through task scheduling.
+
+## Features
+
+- Scalable to many satellites and ops machines
+- Flexible in choosing communication protocol on a per satellite basis
+- Task scheduling and resumption across passes

@@ -1,8 +1,10 @@
 const showdown = require('showdown');
 const fs = require('fs');
 const path = require('path');
+const extensions = require('./extensions');
 
 const converter = new showdown.Converter({
+    extensions: [extensions.anchorHeader],
     noHeaderId: true,
     metadata  : true
 });

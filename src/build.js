@@ -4,7 +4,7 @@ const path = require('path');
 const extensions = require('./extensions');
 
 const converter = new showdown.Converter({
-    extensions: [extensions.anchorHeader, extensions.addTOC],
+    extensions: [extensions.anchorHeader, extensions.addTOC, extensions.highlightCode],
     noHeaderId: true,
     metadata  : true
 });

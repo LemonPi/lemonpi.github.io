@@ -58,7 +58,19 @@ function addTOC() {
     return ext;
 }
 
+function highlightCode() {
+    return {
+        type: 'output',
+        regex: /<pre><code class="(\w+) [^"]*?">([\s\S]*?)<\/code><\/pre>/g,
+        // replace: function(fullmatch, language, content) {
+        //     console.log(`matched ${language}`);
+        // }
+        replace: "\n{% highlight $1 %}$2{% endhighlight %}\n"
+    };
+}
+
 module.exports = {
     anchorHeader,
-    addTOC
+    addTOC,
+    highlightCode,
 };

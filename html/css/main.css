@@ -149,9 +149,9 @@ h3.anchor:after {
 
 .block {
     margin: 0 auto;
-    background-color:honeydew;
     max-width: 50em;
     padding: 0 1em;
+    /*box-shadow: 0px 5px 20px 5px #ccc;*/
 }
 
 #header {
@@ -250,15 +250,6 @@ h3.anchor:after {
 .side {
     float: right;
     padding: 0 70px 0 10px;
-}
-
-.text-block {
-    max-width: 60%;
-}
-
-.text-block > p {
-    margin-top: 0;
-    margin-bottom: 1em;
 }
 
 .anchor {
@@ -527,10 +518,6 @@ h3.anchor:after {
         display: none;
     }
 
-    .text-block {
-        max-width: 100%;
-    }
-
     .block {
         max-width: 100%;
     }
@@ -663,10 +650,6 @@ h3.anchor:after {
     .frames {
         width: 100%;
         margin: 10px 0;
-    }
-
-    .text-block {
-        padding: 15px;
     }
 
     .side {

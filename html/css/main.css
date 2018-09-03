@@ -45,7 +45,7 @@ ul {
 
 blockquote {
     font: 14px/22px normal helvetica, sans-serif;
-    margin: 10px 0px;
+    margin: 10px 0;
     padding: 1px 10px;
     border-left: 3px solid #ccc;
     min-width: 50%;
@@ -54,14 +54,10 @@ blockquote {
     background: #f0f2f4;
 }
 
-xmp {
-    word-wrap: break-word;
-}
-
 pre {
     line-height: 140%;
-    padding: 0px 20px;
-    margin: 10px 0px;
+    padding: 0 20px;
+    margin: 10px 0;
     box-sizing: border-box;
 }
 
@@ -170,8 +166,8 @@ h3.anchor:after {
 }
 
 #titlearea {
-    margin: 0px 32px;
-    padding: 8px 0px;
+    margin: 0 32px;
+    padding: 8px 0;
     height: 100%;
     box-sizing: border-box;
 }
@@ -220,7 +216,7 @@ h3.anchor:after {
 }
 
 .pretty {
-    font-family: Verdana, Sans-Serif;
+    font-family: Verdana, sans-serif;
     background: white;
     border-collapse: collapse;
     text-align: left;
@@ -245,7 +241,7 @@ h3.anchor:after {
 }
 
 .pretty .bar {
-    padding: 0px 8px;
+    padding: 0 8px;
     background: #eee;
 }
 
@@ -255,7 +251,7 @@ h3.anchor:after {
 
 .side {
     float: right;
-    padding: 0px 70px 0px 10px;
+    padding: 0 70px 0 10px;
 }
 
 .text-block {
@@ -263,7 +259,7 @@ h3.anchor:after {
 }
 
 .text-block > p {
-    margin-top: 0em;
+    margin-top: 0;
     margin-bottom: 1em;
 }
 
@@ -288,7 +284,7 @@ h3.anchor:after {
 
 .toc {
     font: 14px/22px normal helvetica, sans-serif;
-    padding: 5px 0px;
+    padding: 5px 0;
     width: 220px;
     border-left: 3px solid #ccc;
     background: #f0f2f4;
@@ -359,7 +355,7 @@ h3.anchor:after {
 }
 
 .reference {
-    font-family: "Calibri", "Lucida Grande", Sans-Serif;
+    font-family: "Calibri", "Lucida Grande", sans-serif;
 }
 
 .frames {
@@ -686,7 +682,6 @@ h3.anchor:after {
     }
 
     #history {
-        color: inherit;
         display: block;
         text-align: center;
         position: inherit;

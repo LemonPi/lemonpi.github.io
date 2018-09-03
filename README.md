@@ -29,3 +29,6 @@ classes and is the preferred way.
 3. run Autotoc on the html/md file
 	1. `java -cp <path to jsoup.jar>:. autotools/Autotoc <path to input>`
 	2. copy output (stdout and the toc.md file) to the top of the input file
+	
+**or** generate the HTML from markdown source as mentioned above and the TOC will be automatically
+generated.

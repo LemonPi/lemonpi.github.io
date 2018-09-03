@@ -143,17 +143,15 @@ h3.anchor:after {
     margin: 0;
     position: relative;
 }
+.has-toc {
+    margin-right: 200px !important;
+}
 
 .block {
-    margin: 0 5%;
-}
-
-.block-toc {
-    margin-right: 220px;
-}
-
-.block-toc .text-block {
-    max-width: 95%;
+    margin: 0 auto;
+    background-color:honeydew;
+    max-width: 50em;
+    padding: 0 1em;
 }
 
 #header {
@@ -537,8 +535,8 @@ h3.anchor:after {
         max-width: 100%;
     }
 
-    .block-toc {
-        margin-right: initial;
+    .has-toc {
+        margin-right: initial !important;
     }
 }
 

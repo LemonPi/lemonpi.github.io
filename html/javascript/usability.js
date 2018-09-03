@@ -12,13 +12,16 @@ toc = document.getElementsByClassName("toc");
 setTimeout(function(){page_height = document.body.offsetHeight - 10;}, 1000);	// after images load
 
 if (toc.length) {
-	blocks = document.getElementsByClassName("block");
-	num_blocks = blocks.length;
-	for (var i = 0; i < num_blocks; ++i)
-		blocks[i].classList.add('block-toc');
+	var content = document.getElementById("content");
+	content.classList.add('has-toc');
+
+	// blocks = document.getElementsByClassName("block");
+	// num_blocks = blocks.length;
+	// for (var i = 0; i < num_blocks; ++i)
+	// 	blocks[i].classList.add('block-toc');
 
 	toc = toc[0];
-	toc_toggle = toc.getElementsByClassName("toc-toggle");
+	var toc_toggle = toc.getElementsByClassName("toc-toggle");
 	toc_toggle = toc_toggle[0];
 	// both rising and falling edge
 	document.addEventListener('scroll', throttle(fix_toc, 200));

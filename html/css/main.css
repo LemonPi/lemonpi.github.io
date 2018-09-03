@@ -682,7 +682,7 @@ h3.anchor:after {
         margin: 0;
     }
 
-    .block > p, .block > details, .block > h3, .block > h4 {
+    .block > details, .block > h3, .block > h4 {
         text-align: center;
     }
 

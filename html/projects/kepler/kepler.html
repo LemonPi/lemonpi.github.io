@@ -3,12 +3,17 @@ layout: single
 title: Kepler Communications Internship
 permalink: /projects/kepler/index.html
 group: projects
+css: syntax
 ---
 <div class="toc">
 <a class="toc-link toch2" href="#entities">Entities</a>
 <a class="toc-link toch2" href="#challenges">Challenges</a>
 <a class="toc-link toch2" href="#mcs_backend">MCS Backend</a>
 <a class="toc-link toch2" href="#features">Features</a>
+<a class="toc-link toch3" href="#scalable">Scalable</a>
+<a class="toc-link toch3" href="#flexible">Flexible</a>
+<a class="toc-link toch3" href="#scheduling_tasks">Scheduling Tasks</a>
+<a class="toc-link toch2" href="#gains_from experience">Gains from Experience</a>
 <p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div>
@@ -47,4 +52,59 @@ through task scheduling.</p>
 <li>Scalable to many satellites and ops machines</li>
 <li>Flexible in choosing communication protocol on a per satellite basis</li>
 <li>Task scheduling and resumption across passes</li>
+</ul>
+<aside class='notice'><h4>Note</h4>Company specific details are omitted from the explanation of these features.</aside>
+<h3 class="anchor">Scalable <a class="anchor-link" title="permalink to section" href="#scalable"
+                               name="scalable">&para;</a></h3>
+<p>A major goal of the MCS is to simultaneously communicate with many satellites
+to support future constellations of up to 200 satellites. 
+Communication is only possible for one satellite per ground station because 
+we need to point the antenna at the satellite, so the actual scalability requirement is 
+only up to the number of ground stations.</p>
+<p>Since it's quick to create and send packets, each ops machine is idle most of the time
+waiting for response packets. The time waiting for a response to one routine can be spent
+on executing another routine, potentially on another satellite. Conceptually, this follows
+the asynchronous programming paradigm: long operations (coroutines) dependent on external
+sources for their completion can <code>await</code> their completion while allowing other coroutines
+to execute.</p>
+<p>In python, this paradigm is offered by its <code>asyncio</code> module. Python was used because it's
+the only language the rest of the software team all knew, and I only had 12 weeks to design
+and implement everything. The prototyping and testing time is significantly shorter with python
+than a compiled language. And since the performance is bottled by the network, 
+the language choice will not significantly affect performance.</p>
+<h3 class="anchor">Flexible <a class="anchor-link" title="permalink to section" href="#flexible"
+                               name="flexible">&para;</a></h3>
+<p>Another major goal of the MCS is to support communication with satellites of different generations. 
+The onboard software for these will be different and may use different communication protocols.</p>
+<p>This flexibility comes from the modular decomposition of the responsibilities of a communication
+protocol down to these following <strong>slots</strong></p>
+<ol>
+<li>packets defining the structure of what gets transmitted and received</li>
+<li>builder defining what packets to send for each intent</li>
+<li>parser converting a sequence of bytes to a sequence of packets</li>
+<li>handler implementing the logic of basic procedures for how to respond to packets </li>
+</ol>
+<p>A comms object bundling implementations for those slots 
+is created at satellite definition time and attached to the satellite.
+After definition, all operations on the satellite are communication method agnostic.</p>
+<h3 class="anchor">Scheduling Tasks <a class="anchor-link" title="permalink to section" href="#scheduling_tasks"
+                               name="scheduling_tasks">&para;</a></h3>
+<p>Tasks provide the mechanism for operations to be carried out across passes.
+Often a single pass may not be enough to complete a long operation 
+(ex. downlink telemetry data) due to unreliable connections. </p>
+<p>Persistence is achieved through a database. 
+An important point is to keep only one ultimate source of truth </p>
+<ul>
+<li>whether it's in code or the database, usually the one with greater persistence.
+This avoids having multiple definitions for a task and the subtle bugs that can arise from that.</li>
+</ul>
+<aside class='important'><h4>Important</h4>With unreliable asynchronous communication, it's important to always have
+an appropriate timeout with each operation!</aside>
+<h2 class="anchor">Gains from Experience <a class="anchor-link" title="permalink to section" href="#gains_from experience"
+                               name="gains_from experience">&para;</a></h2>
+<ul>
+<li>appreciation for the beauty of relational databases</li>
+<li>proficiency with SQL and MySQL</li>
+<li>asynchronous programming experience with <code>asyncio</code> in python</li>
+<li>proficiency with <code>pytest</code> </li>
 </ul>

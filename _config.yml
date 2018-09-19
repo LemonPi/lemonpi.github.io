@@ -2,4 +2,4 @@ relative_permalinks: false
 repository: https://github.com/lemonpi/lemonpi.github.io
 baseurl: ''
 highlighter: rouge
-source: html
+exclude: src

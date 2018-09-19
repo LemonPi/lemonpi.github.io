@@ -13,7 +13,7 @@ const converter = new showdown.Converter({
     noHeaderId: true,
     metadata  : true
 });
-const OUTPUT_ROOT = 'html';
+const OUTPUT_ROOT = 'portfolio';
 
 const files = process.argv.slice(2);
 for (let file of files) {

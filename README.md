@@ -17,6 +17,16 @@ classes and is the preferred way.
 1. `npm install`
 2. `node src/build.js <path to markdown source inside src/>`
     - will automatically generate and move the resulting HTML file into the html directory
+    
+### Markdown language extensions
+Put asides in a block of text starting with `>>` or `>>>` for more important notes, like:
+
+```
+>> This is an aside.
+This is still part of the aside.
+
+No longer part of the aside
+```
 
 ## Generating table of contents
 1. create TOC anchors in the html/md file

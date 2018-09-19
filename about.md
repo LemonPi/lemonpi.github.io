@@ -7,13 +7,7 @@ group: about
 
 <div class="block" style="min-height:500px;">
 
-<div style="display:flex;">
-<div style="margin:0 auto;" class="frames">
-<img src="res/self.jpg">
-</div>
-</div>
 
-<div class="text-block">
 <p>
 	I'm a first year Robotics PhD student at the University of Michigan in Ann Arbor. 
 </p>
@@ -25,12 +19,17 @@ group: about
     for 4 years, spent 16 months in Zurich, and now I'm in
     Ann Arbor.
 </p>
+
+<div style="display:flex;">
+<div style="margin:0 auto;" class="frames">
+<img src="res/self.jpg">
+</div>
+</div>
     
 <p>
 	In my spare time, I enjoy making reusable tools, freely available on my <a href="https://github.com/LemonPi">github</a>, and
 	participating in various programming competitions. 
 </p>
-</div>
 
 <h2>Icon meanings</h2>
 <img style="margin:0 auto; display:block" src="res/zs500.png">
@@ -57,12 +56,10 @@ group: about
 </blockquote>
 
 <h2>Design Principles</h2>
-<div class="text-block">
 <p>
 	My vision of good engineering design should seek these objectives in order of importance: 
 	robustness, usability, and efficiency.  
 </p>
-</div>
 
 <blockquote>
 	<p>

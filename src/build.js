@@ -4,7 +4,12 @@ const path = require('path');
 const extensions = require('./extensions');
 
 const converter = new showdown.Converter({
-    extensions: [extensions.anchorHeader, extensions.addTOC, extensions.highlightCode],
+    extensions: [
+        extensions.asideNotes,
+        extensions.anchorHeader,
+        extensions.addTOC,
+        extensions.highlightCode
+    ],
     noHeaderId: true,
     metadata  : true
 });
@@ -49,7 +54,7 @@ function convertFile(p) {
 
     let output = ["---"];
     Object.entries(converter.getMetadata()).forEach(([key, value]) => {
-       output.push(`${key}: ${value}`);
+        output.push(`${key}: ${value}`);
     });
     output.push("---");
     output.push(html);

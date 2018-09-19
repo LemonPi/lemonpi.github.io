@@ -85,6 +85,23 @@ h3.anchor:after {
     background: #ccc;
 }
 
+aside {
+    box-shadow: 0px 5px 20px 5px #ccc;
+    padding: 1em;
+}
+
+aside > h4 {
+    margin-top:0;
+}
+
+.notice {
+    background-color: #eee;
+}
+
+.important {
+    border: 1px red solid;
+}
+
 .hidden {
     visibility: hidden;
 }

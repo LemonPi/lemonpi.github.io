@@ -69,8 +69,21 @@ function highlightCode() {
     };
 }
 
+function asideNotes() {
+    return [{
+        type: 'lang',
+        regex: />>> ([^>]*?)\n\n/g,
+        replace: "<aside class='important'><h4>Important</h4>$1</aside>\n"
+    }, {
+        type: 'lang',
+        regex: />> ([^>]*?)\n\n/g,
+        replace: "<aside class='notice'><h4>Note</h4>$1</aside>\n"
+    }];
+}
+
 module.exports = {
     anchorHeader,
     addTOC,
     highlightCode,
+    asideNotes,
 };

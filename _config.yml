@@ -2,6 +2,6 @@ relative_permalinks: false
 repository: https://github.com/lemonpi/lemonpi.github.io
 baseurl: ''
 highlighter: rouge
-exclude: [src]
+exclude: [src, .idea]
 plugins:
   - jekyll-redirect-from

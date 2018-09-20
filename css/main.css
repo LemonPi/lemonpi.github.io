@@ -35,6 +35,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.gallery-col>a:hover {
+    text-decoration: none;
+}
+
 li {
     line-height: 2em;
 }
@@ -91,7 +95,7 @@ aside {
 }
 
 aside > h4 {
-    margin-top:0;
+    margin-top: 0;
 }
 
 .notice {
@@ -160,6 +164,7 @@ aside > h4 {
     margin: 0;
     position: relative;
 }
+
 .has-toc {
     margin-right: 200px !important;
 }
@@ -381,35 +386,41 @@ aside > h4 {
 }
 
 .gallery {
-    height: 1000px;
     margin: 80px auto 0 auto;
     text-align: center;
-    max-width: 1464px;
-    display: table;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-col {
+    max-width: 500px;
+    min-width: 140px;
+    flex: 0 1 auto;
+    width: 100%;
+    display: inline-block;
 }
 
 .gallery .box {
     border: 5px solid #888;
-    height: 320px;
-    width: 345px;
+    max-width: 500px;
+    min-width: 140px;
     margin: 5px;
-    position: relative;
-    float: left;
     overflow: hidden;
-    display: table-cell;
     padding: 0;
+}
+
+.gallery .box:hover h1 {
+    background-color: yellow;
+    color: black;
 }
 
 .gallery .box .caption {
     background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    left: 0;
-    top: 0;
     color: #fff;
     z-index: 100;
     text-align: left;
     padding: 10px 15px;
-    opacity: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -420,7 +431,6 @@ aside > h4 {
 
 .box .caption-title {
     margin: 0;
-    padding-bottom: 40px;
 }
 
 .box .caption-desc {
@@ -430,12 +440,8 @@ aside > h4 {
 }
 
 .box img {
-    position: absolute;
-    left: 0;
-}
-
-.box:hover .caption {
-    opacity: 1
+    width: 100%;
+    vertical-align: top;
 }
 
 .hero {
@@ -494,22 +500,6 @@ aside > h4 {
     unicode-bidi: bidi-override;
     direction: rtl;
     display: inline;
-}
-
-@media (max-width: 1662px) {
-    .gallery {
-        max-width: 734px;
-    }
-
-    #main-gallery {
-        max-width: 734px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .gallery {
-        max-width: 734px;
-    }
 }
 
 @media (max-width: 950px) {

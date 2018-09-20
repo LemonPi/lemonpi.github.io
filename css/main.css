@@ -503,13 +503,6 @@ aside > h4 {
 }
 
 @media (max-width: 950px) {
-    #titlelink {
-        font-size: large;
-    }
-
-    #navbar-menu {
-        flex-direction: column;
-    }
 
     img {
         width: 100%;
@@ -535,9 +528,12 @@ aside > h4 {
 }
 
 @media (max-width: 749px) {
-    .gallery {
-        width: 100%;
-        max-width: 100%;
+    #titlelink {
+        font-size: large;
+    }
+
+    #navbar-menu {
+        flex-direction: column;
     }
 
     .gallery .box {
@@ -547,7 +543,12 @@ aside > h4 {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 570px) {
+    .gallery {
+        flex-direction: column;
+        display: block;
+    }
+
     #header {
         margin-bottom: 72px;
     }

@@ -3,3 +3,5 @@ repository: https://github.com/lemonpi/lemonpi.github.io
 baseurl: ''
 highlighter: rouge
 exclude: src
+plugins:
+  - jekyll-redirect-from

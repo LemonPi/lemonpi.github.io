@@ -3,7 +3,7 @@ function anchorHeader() {
         type   : 'output',
         regex  : /<h([23])>(.*?)<\/h\1>/g,
         // regex: /<h2>/g,
-        replace: function (fullMatch, headerLevel, title) {
+        replace(fullMatch, headerLevel, title) {
             // want to convert title to an ID
             const id = title.toLowerCase().replace(" ", "_");
             return `<h${headerLevel} class="anchor">${title} <a class="anchor-link" title="permalink to section" href="#${id}"
@@ -81,9 +81,49 @@ function asideNotes() {
     }];
 }
 
+function gallery() {
+    return {
+        type: 'lang',
+        regex: /\|\|\|([^]*)\|\|\|/g,
+        replace(fullMatch, fullContent) {
+            const output = ["<div class='gallery'>"];
+
+            const cols = fullContent.split('||');
+            for (let colContent of cols) {
+                output.push('<div class="gallery-col">');
+
+                const boxContents = colContent.split('|');
+
+                for (let content of boxContents) {
+                    const parts = content.trim().split('\n');
+                    const [link, img, title, desc, date] = parts;
+
+                    output.push(`<a href="${link}">`);
+                    output.push('<div class="box">');
+                    output.push(`<img src="${img}"/>`);
+                    output.push('<span class="caption">');
+
+                    output.push(`<h1 class="caption-title">${title}</h1>`);
+                    output.push(`<p class="caption-desc">${desc}</p>`);
+                    output.push(`<p class="caption-date">${date}</p>`);
+
+                    output.push('</span>');
+                    output.push('</div>');
+                    output.push('</a>');
+                }
+
+                output.push('</div>');
+            }
+
+            output.push("</div>");
+            return output.join("\n");
+        }
+    }
+}
 module.exports = {
     anchorHeader,
     addTOC,
     highlightCode,
     asideNotes,
+    gallery,
 };

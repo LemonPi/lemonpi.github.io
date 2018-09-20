@@ -8,7 +8,8 @@ const converter = new showdown.Converter({
         extensions.asideNotes,
         extensions.anchorHeader,
         extensions.addTOC,
-        extensions.highlightCode
+        extensions.highlightCode,
+        extensions.gallery
     ],
     noHeaderId: true,
     metadata  : true

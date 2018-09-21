@@ -393,6 +393,15 @@ aside > h4 {
     justify-content: center;
 }
 
+.gallery a {
+    display: block;
+    margin: 10px 5px 10px 5px;
+}
+.gallery a:active {
+    margin: 11px 4px 9px 6px;
+}
+
+
 .gallery-col {
     max-width: 500px;
     min-width: 140px;
@@ -405,12 +414,11 @@ aside > h4 {
     border: 2px solid rgba(0,0,0,0.8);
     max-width: 500px;
     min-width: 140px;
-    margin: 5px 5px 10px 5px;
+    margin: 0;
     overflow: hidden;
     padding: 0;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.4);
 }
-
 .gallery .box:hover h1, .gallery .box:hover .tag{
     background-color: yellow;
     color: black;

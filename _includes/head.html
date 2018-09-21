@@ -1,33 +1,34 @@
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="{{ page.title }} - Johnson Zhong's Design Portfolio" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lemonpi.github.io/{{ page.url }}" />
-<meta property="og:image" content="{{ site.url }}/favicon-32x32.png" />
-<title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
-<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
-{% if page.css == "interactive" %}
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/interactive.css" />
-{% endif %}
-{% if page.css == "handbook" %}
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/handbook.css" />
-{% endif %}
-{% if page.css == "syntax" %}
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/code.css" />
-{% endif %}
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
-<link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
-<link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#00aba9">
-<meta name="theme-color" content="#ffffff">
-{% if page.load != "fast" %}
-<script type="text/javascript" src="{{ site.baseurl }}/javascript/usability.js"></script>
-{% endif %}
-{% if page.console %}
-<link rel="stylesheet" href="{{ site.baseurl }}/res/jq-console/css/console.css" />
-<link rel="stylesheet" href="{{ site.baseurl }}/css/code.css" />
-{% endif %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{{ page.title }} - Johnson Zhong's Design Portfolio"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://lemonpi.github.io/{{ page.url }}"/>
+    <meta property="og:image" content="{{ site.url }}/favicon-32x32.png"/>
+    <meta property="og:description" content="{{ page.excerpt }}">
+    <title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+    {% if page.css == "interactive" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/interactive.css"/>
+    {% endif %}
+    {% if page.css == "handbook" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/handbook.css"/>
+    {% endif %}
+    {% if page.css == "syntax" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/code.css"/>
+    {% endif %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+    <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    {% if page.load != "fast" %}
+    <script type="text/javascript" src="{{ site.baseurl }}/javascript/usability.js"></script>
+    {% endif %}
+    {% if page.console %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/res/jq-console/css/console.css"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/code.css"/>
+    {% endif %}
 </head>

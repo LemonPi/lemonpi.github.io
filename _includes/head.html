@@ -4,7 +4,12 @@
     <meta property="og:title" content="{{ page.title }} - Johnson Zhong's Design Portfolio"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://lemonpi.github.io/{{ page.url }}"/>
-    <meta property="og:image" content="{{ site.url }}/favicon-32x32.png"/>
+    {% if page.img %}
+        {% assign page_img = page.img %}
+    {% else %}
+        {% assign page_img = "res/zs500.png" %}
+    {% endif %}
+    <meta property="og:image" content="{{ site.url }}/{{ page_img }}"/>
     <meta property="og:description" content="{{ page.excerpt }}">
     <title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>

@@ -402,10 +402,10 @@ aside > h4 {
 }
 
 .gallery .box {
-    border: 5px solid #888;
+    border: 2px solid rgba(0,0,0,0.8);
     max-width: 500px;
     min-width: 140px;
-    margin: 5px;
+    margin: 5px 5px 10px 5px;
     overflow: hidden;
     padding: 0;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.4);

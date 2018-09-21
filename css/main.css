@@ -395,10 +395,10 @@ aside > h4 {
 
 .gallery a {
     display: block;
-    margin: 10px 5px 10px 5px;
+    margin: 9px 5px 10px 5px;
 }
 .gallery a:active {
-    margin: 11px 4px 9px 6px;
+    margin: 10px 4px 9px 6px;
 }
 
 

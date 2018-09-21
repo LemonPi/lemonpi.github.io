@@ -386,7 +386,7 @@ aside > h4 {
 }
 
 .gallery {
-    margin: 80px auto 0 auto;
+    margin: 0 auto 80px auto;
     text-align: center;
     max-width: 100%;
     display: flex;

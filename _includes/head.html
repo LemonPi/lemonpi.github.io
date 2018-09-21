@@ -10,7 +10,9 @@
         {% assign page_img = "res/zs_circle.png" %}
     {% endif %}
     <meta property="og:image" content="{{ site.url }}/{{ page_img }}"/>
+    {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt }}">
+    {% endif %}
     <title>{{ page.title }} - Johnson Zhong's Design Portfolio</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
     {% if page.css == "interactive" %}

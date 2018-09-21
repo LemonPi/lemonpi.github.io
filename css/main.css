@@ -431,7 +431,9 @@ aside > h4 {
 }
 
 .box .caption-title {
-    margin: 0;
+    margin-top: 0.4em;
+    padding: 0;
+    line-height: 1em;
 }
 
 .box .caption-desc {
@@ -441,7 +443,6 @@ aside > h4 {
 }
 
 .tag-span {
-    margin-top: 0.3em;
 }
 .tag {
     display: inline;
@@ -612,10 +613,6 @@ aside > h4 {
 
     .gallery .box .caption {
         opacity: 1
-    }
-
-    .box .caption-title {
-        line-height: 40px;
     }
 
     .anchor {

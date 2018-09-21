@@ -96,18 +96,28 @@ function gallery() {
 
                 for (let content of boxContents) {
                     const parts = content.trim().split('\n');
-                    const [link, img, title, desc, date] = parts;
+                    const [link, img, title, desc, date, tags] = parts;
 
                     output.push(`<a href="${link}">`);
                     output.push('<div class="box">');
                     output.push(`<img src="${img}"/>`);
-                    output.push('<span class="caption">');
+                    output.push('<div class="caption">');
 
                     output.push(`<h1 class="caption-title">${title}</h1>`);
+
+                    if (tags) {
+                        output.push('<span class="tag-span">');
+                        const tagsList = tags.split(",");
+                        for (let tag of tagsList) {
+                            output.push(`<span class="tag">${tag}</span>`);
+                        }
+                        output.push('</span>');
+                    }
+
                     output.push(`<p class="caption-desc">${desc}</p>`);
                     output.push(`<p class="caption-date">${date}</p>`);
 
-                    output.push('</span>');
+                    output.push('</div>');
                     output.push('</div>');
                     output.push('</a>');
                 }

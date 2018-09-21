@@ -21,54 +21,64 @@ projects/kepler
 Kepler
 Mission Control Software for Satellites
 May 2018 - Aug 2018
+Python,MySQL,asyncio
 |
 /projects/snowfun/
 /res/projects/snowfun.png
 Snowfun
 A fun way to learn functional programming
 Jan 2016
+JS
 |
 /projects/clisp/
 /projects/clisp.png
 Clisp
 Lisp interpreter (scheme dialect) in C++
 Aug 2014
+C++,Lisp
 ||
 /drawpoint-demo/
 /res/projects/drawpoint.png
 Drawpoint
 HTML Canvas drawing library
 May 2016 - Feb 2017
+JS,react
 |
 /projects/vpr
 /res/projects/vpr_speedup.png
 VPR Speedup
 Speeding up FPGA CAD router through iterative rerouting
 May 2015 - Aug 2015
+C++,JS
 ||
 /projects/robot
 /res/projects/robot.jpg
 Autobots
 Two robots playing connect-4 together on a randomized gamefield
 Jan 2014 - Apr 2015
+C++,Arduino,Controls
 |
 /sal/
 /res/projects/lemonpi.png
 SAL
 Simple Algorithms and Data structures
 Oct 2014 - Jan 2015
+C++
 |
 /projects/icecube
 /projects/icecube.png
 ICE-Cube
 Meat Refrigeration without grid electricity
 March 2014
+Design
 |||
 
 
 ---
 
 <div class="block" markdown='1'>
+
+# Archive
 
 - [**Kepler - Summer internship where I worked on satellite communication**](projects/kepler) - May 2018 to Aug 2018
 - [**Drawpoint - HTML canvas drawing library**](/drawpoint-demo) - May 2016 to Feb 2017

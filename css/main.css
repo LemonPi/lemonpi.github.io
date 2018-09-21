@@ -35,7 +35,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.gallery-col>a:hover {
+.gallery a:hover {
     text-decoration: none;
 }
 
@@ -410,7 +410,7 @@ aside > h4 {
     padding: 0;
 }
 
-.gallery .box:hover h1 {
+.gallery .box:hover h1, .gallery .box:hover .tag{
     background-color: yellow;
     color: black;
 }
@@ -437,6 +437,18 @@ aside > h4 {
 }
 
 .box .caption-date {
+}
+
+.tag-span {
+    margin-top: 0.3em;
+}
+.tag {
+    display: inline;
+    color: white;
+    background-color: #aaa;
+    border-radius: 1em;
+    margin: 0 0.2em;
+    padding: 0 0.5em;
 }
 
 .box img {

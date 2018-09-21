@@ -449,7 +449,8 @@ aside > h4 {
     background-color: #aaa;
     border-radius: 1em;
     margin: 0 0.2em;
-    padding: 0 0.5em;
+    padding: 0.3em 0.5em;
+    font-weight: bold;
 }
 
 .box img {

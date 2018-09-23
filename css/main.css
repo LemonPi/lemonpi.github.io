@@ -411,7 +411,7 @@ aside > h4 {
 }
 
 .gallery .box {
-    border: 2px solid rgba(0,0,0,0.8);
+    border: 2px solid rgba(51,63,80,1);
     max-width: 500px;
     min-width: 140px;
     margin: 0;
@@ -425,7 +425,7 @@ aside > h4 {
 }
 
 .gallery .box .caption {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(51,63,80,1);
     color: #fff;
     z-index: 100;
     text-align: left;

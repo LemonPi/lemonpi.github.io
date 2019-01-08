@@ -22,7 +22,7 @@ group: about
 
 <div style="display:flex;">
 <div style="margin:0 auto;" class="frames">
-<img src="res/self.jpg">
+<img width="100%" src="res/self.jpg">
 </div>
 </div>
     

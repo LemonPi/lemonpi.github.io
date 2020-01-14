@@ -528,6 +528,10 @@ aside > h4 {
     display: inline;
 }
 
+.picture-with-desc {
+    display:flex;
+}
+
 @media (max-width: 950px) {
 
     img {
@@ -566,6 +570,9 @@ aside > h4 {
         margin: 0;
         box-sizing: border-box;
         width: 100%;
+    }
+    .picture-with-desc {
+        flex-direction:column;
     }
 }
 

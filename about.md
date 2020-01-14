@@ -9,7 +9,7 @@ group: about
 
 
 
-<div style="display:flex;">
+<div class="picture-with-desc">
 <div>
 <p>
 	I'm a second year Robotics PhD student at the University of Michigan in Ann Arbor. 
@@ -34,7 +34,7 @@ group: about
     
 
 <h2>Icon meanings</h2>
-<div style="display:flex">
+<div class="picture-with-desc">
 <ul>
     <li>initials of my legal name: Sheng Zhong 
     (chinese ordering is last then first, so it's pronounced Zhong Sheng)</li>

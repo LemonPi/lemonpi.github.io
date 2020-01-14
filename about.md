@@ -8,8 +8,11 @@ group: about
 <div class="block" style="min-height:500px;">
 
 
+
+<div style="display:flex;">
+<div>
 <p>
-	I'm a first year Robotics PhD student at the University of Michigan in Ann Arbor. 
+	I'm a second year Robotics PhD student at the University of Michigan in Ann Arbor. 
 </p>
 
 <p>
@@ -19,27 +22,27 @@ group: about
     for 4 years, spent 16 months in Zurich, and now I'm in
     Ann Arbor.
 </p>
-
-<div style="display:flex;">
+<p>
+	In my spare time, I enjoy making reusable tools, freely available on my <a href="https://github.com/LemonPi">github</a>, and
+	participating in various programming competitions. 
+</p>
+</div>
 <div style="margin:0 auto;" class="frames">
 <img width="100%" src="res/self.jpg">
 </div>
 </div>
     
-<p>
-	In my spare time, I enjoy making reusable tools, freely available on my <a href="https://github.com/LemonPi">github</a>, and
-	participating in various programming competitions. 
-</p>
 
 <h2>Icon meanings</h2>
-<img style="margin:0 auto; display:block" src="res/zs500.png">
-
+<div style="display:flex">
 <ul>
     <li>initials of my legal name: Sheng Zhong 
     (chinese ordering is last then first, so it's pronounced Zhong Sheng)</li>
     <li>a lever representing the usage of tools to help solve problems</li>
     <li>an upward pointing diode representing progress and positive thoughts</li>
 </ul>
+<img style="margin:0 auto; display:block; width:250px" src="res/zs500.png">
+</div>
 
 
 

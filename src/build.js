@@ -14,7 +14,7 @@ const converter = new showdown.Converter({
     noHeaderId: true,
     metadata  : true
 });
-const OUTPUT_ROOT = 'portfolio';
+const SRC_ROOT = 'src';
 
 const files = process.argv.slice(2);
 for (let file of files) {
@@ -43,15 +43,15 @@ function convertFile(p) {
     let prefix = '.';
     let tries = 0;
     // keep going up a directory
-    while (!fs.existsSync(path.join(prefix, OUTPUT_ROOT))) {
+    while (!fs.existsSync(path.join(prefix, SRC_ROOT))) {
         prefix = path.join(prefix, '../');
         if (++tries > 8) {
-            console.error(`Couldn't find ${OUTPUT_ROOT} when running from this location`);
+            console.error(`Couldn't find ${SRC_ROOT} when running from this location`);
             return;
         }
     }
 
-    const outPath = path.join(prefix, OUTPUT_ROOT, relativePath);
+    const outPath = path.join(prefix, relativePath);
 
     let output = ["---"];
     Object.entries(converter.getMetadata()).forEach(([key, value]) => {

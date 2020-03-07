@@ -1,5 +1,4 @@
 var blocks;
-var num_blocks;
 var toc;
 var header;
 var offset_from_top = 1;
@@ -14,11 +13,6 @@ setTimeout(function(){page_height = document.body.offsetHeight - 10;}, 1000);	//
 if (toc.length) {
 	var content = document.getElementById("content");
 	content.classList.add('has-toc');
-
-	// blocks = document.getElementsByClassName("block");
-	// num_blocks = blocks.length;
-	// for (var i = 0; i < num_blocks; ++i)
-	// 	blocks[i].classList.add('block-toc');
 
 	toc = toc[0];
 	var toc_toggle = toc.getElementsByClassName("toc-toggle");

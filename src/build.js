@@ -29,9 +29,9 @@ function convertFile(p) {
     // output to html directory where jekyll will use it to build site
     // extract relative path
     const parts = p.split(path.sep);
-    const relativePathStart = parts.indexOf("src");
+    const relativePathStart = parts.indexOf(SRC_ROOT);
     if (relativePathStart < 0) {
-        console.error("Need to run script from src or above");
+        console.error(`Need to run script from ${SRC_ROOT} or above`);
         return;
     }
 

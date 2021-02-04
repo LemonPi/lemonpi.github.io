@@ -60,6 +60,13 @@ function convertFile(p) {
     output.push("---");
     output.push(html);
 
+    // ensure folder exists
+    fs.mkdir(path.dirname(outPath), {recursive: true}, (err) => {
+        if (err) {
+            throw err;
+        }
+    });
+
     fs.writeFileSync(outPath, output.join("\n"));
     console.log(`Done writing to ${outPath}`);
 }

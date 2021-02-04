@@ -16,6 +16,13 @@ load: fast
 <br></p>
 
 |||
+projects/tampc
+/projects/tampc/realpeg4small.png
+TAMPC
+A controller for escaping traps in novel environments (accepted in RA-L)
+Nov 2019 - Feb 2021
+Python,PyTorch,research
+|
 projects/kepler
 /projects/kepler/visual.png
 Kepler
@@ -29,13 +36,6 @@ Snowfun
 A fun way to learn functional programming
 Jan 2016
 JS
-|
-/projects/clisp/
-/projects/clisp.png
-Clisp
-Lisp interpreter (scheme dialect) in C++
-Aug 2014
-C++,Lisp
 ||
 /drawpoint-demo/
 /res/projects/drawpoint.png
@@ -50,6 +50,13 @@ VPR Speedup
 Speeding up FPGA CAD router through iterative rerouting
 May 2015 - Aug 2015
 C++,JS
+|
+/projects/clisp/
+/projects/clisp.png
+Clisp
+Lisp interpreter (scheme dialect) in C++
+Aug 2014
+C++,Lisp
 ||
 /projects/robot
 /res/projects/robot.jpg
@@ -80,6 +87,7 @@ Design
 
 # Archive
 
+- [**TAMPC - Trap Aware MPC published to RA-L**](projects/tampc) - Nov 2019 to Feb 2021
 - [**Kepler - Summer internship where I worked on satellite communication**](projects/kepler) - May 2018 to Aug 2018
 - [**Drawpoint - HTML canvas drawing library**](/drawpoint-demo) - May 2016 to Feb 2017
 - [**Snowfun - A fun way to learn functional programming**](projects/snowfun) - Jan 2016 to Feb 2016

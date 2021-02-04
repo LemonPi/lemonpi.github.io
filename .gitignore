@@ -13,3 +13,4 @@ toc.md
 *tags*
 .idea
 node_modules
+.DS_Store

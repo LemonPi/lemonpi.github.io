@@ -12,7 +12,7 @@ group: about
 <div class="picture-with-desc">
 <div>
 <p>
-	I'm a second year Robotics PhD student at the University of Michigan in Ann Arbor. 
+	I'm a third year Robotics PhD Candidate at the University of Michigan in Ann Arbor. 
 </p>
 
 <p>
@@ -90,6 +90,7 @@ group: about
 </blockquote>
 
 <p>
-	To reach these objectives, I generally follow my <a href="/process/">design process</a>.
+	To reach these objectives, I generally follow my <a href="/process/">design process</a>. Some <a href="/evaluations/">samples</a> of evaluating
+	products under my design principles conducted during undergrad.
 </p>
 </div>

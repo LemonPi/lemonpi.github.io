@@ -9,12 +9,6 @@ load: fast
 
 <h1 style="text-align:center;">Welcome</h1>
 
-<p align="center">
-    Take a look around my engineering design portfolio, <br>
-    where I present my <a href="principles.html">conception</a> of good design and showcase my
-    recent projects.
-<br></p>
-
 |||
 projects/tampc
 /projects/tampc/realpeg4small.png

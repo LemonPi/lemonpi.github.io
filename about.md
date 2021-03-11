@@ -12,7 +12,7 @@ group: about
 <div class="picture-with-desc">
 <div>
 <p>
-	I'm a third year Robotics PhD Candidate at the University of Michigan in Ann Arbor. 
+	I'm a third year Robotics PhD Candidate in the <a href="http://arm.eecs.umich.edu/">ARM Lab</a> at the University of Michigan in Ann Arbor. 
 </p>
 
 <p>

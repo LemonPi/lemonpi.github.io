@@ -8,11 +8,12 @@ css: syntax
 
 ## Links
 - [RA-L preprint (arxiv)](https://arxiv.org/abs/2010.12516)
-- [video](https://www.youtube.com/watch?v=XB-INROSWBE&ab_channel=UniversityofMichiganARMLab)
 - [repository](https://github.com/UM-ARM-Lab/tampc)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XB-INROSWBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Abstract
-	
+
 We propose an approach to online model adaptation and control in the
 challenging case of hybrid and discontinuous dynamics where actions may
 lead to difficult-to-escape "trap" states, under a given controller. We
@@ -39,3 +40,35 @@ obstacles that we only observe through contact. Our results show that
 our method outperforms the baselines on difficult tasks, and is
 comparable to prior trap-handling methods on easier tasks.
 
+>> Problem is difficult because the robot has no visual sensing and has never observed traps induced by walls during training
+
+## Highlights
+- formally defines traps for a given controller
+- high level TAMPC can be used with many lower level MPC methods
+- introduces latent dynamics architecture that exploits training data invariants to be more robust to out of distribution test data
+
+<div class="frames">
+<img width="100%" src="/projects/tampc/learning6.png">
+<p>Learning curves on validation (left) and out of distribution (right) data with mean across 10 runs in solid 
+and 1 standard deviation shaded. Lower relative MSE is better.
+</p>
+</div>
+
+- capable of escaping traps that requires many control steps to escape (deep), or are close to the goal
+
+<div class="frames">
+<img width="100%" src="/projects/tampc/init.png">
+<p>Initial condition of simulated environments and typical traps for each task. The planar pushing (left) traps
+require multiple control steps pushing in the same direction while the peg-in-hole traps are placed close to the goal.
+</p>
+</div>
+
+- capable of completing tasks that adaptive control and reinforcement learning baselines find impossible while
+outperforming trap-handling baselines on planar pushing tasks
+  
+<div class="frames">
+<img width="100%" src="/projects/tampc/tab.png">
+<p>Results table over simulated and real tasks, with success defined as reaching sufficiently close to the goal
+within 500 control steps.
+</p>
+</div>

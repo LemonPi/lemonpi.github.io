@@ -1,0 +1,66 @@
+---
+layout: single 
+title: Blind Object Tracking in Clutter 
+permalink: /projects/stucco/index.html 
+group: projects 
+css: syntax
+---
+<div class="toc">
+<a class="toc-link toch2" href="#links">Links</a>
+<a class="toc-link toch2" href="#abstract">Abstract</a>
+<a class="toc-link toch2" href="#highlights">Highlights</a>
+<p class="toc-caption"></p>
+<p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
+</div>
+<h2 class="anchor">Links <a class="anchor-link" title="permalink to section" href="#links"
+                               name="links">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/2201.10434">RA-L preprint (arxiv)</a></li>
+<li><a href="https://github.com/UM-ARM-Lab/stucco">repository</a></li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dsXPH-IL590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 class="anchor">Abstract <a class="anchor-link" title="permalink to section" href="#abstract"
+                               name="abstract">&para;</a></h2>
+<p>Retrieving an object from cluttered spaces such as cupboards, refrigerators, or bins requires tracking objects with
+limited or no visual sensing. In these scenarios, contact feedback is necessary to estimate the pose of the objects, yet
+the objects are movable while their shapes and number may be unknown, making the association of contacts with objects
+extremely difficult. While previous work has focused on multi-target tracking, the assumptions therein prohibit using
+prior methods given only the contact-sensing modality. Instead, this paper proposes the method Soft Tracking Using
+Contacts for Cluttered Objects (STUCCO)
+that tracks the belief over contact point locations and implicit object associations using a particle filter. This
+method allows ambiguous object associations of past contacts to be revised as new information becomes available. We
+apply STUCCO to the Blind Object Retrieval problem, where a target object of known shape but unknown pose must be
+retrieved from clutter. Our results suggest that our method outperforms baselines in four simulation environments, and
+on a real robot, where contact sensing is noisy. In simulation, we achieve grasp success of at least 65% on all
+environments while no baselines achieve over 5%.</p>
+<aside class='notice'><h4>Note</h4>Problem is difficult because the robot has no visual sensing while the objects are movable</aside>
+<h2 class="anchor">Highlights <a class="anchor-link" title="permalink to section" href="#highlights"
+                               name="highlights">&para;</a></h2>
+<ul>
+<li>first paper to track multiple objects using only contact feedback</li>
+<li>resolves ambiguity in data association far in the past with new information</li>
+<li>outperforms baselines in tracking metrics of contact error and segmentation quality using the Fowlkes-Mallows index</li>
+</ul>
+<div class="frames">
+<div style="flex-direction:row; width:100%">
+<img width="49.5%" src="/projects/stucco/tracking_res_rev.png">
+<img width="49.5%" src="/projects/stucco/tracking_res_rev_high_ambiguity.png">
+</div>
+<p>Higher FMI is better while lower contact error is better. Error bars indicate 20-80th percentile. Ours is in blue.</p>
+</div>
+<ul>
+<li>able to segment contacts points into objects and track the target object's pose sufficiently to grasp in simulated
+and real environments</li>
+</ul>
+<div style="width:100%" class="frames">
+<img width="100%" src="/projects/stucco/bor-min.png">
+<p>4 simulated environments with a floating gripper. Top shows the initial condition and the bottom shows near the end
+of one of our runs. Robot state trail and best estimate for target pose are in blue, tracked contact points are crosses
+with each color corresponding to a segmented object. Our method achieves at least 65% grasp success across all environments
+while none of the baselines exceed 5%.</p>
+</div>
+<div style="width:100%" class="frames">
+<img width="100%" src="/projects/stucco/real_bubble_min.png">
+<p>Real environment with (top) initial condition and (bot) successful tracking in one of our runs.
+</p>
+</div>

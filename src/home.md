@@ -10,11 +10,11 @@ load: fast
 <h1 style="text-align:center;">Welcome</h1>
 
 |||
-projects/tampc
-/projects/tampc/realpeg4small.png
-TAMPC
-A controller for escaping traps in novel environments (accepted in RA-L)
-Nov 2019 - Feb 2021
+projects/stucco
+/projects/stucco/real_bubble_min.png
+STUCCO
+Tracking objects in clutter using just contacts (RA-L 2022)
+Mar 2021 - Jan 2022
 Python,PyTorch,research
 |
 projects/kepler
@@ -31,6 +31,13 @@ A fun way to learn functional programming
 Jan 2016
 JS
 ||
+projects/tampc
+/projects/tampc/realpeg4small.png
+TAMPC
+A controller for escaping traps in novel environments (RA-L 2021)
+Nov 2019 - Feb 2021
+Python,PyTorch,research
+|
 /drawpoint-demo/
 /res/projects/drawpoint.png
 Drawpoint

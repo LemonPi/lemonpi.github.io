@@ -3,7 +3,6 @@ layout: single
 title: Blind Object Tracking in Clutter 
 permalink: /projects/stucco/index.html 
 group: projects 
-css: syntax
 ---
 
 

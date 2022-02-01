@@ -3,7 +3,6 @@ layout: single
 title: Trap Aware MPC
 permalink: /projects/tampc/index.html
 group: projects
-css: syntax
 ---
 
 ## Links
@@ -72,3 +71,17 @@ outperforming trap-handling baselines on planar pushing tasks
 within 500 control steps.
 </p>
 </div>
+
+## Bibtex
+```text
+@article{zhong2021tampc,
+  title={TAMPC: A Controller for Escaping Traps in Novel Environments},
+  author={Zhong, Sheng and Zhang, Zhenyuan and Fazeli, Nima and Berenson, Dmitry},
+  journal={IEEE Robotics and Automation Letters},
+  volume={6},
+  number={2},
+  pages={1447--1454},
+  year={2021},
+  publisher={IEEE}
+}
+```

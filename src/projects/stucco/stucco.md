@@ -60,3 +60,10 @@ while none of the baselines exceed 5%.</p>
 <p>Real environment with (top) initial condition and (bot) successful tracking in one of our runs.
 </p>
 </div>
+
+## Reference
+```text
+Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval
+Sheng Zhong, Nima Fazeli, and Dmitry Berenson
+IEEE Robotics and Automation Letters (RA-L) (Presented at ICRA 2022), accepted.
+```

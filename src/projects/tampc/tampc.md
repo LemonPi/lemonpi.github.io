@@ -6,10 +6,13 @@ group: projects
 ---
 
 ## Links
-- [RA-L preprint (arxiv)](https://arxiv.org/abs/2010.12516)
+- [IEEEXplore RA-L 2021](https://ieeexplore.ieee.org/document/9350150)
+- [arxiv](https://arxiv.org/abs/2010.12516)
 - [repository](https://github.com/UM-ARM-Lab/tampc)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XB-INROSWBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<aside class='notice'>
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/XB-INROSWBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</aside>
 
 ## Abstract
 
@@ -46,7 +49,7 @@ comparable to prior trap-handling methods on easier tasks.
 - high level TAMPC can be used with many lower level MPC methods
 - introduces latent dynamics architecture that exploits training data invariants to be more robust to out of distribution test data
 
-<div class="frames">
+<div>
 <img width="100%" src="/projects/tampc/learning6.png">
 <p>Learning curves on validation (left) and out of distribution (right) data with mean across 10 runs in solid 
 and 1 standard deviation shaded. Lower relative MSE is better.
@@ -55,22 +58,22 @@ and 1 standard deviation shaded. Lower relative MSE is better.
 
 - capable of escaping traps that requires many control steps to escape (deep), or are close to the goal
 
-<div class="frames">
+<aside class='notice'>
 <img width="100%" src="/projects/tampc/init.png">
 <p>Initial condition of simulated environments and typical traps for each task. The planar pushing (left) traps
 require multiple control steps pushing in the same direction while the peg-in-hole traps are placed close to the goal.
 </p>
-</div>
+</aside>
 
 - capable of completing tasks that adaptive control and reinforcement learning baselines find impossible while
 outperforming trap-handling baselines on planar pushing tasks
   
-<div class="frames">
+<aside class='notice'>
 <img width="100%" src="/projects/tampc/tab.png">
 <p>Results table over simulated and real tasks, with success defined as reaching sufficiently close to the goal
 within 500 control steps.
 </p>
-</div>
+</aside>
 
 ## Bibtex
 ```text

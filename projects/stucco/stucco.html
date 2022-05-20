@@ -1,6 +1,6 @@
 ---
 layout: single 
-title: Blind Object Tracking in Clutter 
+title: Soft Tracking Using Contacts for Cluttered Objects (STUCCO)
 permalink: /projects/stucco/index.html 
 group: projects 
 ---
@@ -8,17 +8,20 @@ group: projects
 <a class="toc-link toch2" href="#links">Links</a>
 <a class="toc-link toch2" href="#abstract">Abstract</a>
 <a class="toc-link toch2" href="#highlights">Highlights</a>
-<a class="toc-link toch2" href="#reference">Reference</a>
+<a class="toc-link toch2" href="#bibtex">Bibtex</a>
 <p class="toc-caption"></p>
 <p class="toc-toggle">toggle TOC (ctrl + &#8660;)</p>
 </div>
 <h2 class="anchor">Links <a class="anchor-link" title="permalink to section" href="#links"
                                name="links">&para;</a></h2>
 <ul>
-<li><a href="https://arxiv.org/abs/2201.10434">RA-L preprint (arxiv)</a></li>
+<li><a href="https://ieeexplore.ieee.org/document/9696372">IEEEXplore (RA-L 2022)</a></li>
+<li><a href="https://arxiv.org/abs/2201.10434">arxiv</a></li>
 <li><a href="https://github.com/UM-ARM-Lab/stucco">repository</a></li>
 </ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dsXPH-IL590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<aside class='notice'>
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/dsXPH-IL590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</aside>
 <h2 class="anchor">Abstract <a class="anchor-link" title="permalink to section" href="#abstract"
                                name="abstract">&para;</a></h2>
 <p>Retrieving an object from cluttered spaces such as cupboards, refrigerators, or bins requires tracking objects with
@@ -34,6 +37,10 @@ retrieved from clutter. Our results suggest that our method outperforms baseline
 on a real robot, where contact sensing is noisy. In simulation, we achieve grasp success of at least 65% on all
 environments while no baselines achieve over 5%.</p>
 <aside class='notice'><h4>Note</h4>Problem is difficult because the robot has no visual sensing while the objects are movable</aside>
+<p><br/></p>
+<div style="width:100%">
+<img width="100%" src="/projects/stucco/stucco_method.png">
+</div>
 <h2 class="anchor">Highlights <a class="anchor-link" title="permalink to section" href="#highlights"
                                name="highlights">&para;</a></h2>
 <ul>
@@ -41,7 +48,7 @@ environments while no baselines achieve over 5%.</p>
 <li>resolves ambiguity in data association far in the past with new information</li>
 <li>outperforms baselines in tracking metrics of contact error and segmentation quality using the Fowlkes-Mallows index</li>
 </ul>
-<div class="frames">
+<div>
 <div style="flex-direction:row; width:100%">
 <img width="49.5%" src="/projects/stucco/tracking_res_rev.png">
 <img width="49.5%" src="/projects/stucco/tracking_res_rev_high_ambiguity.png">
@@ -52,22 +59,29 @@ environments while no baselines achieve over 5%.</p>
 <li>able to segment contacts points into objects and track the target object's pose sufficiently to grasp in simulated
 and real environments</li>
 </ul>
-<div style="width:100%" class="frames">
+<aside class='notice'>
 <img width="100%" src="/projects/stucco/bor-min.png">
 <p>4 simulated environments with a floating gripper. Top shows the initial condition and the bottom shows near the end
 of one of our runs. Robot state trail and best estimate for target pose are in blue, tracked contact points are crosses
 with each color corresponding to a segmented object. Our method achieves at least 65% grasp success across all environments
 while none of the baselines exceed 5%.</p>
-</div>
-<div style="width:100%" class="frames">
+</aside>
+<p><br/></p>
+<aside class='notice'>
 <img width="100%" src="/projects/stucco/real_bubble_min.png">
 <p>Real environment with (top) initial condition and (bot) successful tracking in one of our runs.
 </p>
-</div>
-<h2 class="anchor">Reference <a class="anchor-link" title="permalink to section" href="#reference"
-                               name="reference">&para;</a></h2>
+</aside>
+<h2 class="anchor">Bibtex <a class="anchor-link" title="permalink to section" href="#bibtex"
+                               name="bibtex">&para;</a></h2>
 
-{% highlight text %}Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval
-Sheng Zhong, Nima Fazeli, and Dmitry Berenson
-IEEE Robotics and Automation Letters (RA-L) (Presented at ICRA 2022), accepted.
+{% highlight text %}@ARTICLE{9696372,
+  author={Zhong, Sheng and Fazeli, Nima and Berenson, Dmitry},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval}, 
+  year={2022},
+  volume={7},
+  number={2},
+  pages={3507-3514},
+  doi={10.1109/LRA.2022.3146915}}
 {% endhighlight %}

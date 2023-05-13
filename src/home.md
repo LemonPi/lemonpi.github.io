@@ -7,7 +7,7 @@ redirect_from: /projects/
 load: fast
 ---
 
-<h1 style="text-align:center;">Welcome</h1>
+<h1 style="text-align:center;">My Latest Projects</h1>
 
 |||
 projects/chsel

@@ -530,6 +530,9 @@ aside > h4 {
 
 .picture-with-desc {
     display:flex;
+    flex-direction: row;
+    padding: 25px;
+    gap: 20px;
 }
 
 @media (max-width: 950px) {

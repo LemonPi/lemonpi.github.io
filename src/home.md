@@ -10,11 +10,11 @@ load: fast
 <h1 style="text-align:center;">Welcome</h1>
 
 |||
-projects/stucco
-/projects/stucco/real_bubble_min.png
-STUCCO
-Tracking objects in clutter using just contacts (RA-L 2022)
-Mar 2021 - Jan 2022
+projects/chsel
+/projects/chsel/combined.gif
+CHSEL
+Object pose estimation using contacts and free space (RSS 2023)
+Feb 2022 - April 2023
 Python,PyTorch,research
 |
 projects/kepler
@@ -31,11 +31,11 @@ A fun way to learn functional programming
 Jan 2016
 JS
 ||
-projects/tampc
-/projects/tampc/realpeg4small.png
-TAMPC
-A controller for escaping traps in novel environments (RA-L 2021)
-Nov 2019 - Feb 2021
+projects/stucco
+/projects/stucco/real_bubble_min.png
+STUCCO
+Tracking objects in clutter using just contacts (RA-L 2022)
+Mar 2021 - Jan 2022
 Python,PyTorch,research
 |
 /drawpoint-demo/
@@ -59,6 +59,13 @@ Lisp interpreter (scheme dialect) in C++
 Aug 2014
 C++,Lisp
 ||
+projects/tampc
+/projects/tampc/realpeg4small.png
+TAMPC
+A controller for escaping traps in novel environments (RA-L 2021)
+Nov 2019 - Feb 2021
+Python,PyTorch,research
+|
 /projects/robot
 /res/projects/robot.jpg
 Autobots
@@ -88,6 +95,8 @@ Design
 
 # Archive
 
+- [**CHSEL - Pose Estimation using Contact and Free space published to RSS**](projects/chsel) - Feb 2022 to April 2023
+- [**STUCCO - Tracking Objects in Clutter published to RA-L**](projects/stucco) - Mar 2021 to Jan 2022
 - [**TAMPC - Trap Aware MPC published to RA-L**](projects/tampc) - Nov 2019 to Feb 2021
 - [**Kepler - Summer internship where I worked on satellite communication**](projects/kepler) - May 2018 to Aug 2018
 - [**Drawpoint - HTML canvas drawing library**](/drawpoint-demo) - May 2016 to Feb 2017

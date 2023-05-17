@@ -8,17 +8,19 @@ group: projects
 
 ## Links
 
+- [arxiv](https://arxiv.org/abs/2305.08042)
 - [repository](https://github.com/UM-ARM-Lab/chsel)
   
 
-<!-- <aside class='notice'>
-<iframe width="100%" height="500px" src="https://www.youtube.com/embed/dsXPH-IL590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</aside> -->
+<aside class='notice'>
+<img width="100%" src="https://i.imgur.com/T4DnKDu.gif">
+<p>CHSEL applied to sparse contact data on the YCB drill (top) and dense camera data on a mug (bottom). Yellow points are observed free space points while blue points are observed surface points.</p>
+</aside>
+
+<br>
 
 <aside class='notice'>
-<img width="100%" src="https://i.imgur.com/bxdpgpk.gif">
-<img width="100%" src="https://i.imgur.com/gbBBQpB.gif">
-<p>CHSEL applied to sparse contact data on the YCB drill (top) and dense camera data on a mug (bottom). Yellow points are observed free space points while blue points are observed surface points.</p>
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/qP373CQyiXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </aside>
 
 ## Abstract

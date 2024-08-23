@@ -23,7 +23,8 @@ No longer part of the aside
 If you want to preview the webpage before pushing to github to be hosted, you need jekyll.
 
 ### Installation
-1. install the latest version of ruby
+Github-Pages uses Jekyll 3.9, which isn’t compatible with Ruby 3. Downgrading to Ruby 2.7 should avoid the problem.
+1. install the latest version of ruby 2
 2. install rubydevkit and point to the previous installation of ruby
 3. navigate to portfolio root directory with git bash
 4. `gem install bundler`

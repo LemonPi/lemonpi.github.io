@@ -388,7 +388,7 @@ aside > h4 {
 .gallery {
     margin: 0 auto 80px auto;
     text-align: center;
-    max-width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
 }
@@ -454,6 +454,7 @@ aside > h4 {
 }
 
 .tag-span {
+    line-height: 50px;
 }
 .tag {
     display: inline;

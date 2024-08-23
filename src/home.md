@@ -7,93 +7,126 @@ redirect_from: /projects/
 load: fast
 ---
 
-<h1 style="text-align:center;">My Latest Projects</h1>
+  <div class="profile">
+    <div class="profile-text">
+        <p>Hi, my name is Johnson, the son of my father, John. My Chinese name is Zhong Sheng (钟盛) which is pronounced similarly.</p>
+        <p>I received my PhD in Robotics advised by <a href="https://berenson.robotics.umich.edu/">Dmitry Berenson</a> 
+and co-advised by <a href="https://www.mmintlab.com/people/nima-fazeli/">Nima Fazeli</a> at the University of Michigan.
+I previously received my B.ASc. in Engineering Science from the University of Toronto.
+        </p>
+        <p>I am interested in using model-based methods to reason about uncertainty for robot manipulation, with the
+       goal of enabling robots in homes. I also develop <a href="https://github.com/lemonpi">open source software</a>
+       for robotics research, focusing on parallelization and performance.
+        </p>
+    </div>
+    <img src="/res/self_business.jpeg" alt="My Picture" class="profile-img">
+  </div>
+
+---
+<h1 style="text-align:center;">Publications</h1>
++++
+/res/rumi.gif
+RUMI: Rummaging Using Mutual Information
+<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
+T-RO 2024 (under review)
+arxiv: https://www.arxiv.org/abs/2408.10450
+|
+/projects/chsel/combined.gif
+CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data
+<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
+RSS 2023
+website: projects/chsel
+arxiv: https://arxiv.org/abs/2305.08042
+paper: https://roboticsconference.org/2023/program/papers/077/
+video: https://www.youtube.com/watch?v=qP373CQyiXI
+code: https://github.com/UM-ARM-Lab/chsel
+|
+/projects/stucco/real_bubble_min.png
+Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval
+<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
+RA-L 2022
+website: projects/stucco
+arxiv: https://arxiv.org/abs/2201.10434
+paper: https://ieeexplore.ieee.org/document/9696372
+video: https://www.youtube.com/watch?v=dsXPH-IL590
+code: https://github.com/UM-ARM-Lab/stucco
+|
+/projects/tampc/realpeg4small.png
+TAMPC: A Controller for Escaping Traps in Novel Environments
+<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson
+RA-L 2021
+website: projects/tampc
+arxiv: https://arxiv.org/abs/2010.12516
+paper: https://ieeexplore.ieee.org/abstract/document/9350150
+video: https://www.youtube.com/watch?v=XB-INROSWBE
+code: https://github.com/UM-ARM-Lab/tampc
++++
+
+
+---
+<h1 style="text-align:center;">Projects</h1>
 
 |||
-projects/chsel
-/projects/chsel/combined.gif
-CHSEL
-Object pose estimation using contacts and free space (RSS 2023)
-Feb 2022 - April 2023
+https://github.com/UM-ARM-Lab/pytorch_volumetric
+/res/pv_sdf_slice_small.gif
+Pytorch Volumetric
+Volumetric structures such as voxels and SDFs implemented in pytorch
 Python,PyTorch,research
 |
 projects/kepler
 /projects/kepler/visual.png
 Kepler
 Mission Control Software for Satellites
-May 2018 - Aug 2018
 Python,MySQL,asyncio
 |
 /projects/snowfun/
 /res/projects/snowfun.png
 Snowfun
-A fun way to learn functional programming
-Jan 2016
+Award winning educational game for functional programming
 JS
 ||
-projects/stucco
-/projects/stucco/real_bubble_min.png
-STUCCO
-Tracking objects in clutter using just contacts (RA-L 2022)
-Mar 2021 - Jan 2022
+https://github.com/UM-ARM-Lab/pytorch_kinematics
+/res/pk_ik.gif
+Pytorch Kinematics
+Differentiable forward kinematics and Jacobian calculation in PyTorch
 Python,PyTorch,research
 |
 /drawpoint-demo/
 /res/projects/drawpoint.png
 Drawpoint
 HTML Canvas drawing library
-May 2016 - Feb 2017
 JS,react
 |
 /projects/vpr
 /res/projects/vpr_speedup.png
 VPR Speedup
 Speeding up FPGA CAD router through iterative rerouting
-May 2015 - Aug 2015
 C++,JS
-|
-/projects/clisp/
-/projects/clisp.png
-Clisp
-Lisp interpreter (scheme dialect) in C++
-Aug 2014
-C++,Lisp
 ||
-projects/tampc
-/projects/tampc/realpeg4small.png
-TAMPC
-A controller for escaping traps in novel environments (RA-L 2021)
-Nov 2019 - Feb 2021
+https://github.com/UM-ARM-Lab/pytorch_mppi
+/res/kmppi.gif
+Pytorch MPPI
+Parallelized Model Predictive Path Integral Control in PyTorch with novel smoothing
 Python,PyTorch,research
-|
-/projects/robot
-/res/projects/robot.jpg
-Autobots
-Two robots playing connect-4 together on a randomized gamefield
-Jan 2014 - Apr 2015
-C++,Arduino,Controls
 |
 /sal/
 /res/projects/lemonpi.png
 SAL
 Simple Algorithms and Data structures
-Oct 2014 - Jan 2015
 C++
 |
-/projects/icecube
-/projects/icecube.png
-ICE-Cube
-Meat Refrigeration without grid electricity
-March 2014
-Design
+/projects/clisp/
+/projects/clisp.png
+Clisp
+Lisp interpreter (scheme dialect) in C++
+C++,Lisp
 |||
-
 
 ---
 
 <div class="block" markdown='1'>
 
-# Archive
+# Archived Projects
 
 - [**CHSEL - Pose Estimation using Contact and Free space published to RSS**](projects/chsel) - Feb 2022 to April 2023
 - [**STUCCO - Tracking Objects in Clutter published to RA-L**](projects/stucco) - Mar 2021 to Jan 2022

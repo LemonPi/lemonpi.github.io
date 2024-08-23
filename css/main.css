@@ -737,6 +737,45 @@ aside > h4 {
     -webkit-animation-timing-function: ease;
 }
 
+.profile {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center;
+    margin: 60px 0;
+    padding: 0 15%;
+}
+
+.profile-img {
+    margin: 20px 0; /* Margin on top and bottom for spacing */
+    width: 100%; /* Make the image responsive */
+    max-width: 300px;  /* Restrict the maximum width if needed */
+    height: auto;
+    border-radius: 20%;
+}
+
+.profile-text {
+    text-align: center; /* Center text for better mobile readability */
+    max-width: 100%; /* Ensure text does not overflow on small screens */
+}
+
+@media (min-width: 768px) {
+    .profile {
+        flex-direction: row; /* Side-by-side layout for larger screens */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-img {
+        margin-left: 20px; /* Add margin to the left for better spacing when side by side */
+        margin: 0 0 0 20px; /* Remove vertical margins */
+    }
+
+    .profile-text {
+        text-align: left; /* Align text to the left on larger screens */
+        max-width: 80%; /* Adjust text width for larger screens */
+    }
+}
+
 @keyframes slideUp {
     0% {
         transform: translateY(100%);
@@ -779,3 +818,104 @@ aside > h4 {
     }
 }
 
+.publications {
+    margin-top: 20px;
+}
+
+.pub {
+    padding: 10px;
+    margin-bottom: 20px;
+    /*border-radius: 5px;*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pub img {
+    min-width: 100px;
+    max-width: 200px;
+}
+
+.pub .caption {
+    margin-left: 50px;
+    width: 50%;
+}
+
+.pub .caption-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.pub .caption-authors {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.pub .caption-authors strong {
+    font-weight: bold;
+    color: #333; /* Or any color you prefer for highlighting your name */
+    text-decoration: underline;
+}
+
+.pub .caption-desc {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.pub .caption-date {
+    font-style: italic;
+    color: #777;
+}
+
+.pub .caption-extra {
+    display: flex;
+    flex-direction: row;
+}
+
+.pub .caption-extra p {
+    margin: 3px;
+    padding: 5px 10px;
+    border: black 2px solid;
+    border-radius: 10px;
+}
+
+/* don't change color for links in the extra caption */
+.pub .caption-extra p a {
+    color: black;
+}
+
+.pub .tag-span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pub .tag {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .pub {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pub img {
+        width: 100%;
+        max-width: none; /* Ensure the image takes full width */
+    }
+
+    .pub .caption {
+        margin-left: 0;
+        width: 100%;
+        text-align: left;
+    }
+}

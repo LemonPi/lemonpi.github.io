@@ -77,13 +77,13 @@ projects/kepler
 /projects/kepler/visual.png
 Kepler
 Mission Control Software for Satellites
-Python,MySQL,asyncio
+Python,SQL,asyncio,internship
 |
 /projects/snowfun/
 /res/projects/snowfun.png
 Snowfun
 Award winning educational game for functional programming
-JS
+JS,competition
 ||
 https://github.com/UM-ARM-Lab/pytorch_kinematics
 /res/pk_ik.gif
@@ -100,8 +100,8 @@ JS,react
 /projects/vpr
 /res/projects/vpr_speedup.png
 VPR Speedup
-Speeding up FPGA CAD router through iterative rerouting
-C++,JS
+Speeding up FPGA CAD, part of TRETS 2020 paper winning best paper award
+C++,JS,research
 ||
 https://github.com/UM-ARM-Lab/pytorch_mppi
 /res/kmppi.gif
@@ -113,13 +113,7 @@ Python,PyTorch,research
 /res/projects/lemonpi.png
 SAL
 Simple Algorithms and Data structures
-C++
-|
-/projects/clisp/
-/projects/clisp.png
-Clisp
-Lisp interpreter (scheme dialect) in C++
-C++,Lisp
+C++,competition
 |||
 
 ---

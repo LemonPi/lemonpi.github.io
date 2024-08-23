@@ -9,7 +9,8 @@ const converter = new showdown.Converter({
         extensions.anchorHeader,
         extensions.addTOC,
         extensions.highlightCode,
-        extensions.gallery
+        extensions.gallery,
+        extensions.publications
     ],
     noHeaderId: true,
     metadata  : true

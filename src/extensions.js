@@ -96,7 +96,7 @@ function gallery() {
 
                 for (let content of boxContents) {
                     const parts = content.trim().split('\n');
-                    const [link, img, title, desc, date, tags] = parts;
+                    const [link, img, title, desc, tags] = parts;
 
                     output.push(`<a href="${link}">`);
                     output.push('<div class="box">');
@@ -115,7 +115,7 @@ function gallery() {
                     }
 
                     output.push(`<p class="caption-desc">${desc}</p>`);
-                    output.push(`<p class="caption-date">${date}</p>`);
+                    // output.push(`<p class="caption-date">${date}</p>`);
 
                     output.push('</div>');
                     output.push('</div>');
@@ -130,10 +130,62 @@ function gallery() {
         }
     }
 }
+
+function publications() {
+    return {
+        type: 'lang',
+        regex: /\+\+\+([^]*)\+\+\+/g,
+        replace(fullMatch, fullContent) {
+            const output = ["<div class='publications'>"];
+            const boxContents = fullContent.trim().split('|');
+
+            for (let content of boxContents) {
+                const lines = content.trim().split('\n');
+                const [img, title, authors, venue, ...rest] = lines;
+
+                const extraFields = {};
+                rest.forEach(line => {
+                    const [key, ...valueParts] = line.split(':');
+                    const value = valueParts.join(':').trim();
+                    if (value) {
+                        extraFields[key.trim()] = value;
+                    }
+                });
+
+                output.push('<div class="pub">');
+                output.push(`<img src="${img}" alt="${title}"/>`);
+                output.push('<div class="caption">');
+
+                output.push(`<h1 class="caption-title">${title}</h1>`);
+                output.push(`<p class="caption-authors">${authors}</p>`);
+
+                output.push(`<p class="caption-desc">${venue}</p>`);
+
+                // Add optional fields
+                output.push('<div class="caption-extra">');
+                for (let key in extraFields) {
+                    if (key !== 'tags') { // tags are already processed
+                        output.push(`<p class="${key}"><a href="${extraFields[key]}" target="_blank">${key}</a></p>`);
+                    }
+                }
+                output.push('</div>');
+
+                output.push('</div>');
+                output.push('</div>');
+            }
+
+            output.push("</div>");
+            return output.join("\n");
+
+        }
+    }
+}
+
 module.exports = {
     anchorHeader,
     addTOC,
     highlightCode,
     asideNotes,
     gallery,
+    publications,
 };

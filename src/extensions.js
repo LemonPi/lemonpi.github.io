@@ -95,8 +95,13 @@ function gallery() {
                 const boxContents = colContent.split('|');
 
                 for (let content of boxContents) {
+                    if (content.trim() === "") continue; // Skip empty content
+
                     const parts = content.trim().split('\n');
                     const [link, img, title, desc, tags] = parts;
+
+                    const repoMatch = link.match(/github\.com\/([^\/]+\/[^\/]+)/);
+                    const repoId = repoMatch ? repoMatch[1] : null;
 
                     output.push(`<a href="${link}">`);
                     output.push('<div class="box">');
@@ -115,7 +120,11 @@ function gallery() {
                     }
 
                     output.push(`<p class="caption-desc">${desc}</p>`);
+
                     // output.push(`<p class="caption-date">${date}</p>`);
+                    if (repoMatch) {
+                        output.push(`<div id="${repoId}" class="stats"></div>`); // Placeholder for stats
+                    }
 
                     output.push('</div>');
                     output.push('</div>');

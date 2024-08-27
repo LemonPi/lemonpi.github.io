@@ -920,3 +920,16 @@ aside > h4 {
         text-align: left;
     }
 }
+
+.stats {
+    display: flex;
+    gap: 10px;
+}
+
+.stat {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /*background-color: #f9f9f9;*/
+    font-size: 0.9em;
+}

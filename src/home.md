@@ -64,7 +64,7 @@ code: https://github.com/UM-ARM-Lab/tampc
 
 
 ---
-<h1 style="text-align:center;">Projects</h1>
+<h1 style="text-align:center;">Software Contributions</h1>
 
 |||
 https://github.com/UM-ARM-Lab/pytorch_volumetric

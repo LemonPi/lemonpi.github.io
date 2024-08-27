@@ -12,7 +12,7 @@ load: fast
         <p>Hi, my name is Johnson. My Chinese name is Zhong Sheng (钟盛) which is pronounced similarly.</p>
         <p>I received my PhD in Robotics advised by <a href="https://berenson.robotics.umich.edu/">Dmitry Berenson</a> 
 and co-advised by <a href="https://www.mmintlab.com/people/nima-fazeli/">Nima Fazeli</a> at the University of Michigan.
-I previously received my B.ASc. in Engineering Science from the University of Toronto.
+I previously received my B.ASc. in Engineering Science from the University of Toronto with high honors.
         </p>
         <p>I am interested in using model-based methods to reason about uncertainty for robot manipulation, with the
        goal of enabling robots in homes. I also develop <a href="https://github.com/lemonpi">open source software</a>

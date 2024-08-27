@@ -845,13 +845,13 @@ aside > h4 {
 }
 
 .pub .caption-title {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
 .pub .caption-authors {
     margin: 5px 0;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .pub .caption-authors strong {

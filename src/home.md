@@ -53,7 +53,7 @@ paper: https://ieeexplore.ieee.org/document/9696372
 video: https://www.youtube.com/watch?v=dsXPH-IL590
 code: https://github.com/UM-ARM-Lab/stucco
 |
-/projects/tampc/realpeg4small.png
+/res/tampc.gif
 TAMPC: A Controller for Escaping Traps in Novel Environments
 <strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson
 RA-L 2021

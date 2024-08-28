@@ -30,13 +30,13 @@ Additionally, I develop <a href="https://github.com/lemonpi">open source softwar
 /res/rumi.gif
 RUMI: Rummaging Using Mutual Information
 <strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
-T-RO 2024 (under review)
+IEEE Transactions on Robotics (T-RO), 2024 (under review)
 arxiv: https://www.arxiv.org/abs/2408.10450
 |
 /projects/chsel/combined.gif
 CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data
 <strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
-RSS 2023
+    Robotics: Science and Systems (RSS), 2023
 website: projects/chsel
 arxiv: https://arxiv.org/abs/2305.08042
 paper: https://roboticsconference.org/2023/program/papers/077/
@@ -46,7 +46,7 @@ code: https://github.com/UM-ARM-Lab/chsel
 /projects/stucco/real_bubble_min.png
 Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval
 <strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
-RA-L 2022
+IEEE Robotics and Automation Letters (RA-L), vol. 7, no. 2, pp. 3507-3514, April 2022
 website: projects/stucco
 arxiv: https://arxiv.org/abs/2201.10434
 paper: https://ieeexplore.ieee.org/document/9696372
@@ -56,7 +56,7 @@ code: https://github.com/UM-ARM-Lab/stucco
 /res/tampc.gif
 TAMPC: A Controller for Escaping Traps in Novel Environments
 <strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson
-RA-L 2021
+IEEE Robotics and Automation Letters (RA-L), vol. 6, no. 2, pp. 1447-1454, April 2021
 website: projects/tampc
 arxiv: https://arxiv.org/abs/2010.12516
 paper: https://ieeexplore.ieee.org/abstract/document/9350150

@@ -12,9 +12,15 @@ async function fetchGitHubRepoStats(repo, elementId) {
         const statsContainer = document.getElementById(elementId);
         if (statsContainer) {
             statsContainer.innerHTML = `
-                        <div class="stat">⭐ Stars: ${data.stargazers_count}</div>
-                        <div class="stat">🍴 Forks: ${data.forks_count}</div>
-                    `;
+                        <div class="stat">
+                            <img src="/res/star-fill-white.svg" alt="Stars"> 
+                            Stars ${data.stargazers_count}
+                        </div>
+                        <div class="stat">
+                            <img src="/res/repo-forked-white.svg" alt="Forks"> 
+                            Forks ${data.forks_count}
+                        </div>
+            `;
         }
 
     } catch (error) {

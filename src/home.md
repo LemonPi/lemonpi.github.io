@@ -30,7 +30,7 @@ Additionally, I develop <a href="https://github.com/lemonpi">open source softwar
 /res/rumi.gif
 RUMI: Rummaging Using Mutual Information
 <strong>S. Zhong</strong>, N. Fazeli, and D. Berenson
-IEEE Transactions on Robotics (T-RO), 2024 (under review)
+IEEE Transactions on Robotics (T-RO), 2024 (accepted)
 arxiv: https://www.arxiv.org/abs/2408.10450
 |
 /projects/chsel/combined.gif
